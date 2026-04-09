@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Zenitsu — Usability Testing Case Study | Evelyn Ramsburgh</title>
+
+    <meta
+      name="description"
+      content="Zenitsu is an internal platform that streamlines scalable app development through a generator, shared libraries, a UI, and DevOps automation. This case study focuses on late-stage usability testing and key findings."
+    />
+    <meta
+      name="keywords"
+      content="Evelyn Ramsburgh, Senior Product Designer, UX Designer, UI Designer, IBM, Zenitsu, Usability Testing, UMUX, Carbon Design System, Enterprise UX"
+    />
+    <meta name="robots" content="index,follow" />
+    <link
+      rel="canonical"
+      href="https://evelynramsburgh.com/zenitsu.html"
+    />
+    <meta name="author" content="Evelyn Ramsburgh" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://evelynramsburgh.com/assets/img/og-cover.jpg" />
+    <meta property="og:url" content="https://evelynramsburgh.com/zenitsu.html" />
+    <meta property="og:title" content="Zenitsu — Usability Testing Case Study | Evelyn Ramsburgh" />
+    <meta
+      property="og:description"
+      content="A Medium-like case study on usability testing for Zenitsu—an internal platform that automates module creation and deployment using Carbon Design System."
+    />
+
+    <!-- Mobile Specific Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicons/favicon.png"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="assets/img/favicons/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- All CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="/assets/css/slick.min.css" />
+    <link rel="stylesheet" href="/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="/assets/css/imageRevealHover.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- Page-specific helpers (minimal + Medium-like) -->
+<style>
+      .case-layout { max-width: 980px; }
+
+      .case-title { max-width: 720px; margin: 0 auto; text-align: left; }
+      .case-lead {
+        max-width: 720px;
+        margin: 14px auto 0;
+        text-align: left;
+        font-size: 20px;
+        line-height: 1.7;
+      }
+
+      .case-article { max-width: 720px; margin: 0 auto; }
+
+      .case-body {
+        font-size: 18.5px;
+        line-height: 1.75;
+        letter-spacing: 0.01em;
+        color: rgba(36,36,36,0.92);
+        margin-bottom: 1.1em;
+      }
+
+      .case-heading {
+        margin-top: 44px;
+        margin-bottom: 12px;
+        font-weight: 700;
+      }
+
+      .case-highlights { max-width: 720px; margin: 18px auto 0; }
+      .case-highlights-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        padding: 18px 0 6px;
+        border-top: 1px solid rgba(0,0,0,0.08);
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+      }
+      .case-highlight .label {
+        display: block;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(36,36,36,0.55);
+        margin-bottom: 6px;
+      }
+      .case-highlight .value {
+        display: block;
+        font-size: 15px;
+        line-height: 1.4;
+        color: rgba(36,36,36,0.95);
+        font-weight: 600;
+      }
+
+      .project-inner-thumb {
+        max-width: 920px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .case-caption {
+        max-width: 720px;
+        margin: 10px auto 0;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.5;
+        color: rgba(36,36,36,0.68);
+      }
+
+      .case-bullets {
+        max-width: 720px;
+        margin: 0 auto 28px;
+        padding-left: 1.2rem;
+        list-style: disc;
+      }
+      .case-bullets li { list-style: disc; margin-bottom: 0.45rem; }
+
+      .case-callout {
+        max-width: 720px;
+        margin: 24px auto 0;
+        padding: 16px 18px;
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 14px;
+        background: rgba(0,0,0,0.02);
+      }
+
+      @media (max-width: 992px) {
+        .case-highlights-grid { grid-template-columns: 1fr; gap: 12px; padding: 16px 0 10px; }
+      }
+      @media (max-width: 768px) {
+        .case-body { font-size: 17px; line-height: 1.7; }
+        .case-lead { font-size: 18px; }
+      }
+
+            .figure-images {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.figure-images img {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+    </style>
+  </head>
+
+  <body>
+    <!--==============================
+      Mobile Menu
+    ============================== -->
+    <div class="mobile-menu-wrapper">
+      <div class="mobile-menu-area">
+        <button class="menu-toggle"><i class="fas fa-times"></i></button>
+
+        <div class="mobile-logo">
+          <a href="index.html"
+            ><img src="/assets/img/logo.svg" alt="Evelyn Ramsburgh"
+          /></a>
+        </div>
+
+        <div class="mobile-menu">
+          <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+           <!-- <li><a href="resources.html">Resources</a></li>
+            <li><a href="blog.html">Blog</a></li>-->
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="social-btn style3">
+          <a
+            href="https://www.linkedin.com/in/evelyn-ramsburgh/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+            </span>
+          </a>
+
+          <a
+            href="https://www.behance.net/evelynramsburgh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Behance"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fab fa-behance"></i></span>
+              <span class="effect-1"><i class="fab fa-behance"></i></span>
+            </span>
+          </a>
+
+          <a
+            href="https://buymeacoffee.com/evelynramsburgh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Buy Me a Coffee"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--==============================
+      Header Area
+    ==============================-->
+    <header class="nav-header header-layout1">
+      <div class="sticky-wrapper">
+        <div class="menu-area">
+          <div class="container-fluid">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-auto">
+                <div class="header-logo">
+                  <a href="/index.html">
+                    <img src="/assets/img/logo.svg" alt="logo" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-auto ms-auto">
+                <nav class="main-menu d-none d-lg-inline-block">
+                  <ul>
+                    <li class="active">
+                      <a href="/index.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Home</span>
+                          <span class="effect-1">Home</span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="/about.html">
+                        <span class="link-effect">
+                          <span class="effect-1">About</span>
+                          <span class="effect-1">About</span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="/portfolio.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Portfolio</span>
+                          <span class="effect-1">Portfolio</span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li>
+                    <!--  <a href="/resources.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Resources</span>
+                          <span class="effect-1">Resources</span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="/blog.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Blog</span>
+                          <span class="effect-1">Blog</span>
+                        </span>
+                      </a>
+                    </li>
+                  -->
+                    <li>
+                      <a href="/contact.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Contact</span>
+                          <span class="effect-1">Contact</span>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <div class="navbar-right d-inline-flex d-lg-none">
+                  <button type="button" class="menu-toggle sidebar-btn">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--==============================
+      Breadcrumb
+    ============================== -->
+    <div class="breadcumb-wrapper style2 bg-smoke">
+      <div class="container-fluid">
+        <div class="breadcumb-content">
+          <ul class="breadcumb-menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/portfolio.html">Portfolio</a></li>
+            <li>Zenitsu — Usability Testing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--==============================
+      Case Study
+    ============================== -->
+    <div class="project-details-page-area space">
+      <div class="container case-layout">
+
+        <!-- Title + Lead -->
+        <div class="row">
+          <div class="col-12">
+            <div class="title-area mb-20">
+              <h1 class="sec-title case-title">Zenitsu — Usability Testing for an Internal Developer Platform</h1>
+              <p class="case-lead case-body">
+                Zenitsu streamlined how teams generated, configured, and deployed modular web apps at Sales Systems.
+                This case study focuses on late-stage usability testing and how the findings shaped the next iteration.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO IMAGE (replace with your file) -->
+        <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+          <img
+            class="w-100"
+            src="/assets/img/zenitsu/zentisu_thumbnail.png"
+            alt="Zenitsu platform overview"
+          />
+          <figcaption class="case-caption">
+            Zenitsu brought together a generator, shared libraries, a UI layer, and a DevOps pipeline into one cohesive workflow.
+          </figcaption>
+        </figure>
+
+        <!-- Highlights row -->
+        <div class="case-highlights">
+          <div class="case-highlights-grid">
+            <div class="case-highlight">
+              <span class="label">Category</span>
+              <span class="value">Enterprise · Internal Platform</span>
+            </div>
+            <div class="case-highlight">
+              <span class="label">Focus</span>
+              <span class="value">Usability Testing · UX/UI</span>
+            </div>
+            <div class="case-highlight">
+              <span class="label">Tools</span>
+              <span class="value">Carbon v10 · Sketch · Prototyping</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article -->
+        <div class="case-article">
+
+          <h4 class="case-heading mt-0">Overview</h4>
+          <p class="case-body">
+            Zenitsu was built to reduce the overhead of creating and deploying scalable internal applications.
+            The platform combined four components: a core generator, shared libraries, a user interface for configuration,
+            and a DevOps process that automated setup and deployment. By standardizing the workflow, Zenitsu aimed to
+            decrease avoidable errors, shorten time-to-ship, and make module ownership easier to manage across teams.
+          </p>
+
+          <h4 class="case-heading">Users</h4>
+          <p class="case-body">
+            Zenitsu served a diverse internal audience: developers who created and maintained modules, product owners who shaped requirements,
+            administrators who managed environments and access, and analysts/support roles who relied on predictable structures to troubleshoot.
+            To keep the platform grounded in real workflows, we ran recurring feedback sessions and synthesized learnings into personas and journey artifacts.
+          </p>
+
+
+          
+                  <!-- IMAGE: High-fidelity / all screens (replace) -->
+<figure class="project-inner-thumb wow img-custom-anim-top">
+  <div class="figure-images">
+    <img src="/assets/img/zenitsu/image14-27.png" alt="Developer Persona">
+    <img src="/assets/img/zenitsu/image12-23.png" alt="Product Owner Persona">
+  </div>
+            <figcaption class="case-caption">A representative persona used to anchor requirements and testing scenarios.</figcaption>
+</figure>
+
+
+          <h4 class="case-heading">What I Led</h4>
+          <p class="case-body">
+            I led design efforts on the user interface and interaction patterns, aligning the experience with Carbon Design System v10.
+            While Zenitsu covered multiple technical layers, my responsibility was to ensure the UI made complex configuration feel clear,
+            predictable, and safe—especially in steps where users defined schemas, roles, and deployment targets.
+          </p>
+
+          <h4 class="case-heading">Why Testing</h4>
+          <p class="case-body">
+            For this case study, I’m intentionally not deep-diving into early discovery (interviews, ideation, or wireframing).
+            Instead, I’m focusing on late-stage validation: how we tested a high-fidelity prototype, what we learned,
+            and which changes were prioritized as a result.
+          </p>
+
+          <h4 class="case-heading">Goals</h4>
+          <ul class="case-bullets">
+            <li>Validate user performance on core tasks (create, configure, deploy).</li>
+            <li>Identify friction points and design risks before implementation.</li>
+            <li>Measure perceived efficiency and satisfaction using a lightweight questionnaire.</li>
+          </ul>
+
+          <h4 class="case-heading">Method</h4>
+          <p class="case-body">
+            We ran moderated user sessions with a think-aloud protocol. Participants completed key flows across the prototype while describing
+            their expectations, interpretations of terminology, and decision points. After tasks, we collected structured feedback and
+            administered UMUX (a short usability metric designed as a quicker alternative to SUS for iterative evaluation).
+          </p>
+
+          <!-- OPTIONAL IMAGE: As-Is map -->
+                  <!-- IMAGE: High-fidelity / all screens (replace) -->
+<figure class="project-inner-thumb wow img-custom-anim-top">
+  <div class="figure-images">
+    <img src="/assets/img/zenitsu/image15-29.png" alt="Developer Persona">
+    <img src="/assets/img/zenitsu/image13-25.png" alt="Product Owner Persona">
+  </div>
+            <figcaption class="case-caption">An As-Is experience map helped highlight where cognitive load and ambiguity accumulated.</figcaption>
+          </figure>
+
+          <h4 class="case-heading">Prototype Coverage</h4>
+          <p class="case-body">
+            The test prototype represented a realistic late-stage experience. Because the UI leveraged Carbon and established internal patterns,
+            we were able to prototype at high fidelity quickly and focus sessions on comprehension, task flow, and clarity—rather than UI novelty.
+          </p>
+
+          <!-- OPTIONAL IMAGE: Login/Home -->
+          <figure class="project-inner-thumb wow img-custom-anim-top">
+  <div class="figure-images">
+    <img src="/assets/img/zenitsu/login-1@2x.jpg" alt="Login">
+    <img src="/assets/img/zenitsu/homepage empty - state.png" alt="Homepage Empty State">
+    <img src="/assets/img/zenitsu/homepage.png" alt="Homepage">
+            <figcaption class="case-caption">Login and homepage: participants commented on terminology, navigation, and “what happens next”.</figcaption>
+          </figure>
+
+          <h4 class="case-heading">Key Screens Tested</h4>
+          <p class="case-body">
+            We focused on the screens that carried the most decision-making weight:
+          </p>
+          <ul class="case-bullets">
+            <li><strong>Module list:</strong> discover and manage owned modules.</li>
+            <li><strong>Create new module:</strong> guided flow to define endpoints, schema, UI choices, and deployment.</li>
+            <li><strong>Status & deployment:</strong> confirm environment and understand outcomes.</li>
+          </ul>
+
+          <!-- OPTIONAL IMAGE: Module List -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img
+              class="w-100"
+              src="/assets/img/zenitsu/zenitsu-module-list.png"
+              alt="Module list screen"
+            />
+            <figcaption class="case-caption">Module list: clarity of ownership, actions, and system status was critical for confidence.</figcaption>
+          </figure>
+
+          <h4 class="case-heading">Create Module — Flow Breakdown</h4>
+          <p class="case-body">
+            The creation flow was intentionally structured as a sequence, not a single dense form, to reduce errors and help users confirm intent at each step.
+          </p>
+          <ul class="case-bullets">
+            <li><strong>Step 1 — Definition:</strong> module name, endpoint, and initial metadata.</li>
+            <li><strong>Step 2 — Backend:</strong> schema definition using visual and schema views.</li>
+            <li><strong>Step 3 — Frontend:</strong> UI configuration using Carbon-based components.</li>
+            <li><strong>Step 4 — Deployment:</strong> environment selection and deploy confirmation.</li>
+          </ul>
+
+          <!-- OPTIONAL IMAGE: Create Module -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img
+              class="w-100"
+              src="/assets/img/zenitsu/zenitsu-create-module.png"
+              alt="Create module flow"
+            />
+            <figcaption class="case-caption">Create module: a guided flow that supported preview and reduced configuration mistakes.</figcaption>
+          </figure>
+
+          <h4 class="case-heading">Results</h4>
+          <p class="case-body">
+            UMUX score landed at <strong>64</strong>, which we treated as “acceptable with clear opportunities to improve.”
+            More importantly, sessions revealed repeatable breakdowns: places where users paused, re-read, or needed confirmation before proceeding.
+          </p>
+
+          <h4 class="case-heading">Key Findings</h4>
+          <ul class="case-findings">
+            <li>Reduce cognitive load on the homepage by removing low-value components.</li>
+            <li>Use tooltips intentionally for terminology and constraints, not as a substitute for clarity.</li>
+            <li>Support progressive disclosure: tutorials for new users, less guidance for experienced users.</li>
+            <li>Clarify backend roles and permissions to avoid misconfiguration.</li>
+            <li>Define Schema Editor capabilities explicitly (what it can/can’t do).</li>
+            <li>Use icons consistently in the Frontend step to reinforce meaning.</li>
+            <li>Make environment options in Deployment explicit and comparable.</li>
+            <li>Remove or defer non-actionable data in Status to reduce noise.</li>
+          </ul>
+
+          <h4 class="case-heading">What Changed After Testing</h4>
+          <p class="case-body">
+            Findings were translated into a prioritized improvement list for the next iteration. The emphasis was on reducing ambiguity
+            in high-impact steps (schema, roles, deployment), simplifying surfaces that users used as “home base,” and introducing
+            guidance that adapts to proficiency—so the product remains approachable without becoming noisy.
+          </p>
+
+          <h4 class="case-heading">Conclusion</h4>
+          <p class="case-body">
+            Zenitsu’s value came from making complex, multi-step application setup feel routine and reliable.
+            By validating the late-stage prototype with real internal users, we surfaced the specific points where confidence dropped—
+            and we had a clear roadmap to improve comprehension, reduce errors, and strengthen end-to-end flow before implementation.
+          </p>
+
+          <p class="case-body">
+          </p>
+        </div>
+
+        <!-- Prev / Next nav -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="inner__page-nav space-top mt-n1 mb-n1">
+              <a href="ibm-rebranding.html" class="nav-btn">
+                <i class="fa fa-arrow-left"></i>
+                <span>
+                  <span class="link-effect">
+                    <span class="effect-1">Previous Project</span>
+                    <span class="effect-1">Previous Project</span>
+                  </span>
+                </span>
+              </a>
+
+              <a href="headhunted.html" class="nav-btn">
+                <span>
+                  <span class="link-effect">
+                    <span class="effect-1">Next Project</span>
+                    <span class="effect-1">Next Project</span>
+                  </span>
+                </span>
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--==============================
+      Footer
+    ==============================-->
+    <footer class="footer-wrapper footer-layout9 overflow-hidden">
+      <div class="container">
+        <div class="widget-area space-top">
+          <div class="row justify-content-between">
+            <div class="col-md-6 col-xl-5 col-lg-6">
+              <div class="widget widget-about footer-widget">
+                <h4 class="widget_title">About Evelyn</h4>
+                <p class="about-text">
+                  I design clear, accessible, and scalable digital experiences —
+                  turning complex product problems into UI that feels simple,
+                  intentional, and ready to ship.
+                </p>
+
+                <div class="social-btn style3">
+                  <a
+                    href="https://www.linkedin.com/in/evelyn-ramsburgh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://www.behance.net/evelynramsburgh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Behance"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"><i class="fab fa-behance"></i></span>
+                      <span class="effect-1"><i class="fab fa-behance"></i></span>
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://buymeacoffee.com/evelynramsburgh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Buy Me a Coffee"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3 col-lg-4">
+              <div class="widget widget_nav_menu footer-widget">
+                <h3 class="widget_title">Links</h3>
+                <div class="menu-all-pages-container">
+                  <ul class="menu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/portfolio.html">Portfolio</a></li>
+                  <!--  <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/blog.html">Blog</a></li>-->
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/about.html#testimonials">Testimonials</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright-wrap">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-12">
+              <p>© <span id="year"></span> Evelyn Ramsburgh. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path
+          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+          style="
+            transition: stroke-dashoffset 10ms linear 0s;
+            stroke-dasharray: 307.919, 307.919;
+            stroke-dashoffset: 307.919;
+          "
+        ></path>
+      </svg>
+    </div>
+
+    <!-- JS -->
+    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/slick.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/js/jquery.counterup.min.js"></script>
+    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/js/isotope.pkgd.min.js"></script>
+    <script src="/assets/js/gsap.min.js"></script>
+
+    <script src="/assets/js/twinmax.js"></script>
+    <script src="/assets/js/imageRevealHover.js"></script>
+    <script src="/assets/js/jarallax.min.js"></script>
+    <script src="/assets/js/jquery.marquee.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/waypoints.js"></script>
+    <script src="/assets/js/wow.js"></script>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

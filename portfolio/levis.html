@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Levi’s — Promoter App (Design Sprint) | Evelyn Ramsburgh</title>
+
+    <meta
+      name="description"
+      content="UX/UI case study for a mobile app designed for Levi’s promoters during a five-day Design Sprint. I contributed as UI Designer, shaping an efficient, brand-aligned workflow from early flows and prototypes to high-fidelity screens and implementation handoff."
+    />
+    <meta
+      name="keywords"
+      content="Evelyn Ramsburgh, Product Designer, UX Designer, UI Designer, Levi's, Design Sprint, Mobile App, Field Sales, Promoters, Material Design, Prototyping, Usability Testing"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://evelynramsburgh.com/levis-promoter-app.html" />
+    <meta name="author" content="Evelyn Ramsburgh" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://evelynramsburgh.com/assets/img/og-cover.jpg" />
+    <meta property="og:url" content="https://evelynramsburgh.com/levis-promoter-app.html" />
+    <meta property="og:title" content="Levi’s — Promoter App (Design Sprint) | Evelyn Ramsburgh" />
+    <meta
+      property="og:description"
+      content="A five-day Design Sprint to prototype and validate a mobile workflow for Levi’s promoters—focused on speed, clarity, and brand alignment."
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="/assets/css/slick.min.css" />
+    <link rel="stylesheet" href="/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="/assets/css/imageRevealHover.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- Page helpers (drop-in). Move to style.css if you prefer. -->
+    <style>
+      .case-layout { max-width: 980px; }
+
+      .case-title { max-width: 720px; margin: 0 auto; text-align: left; }
+      .case-lead {
+        max-width: 720px;
+        margin: 14px auto 0;
+        text-align: left;
+        font-size: 20px;
+        line-height: 1.7;
+      }
+
+      .case-article { max-width: 720px; margin: 0 auto; }
+
+      .case-body {
+        font-size: 18.5px;
+        line-height: 1.75;
+        letter-spacing: 0.01em;
+        color: rgba(36,36,36,0.92);
+        margin-bottom: 1.1em;
+      }
+
+      .case-heading {
+        margin-top: 44px;
+        margin-bottom: 12px;
+        font-weight: 700;
+      }
+
+      .case-highlights { max-width: 720px; margin: 18px auto 0; }
+      .case-highlights-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        padding: 18px 0 6px;
+        border-top: 1px solid rgba(0,0,0,0.08);
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+      }
+      .case-highlight .label {
+        display: block;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(36,36,36,0.55);
+        margin-bottom: 6px;
+      }
+      .case-highlight .value {
+        display: block;
+        font-size: 15px;
+        line-height: 1.4;
+        color: rgba(36,36,36,0.95);
+        font-weight: 600;
+      }
+
+      .project-inner-thumb {
+        max-width: 920px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .case-caption {
+        max-width: 720px;
+        margin: 10px auto 0;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.5;
+        color: rgba(36,36,36,0.68);
+      }
+
+      .case-bullets {
+        max-width: 720px;
+        margin: 0 auto 28px;
+        padding-left: 1.2rem;
+        list-style: disc;
+      }
+      .case-bullets li { list-style: disc; margin-bottom: 0.45rem; }
+
+      .case-callout {
+        max-width: 720px;
+        margin: 24px auto 0;
+        padding: 16px 18px;
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 14px;
+        background: rgba(0,0,0,0.02);
+      }
+
+      @media (max-width: 992px) {
+        .case-highlights-grid { grid-template-columns: 1fr; gap: 12px; padding: 16px 0 10px; }
+      }
+      @media (max-width: 768px) {
+        .case-body { font-size: 17px; line-height: 1.7; }
+        .case-lead { font-size: 18px; }
+      }
+
+      .figure-images {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.figure-images img {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-wrapper">
+      <div class="mobile-menu-area">
+        <button class="menu-toggle"><i class="fas fa-times"></i></button>
+
+        <div class="mobile-logo">
+          <a href="index.html"><img src="/assets/img/logo.svg" alt="Evelyn Ramsburgh" /></a>
+        </div>
+
+        <div class="mobile-menu">
+          <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+           <!-- <li><a href="resources.html">Resources</a></li>
+            <li><a href="blog.html">Blog</a></li>-->
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="social-btn style3">
+          <a
+            href="https://www.linkedin.com/in/evelyn-ramsburgh/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+            </span>
+          </a>
+
+          <a
+            href="https://www.behance.net/evelynramsburgh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Behance"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fab fa-behance"></i></span>
+              <span class="effect-1"><i class="fab fa-behance"></i></span>
+            </span>
+          </a>
+
+          <a
+            href="https://buymeacoffee.com/evelynramsburgh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Buy Me a Coffee"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="nav-header header-layout1">
+      <div class="sticky-wrapper">
+        <div class="menu-area">
+          <div class="container-fluid">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-auto">
+                <div class="header-logo">
+                  <a href="/index.html"><img src="/assets/img/logo.svg" alt="logo" /></a>
+                </div>
+              </div>
+
+              <div class="col-auto ms-auto">
+                <nav class="main-menu d-none d-lg-inline-block">
+                  <ul>
+                    <li class="active">
+                      <a href="/index.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Home</span>
+                          <span class="effect-1">Home</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/about.html">
+                        <span class="link-effect">
+                          <span class="effect-1">About</span>
+                          <span class="effect-1">About</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/portfolio.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Portfolio</span>
+                          <span class="effect-1">Portfolio</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                  <!--    <a href="/resources.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Resources</span>
+                          <span class="effect-1">Resources</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/blog.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Blog</span>
+                          <span class="effect-1">Blog</span>
+                        </span>
+                      </a>
+                    </li>-->
+                    <li>
+                      <a href="/contact.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Contact</span>
+                          <span class="effect-1">Contact</span>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <div class="navbar-right d-inline-flex d-lg-none">
+                  <button type="button" class="menu-toggle sidebar-btn">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcumb-wrapper style2 bg-smoke">
+      <div class="container-fluid">
+        <div class="breadcumb-content">
+          <ul class="breadcumb-menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/portfolio.html">Portfolio</a></li>
+            <li>Levi’s — Promoter App</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Study -->
+    <div class="project-details-page-area space">
+      <div class="container case-layout">
+        <!-- Title + Lead -->
+        <div class="row">
+          <div class="col-12">
+            <div class="title-area mb-20">
+              <h1 class="sec-title case-title">Levi’s — Mobile Workflow for Promoters (5-Day Design Sprint)</h1>
+              <p class="case-lead case-body">
+                I designed the UI for a mobile application to support Levi’s in-store promoters during a five-day Design Sprint.
+                The sprint compressed discovery, ideation, prototyping, and validation into one week—helping the team align quickly on a
+                practical, brand-consistent workflow that could be implemented with confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO IMAGE (replace) -->
+        <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+          <img class="w-100" src="/assets/img/levis/levismockup.jpg" alt="Levi’s promoter app concept overview" />
+          <figcaption class="case-caption">
+            Sprint output: a validated mobile flow focused on speed, clarity, and consistent brand expression.
+          </figcaption>
+        </figure>
+
+        <!-- Highlights -->
+        <div class="case-highlights">
+          <div class="case-highlights-grid">
+            <div class="case-highlight">
+              <span class="label">Category</span>
+              <span class="value">Retail · Mobile UX</span>
+            </div>
+            <div class="case-highlight">
+              <span class="label">Role</span>
+              <span class="value">UI Designer</span>
+            </div>
+            <div class="case-highlight">
+              <span class="label">Method</span>
+              <span class="value">5-Day Design Sprint</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article -->
+        <div class="case-article">
+          <h4 class="case-heading mt-0">About</h4>
+          <p class="case-body">
+            Levi’s promoters operate in a fast-paced retail environment: they guide customers, answer fit and product questions,
+            and often need to switch context quickly. This project explored how a lightweight mobile tool could reduce friction in
+            day-to-day promoter work—without distracting from the in-person customer experience.
+          </p>
+
+          <p class="case-body">
+            I partnered with Smarttie (a development agency I collaborate with as a freelance designer) as the UI Designer in the sprint team.
+            My focus was translating the sprint’s decisions into a clear, implementable interface: screens, components, states, and handoff assets.
+          </p>
+
+          <h4 class="case-heading">Objective</h4>
+          <p class="case-body">
+            Design a promoter-first mobile experience that improves speed and confidence in-store—while staying aligned with Levi’s visual identity
+            and supporting a smooth development handoff.
+          </p>
+
+          <h4 class="case-heading">Goals</h4>
+          <ul class="case-bullets">
+            <li>Create an intuitive workflow that supports promoters under time pressure.</li>
+            <li>Make key information scannable and actionable during customer interactions.</li>
+            <li>Reflect Levi’s brand through typography, tone, and visual consistency.</li>
+            <li>Deliver UI that is implementation-ready, including states and interaction guidance.</li>
+          </ul>
+
+          <div class="case-callout">
+            <p class="case-body" style="margin-bottom: 0;">
+              <strong>Design Sprint, in practice:</strong> a five-day framework to align on a problem, prototype a solution,
+              and validate it with users—reducing risk before committing to build.
+            </p>
+          </div>
+
+               <!-- HERO IMAGE (replace) -->
+        <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+          <img class="w-100" src="/assets/img/levis/designsprint-whats.jpg" alt="Design sprint framework" />
+          <figcaption class="case-caption">
+Design Sprint framework          </figcaption>
+        </figure>
+
+          <h4 class="case-heading">Process</h4>
+          <p class="case-body">
+            The sprint structure gave the team a shared pace and a concrete set of decision points.
+            My work followed the sprint rhythm: translating outputs into flows, tightening UI clarity, and preparing assets for testing and handoff.
+          </p>
+
+          <h4 class="case-heading">1) Understand & Define</h4>
+          <ul class="case-bullets">
+            <li>Mapped promoter activities, common questions, and operational constraints in-store.</li>
+            <li>Identified friction points that slow promoters down or add cognitive load mid-conversation.</li>
+            <li>Defined the minimum set of features needed to support a complete workflow.</li>
+          </ul>
+
+          <!-- IMAGE: Early flows / wireframes (replace) -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img class="w-100" src="/assets/img/levis/Promotor.jpeg" alt="Early wireframes and workflow mapping" style="max-width:300px; width:100%; height:auto; display:block; margin:0 auto;" />
+            <figcaption class="case-caption">
+              Early flows and wireframes used to align on scope and the “in-store speed” requirement.
+            </figcaption>
+          </figure>
+
+          <h4 class="case-heading">2) Ideate</h4>
+          <p class="case-body">
+            We generated and compared multiple interaction approaches—prioritizing speed of access, minimal taps, and a clear information hierarchy.
+            Concepts were evaluated against two constraints: promoters need to stay present with customers, and the UI must remain legible at a glance.
+          </p>
+
+          <!-- IMAGE: Sketches / ideation (replace) -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img class="w-100" src="/assets/img/levis/interaccion.png" alt="Ideation sketches and interaction concepts" />
+            <figcaption class="case-caption">
+              Ideation artifacts: exploring interaction patterns optimized for quick, real-world retail use.
+            </figcaption>
+          </figure>
+
+          <h4 class="case-heading">3) Prototype</h4>
+          <p class="case-body">
+            We moved quickly into a low-fidelity prototype to validate structure and navigation before committing to visual detail.
+            To accelerate build feasibility and reduce ambiguity in components and patterns, we aligned on
+            <strong>Material Design</strong> as the underlying UI framework.
+          </p>
+
+          <!-- IMAGE: Prototype screens (replace) -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img class="w-100" src="/assets/img/levis/font-colors.png" alt="Material Design and Typography used." />
+            <figcaption class="case-caption">
+              Material Design and Typography used.
+            </figcaption>
+          </figure>
+
+          <h4 class="case-heading">4) Test</h4>
+          <p class="case-body">
+            We conducted usability sessions with Levi’s promoters and asked participants to think aloud as they navigated the prototype.
+            Feedback focused on terminology, task completion confidence, and whether each screen made the next step obvious.
+            Findings were translated into immediate iteration opportunities—especially around navigation clarity and content hierarchy.
+          </p>
+
+                  <!-- IMAGE: High-fidelity / all screens (replace) -->
+<figure class="project-inner-thumb wow img-custom-anim-top">
+  <div class="figure-images">
+    <img src="/assets/img/levis/01-Login-1.png" alt="High-fidelity UI screen 1">
+    <img src="/assets/img/levis/14-Incidents-1.png" alt="High-fidelity UI screen 2">
+    <img src="/assets/img/levis/18-Profile-1.png" alt="High-fidelity UI screen 3">
+  </div>
+  <figcaption class="case-caption">High-fidelity UI screens.</figcaption>
+</figure>
+
+
+          <h4 class="case-heading">5) Design & Implementation</h4>
+          <p class="case-body">
+            After validation, I produced high-fidelity UI that balanced Levi’s brand expression with the structure of Material components.
+            I also collaborated closely with Smarttie’s developers to support a smooth handoff—providing assets, specs, and interaction notes
+            to reduce rework and interpretation gaps.
+          </p>
+
+                    <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img class="w-100" src="/assets/img/levis/levis-allscreens.png" alt="All screens of the Levi’s promoter app" />
+            <figcaption class="case-caption">High-fidelity UI set prepared for implementation and stakeholder review.</figcaption>
+          </figure>
+
+          <h4 class="case-heading">Results</h4>
+          <p class="case-body">
+            The sprint produced a validated mobile workflow that helped promoters complete key tasks faster and with less friction.
+            The final UI prioritized legibility, predictable navigation, and brand consistency—resulting in a cohesive experience that supports
+            both promoter efficiency and customer-facing confidence.
+          </p>
+
+          <h4 class="case-heading">Key Learnings</h4>
+          <ul class="case-bullets">
+            <li>Time-boxed decision points prevent over-design and keep teams aligned on outcomes.</li>
+            <li>Testing early—even with a simple prototype—quickly reveals terminology and hierarchy issues.</li>
+            <li>Aligning on a component system (Material Design) accelerates feasibility and clarifies implementation.</li>
+            <li>Close designer–developer collaboration reduces ambiguity and increases build quality under sprint timelines.</li>
+          </ul>
+
+          <p class="case-body">
+          </p>
+        </div>
+
+        <!-- Prev / Next nav -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="inner__page-nav space-top mt-n1 mb-n1">
+              <a href="datometry.html" class="nav-btn">
+                <i class="fa fa-arrow-left"></i>
+                <span>
+                  <span class="link-effect">
+                    <span class="effect-1">Previous Project</span>
+                    <span class="effect-1">Previous Project</span>
+                  </span>
+                </span>
+              </a>
+
+              <a href="digitt.html" class="nav-btn">
+                <span>
+                  <span class="link-effect">
+                    <span class="effect-1">Next Project</span>
+                    <span class="effect-1">Next Projectk</span>
+                  </span>
+                </span>
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-wrapper footer-layout9 overflow-hidden">
+      <div class="container">
+        <div class="widget-area space-top">
+          <div class="row justify-content-between">
+            <div class="col-md-6 col-xl-5 col-lg-6">
+              <div class="widget widget-about footer-widget">
+                <h4 class="widget_title">About Evelyn</h4>
+                <p class="about-text">
+                  I design clear, accessible, and scalable digital experiences —
+                  turning complex product problems into UI that feels simple,
+                  intentional, and ready to ship.
+                </p>
+
+                <div class="social-btn style3">
+                  <a
+                    href="https://www.linkedin.com/in/evelyn-ramsburgh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://www.behance.net/evelynramsburgh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Behance"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"><i class="fab fa-behance"></i></span>
+                      <span class="effect-1"><i class="fab fa-behance"></i></span>
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://buymeacoffee.com/evelynramsburgh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Buy Me a Coffee"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3 col-lg-4">
+              <div class="widget widget_nav_menu footer-widget">
+                <h3 class="widget_title">Links</h3>
+                <div class="menu-all-pages-container">
+                  <ul class="menu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/portfolio.html">Portfolio</a></li>
+                  <!--  <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/blog.html">Blog</a></li>-->
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/about.html#testimonials">Testimonials</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="container">
+        <div class="copyright-wrap">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-12">
+              <p>© <span id="year"></span> Evelyn Ramsburgh. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path
+          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+          style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"
+        ></path>
+      </svg>
+    </div>
+
+    <!-- JS -->
+    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/slick.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/js/jquery.counterup.min.js"></script>
+    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/js/isotope.pkgd.min.js"></script>
+    <script src="/assets/js/gsap.min.js"></script>
+
+    <script src="/assets/js/twinmax.js"></script>
+    <script src="/assets/js/imageRevealHover.js"></script>
+    <script src="/assets/js/jarallax.min.js"></script>
+    <script src="/assets/js/jquery.marquee.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/waypoints.js"></script>
+    <script src="/assets/js/wow.js"></script>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>IBM Seller Incentives — UX/UI Modernization | Evelyn Ramsburgh</title>
+
+    <meta
+      name="description"
+      content="Case study: Modernizing IBM Seller Incentives (formerly FMS) from Northstar to Carbon. UX debt prioritization, heuristic evaluation, navigation improvements, and measurable NPS impact (2020–2023)."
+    />
+    <meta
+      name="keywords"
+      content="Evelyn Ramsburgh, IBM, Seller Incentives, FMS, UX case study, Product Design, UX UI, Carbon Design System, Heuristic Evaluation, NPS, Enterprise UX"
+    />
+    <meta name="robots" content="index,follow" />
+    <link
+      rel="canonical"
+      href="https://evelynramsburgh.com/ibm-seller-incentives.html"
+    />
+    <meta name="author" content="Evelyn Ramsburgh" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://evelynramsburgh.com/assets/img/og-cover.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://evelynramsburgh.com/ibm-seller-incentives.html"
+    />
+    <meta
+      property="og:title"
+      content="IBM Seller Incentives — UX/UI Modernization | Evelyn Ramsburgh"
+    />
+    <meta
+      property="og:description"
+      content="A multi-year modernization effort (2020–2023): migrating a legacy enterprise platform from Northstar to Carbon, addressing navigation pain points, and improving NPS through UX debt reduction."
+    />
+
+    <!-- Mobile Specific Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicons/favicon.png"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="assets/img/favicons/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="/assets/css/slick.min.css" />
+    <link rel="stylesheet" href="/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="/assets/css/imageRevealHover.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body>
+    <!--==============================
+Mobile Menu
+============================== -->
+    <div class="mobile-menu-wrapper">
+      <div class="mobile-menu-area">
+        <button class="menu-toggle"><i class="fas fa-times"></i></button>
+
+        <div class="mobile-logo">
+          <a href="index.html"
+            ><img src="/assets/img/logo.svg" alt="Evelyn Ramsburgh"
+          /></a>
+        </div>
+
+        <div class="mobile-menu">
+          <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+           <!-- <li><a href="resources.html">Resources</a></li>
+            <li><a href="blog.html">Blog</a></li>-->
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="social-btn style3">
+          <a
+            href="https://www.linkedin.com/in/evelyn-ramsburgh/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+            </span>
+          </a>
+
+          <a
+            href="https://www.behance.net/evelynramsburgh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Behance"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fab fa-behance"></i></span>
+              <span class="effect-1"><i class="fab fa-behance"></i></span>
+            </span>
+          </a>
+
+          <a
+            href="https://buymeacoffee.com/evelynramsburgh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Buy Me a Coffee"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--==============================
+Header Area
+==============================-->
+    <header class="nav-header header-layout1">
+      <div class="sticky-wrapper">
+        <div class="menu-area">
+          <div class="container-fluid">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-auto">
+                <div class="header-logo">
+                  <a href="/index.html">
+                    <img src="/assets/img/logo.svg" alt="logo" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-auto ms-auto">
+                <nav class="main-menu d-none d-lg-inline-block">
+                  <ul>
+                    <li class="active">
+                      <a href="/index.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Home</span>
+                          <span class="effect-1">Home</span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="/about.html">
+                        <span class="link-effect">
+                          <span class="effect-1">About</span>
+                          <span class="effect-1">About</span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="/portfolio.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Portfolio</span>
+                          <span class="effect-1">Portfolio</span>
+                        </span>
+                      </a>
+                    </li>
+<!--
+                    <li>
+                      <a href="/resources.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Resources</span>
+                          <span class="effect-1">Resources</span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="/blog.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Blog</span>
+                          <span class="effect-1">Blog</span>
+                        </span>
+                      </a>
+                    </li>
+                  -->
+                    <li>
+                      <a href="/contact.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Contact</span>
+                          <span class="effect-1">Contact</span>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <div class="navbar-right d-inline-flex d-lg-none">
+                  <button type="button" class="menu-toggle sidebar-btn">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--==============================
+Breadcumb
+============================== -->
+    <div class="breadcumb-wrapper style2 bg-smoke">
+      <div class="container-fluid">
+        <div class="breadcumb-content">
+          <ul class="breadcumb-menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/portfolio.html">Portfolio</a></li>
+            <li>IBM Seller Incentives</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--==============================
+Project Details
+============================== -->
+    <div class="project-details-page-area space">
+      <div class="container case-layout">
+        <!-- Title + Lead -->
+        <div class="row">
+          <div class="col-12">
+            <div class="title-area mb-20">
+              <p class="case-body" style="margin-bottom: 8px">Case study #1</p>
+              <h1 class="sec-title case-title">IBM Seller Incentives</h1>
+              <p class="case-body case-lead">
+                A multi-year modernization of IBM Seller Incentives (formerly
+                the Field Management System, FMS): migrating legacy UX from
+                Northstar to Carbon, prioritizing UX debt, and improving
+                navigation and satisfaction signals across a global sales
+                organization (2020–2023).
+              </p>
+
+              <!-- Audience chips (as shown in your slides) -->
+              <div
+                class="d-flex flex-wrap gap-2"
+                style="
+                  padding-top: 10px;
+                  border-top: 1px solid rgba(0, 0, 0, 0.12);
+                  margin-top: 18px;
+                "
+              >
+              
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO IMAGE (replace src with your final exported slide/image) -->
+        <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+          <img
+            class="w-100"
+            src="/assets/img/ibm-seller-incentives/hero.png"
+            alt="IBM Seller Incentives case study cover"
+          />
+          <figcaption class="case-caption">
+            IBM Seller Incentives: a key internal platform supporting incentive
+            planning, tracking, and performance for global sales teams.
+          </figcaption>
+        </figure>
+
+        <!-- Highlights -->
+        <div class="case-highlights">
+          <div class="case-highlights-grid">
+            <div class="case-highlight">
+              <span class="label">Context</span>
+              <span class="value">Enterprise · Internal Platform</span>
+            </div>
+            <div class="case-highlight">
+              <span class="label">Role</span>
+              <span class="value">Senior Product Designer (UX/UI)</span>
+            </div>
+            <div class="case-highlight">
+              <span class="label">Team</span>
+              <span class="value">Multi-disciplinary UX + Product + Eng</span>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- Article content -->
+        <div class="case-article">
+          <h4 class="case-heading mt-0">Overview</h4>
+          <p class="case-body">
+            IBM Seller Incentives is a core component of the IBM Global Sales
+            Incentives (GSI) ecosystem. The platform helps sellers and sales
+            managers understand incentive structures, track progress, and make
+            decisions aligned with sales goals—at enterprise scale.
+          </p>
+          <p class="case-body">
+            When I joined, the experience carried meaningful UX debt from years
+            of iterative additions on a legacy architecture. At the same time,
+            IBM was moving product surfaces toward Carbon, raising the bar for
+            consistency, accessibility, and modern interaction patterns.
+          </p>
+
+          <h4 class="case-heading">My Role</h4>
+          <p class="case-body">
+            I worked as part of a multi-disciplinary UX team supporting product
+            owners and engineering. My focus was pragmatic: identify the highest
+            impact UX debt, translate improvements into Carbon-aligned patterns,
+            and partner with developers to ship changes that were feasible within
+            a constrained legacy codebase.
+          </p>
+
+           <ul class="case-bullets">
+            <li>
+              Led UX/UI improvements during the transition from Northstar to
+              Carbon.
+            </li>
+            <li>
+              Partnered with Product Owners to clarify UX principles, scope, and
+              decision criteria.
+            </li>
+            <li>
+              Worked closely with engineering to align on constraints and ship
+              incremental wins.
+            </li>
+          </ul>
+
+          <h4 class="case-heading">The Challenge</h4>
+          <p class="case-body">
+            The primary challenge was improving usability for sellers and sales
+            managers while modernizing the UI. The platform’s legacy
+            architecture made “perfect” redesigns unrealistic; the work demanded
+            thoughtful prioritization, strong collaboration, and consistent
+            delivery of smaller improvements that compounded over time.
+          </p>
+
+          <!-- Challenge image -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img
+              class="w-100"
+              src="/assets/img/ibm-seller-incentives/challenge.png"
+              alt="Challenge summary slide: UX and UI improvements while migrating from Northstar to Carbon"
+            />
+            <figcaption class="case-caption">
+              The modernization effort balanced brand/system compliance with the
+              realities of legacy implementation.
+            </figcaption>
+          </figure>
+
+          <h4 class="case-heading">Legacy Context</h4>
+          <p class="case-body">
+            The platform was historically known as FMS (Field Management System)
+            and accumulated navigation and information architecture issues. Some
+            patterns were inconsistent, terminology drifted across areas, and
+            key tasks required more effort than necessary—especially for
+            infrequent users.
+          </p>
+
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img
+              class="w-100"
+              src="/assets/img/ibm-seller-incentives/legacy-fms.png"
+              alt="Legacy IBM FMS interface screenshot"
+            />
+            <figcaption class="case-caption">
+              A snapshot of the legacy FMS interface that influenced the
+              prioritization of UX debt and Carbon adoption.
+            </figcaption>
+          </figure>
+
+          <h4 class="case-heading">Signal: NPS Feedback</h4>
+          <p class="case-body">
+            A recurring theme from users was that navigation felt “painful.” I
+            used this feedback as a starting point to focus our evaluation on
+            discoverability, wayfinding, and cognitive load rather than purely
+            visual refresh.
+          </p>
+
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img
+              class="w-100"
+              src="/assets/img/ibm-seller-incentives/nps-feedback.png"
+              alt="NPS scores and feedback highlighting painful navigation"
+              style="max-width: 900px; display: block; margin: 0 auto"
+            />
+            <figcaption class="case-caption">
+              User feedback helped narrow the problem: not “make it prettier,”
+              but “make it easier to move and understand.”
+            </figcaption>
+          </figure>
+
+          <h4 class="case-heading">Method: Heuristic Evaluation</h4>
+          <p class="case-body">
+            To quickly identify navigation issues across the product, I ran a
+            heuristic evaluation—reviewing key flows against established
+            usability principles. The output was not a “report for the shelf”;
+            it became a shared backlog of actionable UX debt items we could
+            prioritize and ship.
+          </p>
+
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img
+              class="w-100"
+              src="/assets/img/ibm-seller-incentives/heuristic.png"
+              alt="Heuristic Evaluation slide describing approach"
+              style="max-width: 900px; display: block; margin: 0 auto"
+            />
+            <figcaption class="case-caption">
+              Heuristics gave us a fast, defensible way to translate qualitative
+              complaints into concrete improvements.
+            </figcaption>
+          </figure>
+
+          <h4 class="case-heading">Prioritization: Identifying UX Debt</h4>
+          <p class="case-body">
+            The backlog was extensive, so the work started with triage. I grouped
+            findings into a small set of categories that were easy for product
+            and engineering to reason about, and used them to drive
+            prioritization conversations during planning.
+          </p>
+
+  <ul class="case-bullets">            <li>User interface inconsistencies and legacy components</li>
+            <li>Content, terminology, and messaging clarity</li>
+            <li>Information architecture and navigation structure</li>
+            <li>Accessibility gaps and contrast/legibility issues</li>
+            <li>Customer journey consistency across sections</li>
+            <li>Omnichannel continuity where applicable</li>
+          </ul>
+
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img
+              class="w-100"
+              src="/assets/img/ibm-seller-incentives/ux-debt.png"
+              alt="Identifying UX debt categories slide"
+              style="max-width: 900px; display: block; margin: 0 auto"
+            />
+            <figcaption class="case-caption">
+              A shared categorization system made prioritization discussions
+              faster and more consistent.
+            </figcaption>
+          </figure>
+
+          <h4 class="case-heading">Strategy: Ship the Highest-Impact Improvements</h4>
+          <p class="case-body">
+            Given the legacy architecture, the strategy was incremental:
+            prioritize changes that reduced friction for the most common tasks,
+            improved wayfinding, and aligned UI patterns to Carbon—without
+            destabilizing core workflows.
+          </p>
+
+            <ul class="case-bullets">
+            <li>
+              Modernize navigation patterns and page structure while preserving
+              user recognition.
+            </li>
+            <li>
+              Reduce cognitive load by removing redundant content and clarifying
+              labels.
+            </li>
+            <li>
+              Align components to Carbon to improve consistency and
+              accessibility.
+            </li>
+            <li>
+              Partner with engineering early to confirm feasibility before
+              investing in high-fidelity UI.
+            </li>
+          </ul>
+
+          <h4 class="case-heading">Impact</h4>
+          <p class="case-body">
+            Over time, the work contributed to measurable sentiment improvement.
+            While enterprise platforms rarely transform overnight, consistent
+            UX debt reduction can meaningfully change how users perceive the
+            product—especially around navigation and speed.
+          </p>
+
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img
+              class="w-100"
+              src="/assets/img/ibm-seller-incentives/impact.png"
+              alt="Impact slide with NPS improvement and outcomes"
+            />
+            <figcaption class="case-caption">
+              Impact summary from internal reporting: improved NPS trend,
+              smoother transition to cloud surfaces, and reduced navigation
+              friction.
+            </figcaption>
+          </figure>
+
+           <ul class="case-bullets">
+            <li>
+              Achieved steady month-over-month improvement in Net Promoter Score
+              (NPS), increasing by approximately 5–7 points per month during key
+              periods.
+            </li>
+            <li>
+              Helped shift perception from one of the lowest-ranked experiences
+              (initially around -10 to -15 NPS) toward a more positively
+              received product (reaching ~10–20 NPS over time).
+            </li>
+            <li>
+              Enabled a smoother UX transition as the platform moved toward
+              modern cloud-aligned patterns.
+            </li>
+            <li>
+              Improved application speed perceptions and addressed recurring
+              navigation issues through iterative releases.
+            </li>
+          </ul>
+
+          <h4 class="case-heading">What I’d Highlight to a Hiring Team</h4>
+          <p class="case-body">
+            This project is less about a single “hero redesign” and more about
+            operating effectively inside real constraints: legacy systems,
+            enterprise governance, and long-lived backlogs. The value was in
+            consistently making the product easier to use—using defensible
+            methods, clear prioritization, and strong collaboration.
+          </p>
+
+            <ul class="case-bullets">
+            <li>
+              Translating noisy feedback into actionable, prioritized UX work.
+            </li>
+            <li>
+              Driving alignment between design intent and engineering reality.
+            </li>
+            <li>
+              Improving consistency and accessibility through design system
+              adoption.
+            </li>
+            <li>
+              Delivering incremental wins that compound into measurable impact.
+            </li>
+          </ul>
+
+          <h4 class="case-heading">Final Note</h4>
+          <p class="case-body">
+            Due to IBM confidentiality, this case study focuses on process,
+            decision-making, and outcomes rather than detailed internal screens.
+            Visuals shown are representative slides used to communicate the work
+            internally.
+          </p>
+        </div>
+
+        <!-- Prev / Next nav -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="inner__page-nav space-top mt-n1 mb-n1">
+              <a href="pillhuancalli.html" class="nav-btn">
+                <i class="fa fa-arrow-left"></i>
+                <span>
+                  <span class="link-effect">
+                    <span class="effect-1">Previous Project</span>
+                    <span class="effect-1">Previous Project</span>
+                  </span>
+                </span>
+              </a>
+
+              <a href="datometry.html" class="nav-btn">
+                <span>
+                  <span class="link-effect">
+                    <span class="effect-1">Next Project</span>
+                    <span class="effect-1">Next Project</span>
+                  </span>
+                </span>
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--==============================
+Footer Area
+==============================-->
+    <footer class="footer-wrapper footer-layout9 overflow-hidden">
+      <div class="container">
+        <div class="widget-area space-top">
+          <div class="row justify-content-between">
+            <div class="col-md-6 col-xl-5 col-lg-6">
+              <div class="widget widget-about footer-widget">
+                <h4 class="widget_title">About Evelyn</h4>
+                <p class="about-text">
+                  I design clear, accessible, and scalable digital experiences —
+                  turning complex product problems into UI that feels simple,
+                  intentional, and ready to ship.
+                </p>
+
+                <div class="social-btn style3">
+                  <a
+                    href="https://www.linkedin.com/in/evelyn-ramsburgh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"
+                        ><i class="fab fa-linkedin-in"></i
+                      ></span>
+                      <span class="effect-1"
+                        ><i class="fab fa-linkedin-in"></i
+                      ></span>
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://www.behance.net/evelynramsburgh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Behance"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"
+                        ><i class="fab fa-behance"></i
+                      ></span>
+                      <span class="effect-1"
+                        ><i class="fab fa-behance"></i
+                      ></span>
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://buymeacoffee.com/evelynramsburgh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Buy Me a Coffee"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"
+                        ><i class="fas fa-mug-hot"></i
+                      ></span>
+                      <span class="effect-1"
+                        ><i class="fas fa-mug-hot"></i
+                      ></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3 col-lg-4">
+              <div class="widget widget_nav_menu footer-widget">
+                <h3 class="widget_title">Links</h3>
+                <div class="menu-all-pages-container">
+                  <ul class="menu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/portfolio.html">Portfolio</a></li>
+                  <!--  <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/blog.html">Blog</a></li>-->
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/about.html#testimonials">Testimonials</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright-wrap">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-12">
+              <p>
+                © <span id="year"></span> Evelyn Ramsburgh. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path
+          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+          style="
+            transition: stroke-dashoffset 10ms linear 0s;
+            stroke-dasharray: 307.919, 307.919;
+            stroke-dashoffset: 307.919;
+          "
+        ></path>
+      </svg>
+    </div>
+
+    <!-- JS -->
+    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/slick.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/js/jquery.counterup.min.js"></script>
+    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/js/isotope.pkgd.min.js"></script>
+    <script src="/assets/js/gsap.min.js"></script>
+
+    <script src="/assets/js/twinmax.js"></script>
+    <script src="/assets/js/imageRevealHover.js"></script>
+    <script src="/assets/js/jarallax.min.js"></script>
+    <script src="/assets/js/jquery.marquee.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/waypoints.js"></script>
+    <script src="/assets/js/wow.js"></script>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

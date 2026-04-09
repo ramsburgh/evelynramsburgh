@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Digitt — Digital Signature & Debt Reduction Flows | Evelyn Ramsburgh</title>
+
+    <meta
+      name="description"
+      content="UX/UI case study for Digitt, a platform that helps users reduce credit card debt through lower interest rates. I supported the early product with end-to-end flow design—especially around the digital signature process—focusing on clarity, trust, and accessibility improvements."
+    />
+    <meta
+      name="keywords"
+      content="Evelyn Ramsburgh, Product Designer, UX Designer, UI Designer, Digitt, Fintech, Debt Consolidation, Digital Signature, Web UX, Flows, Accessibility"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://evelynramsburgh.com/digitt-digital-signature.html" />
+    <meta name="author" content="Evelyn Ramsburgh" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://evelynramsburgh.com/assets/img/og-cover.jpg" />
+    <meta property="og:url" content="https://evelynramsburgh.com/digitt-digital-signature.html" />
+    <meta property="og:title" content="Digitt — Digital Signature & Debt Reduction Flows | Evelyn Ramsburgh" />
+    <meta
+      property="og:description"
+      content="Designing early-stage fintech flows with a focus on clarity, user confidence, and accessibility—including a key digital signature experience."
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="/assets/css/slick.min.css" />
+    <link rel="stylesheet" href="/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="/assets/css/imageRevealHover.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- Page helpers (drop-in). Move to style.css if you prefer. -->
+    <style>
+      .case-layout { max-width: 980px; }
+
+      .case-title { max-width: 720px; margin: 0 auto; text-align: left; }
+      .case-lead {
+        max-width: 720px;
+        margin: 14px auto 0;
+        text-align: left;
+        font-size: 20px;
+        line-height: 1.7;
+      }
+
+      .case-article { max-width: 720px; margin: 0 auto; }
+
+      .case-body {
+        font-size: 18.5px;
+        line-height: 1.75;
+        letter-spacing: 0.01em;
+        color: rgba(36,36,36,0.92);
+        margin-bottom: 1.1em;
+      }
+
+      .case-heading {
+        margin-top: 44px;
+        margin-bottom: 12px;
+        font-weight: 700;
+      }
+
+      .project-inner-thumb {
+        max-width: 920px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .case-caption {
+        max-width: 720px;
+        margin: 10px auto 0;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.5;
+        color: rgba(36,36,36,0.68);
+      }
+
+      .case-highlights { max-width: 720px; margin: 18px auto 0; }
+      .case-highlights-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        padding: 18px 0 6px;
+        border-top: 1px solid rgba(0,0,0,0.08);
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+      }
+      .case-highlight .label {
+        display: block;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(36,36,36,0.55);
+        margin-bottom: 6px;
+      }
+      .case-highlight .value {
+        display: block;
+        font-size: 15px;
+        line-height: 1.4;
+        color: rgba(36,36,36,0.95);
+        font-weight: 600;
+      }
+
+      .case-bullets {
+        max-width: 720px;
+        margin: 0 auto 28px;
+        padding-left: 1.2rem;
+        list-style: disc;
+      }
+      .case-bullets li { list-style: disc; margin-bottom: 0.45rem; }
+
+      .case-callout {
+        max-width: 720px;
+        margin: 22px auto 0;
+        padding: 16px 18px;
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 14px;
+        background: rgba(0,0,0,0.02);
+      }
+      .case-callout p { margin: 0; }
+
+      @media (max-width: 992px) {
+        .case-highlights-grid { grid-template-columns: 1fr; gap: 12px; padding: 16px 0 10px; }
+      }
+      @media (max-width: 768px) {
+        .case-body { font-size: 17px; line-height: 1.7; }
+        .case-lead { font-size: 18px; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-wrapper">
+      <div class="mobile-menu-area">
+        <button class="menu-toggle"><i class="fas fa-times"></i></button>
+
+        <div class="mobile-logo">
+          <a href="index.html"><img src="/assets/img/logo.svg" alt="Evelyn Ramsburgh" /></a>
+        </div>
+
+        <div class="mobile-menu">
+          <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+           <!-- <li><a href="resources.html">Resources</a></li>
+            <li><a href="blog.html">Blog</a></li>-->
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="social-btn style3">
+          <a
+            href="https://www.linkedin.com/in/evelyn-ramsburgh/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+            </span>
+          </a>
+
+          <a
+            href="https://www.behance.net/evelynramsburgh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Behance"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fab fa-behance"></i></span>
+              <span class="effect-1"><i class="fab fa-behance"></i></span>
+            </span>
+          </a>
+
+          <a
+            href="https://buymeacoffee.com/evelynramsburgh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Buy Me a Coffee"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="nav-header header-layout1">
+      <div class="sticky-wrapper">
+        <div class="menu-area">
+          <div class="container-fluid">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-auto">
+                <div class="header-logo">
+                  <a href="/index.html"><img src="/assets/img/logo.svg" alt="logo" /></a>
+                </div>
+              </div>
+
+              <div class="col-auto ms-auto">
+                <nav class="main-menu d-none d-lg-inline-block">
+                  <ul>
+                    <li class="active">
+                      <a href="/index.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Home</span>
+                          <span class="effect-1">Home</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/about.html">
+                        <span class="link-effect">
+                          <span class="effect-1">About</span>
+                          <span class="effect-1">About</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/portfolio.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Portfolio</span>
+                          <span class="effect-1">Portfolio</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                 <!--     <a href="/resources.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Resources</span>
+                          <span class="effect-1">Resources</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/blog.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Blog</span>
+                          <span class="effect-1">Blog</span>
+                        </span>-->
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/contact.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Contact</span>
+                          <span class="effect-1">Contact</span>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <div class="navbar-right d-inline-flex d-lg-none">
+                  <button type="button" class="menu-toggle sidebar-btn">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcumb-wrapper style2 bg-smoke">
+      <div class="container-fluid">
+        <div class="breadcumb-content">
+          <ul class="breadcumb-menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/portfolio.html">Portfolio</a></li>
+            <li>Digitt — Digital Signature</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Study -->
+    <div class="project-details-page-area space">
+      <div class="container case-layout">
+        <!-- Title + Lead -->
+        <div class="row">
+          <div class="col-12">
+            <div class="title-area mb-20">
+              <h1 class="sec-title case-title">Digitt — Digital Signature Process & Core Debt-Reduction Flows</h1>
+              <p class="case-lead case-body">
+                Digitt is a web platform that helps users reduce credit card debt by refinancing to a lower interest rate.
+                I supported the early product (starting in 2018) by designing key user flows and screens—including the digital signature
+                experience—focused on clarity, trust, and smooth completion of high-stakes steps.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO IMAGE (replace) -->
+        <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+          <img class="w-100" src="/assets/img/digitt/digitt-cover.png" alt="Digitt platform overview and signature flow" />
+          <figcaption class="case-caption">
+            Early Digitt experience: guiding users from initial eligibility and form submission through verification and signature.
+          </figcaption>
+        </figure>
+
+        <!-- Highlights -->
+        <div class="case-highlights">
+          <div class="case-highlights-grid">
+            <div class="case-highlight">
+              <span class="label">Category</span>
+              <span class="value">Fintech · Debt Reduction</span>
+            </div>
+            <div class="case-highlight">
+              <span class="label">Role</span>
+              <span class="value">UX/UI Designer (Flows)</span>
+            </div>
+            <div class="case-highlight">
+              <span class="label">Focus</span>
+              <span class="value">IA · Forms · Digital Signature</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article -->
+        <div class="case-article">
+          <h4 class="case-heading mt-0">About</h4>
+          <p class="case-body">
+            Debt refinancing is a sensitive, high-friction domain: users need to understand what they are agreeing to, feel confident in the
+            process, and complete steps without errors. In 2018, Digitt was scaling its early MVP into more robust digital processes.
+            My work focused on the product’s most critical moments—especially multi-step forms and agreement flows—where small UX issues can create
+            large drop-offs.
+          </p>
+
+          <p class="case-body">
+            Over time, Digitt has grown and evolved. This case study documents my contributions to the earlier product stage and the UX decisions that
+            supported user comprehension and completion.
+          </p>
+
+
+          <h4 class="case-heading">Objective</h4>
+          <p class="case-body">
+            Create a user-friendly web experience that simplifies the debt-reduction journey—from initial information capture to document review and
+            digital signature—so users can confidently progress through a complex financial process with minimal friction.
+          </p>
+
+          <h4 class="case-heading">Goals</h4>
+          <ul class="case-bullets">
+            <li>Reduce cognitive load across multi-step forms and verification steps.</li>
+            <li>Clarify expectations: what is required, why it matters, and what happens next.</li>
+            <li>Design a signature flow that feels trustworthy, explicit, and easy to complete.</li>
+            <li>Provide implementation-ready UX specs to support fast iteration with engineering.</li>
+          </ul>
+
+          <h4 class="case-heading">Process</h4>
+          <p class="case-body">
+            The work was structured around a pragmatic, product-first approach: understand where users get stuck, simplify the sequence, make decisions
+            visible, and validate with stakeholders. Because fintech experiences depend on trust, we prioritized transparency and clear microcopy at each
+            step.
+          </p>
+
+          <h4 class="case-heading">1) Research & User Understanding</h4>
+          <ul class="case-bullets">
+            <li>Reviewed market patterns for debt consolidation and refinancing experiences.</li>
+            <li>Audited MVP data and stakeholder feedback to identify drop-off risks and unclear steps.</li>
+            <li>Aligned on the “trust checklist”: clarity, explicit consent, and error prevention.</li>
+          </ul>
+
+          <h4 class="case-heading">2) User Flows & Information Architecture</h4>
+          <p class="case-body">
+            I mapped end-to-end flows from first visit through application completion and signature—sequencing tasks to minimize back-and-forth and
+            ensuring each step answered three questions: <em>What is this?</em> <em>Why do you need it?</em> <em>What happens next?</em>
+          </p>
+
+          <ul class="case-bullets">
+            <li>Defined the minimal steps needed to gather financial information without overwhelming users.</li>
+            <li>Structured review moments (summaries) to prevent mistakes before submission.</li>
+            <li>Designed clear success and failure paths to keep users oriented.</li>
+          </ul>
+
+          <!-- IMAGE: Flow / IA (replace) -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img class="w-100" src="/assets/img/digitt/digitt-flows.png" alt="Digitt user flows and information architecture" />
+            <figcaption class="case-caption">
+              Flow work: sequencing the journey to reduce friction and improve comprehension.
+            </figcaption>
+          </figure>
+
+          <h4 class="case-heading">3) Wireframes & Prototyping</h4>
+          <p class="case-body">
+            I translated the flow into wireframes and interactive prototypes to validate layout, field grouping, and error prevention patterns.
+            Prototypes allowed stakeholders to review the experience as a real journey—making gaps and ambiguities visible early.
+          </p>
+
+          <!-- IMAGE: Wireframes (replace) -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img class="w-100" src="/assets/img/digitt/digitt-wireframes.png" alt="Wireframes and prototype for Digitt forms" />
+            <figcaption class="case-caption">
+              Wireframes: form hierarchy, progressive disclosure, and validation states.
+            </figcaption>
+          </figure>
+
+          <h4 class="case-heading">4) Digital Signature Experience</h4>
+          <p class="case-body">
+            The digital signature step is both a legal checkpoint and a trust moment. I designed the signature flow to make the user’s action explicit,
+            reduce uncertainty, and ensure the interface supported careful review—not accidental consent.
+          </p>
+
+          <ul class="case-bullets">
+            <li>Clear document review states (what you’re signing, what to confirm).</li>
+            <li>Progress indicators and “safe” navigation to avoid losing context.</li>
+            <li>Confirmation patterns that reinforce completion and next steps.</li>
+          </ul>
+
+          <!-- IMAGE: Signature process (replace) -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img class="w-100" src="/assets/img/digitt/digitt-signature.png" alt="Digitt digital signature process screens" />
+            <figcaption class="case-caption">
+              Digital signature flow: designed for clarity, explicit consent, and confident completion.
+            </figcaption>
+          </figure>
+
+          <h4 class="case-heading">5) Iteration & Implementation Support</h4>
+          <p class="case-body">
+            I worked closely with engineering to ensure the UX intent translated into the built experience, clarifying interactions, states, and edge cases.
+            This included tightening error handling and ensuring users had clear recovery paths if something went wrong.
+          </p>
+
+          <h4 class="case-heading">Results</h4>
+          <p class="case-body">
+            The outcome was a streamlined set of flows that supported Digitt’s early growth: clearer form progression, more confident handoffs between steps,
+            and a signature experience designed to reduce uncertainty in a high-stakes moment. The work helped establish a foundation that the team could
+            iterate on as the product matured.
+          </p>
+
+          <!-- IMAGE: Former homepage (replace) -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img class="w-100" src="/assets/img/digitt/digitt-homepage-legacy.png" alt="Former Digitt homepage" />
+            <figcaption class="case-caption">Former Digitt homepage (historic reference).</figcaption>
+          </figure>
+
+          <h4 class="case-heading">Scope & Evolution</h4>
+          <div class="case-callout">
+            <p class="case-body">
+              <strong>Note:</strong> My contribution was focused on product UX—specifically user flows, information architecture,
+              and key screens for form completion and signature. I did not own Digitt’s brand, design system, or long-term visual identity.
+            </p>
+            <p class="case-body" style="margin-top: 10px;">
+              As Digitt evolved, parts of the visual design changed—including branding and component styling. At the time, some button color choices had
+              limited contrast and were difficult to perceive. Improving contrast and accessibility was a consistent recommendation I raised with product.
+              These elements were later updated, resulting in better accessibility for users.
+            </p>
+          </div>
+
+          <h4 class="case-heading">Final Remarks</h4>
+          <p class="case-body">
+            Designing fintech flows requires balancing speed with certainty. The experience must keep users moving while also helping them understand
+            what they are providing and agreeing to. This work reinforced the value of clear sequencing, progressive disclosure, and accessibility
+            advocacy—especially in moments where trust determines whether users complete the journey.
+          </p>
+
+          <p class="case-body">
+          </p>
+        </div>
+
+        <!-- Prev / Next nav -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="inner__page-nav space-top mt-n1 mb-n1">
+              <a href="/portfolio.html" class="nav-btn">
+                <i class="fa fa-arrow-left"></i>
+                <span>
+                  <span class="link-effect">
+                    <span class="effect-1">Back to Portfolio</span>
+                    <span class="effect-1">Back to Portfolio</span>
+                  </span>
+                </span>
+              </a>
+
+              <a href="/contact.html" class="nav-btn">
+                <span>
+                  <span class="link-effect">
+                    <span class="effect-1">Let’s talk</span>
+                    <span class="effect-1">Let’s talk</span>
+                  </span>
+                </span>
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-wrapper footer-layout9 overflow-hidden">
+      <div class="container">
+        <div class="widget-area space-top">
+          <div class="row justify-content-between">
+            <div class="col-md-6 col-xl-5 col-lg-6">
+              <div class="widget widget-about footer-widget">
+                <h4 class="widget_title">About Evelyn</h4>
+                <p class="about-text">
+                  I design clear, accessible, and scalable digital experiences —
+                  turning complex product problems into UI that feels simple,
+                  intentional, and ready to ship.
+                </p>
+
+                <div class="social-btn style3">
+                  <a
+                    href="https://www.linkedin.com/in/evelyn-ramsburgh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://www.behance.net/evelynramsburgh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Behance"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"><i class="fab fa-behance"></i></span>
+                      <span class="effect-1"><i class="fab fa-behance"></i></span>
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://buymeacoffee.com/evelynramsburgh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Buy Me a Coffee"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3 col-lg-4">
+              <div class="widget widget_nav_menu footer-widget">
+                <h3 class="widget_title">Links</h3>
+                <div class="menu-all-pages-container">
+                  <ul class="menu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/portfolio.html">Portfolio</a></li>
+                 <!--   <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/blog.html">Blog</a></li>-->
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/about.html#testimonials">Testimonials</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="container">
+        <div class="copyright-wrap">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-12">
+              <p>© <span id="year"></span> Evelyn Ramsburgh. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path
+          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+          style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"
+        ></path>
+      </svg>
+    </div>
+
+    <!-- JS -->
+    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/slick.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/js/jquery.counterup.min.js"></script>
+    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/js/isotope.pkgd.min.js"></script>
+    <script src="/assets/js/gsap.min.js"></script>
+
+    <script src="/assets/js/twinmax.js"></script>
+    <script src="/assets/js/imageRevealHover.js"></script>
+    <script src="/assets/js/jarallax.min.js"></script>
+    <script src="/assets/js/jquery.marquee.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/waypoints.js"></script>
+    <script src="/assets/js/wow.js"></script>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

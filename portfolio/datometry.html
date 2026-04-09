@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Datometry qInsight — MVP & UI Design Case Study | Evelyn Ramsburgh</title>
+
+    <meta
+      name="description"
+      content="I led design for Datometry qInsight, an enterprise platform that enables applications built for on-prem data warehouses to run on major cloud data warehouses via virtualization—without code changes. This case study covers the MVP, UI foundation, and collaboration model."
+    />
+    <meta
+      name="keywords"
+      content="Evelyn Ramsburgh, Senior Product Designer, Product Designer, UX Designer, UI Designer, Datometry, qInsight, Enterprise UX, Data Warehousing, Virtualization, MVP, SaaS, Design Lead"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://evelynramsburgh.com/datometry-qinsight.html" />
+    <meta name="author" content="Evelyn Ramsburgh" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://evelynramsburgh.com/assets/img/og-cover.jpg" />
+    <meta property="og:url" content="https://evelynramsburgh.com/datometry-qinsight.html" />
+    <meta property="og:title" content="Datometry qInsight — MVP & UI Design | Evelyn Ramsburgh" />
+    <meta
+      property="og:description"
+      content="Design leadership for an enterprise platform that replatforms data-warehouse applications to the cloud via virtualization—without code changes."
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="/assets/css/slick.min.css" />
+    <link rel="stylesheet" href="/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="/assets/css/imageRevealHover.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- Page helpers (drop-in). Move to style.css if you prefer. -->
+
+  </head>
+
+  <body>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-wrapper">
+      <div class="mobile-menu-area">
+        <button class="menu-toggle"><i class="fas fa-times"></i></button>
+
+        <div class="mobile-logo">
+          <a href="index.html"><img src="/assets/img/logo.svg" alt="Evelyn Ramsburgh" /></a>
+        </div>
+
+        <div class="mobile-menu">
+          <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+           <!--   <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="blog.html">Blog</a></li>-->
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="social-btn style3">
+          <a
+            href="https://www.linkedin.com/in/evelyn-ramsburgh/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+            </span>
+          </a>
+
+          <a
+            href="https://www.behance.net/evelynramsburgh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Behance"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fab fa-behance"></i></span>
+              <span class="effect-1"><i class="fab fa-behance"></i></span>
+            </span>
+          </a>
+
+          <a
+            href="https://buymeacoffee.com/evelynramsburgh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Buy Me a Coffee"
+          >
+            <span class="link-effect">
+              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="nav-header header-layout1">
+      <div class="sticky-wrapper">
+        <div class="menu-area">
+          <div class="container-fluid">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-auto">
+                <div class="header-logo">
+                  <a href="/index.html"><img src="/assets/img/logo.svg" alt="logo" /></a>
+                </div>
+              </div>
+
+              <div class="col-auto ms-auto">
+                <nav class="main-menu d-none d-lg-inline-block">
+                  <ul>
+                    <li class="active">
+                      <a href="/index.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Home</span>
+                          <span class="effect-1">Home</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/about.html">
+                        <span class="link-effect">
+                          <span class="effect-1">About</span>
+                          <span class="effect-1">About</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/portfolio.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Portfolio</span>
+                          <span class="effect-1">Portfolio</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <!--  <a href="/resources.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Resources</span>
+                          <span class="effect-1">Resources</span> 
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/blog.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Blog</span>
+                          <span class="effect-1">Blog</span>
+                        </span>
+                      </a>
+                    </li>-->
+                    <li>
+                      <a href="/contact.html">
+                        <span class="link-effect">
+                          <span class="effect-1">Contact</span>
+                          <span class="effect-1">Contact</span>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <div class="navbar-right d-inline-flex d-lg-none">
+                  <button type="button" class="menu-toggle sidebar-btn">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcumb-wrapper style2 bg-smoke">
+      <div class="container-fluid">
+        <div class="breadcumb-content">
+          <ul class="breadcumb-menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/portfolio.html">Portfolio</a></li>
+            <li>Datometry qInsight</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Study -->
+    <div class="project-details-page-area space">
+      <div class="container case-layout">
+        <!-- Title + Lead -->
+        <div class="row">
+          <div class="col-12">
+            <div class="title-area mb-20">
+              <h1 class="sec-title case-title">Datometry qInsight — Designing the MVP for Cloud Data Warehouse Virtualization</h1>
+              <p class="case-lead case-body">
+                I led UX/UI for Datometry qInsight, a platform that helps enterprises run applications built for on-premises data warehouses
+                on major cloud data warehouses—without rewriting code or changing configurations. This case study covers the MVP foundation,
+                early UI system, and the collaboration model that enabled delivery.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO IMAGE (replace) -->
+        <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+          <img class="w-100" src="/assets/img/datometry/datometry-cover.png" alt="Datometry qInsight overview" />
+          <figcaption class="case-caption">
+            qInsight’s UI focused on clarity, safe actions, and fast comprehension for complex enterprise workflows.
+          </figcaption>
+        </figure>
+
+        <!-- Highlights -->
+        <div class="case-highlights">
+          <div class="case-highlights-grid">
+            <div class="case-highlight">
+              <span class="label">Category</span>
+              <span class="value">Enterprise · Data Platform</span>
+            </div>
+            <div class="case-highlight">
+              <span class="label">Role</span>
+              <span class="value">Design Lead (UX/UI)</span>
+            </div>
+            <div class="case-highlight">
+              <span class="label">Delivery</span>
+              <span class="value">MVP · UI Foundation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article -->
+        <div class="case-article">
+          <h4 class="case-heading mt-0">About</h4>
+          <p class="case-body">
+            Datometry qInsight was positioned as a “replatforming layer” for data warehousing. The product leveraged virtualization principles
+            to allow applications originally developed for on-prem data warehouses to run on major cloud data warehouses without requiring
+            application code changes. That promise created an important UX challenge: the product needed to present complex infrastructure
+            concepts in a way that felt concrete, trustworthy, and operable.
+          </p>
+
+          <h4 class="case-heading">My Role</h4>
+          <p class="case-body">
+            I led design within a cross-functional delivery team and partnered closely with stakeholders, product owners, engineering, and QA.
+            My responsibilities included shaping the MVP information architecture, defining core interaction patterns, producing wireframes and prototypes,
+            and delivering frontend-ready UI specs that supported rapid implementation.
+          </p>
+
+          <h4 class="case-heading">Goals</h4>
+          <ul class="case-bullets">
+            <li>Design an interface that makes cloud replatforming workflows understandable and operable for enterprise users.</li>
+            <li>Reduce perceived risk by clarifying system status, outcomes, and dependencies before users take action.</li>
+            <li>Enable rapid adoption of new database technologies while preserving the value of existing applications.</li>
+          </ul>
+
+          <h4 class="case-heading">Constraints</h4>
+          <p class="case-body">
+            The MVP needed to ship quickly and communicate a technically sophisticated value proposition to users who expect reliability.
+            Every screen had to balance speed of use with precision: the UI could not be ambiguous about environments, compatibility, or operational impact.
+          </p>
+
+          <h4 class="case-heading">Process</h4>
+          <p class="case-body">
+            We worked in an Agile model with short feedback loops. Design and engineering moved in parallel: I created prototypes early,
+            validated flows with stakeholders, and evolved the UI alongside implementation constraints. This ensured the product remained cohesive
+            even as scope evolved toward MVP essentials.
+          </p>
+
+          <h4 class="case-heading">Understanding Phase</h4>
+          <ul class="case-bullets">
+            <li>Studied the product’s virtualization approach and how it mapped to user workflows.</li>
+            <li>Aligned with stakeholders and product owners on MVP scope and success measures.</li>
+            <li>Identified the high-risk points where the UI must prevent costly mistakes.</li>
+          </ul>
+
+          <h4 class="case-heading">Agile Collaboration</h4>
+          <p class="case-body">
+            I participated in sprint planning, daily stand-ups, and sprint reviews to keep design decisions synchronized with delivery.
+            This cadence helped resolve ambiguities quickly—especially around edge cases, terminology, and system state representation.
+          </p>
+
+          <h4 class="case-heading">MVP Design</h4>
+          <p class="case-body">
+            The MVP focused on the minimum set of workflows needed to demonstrate value end-to-end. I produced wireframes and interactive prototypes
+            to validate navigation, data hierarchy, and the “happy path” as well as key error states. The goal was to make complex operations feel
+            predictable through consistent patterns and clear feedback.
+          </p>
+
+          <!-- IMAGE: Wireframes (replace) -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img class="w-100" src="/assets/img/datometry/datometry-wireframes.png" alt="Datometry qInsight wireframes" />
+            <figcaption class="case-caption">Early wireframes used to validate hierarchy, navigation, and MVP scope.</figcaption>
+          </figure>
+
+          <h4 class="case-heading">User Interface Design</h4>
+          <p class="case-body">
+            I established foundational UI patterns for dashboards, tables, and status surfaces—prioritizing scannability, safe actions,
+            and clear system feedback. Because enterprise users operate with high stakes, the UI emphasized:
+          </p>
+          <ul class="case-bullets">
+            <li>Strong information hierarchy for quick scanning.</li>
+            <li>Consistent table and filtering patterns for operational tasks.</li>
+            <li>Explicit status and health indicators for confidence and troubleshooting.</li>
+          </ul>
+
+          <!-- IMAGE: Dashboard (replace) -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img class="w-100" src="/assets/img/datometry/datometry-dashboard.png" alt="qInsight dashboard main screen" />
+            <figcaption class="case-caption">Dashboard: designed for rapid comprehension of status, scope, and next actions.</figcaption>
+          </figure>
+
+          <h4 class="case-heading">Iterative Feedback</h4>
+          <p class="case-body">
+            We incorporated feedback continuously—from stakeholders and team members, and when available, from representative users.
+            Iteration focused on reducing ambiguity, improving terminology, and tightening the relationship between “what the system knows”
+            and “what the user can safely do next.”
+          </p>
+
+          <!-- IMAGE: Heatmap/Analytics (replace) -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <img class="w-100" src="/assets/img/datometry/datometry-heatmap.png" alt="qInsight heatmap visualization" />
+            <figcaption class="case-caption">Visualization surfaces supported diagnosis and pattern recognition.</figcaption>
+          </figure>
+
+          <h4 class="case-heading">Results</h4>
+          <p class="case-body">
+            The outcome was an MVP UI that effectively demonstrated qInsight’s core promise and gave engineering a strong foundation for future features.
+            By leading design within an Agile delivery model, we kept the UI aligned with the product vision while moving quickly.
+            The resulting experience emphasized clarity, trust, and operational readiness—critical qualities for enterprise adoption.
+          </p>
+
+          <h4 class="case-heading">What I’m Proud Of</h4>
+          <ul class="case-bullets">
+            <li>Building an MVP information architecture that scaled with feature growth.</li>
+            <li>Designing UI patterns that made complex system behavior legible and actionable.</li>
+            <li>Maintaining alignment across stakeholders through prototypes and clear specs.</li>
+          </ul>
+
+          <p class="case-body">
+          </p>
+        </div>
+
+        <!-- Prev / Next nav -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="inner__page-nav space-top mt-n1 mb-n1">
+              <a href="ibm-seller-incentives.html" class="nav-btn">
+                <i class="fa fa-arrow-left"></i>
+                <span>
+                  <span class="link-effect">
+                    <span class="effect-1">Previous Project</span>
+                    <span class="effect-1">Previous Project</span>
+                  </span>
+                </span>
+              </a>
+
+              <a href="levis.html" class="nav-btn">
+                <span>
+                  <span class="link-effect">
+                    <span class="effect-1">Next Project</span>
+                    <span class="effect-1">Next Project</span>
+                  </span>
+                </span>
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--==============================
+      Footer
+    ==============================-->
+    <footer class="footer-wrapper footer-layout9 overflow-hidden">
+      <div class="container">
+        <div class="widget-area space-top">
+          <div class="row justify-content-between">
+            <div class="col-md-6 col-xl-5 col-lg-6">
+              <div class="widget widget-about footer-widget">
+                <h4 class="widget_title">About Evelyn</h4>
+                <p class="about-text">
+                  I design clear, accessible, and scalable digital experiences —
+                  turning complex product problems into UI that feels simple,
+                  intentional, and ready to ship.
+                </p>
+
+                <div class="social-btn style3">
+                  <a
+                    href="https://www.linkedin.com/in/evelyn-ramsburgh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://www.behance.net/evelynramsburgh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Behance"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"><i class="fab fa-behance"></i></span>
+                      <span class="effect-1"><i class="fab fa-behance"></i></span>
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://buymeacoffee.com/evelynramsburgh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Buy Me a Coffee"
+                  >
+                    <span class="link-effect">
+                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3 col-lg-4">
+              <div class="widget widget_nav_menu footer-widget">
+                <h3 class="widget_title">Links</h3>
+                <div class="menu-all-pages-container">
+                  <ul class="menu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/portfolio.html">Portfolio</a></li>
+                <!--      <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/blog.html">Blog</a></li>-->
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/about.html#testimonials">Testimonials</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright-wrap">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-12">
+              <p>© <span id="year"></span> Evelyn Ramsburgh. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path
+          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+          style="
+            transition: stroke-dashoffset 10ms linear 0s;
+            stroke-dasharray: 307.919, 307.919;
+            stroke-dashoffset: 307.919;
+          "
+        ></path>
+      </svg>
+    </div>
+
+    <!-- JS -->
+    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/slick.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/js/jquery.counterup.min.js"></script>
+    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/js/isotope.pkgd.min.js"></script>
+    <script src="/assets/js/gsap.min.js"></script>
+
+    <script src="/assets/js/twinmax.js"></script>
+    <script src="/assets/js/imageRevealHover.js"></script>
+    <script src="/assets/js/jarallax.min.js"></script>
+    <script src="/assets/js/jquery.marquee.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/waypoints.js"></script>
+    <script src="/assets/js/wow.js"></script>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
