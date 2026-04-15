@@ -15,7 +15,7 @@
         .award-year {
             font-size: 14px;
             font-weight: 600;
-            font-family: $title-font;
+            font-family: $body-font;
             color: $title-color;
             letter-spacing: -0.14px;
             transition: 0.4s;
@@ -25,9 +25,9 @@
             transition: 0.4s;
             position: relative;
             h4 {
-                font-size: 24px;
-                font-weight: 600;
-                font-family: $title-font;
+                font-size: 20px;
+                font-weight: 300;
+                font-family: $body-font !important;
                 margin-bottom: 3px;
                 a {
                     color: $title-color;
@@ -38,39 +38,24 @@
             }
             p {
                 font-size: 18px;
+                font-weight: 200;
                 margin-bottom: -0.3em;
             }
-            // .award-thumb {
-            //     position: absolute;
-            //     object-fit: contain;
-            //     transform: translateX(-50%) translateY(-50%);
-            //     top: 320%;
-            //     right: -10%;
-            //     z-index: -10;
-            //     opacity: 0;
-            //     visibility: hidden;
-            //     pointer-events: none;
-            //     -webkit-transition: opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-            //     transition: opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-            //     transition: opacity 0.2s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-            //     transition: opacity 0.2s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-            // }
         }
         .award-tag {
             margin-left: auto;
             text-transform: none;
-            transition: 0.4s;
         }
         &:hover {
             .award-details,
             .award-year {
-                transform: translate3d(1.5rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform: translateX(1.5rem);
                 transform-style: preserve-3d;
             }
             .award-tag {
-                transform: translate3d(-1.5rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform: translateX(-1.5rem);
                 transform-style: preserve-3d;
-            } 
+            }
         }
         &.style2 {
             .award-details h4 {
@@ -86,7 +71,7 @@
             }
             .award-meta {
                 font-size: 18px;
-                font-weight: 400;
+                font-weight: 200;
                 font-family: $body-font;
                 a {
                     color: $title-color;
@@ -103,52 +88,49 @@
                 }
             }
         }
-    }
-}
-@include lg {
-    .award-wrap-area .single-award-list .award-details {
-        margin-left: 50px;
-    }
-}
-@include md {
-    .award-wrap-area .single-award-list .award-details p {
-        font-size: 16px;
-    }
-}
-@include sm {
-    .award-wrap-area .single-award-list {
-        display: block;
-    }
-    .award-wrap-area .single-award-list .award-details {
-        margin-left: 0px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-    .award-wrap-area .single-award-list .award-tag {
-        margin-bottom: -0.5em;
-        display: block;
-        transform: none;
-    }
-    .award-wrap-area .single-award-list {
-        transition: 1.0s;
-        &:hover {
+        @include lg {
             .award-details {
-                transform: none;
+                margin-left: 50px;
+            }
+        }
+        @include md {
+            .award-details p {
+                font-size: 16px;
+            }
+        }
+        @include sm {
+            display: block;
+            transition: 1.0s;
+            .award-details {
+                margin-left: 0;
+                margin-top: 10px;
+                margin-bottom: 20px;
             }
             .award-tag {
+                margin-bottom: -0.5em;
+                display: block;
                 transform: none;
             }
-        }        
-    }
-}
-@include xs {
-    .award-wrap-area .single-award-list .award-details h4 {
-        font-size: 22px;
-    }
-    .award-wrap-area .single-award-list .award-details p {
-        font-size: 14px;
-    }
-    .award-wrap-area .single-award-list .award-details .award-thumb {
-        display: none;
+            &:hover {
+                .award-details,
+                .award-year {
+                    transform: none;
+                }
+                .award-tag {
+                    transform: none;
+                }
+            }
+        }
+        @include xs {
+            .award-details h4 {
+                font-size: 22px;
+            }
+            .award-details p {
+                font-size: 14px;
+            }
+            .award-details .award-thumb {
+                display: none;
+            }
+        }
     }
 }

@@ -1,0 +1,204 @@
+/* =========================
+   THUMBNAIL CARDS
+   ========================= */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.portfolio-card {
+  background: #f3f3f3;
+  border: 1px solid #e5e5e5;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.portfolio-card-thumb {
+  min-height: 180px;
+  padding: 32px 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: #efefef;
+}
+
+.portfolio-card-body {
+  padding: 16px 20px 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+/* =========================
+   THUMBNAIL TITLE BASE
+   ========================= */
+
+.portfolio-thumb-title {
+  width: 383px;
+  max-width: 100%;
+  flex-shrink: 0;
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 59px;
+  letter-spacing: -0.02em;
+  margin: 0;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   GRADIENT VARIANTS
+   ========================= */
+
+/* 1 */
+.thumb-gradient-1 {
+  background-image: linear-gradient(90deg, #84A0C4 0%, #005974 100%);
+}
+
+/* 2 */
+.thumb-gradient-2 {
+  background-image: linear-gradient(90deg, #375d8a 0%, #273aba 100%);
+}
+
+/* 3 */
+.thumb-gradient-3 {
+  background-image: linear-gradient(90deg, #12335E 0%, #3255E1 100%);
+}
+
+/* 4 */
+.thumb-gradient-4 {
+  background-image: linear-gradient(90deg, #650E35 0%, #CEADB7 100%);
+}
+
+/* 5 */
+.thumb-gradient-5 {
+  background-image: linear-gradient(270deg, #A7FFA7 27.81%, #244B1D 97.26%);
+}
+
+/* 6 */
+.thumb-gradient-6 {
+  background-image: linear-gradient(90deg, #4c76ab 0%, #442b61 100%);
+}
+
+/* 7 */
+.thumb-gradient-7 {
+  background-image: linear-gradient(90deg, #c78c75 0%, #9c5c18 100%);
+}
+
+/* 8 */
+.thumb-gradient-8 {
+  background-image: linear-gradient(90deg, #7A1A1A 0%, #FFD5F3 100%);
+}
+
+/* 9 */
+.thumb-gradient-9 {
+  background-image: linear-gradient(90deg, #4D97F4 0%, #B7B6B9 100%);
+}
+
+/* 10 */
+.thumb-gradient-10 {
+  background-image: linear-gradient(90deg, #EF3595 0%, #FFE7EC 100%);
+}
+
+/* =========================
+   OPTIONAL TEXT STYLES
+   ========================= */
+
+.portfolio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.portfolio-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #f4edf7;
+  color: #666;
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.portfolio-card-title {
+  margin: 0;
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #222;
+}
+
+.portfolio-card-meta {
+  margin: 0;
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #666;
+}
+
+.portfolio-card-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #111;
+  text-decoration: none;
+}
+
+.portfolio-card-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1199px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio-thumb-title {
+    font-size: 34px;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-card-thumb {
+    min-height: 150px;
+    padding: 24px 20px;
+  }
+
+  .portfolio-thumb-title {
+    width: 100%;
+    font-size: 28px;
+    line-height: 1.25;
+  }
+}

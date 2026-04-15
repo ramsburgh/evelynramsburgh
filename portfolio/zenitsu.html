@@ -92,32 +92,73 @@
       .case-heading {
         margin-top: 44px;
         margin-bottom: 12px;
-        font-weight: 700;
+        font-weight: 400;
       }
 
       .case-highlights { max-width: 720px; margin: 18px auto 0; }
       .case-highlights-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 22px;
-        padding: 18px 0 6px;
+        gap: 0;
+        padding: 18px 0 0;
         border-top: 1px solid rgba(0,0,0,0.08);
-        border-bottom: 1px solid rgba(0,0,0,0.08);
+        /* no border-bottom */
+      }
+      .case-highlight {
+        padding: 0 24px 18px 0;
+      }
+      .case-highlight:not(:first-child) {
+        padding-left: 24px;
+        border-left: 1px solid rgba(0,0,0,0.08);
       }
       .case-highlight .label {
         display: block;
-        font-size: 12px;
-        letter-spacing: 0.08em;
+        font-size: 11px;
+        letter-spacing: 0.09em;
         text-transform: uppercase;
-        color: rgba(36,36,36,0.55);
-        margin-bottom: 6px;
+        color: rgba(36,36,36,0.45);
+        margin-bottom: 5px;
       }
       .case-highlight .value {
         display: block;
         font-size: 15px;
         line-height: 1.4;
         color: rgba(36,36,36,0.95);
-        font-weight: 600;
+        font-weight: 400;
+      }
+      /* Mobile: horizontal pairs side by side, compact */
+      @media (max-width: 600px) {
+        .case-highlights-grid {
+          grid-template-columns: 1fr;
+          gap: 0;
+          padding: 0;
+          border-top: none;
+        }
+        .case-highlight {
+          display: flex;
+          flex-direction: row;
+          align-items: baseline;
+          gap: 10px;
+          padding: 10px 0;
+          border-left: none !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .case-highlight:first-child {
+          border-top: 1px solid rgba(0,0,0,0.08);
+        }
+        .case-highlight:last-child {
+          border-bottom: none;
+        }
+        .case-highlight .label {
+          min-width: 72px;
+          margin-bottom: 0;
+          flex-shrink: 0;
+        }
+        .case-highlight .value {
+          font-size: 14px;
+        }
       }
 
       .project-inner-thumb {
@@ -152,183 +193,131 @@
         background: rgba(0,0,0,0.02);
       }
 
-      @media (max-width: 992px) {
-        .case-highlights-grid { grid-template-columns: 1fr; gap: 12px; padding: 16px 0 10px; }
+      /* ── Highlight stat block ── */
+      .case-stat-block {
+        max-width: 720px;
+        margin: 40px auto;
+        padding: 32px 36px;
+        background: #f7f7f5;
+        border-left: 3px solid var(--theme-color, #c8f000);
+        border-radius: 0 12px 12px 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 32px;
       }
+      .case-stat-block .stat-number {
+        font-family: var(--title-font, 'Fraunces', serif);
+        font-size: 64px;
+        font-weight: 300;
+        line-height: 1;
+        color: #0a0c00;
+        flex-shrink: 0;
+        letter-spacing: -2px;
+      }
+      .case-stat-block .stat-label {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: rgba(36,36,36,0.45);
+        margin-bottom: 8px;
+        display: block;
+      }
+      .case-stat-block .stat-body {
+        font-size: 16px;
+        line-height: 1.6;
+        color: rgba(36,36,36,0.85);
+      }
+      @media (max-width: 600px) {
+        .case-stat-block { flex-direction: column; gap: 12px; padding: 24px 20px; }
+        .case-stat-block .stat-number { font-size: 48px; }
+      }
+
+      /* case-highlights mobile handled in block above */
       @media (max-width: 768px) {
         .case-body { font-size: 17px; line-height: 1.7; }
         .case-lead { font-size: 18px; }
       }
 
-            .figure-images {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
+      /* ── Case study gallery ───────────────────── */
+      .cs-gallery {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .cs-gallery-item {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        border-radius: 6px;
+        flex: 1 1 0;
+        min-width: 120px;
+        max-width: 340px;
+        cursor: zoom-in;
+        text-decoration: none;
+      }
+      .cs-gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.25s ease;
+      }
+      .cs-gallery-item:hover img { transform: scale(1.04); }
+      .cs-expand {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(10,10,10,0.38);
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        color: #fff;
+        font-size: 22px;
+      }
+      .cs-gallery-item:hover .cs-expand { opacity: 1; }
 
-.figure-images img {
-  max-width: 260px;
-  width: 100%;
-  height: auto;
-  display: block;
-}
+      /* single-image lightbox */
+      .cs-single-link {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        cursor: zoom-in;
+        text-decoration: none;
+      }
+      .cs-single-link img { display: block; width: 100%; height: auto; transition: transform 0.25s ease; }
+      .cs-single-link:hover img { transform: scale(1.015); }
+      .cs-single-link .cs-expand {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(10,10,10,0.32);
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        color: #fff;
+        font-size: 26px;
+      }
+      .cs-single-link:hover .cs-expand { opacity: 1; }
+      @media (max-width: 576px) {
+        .cs-gallery { flex-direction: column; }
+        .cs-gallery-item { max-width: 100%; }
+      }
+      .w500 { font-weight: 500; }
     </style>
   </head>
 
   <body>
     <!--==============================
-      Mobile Menu
-    ============================== -->
-    <div class="mobile-menu-wrapper">
-      <div class="mobile-menu-area">
-        <button class="menu-toggle"><i class="fas fa-times"></i></button>
-
-        <div class="mobile-logo">
-          <a href="index.html"
-            ><img src="/assets/img/logo.svg" alt="Evelyn Ramsburgh"
-          /></a>
-        </div>
-
-        <div class="mobile-menu">
-          <ul>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-           <!-- <li><a href="resources.html">Resources</a></li>
-            <li><a href="blog.html">Blog</a></li>-->
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="social-btn style3">
-          <a
-            href="https://www.linkedin.com/in/evelyn-ramsburgh/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-            </span>
-          </a>
-
-          <a
-            href="https://www.behance.net/evelynramsburgh"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Behance"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fab fa-behance"></i></span>
-              <span class="effect-1"><i class="fab fa-behance"></i></span>
-            </span>
-          </a>
-
-          <a
-            href="https://buymeacoffee.com/evelynramsburgh"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Buy Me a Coffee"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
+      Nav — cargado desde nav.html
+    ==============================-->
+    <div id="site-nav"></div>
 
     <!--==============================
       Header Area
     ==============================-->
-    <header class="nav-header header-layout1">
-      <div class="sticky-wrapper">
-        <div class="menu-area">
-          <div class="container-fluid">
-            <div class="row align-items-center justify-content-between">
-              <div class="col-auto">
-                <div class="header-logo">
-                  <a href="/index.html">
-                    <img src="/assets/img/logo.svg" alt="logo" />
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-auto ms-auto">
-                <nav class="main-menu d-none d-lg-inline-block">
-                  <ul>
-                    <li class="active">
-                      <a href="/index.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Home</span>
-                          <span class="effect-1">Home</span>
-                        </span>
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="/about.html">
-                        <span class="link-effect">
-                          <span class="effect-1">About</span>
-                          <span class="effect-1">About</span>
-                        </span>
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="/portfolio.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Portfolio</span>
-                          <span class="effect-1">Portfolio</span>
-                        </span>
-                      </a>
-                    </li>
-
-                    <li>
-                    <!--  <a href="/resources.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Resources</span>
-                          <span class="effect-1">Resources</span>
-                        </span>
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="/blog.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Blog</span>
-                          <span class="effect-1">Blog</span>
-                        </span>
-                      </a>
-                    </li>
-                  -->
-                    <li>
-                      <a href="/contact.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Contact</span>
-                          <span class="effect-1">Contact</span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-
-                <div class="navbar-right d-inline-flex d-lg-none">
-                  <button type="button" class="menu-toggle sidebar-btn">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
     <!--==============================
       Breadcrumb
     ============================== -->
@@ -363,13 +352,11 @@
           </div>
         </div>
 
-        <!-- HERO IMAGE (replace with your file) -->
+        <!-- HERO IMAGE -->
         <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-          <img
-            class="w-100"
-            src="/assets/img/zenitsu/zentisu_thumbnail.png"
-            alt="Zenitsu platform overview"
-          />
+            <img class="w-100" src="../assets/img/zenitsu/zenitsu-hero.webp" alt="Zenitsu platform overview">
+
+          </a>
           <figcaption class="case-caption">
             Zenitsu brought together a generator, shared libraries, a UI layer, and a DevOps pipeline into one cohesive workflow.
           </figcaption>
@@ -394,165 +381,249 @@
         </div>
 
         <!-- Article -->
-        <div class="case-article">
+        <div class="case-article"><br>
 
           <h4 class="case-heading mt-0">Overview</h4>
           <p class="case-body">
-            Zenitsu was built to reduce the overhead of creating and deploying scalable internal applications.
-            The platform combined four components: a core generator, shared libraries, a user interface for configuration,
-            and a DevOps process that automated setup and deployment. By standardizing the workflow, Zenitsu aimed to
-            decrease avoidable errors, shorten time-to-ship, and make module ownership easier to manage across teams.
+            Zenitsu was an internal platform built to reduce the overhead of creating and deploying scalable web applications
+            at IBM Sales Systems. The platform standardized a four-component workflow — a core generator, shared libraries,
+            a configuration UI, and a DevOps pipeline — serving <span class="highlight">over 200 developers and product owners
+            across 12 global sales teams</span>. By automating module setup and deployment, Zenitsu aimed to cut avoidable errors,
+            shorten time-to-ship, and make ownership traceable across teams operating in different time zones.
           </p>
 
           <h4 class="case-heading">Users</h4>
           <p class="case-body">
-            Zenitsu served a diverse internal audience: developers who created and maintained modules, product owners who shaped requirements,
-            administrators who managed environments and access, and analysts/support roles who relied on predictable structures to troubleshoot.
-            To keep the platform grounded in real workflows, we ran recurring feedback sessions and synthesized learnings into personas and journey artifacts.
+            The platform served a cross-functional internal audience: developers who built and maintained modules, product owners
+            who defined requirements and tracked deployments, administrators who managed environments and access, and analyst/support
+            roles who depended on stable, predictable structures to troubleshoot issues.
+            Following IBM Design Thinking methodology, we identified and worked closely with <span class="highlight">Sponsor Users</span> —
+            real representatives from each role group — who participated in recurring feedback sessions throughout the project.
+            Their input shaped both the personas and the scenarios used in usability testing.
           </p>
 
-
-          
-                  <!-- IMAGE: High-fidelity / all screens (replace) -->
-<figure class="project-inner-thumb wow img-custom-anim-top">
-  <div class="figure-images">
-    <img src="/assets/img/zenitsu/image14-27.png" alt="Developer Persona">
-    <img src="/assets/img/zenitsu/image12-23.png" alt="Product Owner Persona">
-  </div>
-            <figcaption class="case-caption">A representative persona used to anchor requirements and testing scenarios.</figcaption>
-</figure>
-
+          <!-- Personas gallery -->
+          <figure class="project-inner-thumb wow img-custom-anim-top">
+            <div class="cs-gallery">
+              <a class="cs-gallery-item" href="../assets/img/zenitsu/zenitsu-screen-01.webp" data-group="personas" title="Molly — Product Owner Persona">
+                <img src="../assets/img/zenitsu/zenitsu-screen-01.webp" alt="Molly, Product Owner persona">
+                <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+              </a>
+              <a class="cs-gallery-item" href="../assets/img/zenitsu/zenitsu-screen-03.webp" data-group="personas" title="Anwar — Developer Persona">
+                <img src="../assets/img/zenitsu/zenitsu-screen-03.webp" alt="Anwar, Developer persona">
+                <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+              </a>
+            </div>
+            <figcaption class="case-caption">Sponsor User-informed personas — Molly (Product Owner) and Anwar (Developer) — anchored scenario design and kept testing grounded in real workflows.</figcaption>
+          </figure>
 
           <h4 class="case-heading">What I Led</h4>
           <p class="case-body">
-            I led design efforts on the user interface and interaction patterns, aligning the experience with Carbon Design System v10.
-            While Zenitsu covered multiple technical layers, my responsibility was to ensure the UI made complex configuration feel clear,
-            predictable, and safe—especially in steps where users defined schemas, roles, and deployment targets.
+            I led the UI design and interaction layer, aligning patterns with Carbon Design System v10.
+            My responsibility extended beyond screens: I defined component usage guidelines, maintained design-to-dev
+            handoff documentation in Sketch with annotated specs, and ran design QA sessions with engineers during implementation
+            to verify that Carbon tokens — color, spacing, and type — were applied consistently across modules.
+            The goal was to ensure the UI made <span class="highlight">complex configuration feel clear, predictable, and safe</span>,
+            particularly in the steps where users defined schemas, assigned roles, and selected deployment environments.
           </p>
-
-          <h4 class="case-heading">Why Testing</h4>
           <p class="case-body">
-            For this case study, I’m intentionally not deep-diving into early discovery (interviews, ideation, or wireframing).
-            Instead, I’m focusing on late-stage validation: how we tested a high-fidelity prototype, what we learned,
-            and which changes were prioritized as a result.
+            One deliberate tradeoff I advocated for: keeping the creation flow as a strict linear sequence
+            (Definition → Backend → Frontend → Deployment) rather than a free-form multi-tab editor.
+            Engineering preferred tabs for flexibility. I pushed back — user interviews showed that non-linear
+            entry caused data loss and misconfiguration. The sequential approach added one extra click per session
+            but eliminated an entire category of error we were seeing in the As-Is experience.
           </p>
 
-          <h4 class="case-heading">Goals</h4>
+          <h4 class="case-heading">Why Usability Testing</h4>
+          <p class="case-body">
+            This case study focuses on late-stage validation — after wireframing and early discovery, right before
+            development handoff. At this stage, IBM Design Thinking calls for a <span class="highlight">Playback</span>:
+            a structured session where the team presents the current design to stakeholders and Sponsor Users to validate
+            direction and surface gaps. We extended this into a formal usability test to get measurable, comparable data
+            before committing to build.
+          </p>
+
+          <h4 class="case-heading">Hills</h4>
+          <p class="case-body">
+            Following IBM Design Thinking, we framed our testing goals as Hills — outcome-oriented statements
+            that describe what a user should be able to accomplish, not what the system should do:
+          </p>
           <ul class="case-bullets">
-            <li>Validate user performance on core tasks (create, configure, deploy).</li>
-            <li>Identify friction points and design risks before implementation.</li>
-            <li>Measure perceived efficiency and satisfaction using a lightweight questionnaire.</li>
+            <li>A developer can create and deploy a new module without needing to contact the support team.</li>
+            <li>A product owner can review module status and understand what action is needed in under two minutes.</li>
+            <li>A new user can complete their first deployment with no prior documentation.</li>
           </ul>
 
           <h4 class="case-heading">Method</h4>
           <p class="case-body">
-            We ran moderated user sessions with a think-aloud protocol. Participants completed key flows across the prototype while describing
-            their expectations, interpretations of terminology, and decision points. After tasks, we collected structured feedback and
-            administered UMUX (a short usability metric designed as a quicker alternative to SUS for iterative evaluation).
+            We ran moderated sessions with 7 participants using a think-aloud protocol. Participants spanned both
+            Sponsor User groups — developers and product owners — and completed key flows while describing their
+            expectations, interpretation of terminology, and decision points. Sessions were observed by the broader
+            squad including engineers and the product manager, reinforcing a shared understanding of user behavior
+            across the team. After task completion, we administered UMUX — a lightweight usability metric
+            developed as a shorter alternative to SUS, validated for iterative evaluation cycles.
           </p>
 
-          <!-- OPTIONAL IMAGE: As-Is map -->
-                  <!-- IMAGE: High-fidelity / all screens (replace) -->
-<figure class="project-inner-thumb wow img-custom-anim-top">
-  <div class="figure-images">
-    <img src="/assets/img/zenitsu/image15-29.png" alt="Developer Persona">
-    <img src="/assets/img/zenitsu/image13-25.png" alt="Product Owner Persona">
-  </div>
-            <figcaption class="case-caption">An As-Is experience map helped highlight where cognitive load and ambiguity accumulated.</figcaption>
+          <!-- As-Is maps gallery -->
+          <figure class="project-inner-thumb wow img-custom-anim-top">
+            <div class="cs-gallery">
+              <a class="cs-gallery-item" href="../assets/img/zenitsu/zenitsu-screen-02.webp" data-group="asis" title="As-Is Experience Map — Molly (Product Owner)">
+                <img src="../assets/img/zenitsu/zenitsu-screen-02.webp" alt="As-Is experience map — Molly, Product Owner">
+                <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+              </a>
+              <a class="cs-gallery-item" href="../assets/img/zenitsu/zenitsu-screen-04.webp" data-group="asis" title="As-Is Experience Map — Anwar (Developer)">
+                <img src="../assets/img/zenitsu/zenitsu-screen-04.webp" alt="As-Is experience map — Anwar, Developer">
+                <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+              </a>
+            </div>
+            <figcaption class="case-caption">As-Is experience maps for each Sponsor User group surfaced where cognitive load and ambiguity accumulated — informing both the prototype scope and the testing scenarios.</figcaption>
           </figure>
 
           <h4 class="case-heading">Prototype Coverage</h4>
           <p class="case-body">
-            The test prototype represented a realistic late-stage experience. Because the UI leveraged Carbon and established internal patterns,
-            we were able to prototype at high fidelity quickly and focus sessions on comprehension, task flow, and clarity—rather than UI novelty.
+            Because the UI was built on Carbon Design System v10 — with established components, tokens, and interaction patterns —
+            we reached high fidelity quickly without building custom UI. This let sessions focus entirely on
+            <span class="highlight">comprehension, task flow, and decision-making clarity</span> rather than novelty or aesthetics.
           </p>
 
-          <!-- OPTIONAL IMAGE: Login/Home -->
+          <!-- Login / Home gallery -->
           <figure class="project-inner-thumb wow img-custom-anim-top">
-  <div class="figure-images">
-    <img src="/assets/img/zenitsu/login-1@2x.jpg" alt="Login">
-    <img src="/assets/img/zenitsu/homepage empty - state.png" alt="Homepage Empty State">
-    <img src="/assets/img/zenitsu/homepage.png" alt="Homepage">
-            <figcaption class="case-caption">Login and homepage: participants commented on terminology, navigation, and “what happens next”.</figcaption>
+            <div class="cs-gallery">
+              <a class="cs-gallery-item" href="../assets/img/zenitsu/zenitsu-login.webp" data-group="proto-home" title="Login screen">
+                <img src="../assets/img/zenitsu/zenitsu-login.webp" alt="Login screen">
+                <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+              </a>
+              <a class="cs-gallery-item" href="../assets/img/zenitsu/zenitsu-homepage-empty.webp" data-group="proto-home" title="Homepage — empty state">
+                <img src="../assets/img/zenitsu/zenitsu-homepage-empty.webp" alt="Homepage empty state">
+                <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+              </a>
+              <a class="cs-gallery-item" href="../assets/img/zenitsu/zenitsu-homepage.webp" data-group="proto-home" title="Homepage — filled state">
+                <img src="../assets/img/zenitsu/zenitsu-homepage.webp" alt="Homepage">
+                <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+              </a>
+            </div>
+            <figcaption class="case-caption">Login and homepage: participants commented on terminology, navigation labels, and "what happens next" — pointing to microcopy gaps rather than structural issues.</figcaption>
           </figure>
 
           <h4 class="case-heading">Key Screens Tested</h4>
-          <p class="case-body">
-            We focused on the screens that carried the most decision-making weight:
-          </p>
           <ul class="case-bullets">
-            <li><strong>Module list:</strong> discover and manage owned modules.</li>
-            <li><strong>Create new module:</strong> guided flow to define endpoints, schema, UI choices, and deployment.</li>
-            <li><strong>Status & deployment:</strong> confirm environment and understand outcomes.</li>
+            <li><span class="w500">Module list:</span> discover, manage, and understand the status of owned modules.</li>
+            <li><span class="w500">Create new module:</span> guided 4-step flow to define endpoints, configure schema, set UI choices, and deploy.</li>
+            <li><span class="w500">Status &amp; deployment:</span> confirm environment selection and interpret deployment outcomes.</li>
           </ul>
 
-          <!-- OPTIONAL IMAGE: Module List -->
+          <!-- Module List -->
           <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img
-              class="w-100"
-              src="/assets/img/zenitsu/zenitsu-module-list.png"
-              alt="Module list screen"
-            />
-            <figcaption class="case-caption">Module list: clarity of ownership, actions, and system status was critical for confidence.</figcaption>
+            <a class="cs-single-link" href="../assets/img/zenitsu/zenitsu-module-list.webp" title="Module list screen">
+              <img class="w-100" src="../assets/img/zenitsu/zenitsu-module-list.webp" alt="Module list screen">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+            <figcaption class="case-caption">Module list: clarity of ownership, inline actions, and system status was critical for user confidence before attempting any task.</figcaption>
           </figure>
 
           <h4 class="case-heading">Create Module — Flow Breakdown</h4>
           <p class="case-body">
-            The creation flow was intentionally structured as a sequence, not a single dense form, to reduce errors and help users confirm intent at each step.
+            The creation flow was structured as a strict sequence to reduce errors and help users confirm intent at each step —
+            a deliberate architectural decision backed by research rather than engineering convenience.
           </p>
           <ul class="case-bullets">
-            <li><strong>Step 1 — Definition:</strong> module name, endpoint, and initial metadata.</li>
-            <li><strong>Step 2 — Backend:</strong> schema definition using visual and schema views.</li>
-            <li><strong>Step 3 — Frontend:</strong> UI configuration using Carbon-based components.</li>
-            <li><strong>Step 4 — Deployment:</strong> environment selection and deploy confirmation.</li>
+            <li><span class="w500">Step 1 — Definition:</span> module name, endpoint, and initial metadata.</li>
+            <li><span class="w500">Step 2 — Backend:</span> schema and data modeling using both a visual editor and a schema view.</li>
+            <li><span class="w500">Step 3 — Frontend:</span> UI configuration using Carbon-based components, with live preview.</li>
+            <li><span class="w500">Step 4 — Deployment:</span> environment selection with explicit descriptions of each option's consequences.</li>
           </ul>
 
-          <!-- OPTIONAL IMAGE: Create Module -->
-          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img
-              class="w-100"
-              src="/assets/img/zenitsu/zenitsu-create-module.png"
-              alt="Create module flow"
-            />
-            <figcaption class="case-caption">Create module: a guided flow that supported preview and reduced configuration mistakes.</figcaption>
+          <!-- 4-step gallery -->
+          <figure class="project-inner-thumb wow img-custom-anim-top">
+            <div class="cs-gallery">
+              <a class="cs-gallery-item" href="../assets/img/zenitsu/zenitsu-screen-06.webp" data-group="create-flow" title="Step 1 — Definition">
+                <img src="../assets/img/zenitsu/zenitsu-screen-06.webp" alt="Step 1: Definition">
+                <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+              </a>
+              <a class="cs-gallery-item" href="../assets/img/zenitsu/zenitsu-screen-07.webp" data-group="create-flow" title="Step 2 — Backend: visual data modeling">
+                <img src="../assets/img/zenitsu/zenitsu-screen-07.webp" alt="Step 2: Backend">
+                <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+              </a>
+              <a class="cs-gallery-item" href="../assets/img/zenitsu/zenitsu-screen-08.webp" data-group="create-flow" title="Step 3 — Frontend: Carbon UI editor">
+                <img src="../assets/img/zenitsu/zenitsu-screen-08.webp" alt="Step 3: Frontend">
+                <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+              </a>
+              <a class="cs-gallery-item" href="../assets/img/zenitsu/zenitsu-deployment.webp" data-group="create-flow" title="Step 4 — Deployment">
+                <img src="../assets/img/zenitsu/zenitsu-deployment.webp" alt="Step 4: Deployment">
+                <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+              </a>
+            </div>
+            <figcaption class="case-caption">Definition → Backend → Frontend → Deployment. Each step isolated one decision domain, reducing cognitive load and preventing the data loss we'd observed in the As-Is flow.</figcaption>
           </figure>
 
           <h4 class="case-heading">Results</h4>
+
+          <div class="case-stat-block">
+            <span class="stat-number"><span class="highlight">64</span></span>
+            <div>
+              <span class="stat-label">UMUX Score out of 100 — 7 participants, moderated sessions</span>
+              <p class="stat-body">
+                A score of 64 confirmed the platform was functional but not yet frictionless.
+                The squad used this data in the next Playback with stakeholders to justify a focused iteration sprint —
+                prioritizing the Backend and Deployment steps where confidence dropped most consistently.
+                The score also established a measurable baseline: future iterations would be tested against it.
+              </p>
+            </div>
+          </div>
+
           <p class="case-body">
-            UMUX score landed at <strong>64</strong>, which we treated as “acceptable with clear opportunities to improve.”
-            More importantly, sessions revealed repeatable breakdowns: places where users paused, re-read, or needed confirmation before proceeding.
+            Beyond the score, sessions revealed <span class="highlight">repeatable breakdowns</span> — moments where
+            users across different roles paused, re-read, or needed reassurance before proceeding.
+            These weren't isolated edge cases; they pointed to systemic gaps in terminology, feedback signals, and role clarity.
           </p>
 
           <h4 class="case-heading">Key Findings</h4>
           <ul class="case-findings">
-            <li>Reduce cognitive load on the homepage by removing low-value components.</li>
-            <li>Use tooltips intentionally for terminology and constraints, not as a substitute for clarity.</li>
-            <li>Support progressive disclosure: tutorials for new users, less guidance for experienced users.</li>
-            <li>Clarify backend roles and permissions to avoid misconfiguration.</li>
-            <li>Define Schema Editor capabilities explicitly (what it can/can’t do).</li>
-            <li>Use icons consistently in the Frontend step to reinforce meaning.</li>
-            <li>Make environment options in Deployment explicit and comparable.</li>
-            <li>Remove or defer non-actionable data in Status to reduce noise.</li>
+            <li><span class="w500">Homepage overload:</span> users scanned components irrelevant to their current task. Removing low-value elements reduced entry friction and shortened time-to-first-action.</li>
+            <li><span class="w500">Tooltip misuse:</span> tooltips were compensating for unclear labeling. The fix was clearer copy at the source, not more tooltips layered on top.</li>
+            <li><span class="w500">One-size onboarding failed:</span> experienced users felt patronized by mandatory guidance; new users needed more of it. <span class="highlight">Progressive disclosure</span> — adapting guidance to user proficiency — was the solution.</li>
+            <li><span class="w500">Role &amp; permissions confusion:</span> backend misconfiguration happened because role boundaries weren't surfaced at the decision point. Users didn't know what they were authorizing.</li>
+            <li><span class="w500">Schema Editor ambiguity:</span> users didn't know the editor's limits until they hit them. Explicit capability framing at entry would prevent dead ends and support calls.</li>
+            <li><span class="w500">Icon inconsistency in Frontend step:</span> the same action was represented differently across contexts, breaking the mental model users had built in earlier steps.</li>
+            <li><span class="w500">Deployment options unclear:</span> environment labels (staging, production) weren't described in terms of consequences — only names. Users guessed rather than chose deliberately.</li>
+            <li><span class="w500">Status page noise:</span> non-actionable data was surfaced prominently, creating anxiety without a path forward. Deferring it reduced cognitive load without removing functionality.</li>
           </ul>
+
+          <h4 class="case-heading">Accessibility</h4>
+          <p class="case-body">
+            Carbon Design System v10 provides a strong accessibility foundation — components are built to WCAG 2.1 AA standards,
+            with keyboard navigation, focus management, and screen reader support included by default.
+            During design QA, I verified that our implementation preserved these properties: focus order in the 4-step flow
+            was logical and uninterrupted, form fields had visible labels rather than placeholder-only text,
+            and error states surfaced inline rather than as modal interruptions. For an internal platform used daily
+            by a global workforce, accessibility wasn't a compliance checkbox — it was a baseline expectation.
+          </p>
 
           <h4 class="case-heading">What Changed After Testing</h4>
           <p class="case-body">
-            Findings were translated into a prioritized improvement list for the next iteration. The emphasis was on reducing ambiguity
-            in high-impact steps (schema, roles, deployment), simplifying surfaces that users used as “home base,” and introducing
-            guidance that adapts to proficiency—so the product remains approachable without becoming noisy.
+            Findings were presented in a Playback with the product squad and key stakeholders. The team prioritized
+            three categories for the next iteration sprint: reducing ambiguity in high-stakes steps (schema definition,
+            role assignment, deployment environment), simplifying the homepage to a task-oriented entry point,
+            and introducing proficiency-aware guidance that adapts without requiring users to configure it themselves.
+          </p>
+          <p class="case-body">
+            The UMUX score of 64 became the baseline. The goal for the next round of testing was to reach 75 —
+            a threshold that, based on UMUX research, correlates with users describing the system as
+            "easy to use" rather than just "usable."
           </p>
 
           <h4 class="case-heading">Conclusion</h4>
           <p class="case-body">
-            Zenitsu’s value came from making complex, multi-step application setup feel routine and reliable.
-            By validating the late-stage prototype with real internal users, we surfaced the specific points where confidence dropped—
-            and we had a clear roadmap to improve comprehension, reduce errors, and strengthen end-to-end flow before implementation.
+            Zenitsu's value was in making complex, multi-step application setup feel routine and reliable for
+            teams that couldn't afford to lose time to tooling friction. By running late-stage validation with
+            real internal users — Sponsor Users with active stakes in the outcome — we surfaced
+            <span class="highlight">the specific points where confidence dropped</span> before a single line of
+            production code was written. The result wasn't just a better prototype. It was a prioritized,
+            evidence-based roadmap that the team could defend to stakeholders and build against with confidence.
           </p>
 
-          <p class="case-body">
-          </p>
+          <p class="case-body"></p>
         </div>
-
         <!-- Prev / Next nav -->
         <div class="row">
           <div class="col-lg-12">
@@ -584,96 +655,10 @@
     </div>
 
     <!--==============================
-      Footer
+      Footer — cargado desde footer.html
+      Para editar el footer, edita SOLO footer.html
     ==============================-->
-    <footer class="footer-wrapper footer-layout9 overflow-hidden">
-      <div class="container">
-        <div class="widget-area space-top">
-          <div class="row justify-content-between">
-            <div class="col-md-6 col-xl-5 col-lg-6">
-              <div class="widget widget-about footer-widget">
-                <h4 class="widget_title">About Evelyn</h4>
-                <p class="about-text">
-                  I design clear, accessible, and scalable digital experiences —
-                  turning complex product problems into UI that feels simple,
-                  intentional, and ready to ship.
-                </p>
-
-                <div class="social-btn style3">
-                  <a
-                    href="https://www.linkedin.com/in/evelyn-ramsburgh/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                    </span>
-                  </a>
-
-                  <a
-                    href="https://www.behance.net/evelynramsburgh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Behance"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fab fa-behance"></i></span>
-                      <span class="effect-1"><i class="fab fa-behance"></i></span>
-                    </span>
-                  </a>
-
-                  <a
-                    href="https://buymeacoffee.com/evelynramsburgh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Buy Me a Coffee"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-xl-3 col-lg-4">
-              <div class="widget widget_nav_menu footer-widget">
-                <h3 class="widget_title">Links</h3>
-                <div class="menu-all-pages-container">
-                  <ul class="menu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/portfolio.html">Portfolio</a></li>
-                  <!--  <li><a href="/resources.html">Resources</a></li>
-                    <li><a href="/blog.html">Blog</a></li>-->
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/about.html#testimonials">Testimonials</a></li>
-                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="copyright-wrap">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-12">
-              <p>© <span id="year"></span> Evelyn Ramsburgh. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <div id="site-footer"></div>
 
     <!-- Scroll To Top -->
     <div class="scroll-top">
@@ -713,5 +698,106 @@
     <script src="/assets/js/wow.js"></script>
 
     <script src="/assets/js/main.js"></script>
-  </body>
+        
+    <!--==============================
+    Component loader — NO tocar
+  ==============================-->
+  <script>
+    (function () {
+      // Archivos en /portfolio/ usan '../'  |  raíz usa './'
+      var inSubfolder = window.location.pathname.indexOf('/portfolio/') !== -1;
+      var base = inSubfolder ? '../' : './';
+
+      function load(file, targetId, onDone) {
+        fetch(base + file)
+          .then(function (r) {
+            if (!r.ok) throw new Error(file + ' returned ' + r.status);
+            return r.text();
+          })
+          .then(function (html) {
+            var el = document.getElementById(targetId);
+            if (!el) { console.warn('#' + targetId + ' not found'); return; }
+            el.innerHTML = html;
+            if (typeof onDone === 'function') onDone();
+          })
+          .catch(function (e) { console.warn('Could not load ' + file + ':', e); });
+      }
+
+      function markActive() {
+        var path = window.location.pathname;
+        ['#site-nav .main-menu a', '#site-nav .mobile-menu a'].forEach(function (sel) {
+          document.querySelectorAll(sel).forEach(function (a) {
+            var href = a.getAttribute('href');
+            var active = href === path ||
+              (href === '/portfolio.html' && path.indexOf('/portfolio') === 0);
+            if (active) a.closest('li').classList.add('active');
+          });
+        });
+      }
+
+      function initMobileMenu() {
+        if (typeof jQuery !== 'undefined' && jQuery.fn.mobilemenu) {
+          jQuery('.mobile-menu-wrapper').mobilemenu();
+        }
+      }
+
+      function writeYear() {
+        document.querySelectorAll('.footer-year').forEach(function (el) {
+          el.textContent = new Date().getFullYear();
+        });
+      }
+
+      load('nav.html', 'site-nav', function () {
+        markActive();
+        initMobileMenu();
+      });
+
+      load('footer.html', 'site-footer', function () {
+        writeYear();
+      });
+
+    })();
+  </script>
+
+
+  <!-- Magnific Popup — gallery + single lightbox init -->
+  <script>
+  jQuery(document).ready(function($) {
+
+    // ── Grouped galleries (navigate with arrows) ──────────
+    var galleryGroups = [];
+    $('[data-group]').each(function() {
+      var g = $(this).data('group');
+      if (galleryGroups.indexOf(g) === -1) galleryGroups.push(g);
+    });
+
+    galleryGroups.forEach(function(group) {
+      $('[data-group="' + group + '"]').magnificPopup({
+        type: 'image',
+        gallery: {
+          enabled: true,
+          navigateByImgClick: true,
+          preload: [0, 1],
+          arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+          tCounter: '<span class="mfp-counter">%curr% / %total%</span>'
+        },
+        image: { titleSrc: 'title' },
+        removalDelay: 120,
+        mainClass: 'mfp-fade',
+        closeBtnInside: false
+      });
+    });
+
+    // ── Single images ─────────────────────────────────────
+    $('.cs-single-link').magnificPopup({
+      type: 'image',
+      image: { titleSrc: 'title' },
+      removalDelay: 120,
+      mainClass: 'mfp-fade',
+      closeBtnInside: false
+    });
+
+  });
+  </script>
+</body>
 </html>

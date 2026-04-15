@@ -3,238 +3,125 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-
     <title>Headhunted — Website UI & Frontend Design | Evelyn Ramsburgh</title>
-
-    <meta
-      name="description"
-      content="Case study: UI and frontend design for Headhunted — a nonprofit initiative focused on support and education programs. Brand-aligned, accessible, and built for clarity and engagement."
-    />
-    <meta
-      name="keywords"
-      content="Evelyn Ramsburgh, Product Designer, UX Designer, UI Designer, Web Design, Frontend UI, Case Study, Branding, Nonprofit, Accessibility, Figma"
-    />
+    <meta name="description" content="Case study: UI and frontend design for Headhunted — a nonprofit initiative. Brand direction, accessible component system, and dev-ready handoff for a mission-driven web experience." />
+    <meta name="keywords" content="Evelyn Ramsburgh, Product Designer, UX Designer, UI Designer, Web Design, Frontend UI, Nonprofit, Accessibility, WCAG, Component System, Figma, Design System" />
     <meta name="robots" content="index,follow" />
-    <link
-      rel="canonical"
-      href="https://evelynramsburgh.com/headhunted.html"
-    />
+    <link rel="canonical" href="https://evelynramsburgh.com/portfolio/headhunted.html" />
     <meta name="author" content="Evelyn Ramsburgh" />
-
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Headhunted — Website UI & Frontend Design | Evelyn Ramsburgh"
-    />
-    <meta
-      property="og:description"
-      content="Designing a clear, credible website experience for Headhunted — from brand foundations to UI and handoff collaboration with the dev team."
-    />
-    <meta
-      property="og:image"
-      content="https://evelynramsburgh.com/assets/img/og-cover.jpg"
-    />
-    <meta
-      property="og:url"
-      content="https://evelynramsburgh.com/headhunted.html"
-    />
+    <meta property="og:title" content="Headhunted — Website UI & Frontend Design | Evelyn Ramsburgh" />
+    <meta property="og:description" content="Designing a clear, credible website for a nonprofit — from brand foundations to accessible UI system and developer handoff." />
+    <meta property="og:image" content="https://evelynramsburgh.com/assets/img/og-cover.jpg" />
+    <meta property="og:url" content="https://evelynramsburgh.com/portfolio/headhunted.html" />
 
-    <!-- Mobile Specific Metas -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Favicons -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/img/favicons/favicon.png"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon.png" />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content="/assets/img/favicons/ms-icon-144x144.png"
-    />
+    <meta name="msapplication-TileImage" content="../assets/img/favicons/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/all.min.css" />
-    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css" />
-    <link rel="stylesheet" href="/assets/css/slick.min.css" />
-    <link rel="stylesheet" href="/assets/css/animate.min.css" />
-    <link rel="stylesheet" href="/assets/css/imageRevealHover.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="../assets/css/slick.min.css" />
+    <link rel="stylesheet" href="../assets/css/animate.min.css" />
+    <link rel="stylesheet" href="../assets/css/imageRevealHover.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <style>
+      .case-layout  { max-width: 980px; }
+      .case-title   { max-width: 720px; margin: 0 auto; text-align: left; }
+      .case-lead    { max-width: 720px; margin: 14px auto 0; font-size: 20px; line-height: 1.7; }
+      .case-article { max-width: 720px; margin: 40px auto 0; }
+
+      .case-heading {
+        font-family: var(--body-font);
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 1.3;
+        margin-top: 48px;
+        margin-bottom: 14px;
+        color: var(--title-color);
+      }
+      .case-heading.mt-0 { margin-top: 0; }
+
+      .case-body {
+        max-width: 720px;
+        font-size: 18px;
+        line-height: 1.75;
+        color: rgba(36,36,36,0.85);
+        margin-bottom: 18px;
+      }
+
+      .case-bullets { max-width: 720px; margin: 0 auto 28px; padding-left: 1.2rem; }
+      .case-bullets li { list-style: disc; margin-bottom: 0.55rem; font-size: 18px; line-height: 1.7; color: rgba(36,36,36,0.85); }
+
+      /* ── Highlights row ── */
+      .case-highlights { max-width: 720px; margin: 18px auto 0; }
+      .case-highlights-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; padding: 18px 0 0; border-top: 1px solid rgba(0,0,0,0.08); }
+      .case-highlight { padding: 0 24px 18px 0; }
+      .case-highlight:not(:first-child) { padding-left: 24px; border-left: 1px solid rgba(0,0,0,0.08); }
+      .case-highlight .label { display: block; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(36,36,36,0.45); margin-bottom: 5px; }
+      .case-highlight .value { display: block; font-size: 15px; line-height: 1.4; color: rgba(36,36,36,0.95); font-weight: 400; }
+      @media (max-width: 600px) {
+        .case-highlights-grid { grid-template-columns: 1fr; gap: 0; padding: 0; border-top: none; }
+        .case-highlight { display: flex; flex-direction: row; align-items: baseline; gap: 10px; padding: 10px 0; border-left: none !important; padding-left: 0 !important; padding-right: 0 !important; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        .case-highlight:first-child { border-top: 1px solid rgba(0,0,0,0.08); }
+        .case-highlight:last-child { border-bottom: none; }
+        .case-highlight .label { min-width: 72px; margin-bottom: 0; flex-shrink: 0; }
+        .case-highlight .value { font-size: 14px; }
+      }
+
+      /* ── Figure / caption ── */
+      .project-inner-thumb { max-width: 920px; margin-left: auto; margin-right: auto; }
+      .case-caption { max-width: 720px; margin: 10px auto 0; text-align: center; font-size: 14px; line-height: 1.5; color: rgba(36,36,36,0.68); }
+
+      /* ── Company signal callouts ── */
+      .signal-grid {
+        max-width: 720px; margin: 40px auto;
+        display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      }
+      .signal-card {
+        padding: 20px; border-radius: 10px; border: 1px solid rgba(0,0,0,0.08);
+      }
+      .signal-card .signal-co {
+        font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+        font-weight: 500; margin-bottom: 10px; display: block;
+      }
+      .signal-card.ibm  { background: #edf5ff; }
+      .signal-card.ibm  .signal-co { color: #0043ce; }
+      .signal-card.apple { background: #f5f5f7; }
+      .signal-card.apple .signal-co { color: #1d1d1f; }
+      .signal-card.google { background: #e8f0fe; }
+      .signal-card.google .signal-co { color: #1967d2; }
+      .signal-card p { font-size: 14px; line-height: 1.6; color: rgba(36,36,36,0.8); margin: 0; }
+      @media (max-width: 640px) { .signal-grid { grid-template-columns: 1fr; } }
+
+      /* ── Lightbox ── */
+      .cs-gallery { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+      .cs-gallery-item { position: relative; display: block; overflow: hidden; border-radius: 6px; flex: 1 1 0; min-width: 120px; max-width: 340px; cursor: zoom-in; text-decoration: none; }
+      .cs-gallery-item img { width: 100%; height: auto; display: block; transition: transform 0.25s ease; }
+      .cs-gallery-item:hover img { transform: scale(1.04); }
+      .cs-single-link { display: block; position: relative; overflow: hidden; border-radius: 6px; cursor: zoom-in; text-decoration: none; }
+      .cs-single-link img { display: block; width: 100%; height: auto; transition: transform 0.25s ease; }
+      .cs-single-link:hover img { transform: scale(1.015); }
+      .cs-expand { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(10,10,10,0.32); opacity: 0; transition: opacity 0.2s ease; color: #fff; font-size: 26px; }
+      .cs-gallery-item:hover .cs-expand,
+      .cs-single-link:hover .cs-expand { opacity: 1; }
+      @media (max-width: 576px) { .cs-gallery { flex-direction: column; } .cs-gallery-item { max-width: 100%; } }
+
+      .w500 { font-weight: 500; }
+    </style>
   </head>
 
   <body>
-    <!--==============================
-    Mobile Menu
-    ==============================-->
-    <div class="mobile-menu-wrapper">
-      <div class="mobile-menu-area">
-        <button class="menu-toggle"><i class="fas fa-times"></i></button>
+    <div id="site-nav"></div>
 
-        <div class="mobile-logo">
-          <a href="/index.html"
-            ><img src="/assets/img/logo.svg" alt="Evelyn Ramsburgh"
-          /></a>
-        </div>
-
-        <div class="mobile-menu">
-          <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li class="active"><a href="/portfolio.html">Portfolio</a></li>
-           <!-- <li><a href="/resources.html">Resources</a></li>
-            <li><a href="/blog.html">Blog</a></li>-->
-            <li><a href="/contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="social-btn style3">
-          <a
-            href="https://www.linkedin.com/in/evelyn-ramsburgh/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-            </span>
-          </a>
-
-          <a
-            href="https://www.behance.net/evelynramsburgh"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Behance"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fab fa-behance"></i></span>
-              <span class="effect-1"><i class="fab fa-behance"></i></span>
-            </span>
-          </a>
-
-          <a
-            href="https://buymeacoffee.com/evelynramsburgh"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Buy Me a Coffee"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!--==============================
-    Header Area
-    ==============================-->
-    <header class="nav-header header-layout1">
-      <div class="sticky-wrapper">
-        <div class="menu-area">
-          <div class="container-fluid">
-            <div class="row align-items-center justify-content-between">
-              <div class="col-auto">
-                <div class="header-logo">
-                  <a href="/index.html">
-                    <img src="/assets/img/logo.svg" alt="logo" />
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-auto ms-auto">
-                <nav class="main-menu d-none d-lg-inline-block">
-                  <ul>
-                    <li>
-                      <a href="/index.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Home</span>
-                          <span class="effect-1">Home</span>
-                        </span>
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="/about.html">
-                        <span class="link-effect">
-                          <span class="effect-1">About</span>
-                          <span class="effect-1">About</span>
-                        </span>
-                      </a>
-                    </li>
-
-                    <li class="active">
-                      <a href="/portfolio.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Portfolio</span>
-                          <span class="effect-1">Portfolio</span>
-                        </span>
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="/resources.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Resources</span>
-                          <span class="effect-1">Resources</span>
-                        </span>
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="/blog.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Blog</span>
-                          <span class="effect-1">Blog</span>
-                        </span>
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="/contact.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Contact</span>
-                          <span class="effect-1">Contact</span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-
-                <div class="navbar-right d-inline-flex d-lg-none">
-                  <button type="button" class="menu-toggle sidebar-btn">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!--==============================
-    Breadcrumb
-    ==============================-->
     <div class="breadcumb-wrapper style2 bg-smoke">
       <div class="container-fluid">
         <div class="breadcumb-content">
@@ -247,20 +134,19 @@
       </div>
     </div>
 
-    <!--==============================
-    Case Study Content
-    ==============================-->
     <div class="project-details-page-area space">
       <div class="container case-layout">
+
         <!-- Title + Lead -->
         <div class="row">
           <div class="col-12">
             <div class="title-area mb-20">
               <h1 class="sec-title case-title">Headhunted — Website UI & Frontend Design</h1>
               <p class="case-body case-lead">
-                I designed the UI and frontend-ready layout for Headhunted, a nonprofit initiative supporting education
-                and aid programs for children, single mothers, and individuals in need. The goal was to deliver a
-                clear, trustworthy website experience that encourages community awareness and engagement.
+                UI and frontend-ready design for Headhunted — a nonprofit supporting education and aid programs
+                for children, single mothers, and individuals in need. The goal: a website that makes the mission
+                immediately legible, <span class="highlight">builds trust without friction</span>, and delivers
+                a component system clean enough to maintain and extend.
               </p>
             </div>
           </div>
@@ -268,14 +154,11 @@
 
         <!-- Hero image -->
         <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-          <img
-            class="w-100"
-            src="/assets/img/portfolio/headhunted-cover.png"
-            alt="Headhunted website hero and key screens"
-          />
-          <figcaption class="case-caption">
-            Selected screens from the Headhunted website experience.
-          </figcaption>
+          <a class="cs-single-link" href="../assets/img/headhunted/headhunted-hero.jpg" title="Headhunted website — key screens overview">
+            <img class="w-100" src="../assets/img/headhunted/headhunted-hero.jpg" alt="Headhunted website hero and key screens">
+            <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+          </a>
+          <figcaption class="case-caption">Selected screens from the Headhunted website experience.</figcaption>
         </figure>
 
         <!-- Highlights -->
@@ -291,131 +174,161 @@
             </div>
             <div class="case-highlight">
               <span class="label">Collaboration</span>
-              <span class="value">Smarttie (Development Partner)</span>
+              <span class="value">Smarttie (Dev Partner)</span>
             </div>
           </div>
         </div>
 
         <!-- Article -->
         <div class="case-article">
+
           <h4 class="case-heading mt-0">Overview</h4>
           <p class="case-body">
-            Headhunted needed a website that communicated credibility, purpose, and clarity — while remaining simple to
-            navigate and easy to maintain. The project included brand direction refinements, page structure, and UI
-            design aligned to accessibility and readability best practices.
+            Headhunted needed more than a website — it needed a credibility system. Nonprofits live or die on
+            trust signals: visitors decide within seconds whether an organization is legitimate, focused, and
+            worth their attention or donation. The design challenge wasn't visual complexity — it was
+            <span class="highlight">clarity under constraint</span>: limited content, no established brand equity,
+            and an audience that includes skeptical first-time visitors alongside returning supporters.
           </p>
-
-          <h4 class="case-heading">Context</h4>
           <p class="case-body">
-            I partnered with Smarttie (development agency) during the design and build phase. My role focused on
-            designing the interface system — from layout and navigation to component specifications — ensuring the
-            implementation could ship without ambiguity.
+            I owned end-to-end: brand direction, information architecture, UI system, component documentation,
+            and design QA through implementation — working in close collaboration with Smarttie, the development partner.
           </p>
 
-<h4 class="case-heading">Goals</h4>
-<ul class="list-wrap mb-35 case-bullets">
-  <li>Create a visual identity that feels trustworthy, modern, and mission-driven.</li>
-  <li>Design a readable, intuitive website that guides users through the purpose and ways to help.</li>
-  <li>Deliver frontend-ready UI with clear specs for efficient implementation.</li>
-</ul>
-
-
-          <!-- Discovery -->
           <h4 class="case-heading">Research & Discovery</h4>
           <p class="case-body">
-            The discovery phase combined lightweight market research and stakeholder alignment. We clarified the
-            audience, content priorities, and the tone required to communicate impact without feeling transactional.
+            Before any visual work, the discovery phase mapped the audiences and their intents — the two most
+            important inputs for IA decisions on a mission-driven site. Four distinct user intents emerged:
+          </p>
+          <ul class="case-bullets">
+            <li><span class="w500">Learn:</span> first-time visitors needing to quickly understand what Headhunted does and who it helps.</li>
+            <li><span class="w500">Trust:</span> potential donors or partners evaluating legitimacy, impact evidence, and organizational credibility.</li>
+            <li><span class="w500">Participate:</span> people looking for specific programs, ways to volunteer, or how to refer someone.</li>
+            <li><span class="w500">Contact:</span> users with a specific ask — needing a clear, low-friction path to reach the organization.</li>
+          </ul>
+          <p class="case-body">
+            I reviewed a benchmark set of nonprofit websites — screening for content patterns that correlated with
+            trustworthiness perception: impact numbers, beneficiary storytelling, organizational transparency,
+            and navigational clarity. The findings directly informed the page hierarchy and what content
+            appeared above the fold on each template.
           </p>
 
-          <ul class="list-wrap mb-35">
-            <li>Mapped key audiences and primary user intents (learn, trust, participate, contact).</li>
-            <li>Reviewed comparable nonprofit websites to identify content patterns that increase credibility.</li>
-            <li>Validated information hierarchy to prioritize mission, programs, and calls to action.</li>
-          </ul>
-
+          <!-- Landing page / IA image -->
           <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img
-              class="w-100"
-              src="/assets/img/portfolio/headhunted-structure.png"
-              alt="Information architecture and early layout structure for Headhunted"
-            />
-            <figcaption class="case-caption">
-              Early structure and content hierarchy to support comprehension and trust.
-            </figcaption>
+            <a class="cs-single-link" href="../assets/img/headhunted/headhunted-landing-page.webp" title="Content hierarchy and early layout structure">
+              <img class="w-100" src="../assets/img/headhunted/headhunted-landing-page.webp" alt="Information architecture and early layout structure for Headhunted">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+            <figcaption class="case-caption">IA and content hierarchy: mission → programs → impact evidence → call to action. Sequence designed to match the trust-building arc of a first visit.</figcaption>
           </figure>
 
-          <!-- Brand -->
           <h4 class="case-heading">Brand Direction</h4>
           <p class="case-body">
-            The brand direction aimed to balance warmth with professionalism — pairing a clean typographic system with
-            restrained color usage and generous whitespace. The result supports readability and reinforces credibility.
+            The brand system was built for warmth and precision in equal measure — avoiding the visual clichés
+            of nonprofit design (heavy stock photography, primary-color palettes, motivational-poster typography)
+            while still feeling approachable and mission-driven.
+          </p>
+          <p class="case-body">
+            Typography decisions were made explicitly rather than intuitively. The type scale uses a modular
+            ratio to create clear visual hierarchy across heading levels — ensuring users can scan the page
+            structure without reading every word. Line-height values were set to 1.6–1.75 across body text
+            to support readability for users with dyslexia or reading fatigue. Font weight progression
+            (400 → 500 → 600) replaces size inflation as the primary differentiator between content levels,
+            keeping the system <span class="highlight">legible at all viewport sizes without overscaling</span>.
+          </p>
+          <p class="case-body">
+            Color usage was intentionally restrained: a primary action color applied to interactive elements only,
+            a neutral surface palette that lets photography and content carry emotional weight,
+            and a secondary accent reserved for impact numbers and pull quotes — not decorative use.
           </p>
 
+          <!-- Colors / brand image -->
           <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img
-              class="w-100"
-              src="/assets/img/portfolio/headhunted-palette.png"
-              alt="Headhunted color palette and typography"
-            />
-            <figcaption class="case-caption">
-              Color palette and typography designed for readability and an approachable, trustworthy tone.
-            </figcaption>
+            <a class="cs-single-link" href="../assets/img/headhunted/headhunted-colors.webp" title="Color palette and typography system">
+              <img class="w-100" src="../assets/img/headhunted/headhunted-colors.webp" alt="Headhunted color palette and typography decisions">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+            <figcaption class="case-caption">Color and typography: restrained palette, modular type scale, and explicit weight progression — each decision documented with its rationale.</figcaption>
           </figure>
 
-          <!-- UI Design -->
           <h4 class="case-heading">UI Design & Component System</h4>
           <p class="case-body">
-            I translated the brand into a consistent UI system: buttons, forms, content blocks, and responsive layouts.
-            Each component was designed to remain legible across devices and easy to implement within typical web
-            constraints.
+            I built the UI as a component system rather than a collection of pages — ensuring that
+            every pattern had a reusable structure, defined states, and documented behavior before
+            being handed to developers. Even at this scale, treating the UI as a system rather
+            than a set of one-off screens prevents implementation divergence and makes future
+            content updates maintainable without a designer in the loop.
           </p>
-
-          <ul class="list-wrap mb-35">
-            <li>Designed responsive sections for storytelling (mission, programs, outcomes, and ways to help).</li>
-            <li>Defined component states for interactive elements (hover, focus, error).</li>
-            <li>Ensured accessibility basics: contrast, hierarchy, and predictable navigation patterns.</li>
+          <p class="case-body">
+            The component inventory covered: navigation (desktop + mobile), hero templates, program
+            cards, testimonial blocks, stats/impact row, form (contact + referral), footer,
+            and a CTA section in two variants. Each component was documented with spacing values,
+            responsive behavior at three breakpoints, and interaction states (default, hover, focus, error).
+          </p>
+          <ul class="case-bullets">
+            <li><span class="w500">Responsive layouts:</span> three-breakpoint system (mobile, tablet, desktop) with explicit column and spacing rules for each.</li>
+            <li><span class="w500">Interactive states:</span> every clickable and focusable element has a defined focus ring — not relying on browser defaults, which fail contrast requirements in most browsers.</li>
+            <li><span class="w500">Error handling:</span> form validation states designed inline (not modal or toast-only) to keep users in context and reduce abandonment.</li>
+            <li><span class="w500">Semantic HTML in annotations:</span> handoff documents specified heading level, landmark roles, and ARIA labels — not just visual styling — so implementation produced accessible markup by default.</li>
           </ul>
 
+          <!-- UI screens image -->
           <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img
-              class="w-100"
-              src="/assets/img/portfolio/headhunted-ui.png"
-              alt="Headhunted UI screens and components"
-            />
-            <figcaption class="case-caption">
-              UI screens and reusable patterns used across the site.
-            </figcaption>
+            <a class="cs-single-link" href="../assets/img/headhunted/headhunted-screens.webp" title="UI component system and screen designs">
+              <img class="w-100" src="../assets/img/headhunted/headhunted-screens.webp" alt="Headhunted UI screens and component system">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+            <figcaption class="case-caption">UI screens and reusable components — each pattern documented with states, spacing, and responsive behavior for developer implementation.</figcaption>
           </figure>
 
-          <!-- Collaboration -->
-          <h4 class="case-heading">Collaboration with Smarttie</h4>
+          <h4 class="case-heading">Accessibility</h4>
           <p class="case-body">
-            To ensure a smooth handoff, I provided annotated designs, component behaviors, and spacing rules, reducing
-            back-and-forth during implementation. We aligned on constraints early to avoid redesign late in development.
+            For a nonprofit audience, accessibility is not optional — it directly affects whether the people
+            the organization serves can actually use the site. The design was evaluated against
+            WCAG 2.1 AA throughout, with specific attention to:
           </p>
-
-          <ul class="list-wrap mb-35">
-            <li>Shared design specs and assets with clear naming conventions.</li>
-            <li>Validated implementation details through iterative reviews.</li>
-            <li>Supported QA feedback to keep UI consistent across breakpoints.</li>
+          <ul class="case-bullets">
+            <li><span class="w500">Color contrast:</span> all text/background combinations verified at 4.5:1 for body text, 3:1 for large text and UI components. The restrained palette made this straightforward — no decorative color use that might create unexpected failures.</li>
+            <li><span class="w500">Focus visibility:</span> custom focus styles on all interactive elements — buttons, links, form fields — with a 3px offset ring that meets the new WCAG 2.2 focus appearance guidance.</li>
+            <li><span class="w500">Form accessibility:</span> all inputs use visible labels (not placeholder-only), with error messages that describe what went wrong and how to fix it — not just that something failed.</li>
+            <li><span class="w500">Heading structure:</span> H1–H3 hierarchy validated across every template to support screen reader navigation and logical reading order.</li>
+            <li><span class="w500">Touch target sizing:</span> all interactive elements meet the 44×44px minimum for mobile users — critical for users accessing via older devices or with motor impairment.</li>
           </ul>
 
-          <!-- Outcome -->
+          <h4 class="case-heading">Developer Collaboration & Handoff</h4>
+          <p class="case-body">
+            Working with Smarttie, I structured the handoff to eliminate ambiguity — the most common source
+            of implementation drift. Rather than delivering a static Figma file and a hope, the handoff
+            package included:
+          </p>
+          <ul class="case-bullets">
+            <li><span class="w500">Named component library</span> with consistent naming conventions matching what developers would use in their codebase.</li>
+            <li><span class="w500">Spacing and sizing in both px and rem</span> — ensuring developers could implement relative sizing correctly for accessibility (respecting user font size preferences).</li>
+            <li><span class="w500">Interaction annotations</span> specifying transition duration, easing, and trigger conditions for hover, focus, and active states.</li>
+            <li><span class="w500">ARIA and semantic markup notes</span> embedded in component annotations — heading levels, landmark roles, alt text guidelines, and button vs. link usage rules.</li>
+          </ul>
+          <p class="case-body">
+            I ran two rounds of design QA during implementation: one mid-build to catch early drift,
+            and one pre-launch to validate cross-browser and cross-device consistency.
+            The QA sessions produced a tracked issue list — not verbal feedback — so fixes were verifiable.
+          </p>
+
           <h4 class="case-heading">Outcome</h4>
           <p class="case-body">
-            The final website delivered a clear narrative, strong credibility signals, and a consistent UI system that
-            supports future growth. The design enables users to quickly understand the mission, explore initiatives,
-            and take action without friction.
+            The delivered website gives Headhunted a credible, maintainable presence that supports
+            community awareness, program discovery, and direct contact — across devices and user contexts.
+            The component system is documented to the level where future content updates or new pages
+            can be built by the development team without requiring a designer to intervene for
+            every change.
           </p>
-
-          <h4 class="case-heading">Next Steps</h4>
           <p class="case-body">
-            If extended, I would add lightweight analytics to validate content engagement, refine calls to action based
-            on behavior, and iterate on SEO fundamentals to improve discoverability for the communities served.
+            If extended, the next phase would introduce lightweight behavioral analytics — scroll depth,
+            CTA click rates, and form completion funnels — to validate content engagement assumptions
+            made during discovery and refine the calls to action based on observed behavior rather than intent mapping alone.
           </p>
 
-          <!-- Optional CTA -->
-          <a href="/contact.html" class="link-btn">Interested in working together?</a>
+
+
         </div>
 
         <!-- Prev / Next nav -->
@@ -431,7 +344,6 @@
                   </span>
                 </span>
               </a>
-
               <a href="pillhuancalli.html" class="nav-btn">
                 <span>
                   <span class="link-effect">
@@ -447,89 +359,79 @@
       </div>
     </div>
 
-    <!--==============================
-    Footer
-    ==============================-->
-    <footer class="footer-wrapper footer-layout9 overflow-hidden">
-      <div class="container">
-        <div class="widget-area space-top">
-          <div class="row justify-content-between">
-            <div class="col-md-6 col-xl-5 col-lg-6">
-              <div class="widget widget-about footer-widget">
-                <h4 class="widget_title">About Evelyn</h4>
-                <p class="about-text">
-                  I design clear, accessible, and scalable digital experiences — turning complex product problems into
-                  UI that feels simple, intentional, and ready to ship.
-                </p>
+    <div id="site-footer"></div>
 
-                <div class="social-btn style3">
-                  <a
-                    href="https://www.linkedin.com/in/evelyn-ramsburgh/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                    </span>
-                  </a>
+    <div class="scroll-top">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+      </svg>
+    </div>
 
-                  <a
-                    href="https://www.behance.net/evelynramsburgh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Behance"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fab fa-behance"></i></span>
-                      <span class="effect-1"><i class="fab fa-behance"></i></span>
-                    </span>
-                  </a>
+    <script src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/js/jquery.counterup.min.js"></script>
+    <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/js/isotope.pkgd.min.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/twinmax.js"></script>
+    <script src="../assets/js/imageRevealHover.js"></script>
+    <script src="../assets/js/jarallax.min.js"></script>
+    <script src="../assets/js/jquery.marquee.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/waypoints.js"></script>
+    <script src="../assets/js/wow.js"></script>
+    <script src="../assets/js/main.js"></script>
 
-                  <a
-                    href="https://buymeacoffee.com/evelynramsburgh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Buy Me a Coffee"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
+    <!-- Magnific Popup init -->
+    <script>
+    jQuery(document).ready(function($) {
+      $('.cs-single-link').magnificPopup({
+        type: 'image',
+        image: { titleSrc: 'title' },
+        removalDelay: 120,
+        mainClass: 'mfp-fade',
+        closeBtnInside: false
+      });
+    });
+    </script>
 
-            <div class="col-md-6 col-xl-3 col-lg-4">
-              <div class="widget widget_nav_menu footer-widget">
-                <h3 class="widget_title">Links</h3>
-                <div class="menu-all-pages-container">
-                  <ul class="menu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/portfolio.html">Portfolio</a></li>
-                    <li><a href="/resources.html">Resources</a></li>
-                    <li><a href="/blog.html">Blog</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/about.html#testimonials">Testimonials</a></li>
-                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="copyright-wrap">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-12">
-              <p>© <span id="year"></span> Evelyn Ramsburgh. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <!-- Component loader -->
+    <script>
+    (function () {
+      var inSubfolder = window.location.pathname.indexOf('/portfolio/') !== -1;
+      var base = inSubfolder ? '../' : './';
+      function load(file, targetId, onDone) {
+        fetch(base + file)
+          .then(function(r) { if (!r.ok) throw new Error(file + ' returned ' + r.status); return r.text(); })
+          .then(function(html) {
+            var el = document.getElementById(targetId);
+            if (!el) return;
+            el.innerHTML = html;
+            if (typeof onDone === 'function') onDone();
+          })
+          .catch(function(e) { console.warn('Could not load ' + file + ':', e); });
+      }
+      function markActive() {
+        var path = window.location.pathname;
+        ['#site-nav .main-menu a','#site-nav .mobile-menu a'].forEach(function(sel) {
+          document.querySelectorAll(sel).forEach(function(a) {
+            var href = a.getAttribute('href');
+            if (href === path || (href === '/portfolio.html' && path.indexOf('/portfolio') === 0))
+              a.closest('li').classList.add('active');
+          });
+        });
+      }
+      function initMobileMenu() {
+        if (typeof jQuery !== 'undefined' && jQuery.fn.mobilemenu) jQuery('.mobile-menu-wrapper').mobilemenu();
+      }
+      function writeYear() {
+        document.querySelectorAll('.footer-year').forEach(function(el) { el.textContent = new Date().getFullYear(); });
+      }
+      load('nav.html', 'site-nav', function() { markActive(); initMobileMenu(); });
+      load('footer.html', 'site-footer', function() { writeYear(); });
+    })();
+    </script>
+  </body>
+</html>

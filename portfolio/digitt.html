@@ -3,293 +3,123 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Digitt — Digital Signature & Debt Reduction Flows | Evelyn Ramsburgh</title>
-
-    <meta
-      name="description"
-      content="UX/UI case study for Digitt, a platform that helps users reduce credit card debt through lower interest rates. I supported the early product with end-to-end flow design—especially around the digital signature process—focusing on clarity, trust, and accessibility improvements."
-    />
-    <meta
-      name="keywords"
-      content="Evelyn Ramsburgh, Product Designer, UX Designer, UI Designer, Digitt, Fintech, Debt Consolidation, Digital Signature, Web UX, Flows, Accessibility"
-    />
+    <title>Digitt — Digital Signature & Debt-Reduction Flows | Evelyn Ramsburgh</title>
+    <meta name="description" content="UX/UI case study for Digitt — a fintech platform helping users reduce credit card debt. I designed core flows including the digital signature experience, focused on trust, clarity, and WCAG-compliant accessibility in a high-stakes financial journey." />
+    <meta name="keywords" content="Evelyn Ramsburgh, Product Designer, Fintech, Digitt, Digital Signature, Debt Reduction, User Flows, Accessibility, WCAG, Form Design, Progressive Disclosure, UX" />
     <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://evelynramsburgh.com/digitt-digital-signature.html" />
+    <link rel="canonical" href="https://evelynramsburgh.com/portfolio/digitt.html" />
     <meta name="author" content="Evelyn Ramsburgh" />
-
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://evelynramsburgh.com/assets/img/og-cover.jpg" />
-    <meta property="og:url" content="https://evelynramsburgh.com/digitt-digital-signature.html" />
-    <meta property="og:title" content="Digitt — Digital Signature & Debt Reduction Flows | Evelyn Ramsburgh" />
-    <meta
-      property="og:description"
-      content="Designing early-stage fintech flows with a focus on clarity, user confidence, and accessibility—including a key digital signature experience."
-    />
+    <meta property="og:url" content="https://evelynramsburgh.com/portfolio/digitt.html" />
+    <meta property="og:title" content="Digitt — Digital Signature & Debt-Reduction Flows | Evelyn Ramsburgh" />
+    <meta property="og:description" content="Designing trust-critical fintech flows for a debt-reduction platform — from IA and form progression through digital signature and accessibility advocacy." />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon.png" />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png" />
+    <meta name="msapplication-TileImage" content="../assets/img/favicons/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/all.min.css" />
-    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css" />
-    <link rel="stylesheet" href="/assets/css/slick.min.css" />
-    <link rel="stylesheet" href="/assets/css/animate.min.css" />
-    <link rel="stylesheet" href="/assets/css/imageRevealHover.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="../assets/css/slick.min.css" />
+    <link rel="stylesheet" href="../assets/css/animate.min.css" />
+    <link rel="stylesheet" href="../assets/css/imageRevealHover.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
 
-    <!-- Page helpers (drop-in). Move to style.css if you prefer. -->
     <style>
-      .case-layout { max-width: 980px; }
-
-      .case-title { max-width: 720px; margin: 0 auto; text-align: left; }
-      .case-lead {
-        max-width: 720px;
-        margin: 14px auto 0;
-        text-align: left;
-        font-size: 20px;
-        line-height: 1.7;
-      }
-
-      .case-article { max-width: 720px; margin: 0 auto; }
-
-      .case-body {
-        font-size: 18.5px;
-        line-height: 1.75;
-        letter-spacing: 0.01em;
-        color: rgba(36,36,36,0.92);
-        margin-bottom: 1.1em;
-      }
+      .case-layout  { max-width: 980px; }
+      .case-title   { max-width: 720px; margin: 0 auto; text-align: left; }
+      .case-lead    { max-width: 720px; margin: 14px auto 0; font-size: 20px; line-height: 1.7; }
+      .case-article { max-width: 720px; margin: 40px auto 0; }
 
       .case-heading {
-        margin-top: 44px;
-        margin-bottom: 12px;
-        font-weight: 700;
+        font-family: var(--body-font);
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 1.3;
+        margin-top: 48px;
+        margin-bottom: 14px;
+        color: var(--title-color);
       }
+      .case-heading.mt-0 { margin-top: 0; }
 
-      .project-inner-thumb {
-        max-width: 920px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .case-caption {
+      .case-body {
         max-width: 720px;
-        margin: 10px auto 0;
-        text-align: center;
-        font-size: 14px;
-        line-height: 1.5;
-        color: rgba(36,36,36,0.68);
+        font-size: 18px;
+        line-height: 1.75;
+        color: rgba(36,36,36,0.85);
+        margin-bottom: 18px;
       }
 
+      .case-bullets { max-width: 720px; margin: 0 auto 28px; padding-left: 1.2rem; }
+      .case-bullets li { list-style: disc; margin-bottom: 0.55rem; font-size: 18px; line-height: 1.7; color: rgba(36,36,36,0.85); }
+
+      /* ── Highlights row ── */
       .case-highlights { max-width: 720px; margin: 18px auto 0; }
-      .case-highlights-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 22px;
-        padding: 18px 0 6px;
-        border-top: 1px solid rgba(0,0,0,0.08);
-        border-bottom: 1px solid rgba(0,0,0,0.08);
-      }
-      .case-highlight .label {
-        display: block;
-        font-size: 12px;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: rgba(36,36,36,0.55);
-        margin-bottom: 6px;
-      }
-      .case-highlight .value {
-        display: block;
-        font-size: 15px;
-        line-height: 1.4;
-        color: rgba(36,36,36,0.95);
-        font-weight: 600;
+      .case-highlights-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; padding: 18px 0 0; border-top: 1px solid rgba(0,0,0,0.08); }
+      .case-highlight { padding: 0 24px 18px 0; }
+      .case-highlight:not(:first-child) { padding-left: 24px; border-left: 1px solid rgba(0,0,0,0.08); }
+      .case-highlight .label { display: block; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(36,36,36,0.45); margin-bottom: 5px; }
+      .case-highlight .value { display: block; font-size: 15px; line-height: 1.4; color: rgba(36,36,36,0.95); font-weight: 400; }
+      @media (max-width: 600px) {
+        .case-highlights-grid { grid-template-columns: 1fr; gap: 0; padding: 0; border-top: none; }
+        .case-highlight { display: flex; flex-direction: row; align-items: baseline; gap: 10px; padding: 10px 0; border-left: none !important; padding-left: 0 !important; padding-right: 0 !important; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        .case-highlight:first-child { border-top: 1px solid rgba(0,0,0,0.08); }
+        .case-highlight:last-child { border-bottom: none; }
+        .case-highlight .label { min-width: 72px; margin-bottom: 0; flex-shrink: 0; }
+        .case-highlight .value { font-size: 14px; }
       }
 
-      .case-bullets {
-        max-width: 720px;
-        margin: 0 auto 28px;
-        padding-left: 1.2rem;
-        list-style: disc;
-      }
-      .case-bullets li { list-style: disc; margin-bottom: 0.45rem; }
+      /* ── Figure / caption ── */
+      .project-inner-thumb { max-width: 920px; margin-left: auto; margin-right: auto; }
+      .case-caption { max-width: 720px; margin: 10px auto 0; text-align: center; font-size: 14px; line-height: 1.5; color: rgba(36,36,36,0.68); }
 
-      .case-callout {
-        max-width: 720px;
-        margin: 22px auto 0;
-        padding: 16px 18px;
-        border: 1px solid rgba(0,0,0,0.08);
-        border-radius: 14px;
-        background: rgba(0,0,0,0.02);
+      /* ── Stat block ── */
+      .case-stat-block {
+        max-width: 720px; margin: 40px auto; padding: 32px 36px;
+        background: #f7f7f5; border-left: 3px solid var(--theme-color,#c8f000);
+        border-radius: 0 12px 12px 0; display: flex; align-items: flex-start; gap: 32px;
       }
-      .case-callout p { margin: 0; }
+      .case-stat-block .stat-number { font-family: var(--title-font,'Fraunces',serif); font-size: 64px; font-weight: 300; line-height: 1; color: #0a0c00; flex-shrink: 0; letter-spacing: -2px; white-space: nowrap; }
+      .case-stat-block .stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(36,36,36,0.45); margin-bottom: 8px; display: block; }
+      .case-stat-block .stat-body { font-size: 16px; line-height: 1.6; color: rgba(36,36,36,0.85); margin: 0; }
+      @media (max-width: 600px) { .case-stat-block { flex-direction: column; gap: 12px; padding: 24px 20px; } .case-stat-block .stat-number { font-size: 48px; } }
 
-      @media (max-width: 992px) {
-        .case-highlights-grid { grid-template-columns: 1fr; gap: 12px; padding: 16px 0 10px; }
-      }
-      @media (max-width: 768px) {
-        .case-body { font-size: 17px; line-height: 1.7; }
-        .case-lead { font-size: 18px; }
-      }
+      /* ── Ownership table ── */
+      .ownership-table { max-width: 720px; margin: 24px auto; border-collapse: collapse; width: 100%; font-size: 15px; }
+      .ownership-table th { text-align: left; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(36,36,36,0.45); font-weight: 400; padding: 0 16px 10px 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+      .ownership-table td { padding: 10px 16px 10px 0; border-bottom: 1px solid rgba(0,0,0,0.05); color: rgba(36,36,36,0.85); line-height: 1.5; vertical-align: top; }
+      .ownership-table td:first-child { font-weight: 500; white-space: nowrap; }
+      .badge-me { display: inline-block; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; background: var(--theme-color,#c8f000); color: #0a0c00; border-radius: 3px; padding: 1px 6px; margin-left: 6px; vertical-align: middle; }
+      .badge-shared { display: inline-block; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; background: rgba(0,0,0,0.06); color: rgba(36,36,36,0.6); border-radius: 3px; padding: 1px 6px; margin-left: 6px; vertical-align: middle; }
+      @media (max-width: 600px) { .ownership-table { font-size: 14px; } .ownership-table td:first-child { white-space: normal; } }
+
+      /* ── Tradeoff callout ── */
+      .tradeoff { max-width: 720px; margin: 28px auto; padding: 20px 22px; border: 1px solid rgba(0,0,0,0.08); border-radius: 10px; background: rgba(0,0,0,0.015); }
+      .tradeoff .tradeoff-label { font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(36,36,36,0.4); margin-bottom: 8px; display: block; }
+      .tradeoff p { font-size: 16px; line-height: 1.65; color: rgba(36,36,36,0.85); margin: 0; }
+
+      /* ── Lightbox ── */
+      .cs-single-link { display: block; position: relative; overflow: hidden; border-radius: 6px; cursor: zoom-in; text-decoration: none; }
+      .cs-single-link img { display: block; width: 100%; height: auto; transition: transform 0.25s ease; }
+      .cs-single-link:hover img { transform: scale(1.015); }
+      .cs-expand { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(10,10,10,0.32); opacity: 0; transition: opacity 0.2s ease; color: #fff; font-size: 26px; }
+      .cs-single-link:hover .cs-expand { opacity: 1; }
+
+      .w500 { font-weight: 500; }
     </style>
   </head>
 
   <body>
-    <!-- Mobile Menu -->
-    <div class="mobile-menu-wrapper">
-      <div class="mobile-menu-area">
-        <button class="menu-toggle"><i class="fas fa-times"></i></button>
+    <div id="site-nav"></div>
 
-        <div class="mobile-logo">
-          <a href="index.html"><img src="/assets/img/logo.svg" alt="Evelyn Ramsburgh" /></a>
-        </div>
-
-        <div class="mobile-menu">
-          <ul>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-           <!-- <li><a href="resources.html">Resources</a></li>
-            <li><a href="blog.html">Blog</a></li>-->
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="social-btn style3">
-          <a
-            href="https://www.linkedin.com/in/evelyn-ramsburgh/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-            </span>
-          </a>
-
-          <a
-            href="https://www.behance.net/evelynramsburgh"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Behance"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fab fa-behance"></i></span>
-              <span class="effect-1"><i class="fab fa-behance"></i></span>
-            </span>
-          </a>
-
-          <a
-            href="https://buymeacoffee.com/evelynramsburgh"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Buy Me a Coffee"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Header -->
-    <header class="nav-header header-layout1">
-      <div class="sticky-wrapper">
-        <div class="menu-area">
-          <div class="container-fluid">
-            <div class="row align-items-center justify-content-between">
-              <div class="col-auto">
-                <div class="header-logo">
-                  <a href="/index.html"><img src="/assets/img/logo.svg" alt="logo" /></a>
-                </div>
-              </div>
-
-              <div class="col-auto ms-auto">
-                <nav class="main-menu d-none d-lg-inline-block">
-                  <ul>
-                    <li class="active">
-                      <a href="/index.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Home</span>
-                          <span class="effect-1">Home</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/about.html">
-                        <span class="link-effect">
-                          <span class="effect-1">About</span>
-                          <span class="effect-1">About</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/portfolio.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Portfolio</span>
-                          <span class="effect-1">Portfolio</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                 <!--     <a href="/resources.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Resources</span>
-                          <span class="effect-1">Resources</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/blog.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Blog</span>
-                          <span class="effect-1">Blog</span>
-                        </span>-->
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/contact.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Contact</span>
-                          <span class="effect-1">Contact</span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-
-                <div class="navbar-right d-inline-flex d-lg-none">
-                  <button type="button" class="menu-toggle sidebar-btn">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Breadcrumb -->
     <div class="breadcumb-wrapper style2 bg-smoke">
       <div class="container-fluid">
         <div class="breadcumb-content">
@@ -302,29 +132,28 @@
       </div>
     </div>
 
-    <!-- Case Study -->
     <div class="project-details-page-area space">
       <div class="container case-layout">
+
         <!-- Title + Lead -->
         <div class="row">
           <div class="col-12">
             <div class="title-area mb-20">
-              <h1 class="sec-title case-title">Digitt — Digital Signature Process & Core Debt-Reduction Flows</h1>
+              <h1 class="sec-title case-title">Digitt — Designing Trust-Critical Flows for a Debt-Reduction Platform</h1>
               <p class="case-lead case-body">
-                Digitt is a web platform that helps users reduce credit card debt by refinancing to a lower interest rate.
-                I supported the early product (starting in 2018) by designing key user flows and screens—including the digital signature
-                experience—focused on clarity, trust, and smooth completion of high-stakes steps.
-              </p>
+                Digitt is a fintech platform that helps users reduce credit card debt by refinancing to a lower interest rate. <br>
+</p>
             </div>
           </div>
         </div>
 
-        <!-- HERO IMAGE (replace) -->
+        <!-- Hero image -->
         <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-          <img class="w-100" src="/assets/img/digitt/digitt-cover.png" alt="Digitt platform overview and signature flow" />
-          <figcaption class="case-caption">
-            Early Digitt experience: guiding users from initial eligibility and form submission through verification and signature.
-          </figcaption>
+          <a class="cs-single-link" href="../assets/img/digitt/digitt-cover.webp" title="Digitt platform — full flow overview">
+            <img class="w-100" src="../assets/img/digitt/digitt-cover.webp" alt="Digitt platform overview and signature flow">
+            <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+          </a>
+          <figcaption class="case-caption">Early Digitt experience: eligibility → application → verification → signature. Every step designed to keep users moving without losing them to anxiety or confusion.</figcaption>
         </figure>
 
         <!-- Highlights -->
@@ -336,154 +165,369 @@
             </div>
             <div class="case-highlight">
               <span class="label">Role</span>
-              <span class="value">UX/UI Designer (Flows)</span>
+              <span class="value">UX/UI Designer — Flows & Signature</span>
             </div>
             <div class="case-highlight">
               <span class="label">Focus</span>
-              <span class="value">IA · Forms · Digital Signature</span>
+              <span class="value">IA · Form Design · Digital Signature</span>
             </div>
           </div>
         </div>
 
         <!-- Article -->
         <div class="case-article">
-          <h4 class="case-heading mt-0">About</h4>
+               <p class="case-body" style="font-style: italic;">Starting in 2018, I designed the core user flows — from initial application through document review and digital signature —
+                with a focus on keeping users confident through a financially and legally consequential process. <br>
+              </p>
+          <!-- 1. PRODUCT THINKING -->
+          <h4 class="case-heading mt-0">The Problem — Business and User</h4>
           <p class="case-body">
-            Debt refinancing is a sensitive, high-friction domain: users need to understand what they are agreeing to, feel confident in the
-            process, and complete steps without errors. In 2018, Digitt was scaling its early MVP into more robust digital processes.
-            My work focused on the product’s most critical moments—especially multi-step forms and agreement flows—where small UX issues can create
-            large drop-offs.
+            <span class="w500">Business problem:</span> In fintech lending, the application funnel is a direct revenue driver.
+            Every drop-off between eligibility check and signed agreement is a lost conversion.
+            For Digitt in 2018 — an early-stage product scaling its digital processes —
+            drop-off in multi-step forms and the signature flow represented the primary obstacle to growth.
+            The design problem was not awareness or acquisition. It was <span class="highlight">completion</span>.
+          </p>
+          <a href="https://www.digitt.com/" target="_blank" rel="noopener"
+   style="display:flex;align-items:center;gap:16px;padding:16px 20px;border:1px solid rgba(0,0,0,0.1);border-radius:10px;text-decoration:none;color:inherit;background:#fff;max-width:560px;margin:24px auto;transition:box-shadow .2s ease;"
+   onmouseover="this.style.boxShadow='0 4px 18px rgba(0,0,0,0.08)'"
+   onmouseout="this.style.boxShadow='none'">
+  <img src="https://cdn.prod.website-files.com/638654b586d87b27f565a4d6/63865a2b94265e3fba08931a_Digitt_Logo_Light_Blue-02.svg"
+       style="width:40px;height:40px;border-radius:8px;flex-shrink:0;object-fit:contain;background:#0b1f3a;padding:7px;"
+       alt="Digitt">
+  <div style="min-width:0;">
+    <div style="font-size:13px;font-weight:500;color:#0a0c00;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Digitt</div>
+    <div style="font-size:12px;color:rgba(36,36,36,0.55);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Refinanciamiento y consolidación de deudas de tarjetas de crédito.</div>
+    <div style="font-size:11px;color:#1A73E8;margin-top:4px;">digitt.com</div>
+  </div>
+</a>
+          <p class="case-body">
+            <span class="w500">User problem:</span> Debt refinancing is emotionally loaded. Users arrive already stressed
+            about their financial situation, and then face a process that asks for sensitive personal and financial data,
+            requires reading legal documents, and ends with a legally binding signature — often on a device
+            they're not fully comfortable with. The dominant user anxiety is: <em>"Am I agreeing to something I don't understand?"</em>
+            Drop-off is rarely caused by users giving up — it's caused by users pausing and never coming back.
+          </p>
+          <p class="case-body">
+            <span class="w500">Connection to product goals:</span> Reducing form drop-off and signature abandonment
+            directly mapped to Digitt's ability to demonstrate conversion metrics to investors and scale its
+            lending volume. Every improvement to user comprehension and confidence was simultaneously a product
+            quality improvement and a business metric driver.
           </p>
 
+          <!-- 2. ROLE & OWNERSHIP -->
+          <h4 class="case-heading">Role & Ownership</h4>
           <p class="case-body">
-            Over time, Digitt has grown and evolved. This case study documents my contributions to the earlier product stage and the UX decisions that
-            supported user comprehension and completion.
+            I was the UX/UI designer responsible for flows, screens, and handoff.
+            I did not own Digitt's brand, design system, or long-term visual identity.
+            The table below is explicit about what I owned vs. what was team or product work:
           </p>
 
+          <table class="ownership-table">
+            <thead>
+              <tr><th>Area</th><th>Who</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>User flows & IA <span class="badge-me">Me</span></td>
+                <td>Solo</td>
+                <td>End-to-end flow mapping, step sequencing, screen-by-screen IA</td>
+              </tr>
+              <tr>
+                <td>Wireframes & prototypes <span class="badge-me">Me</span></td>
+                <td>Solo</td>
+                <td>Low-fi through interactive prototypes for stakeholder validation</td>
+              </tr>
+              <tr>
+                <td>Form UX & validation states <span class="badge-me">Me</span></td>
+                <td>Solo</td>
+                <td>Field grouping, progressive disclosure, inline error patterns</td>
+              </tr>
+              <tr>
+                <td>Digital signature flow <span class="badge-me">Me</span></td>
+                <td>Solo</td>
+                <td>Full flow design — document review, consent patterns, completion states</td>
+              </tr>
+              <tr>
+                <td>Accessibility advocacy <span class="badge-me">Me</span></td>
+                <td>Solo</td>
+                <td>Raised WCAG compliance issues throughout; some implemented post-engagement</td>
+              </tr>
+              <tr>
+                <td>Brand & visual identity <span class="badge-shared">Not mine</span></td>
+                <td>Digitt team</td>
+                <td>Color, typography, and component styling owned by the product team</td>
+              </tr>
+              <tr>
+                <td>Engineering implementation <span class="badge-shared">Shared</span></td>
+                <td>With Dev team</td>
+                <td>I provided specs + edge cases; implementation decisions with engineering</td>
+              </tr>
+            </tbody>
+          </table>
 
-          <h4 class="case-heading">Objective</h4>
-          <p class="case-body">
-            Create a user-friendly web experience that simplifies the debt-reduction journey—from initial information capture to document review and
-            digital signature—so users can confidently progress through a complex financial process with minimal friction.
-          </p>
-
-          <h4 class="case-heading">Goals</h4>
-          <ul class="case-bullets">
-            <li>Reduce cognitive load across multi-step forms and verification steps.</li>
-            <li>Clarify expectations: what is required, why it matters, and what happens next.</li>
-            <li>Design a signature flow that feels trustworthy, explicit, and easy to complete.</li>
-            <li>Provide implementation-ready UX specs to support fast iteration with engineering.</li>
-          </ul>
-
+          <!-- 3. PROCESS -->
           <h4 class="case-heading">Process</h4>
           <p class="case-body">
-            The work was structured around a pragmatic, product-first approach: understand where users get stuck, simplify the sequence, make decisions
-            visible, and validate with stakeholders. Because fintech experiences depend on trust, we prioritized transparency and clear microcopy at each
-            step.
+            The engagement was structured around the highest-friction moments in the funnel:
+            the multi-step application form and the digital signature flow.
+            Rather than redesigning the full product, I focused on the steps where
+            user confusion or anxiety was most likely to cause abandonment — and designed
+            specifically to reduce those moments.
           </p>
-
-          <h4 class="case-heading">1) Research & User Understanding</h4>
           <ul class="case-bullets">
-            <li>Reviewed market patterns for debt consolidation and refinancing experiences.</li>
-            <li>Audited MVP data and stakeholder feedback to identify drop-off risks and unclear steps.</li>
-            <li>Aligned on the “trust checklist”: clarity, explicit consent, and error prevention.</li>
+            <li><span class="w500">Discovery:</span> reviewed market benchmarks for debt consolidation flows, audited stakeholder feedback on drop-off points, and aligned on a "trust checklist" — the three questions every screen must answer: <em>What is this? Why do you need it? What happens next?</em></li>
+            <li><span class="w500">Flow mapping:</span> mapped the end-to-end journey as a sequence of user decisions, not just screens — identifying where back-tracking was likely, where cognitive load peaked, and where errors would be most costly.</li>
+            <li><span class="w500">Wireframes + prototyping:</span> low-fi wireframes for structure validation, followed by interactive prototypes for stakeholder review — allowing the experience to be assessed as a journey, not a collection of static screens.</li>
+            <li><span class="w500">Implementation support:</span> worked with engineering to clarify edge cases, error states, and interaction details — with two rounds of QA to catch implementation drift.</li>
           </ul>
 
-          <h4 class="case-heading">2) User Flows & Information Architecture</h4>
-          <p class="case-body">
-            I mapped end-to-end flows from first visit through application completion and signature—sequencing tasks to minimize back-and-forth and
-            ensuring each step answered three questions: <em>What is this?</em> <em>Why do you need it?</em> <em>What happens next?</em>
-          </p>
-
-          <ul class="case-bullets">
-            <li>Defined the minimal steps needed to gather financial information without overwhelming users.</li>
-            <li>Structured review moments (summaries) to prevent mistakes before submission.</li>
-            <li>Designed clear success and failure paths to keep users oriented.</li>
-          </ul>
-
-          <!-- IMAGE: Flow / IA (replace) -->
+          <!-- IA / flow image -->
           <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img class="w-100" src="/assets/img/digitt/digitt-flows.png" alt="Digitt user flows and information architecture" />
-            <figcaption class="case-caption">
-              Flow work: sequencing the journey to reduce friction and improve comprehension.
-            </figcaption>
+            
+            <!-- ── Design Thinking Process ── -->
+<div style="max-width:720px; margin:28px auto;">
+  <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:8px;">
+
+    <!-- Empathize -->
+    <div style="padding:14px 10px; background:rgba(0,0,0,0.03); border-radius:8px; text-align:center; border-top:2px solid rgba(0,0,0,0.08);">
+      <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(36,36,36,0.4); display:block; margin-bottom:4px; font-family:var(--body-font);">01</span>
+      <span style="font-size:14px; font-weight:500; color:rgba(36,36,36,0.85); display:block; margin-bottom:4px; font-family:var(--body-font);">Empathize</span>
+      <span style="font-size:12px; color:rgba(36,36,36,0.55); line-height:1.4; font-family:var(--body-font);">Understand Digitt users through Data Analytics & Research</span>
+    </div>
+
+    <!-- Define — active -->
+    <div style="padding:14px 10px; background:rgba(200,240,0,0.12); border-radius:8px; text-align:center; border-top:2px solid var(--theme-color, #c8f000);">
+      <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(36,36,36,0.4); display:block; margin-bottom:4px; font-family:var(--body-font);">02</span>
+      <span style="font-size:14px; font-weight:500; color:rgba(36,36,36,0.85); display:block; margin-bottom:4px; font-family:var(--body-font);">Define</span>
+      <span style="font-size:12px; color:rgba(36,36,36,0.55); line-height:1.4; font-family:var(--body-font);">Frame the problem with clarity and intent</span>
+    </div>
+
+    <!-- Ideate — active -->
+    <div style="padding:14px 10px; background:rgba(200,240,0,0.12); border-radius:8px; text-align:center; border-top:2px solid var(--theme-color, #c8f000);">
+      <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(36,36,36,0.4); display:block; margin-bottom:4px; font-family:var(--body-font);">03</span>
+      <span style="font-size:14px; font-weight:500; color:rgba(36,36,36,0.85); display:block; margin-bottom:4px; font-family:var(--body-font);">Ideate</span>
+      <span style="font-size:12px; color:rgba(36,36,36,0.55); line-height:1.4; font-family:var(--body-font);">Generate and explore diverse concepts</span>
+    </div>
+
+    <!-- Prototype -->
+    <div style="padding:14px 10px; background:rgba(0,0,0,0.03); border-radius:8px; text-align:center; border-top:2px solid rgba(0,0,0,0.08);">
+      <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(36,36,36,0.4); display:block; margin-bottom:4px; font-family:var(--body-font);">04</span>
+      <span style="font-size:14px; font-weight:500; color:rgba(36,36,36,0.85); display:block; margin-bottom:4px; font-family:var(--body-font);">Prototype</span>
+      <span style="font-size:12px; color:rgba(36,36,36,0.55); line-height:1.4; font-family:var(--body-font);">Build tangible representations to test</span>
+    </div>
+
+    <!-- Test -->
+    <div style="padding:14px 10px; background:rgba(0,0,0,0.03); border-radius:8px; text-align:center; border-top:2px solid rgba(0,0,0,0.08);">
+      <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(36,36,36,0.4); display:block; margin-bottom:4px; font-family:var(--body-font);">05</span>
+      <span style="font-size:14px; font-weight:500; color:rgba(36,36,36,0.85); display:block; margin-bottom:4px; font-family:var(--body-font);">Test</span>
+      <span style="font-size:12px; color:rgba(36,36,36,0.55); line-height:1.4; font-family:var(--body-font);">Validate with users and iterate</span>
+    </div>
+
+  </div>
+
+  <!-- Mobile: 2-col wrap at ≤550px (same breakpoint as levis) -->
+  <style>@media(max-width:550px){#dt-grid{grid-template-columns:1fr 1fr!important}}</style>
+</div>
+            <figcaption class="case-caption">Flow work: mapping the debt-reduction journey as a sequence of user decisions — identifying where anxiety peaks and where clarity interventions were needed most.</figcaption>
           </figure>
 
-          <h4 class="case-heading">3) Wireframes & Prototyping</h4>
-          <p class="case-body">
-            I translated the flow into wireframes and interactive prototypes to validate layout, field grouping, and error prevention patterns.
-            Prototypes allowed stakeholders to review the experience as a real journey—making gaps and ambiguities visible early.
-          </p>
+          <!-- 4. KEY DECISIONS & TRADEOFFS -->
+          <h4 class="case-heading">Key Design Decisions & Tradeoffs</h4>
 
-          <!-- IMAGE: Wireframes (replace) -->
-          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img class="w-100" src="/assets/img/digitt/digitt-wireframes.png" alt="Wireframes and prototype for Digitt forms" />
-            <figcaption class="case-caption">
-              Wireframes: form hierarchy, progressive disclosure, and validation states.
-            </figcaption>
-          </figure>
-
-          <h4 class="case-heading">4) Digital Signature Experience</h4>
-          <p class="case-body">
-            The digital signature step is both a legal checkpoint and a trust moment. I designed the signature flow to make the user’s action explicit,
-            reduce uncertainty, and ensure the interface supported careful review—not accidental consent.
-          </p>
-
-          <ul class="case-bullets">
-            <li>Clear document review states (what you’re signing, what to confirm).</li>
-            <li>Progress indicators and “safe” navigation to avoid losing context.</li>
-            <li>Confirmation patterns that reinforce completion and next steps.</li>
-          </ul>
-
-          <!-- IMAGE: Signature process (replace) -->
-          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img class="w-100" src="/assets/img/digitt/digitt-signature.png" alt="Digitt digital signature process screens" />
-            <figcaption class="case-caption">
-              Digital signature flow: designed for clarity, explicit consent, and confident completion.
-            </figcaption>
-          </figure>
-
-          <h4 class="case-heading">5) Iteration & Implementation Support</h4>
-          <p class="case-body">
-            I worked closely with engineering to ensure the UX intent translated into the built experience, clarifying interactions, states, and edge cases.
-            This included tightening error handling and ensuring users had clear recovery paths if something went wrong.
-          </p>
-
-          <h4 class="case-heading">Results</h4>
-          <p class="case-body">
-            The outcome was a streamlined set of flows that supported Digitt’s early growth: clearer form progression, more confident handoffs between steps,
-            and a signature experience designed to reduce uncertainty in a high-stakes moment. The work helped establish a foundation that the team could
-            iterate on as the product matured.
-          </p>
-
-          <!-- IMAGE: Former homepage (replace) -->
-          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img class="w-100" src="/assets/img/digitt/digitt-homepage-legacy.png" alt="Former Digitt homepage" />
-            <figcaption class="case-caption">Former Digitt homepage (historic reference).</figcaption>
-          </figure>
-
-          <h4 class="case-heading">Scope & Evolution</h4>
-          <div class="case-callout">
-            <p class="case-body">
-              <strong>Note:</strong> My contribution was focused on product UX—specifically user flows, information architecture,
-              and key screens for form completion and signature. I did not own Digitt’s brand, design system, or long-term visual identity.
-            </p>
-            <p class="case-body" style="margin-top: 10px;">
-              As Digitt evolved, parts of the visual design changed—including branding and component styling. At the time, some button color choices had
-              limited contrast and were difficult to perceive. Improving contrast and accessibility was a consistent recommendation I raised with product.
-              These elements were later updated, resulting in better accessibility for users.
-            </p>
+          <div class="tradeoff">
+            <span class="tradeoff-label">Decision 1 — Progressive disclosure over single long form</span>
+            <p>The initial approach grouped all financial information into a single long-form screen — common in
+            legacy financial applications, and preferred by the development team for implementation simplicity.
+            I redesigned as a progressive multi-step flow, revealing one logical group of questions at a time.
+            The tradeoff: more screens, more implementation complexity. The argument for it: in sensitive financial
+            contexts, users who can see the full scope of what they're being asked feel overwhelmed and defer.
+            Breaking it into named steps (Your information → Your finances → Review → Sign) gave users
+            a legible scope and a sense of progress that reduced premature abandonment. Each step was small
+            enough to complete in under 2 minutes.</p>
           </div>
 
-          <h4 class="case-heading">Final Remarks</h4>
+          <div class="tradeoff">
+            <span class="tradeoff-label">Decision 2 — Document review before signature, not simultaneous</span>
+            <p>The original signature flow presented the document and the signature input simultaneously —
+            the legal content scrolling alongside the signature field. I separated them into two distinct screens:
+            <em>Review</em> and <em>Sign</em>. The argument against this: it added a screen and a click.
+            The argument for it: presenting a signature input while legal text is still on screen
+            creates the visual impression that signing is the primary task, not understanding.
+            Separating the steps made review genuinely prior to consent — which is both better UX
+            and more legally defensible. The signature step, when it arrived, felt like a deliberate
+            act rather than a continuation of scrolling.</p>
+          </div>
+
+          <div class="tradeoff">
+            <span class="tradeoff-label">Decision 3 — Inline validation over end-of-form error summary</span>
+            <p>I designed errors to surface inline — immediately on field blur — rather than
+            collected at the bottom of the form or after submission. This was debated:
+            end-of-form summaries are common in financial applications because they require
+            less real-time backend logic. Inline validation requires more engineering effort.
+            I advocated for inline because in financial forms, users make mistakes on sensitive
+            fields (SSN, account numbers) and discovering this only at submission creates
+            a negative experience at exactly the moment trust is most critical.
+            Inline errors also support screen reader users who navigate field-by-field —
+            a WCAG requirement that end-of-form patterns make significantly harder to satisfy.</p>
+          </div>
+
+          <!-- Wireframes image -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <a class="cs-single-link" href="../assets/img/digitt/digitt-desktop-screens.webp" title="Wireframes — form hierarchy and validation states">
+              <img class="w-100" src="../assets/img/digitt/digitt-desktop-screens.webp" alt="Digitt wireframes showing form hierarchy and progressive disclosure">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+            <figcaption class="case-caption">Wireframes: progressive form structure, field grouping by cognitive proximity, and inline validation states — designed for clarity at every input moment.</figcaption>
+          </figure>
+
+          <!-- 5. DIGITAL SIGNATURE -->
+          <h4 class="case-heading">The Signature Flow — Designing for Explicit Consent</h4>
           <p class="case-body">
-            Designing fintech flows requires balancing speed with certainty. The experience must keep users moving while also helping them understand
-            what they are providing and agreeing to. This work reinforced the value of clear sequencing, progressive disclosure, and accessibility
-            advocacy—especially in moments where trust determines whether users complete the journey.
+            The digital signature step is simultaneously a legal requirement, a trust moment,
+            and a completion signal. Getting it wrong doesn't just cause abandonment —
+            it creates legal exposure. I designed the flow around one principle:
+            <span class="highlight">the user's action must feel deliberate, not automatic</span>.
+          </p>
+          <ul class="case-bullets">
+            <li><span class="w500">Separated review from signing:</span> the document appears in a dedicated review screen with scroll tracking — users can't proceed until they've reached the bottom, creating a genuine review gate rather than a checkbox formality.</li>
+            <li><span class="w500">Named what they're agreeing to:</span> every confirmation step includes the document title and a plain-language summary of what's being agreed to — not just "Sign below."</li>
+            <li><span class="w500">Progress context preserved:</span> the signature step shows users where they are in the overall flow — so completing the signature feels like finishing a process, not entering a new one.</li>
+            <li><span class="w500">Confirmation state designed as a celebration, not a receipt:</span> the post-signature screen was designed to feel like an achievement — because for users managing debt, completing this step is genuinely significant.</li>
+          </ul>
+
+          <!-- Signature / mobile image -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <a class="cs-single-link" href="../assets/img/digitt/digitt-mobile-screens.webp" title="Digital signature flow — mobile screens">
+              <img class="w-100" src="../assets/img/digitt/digitt-mobile-screens.webp" alt="Digitt digital signature process on mobile">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+            <figcaption class="case-caption">Signature flow on mobile: document review → explicit confirmation → completion. Designed to make the user's consent feel deliberate and their progress feel earned.</figcaption>
+          </figure>
+
+          <!-- 6. ACCESSIBILITY -->
+          <h4 class="case-heading">Accessibility</h4>
+          <p class="case-body">
+            Financial platforms have a legal obligation to accessibility — not just a UX one.
+            Across the engagement, I flagged and advocated for several WCAG 2.1 AA requirements:
+          </p>
+          <ul class="case-bullets">
+            <li><span class="w500">Button contrast failures:</span> primary CTAs used a brand color that failed the 4.5:1 contrast ratio for normal text and 3:1 for large text. I raised this formally and it was addressed in a later update — the improved contrast is now live.</li>
+            <li><span class="w500">Inline validation and screen reader support:</span> error messages needed ARIA live regions to be announced to screen reader users — a common oversight in financial forms that makes them functionally unusable for visually impaired users.</li>
+            <li><span class="w500">Focus management in multi-step flows:</span> on step transitions, focus needed to move to the top of the new step — otherwise keyboard and screen reader users lost context and had to re-navigate the entire page.</li>
+            <li><span class="w500">Touch target sizing:</span> mobile form elements and signature input areas met 44×44px minimum — critical for users with motor impairments and older devices.</li>
+          </ul>
+          <p class="case-body">
+            Not all recommendations were implemented during the initial engagement — a reality of working
+            in early-stage product contexts where development resources are constrained.
+            The contrast issue, once raised formally with documentation, was eventually corrected.
+            That outcome — advocacy leading to a shipped fix — is the meaningful signal here,
+            not just that the issue was identified.
           </p>
 
+          <!-- 7. ITERATION & LEARNINGS -->
+          <h4 class="case-heading">Iterations & Learnings</h4>
+          <ul class="case-bullets">
+            <li>
+              <span class="w500">First flow attempt had too many steps.</span> The initial progressive disclosure model had 6 named steps. Stakeholder feedback flagged it as feeling long before users even started. I consolidated to 4 by merging steps that shared the same emotional register (personal info and contact info became one step; document review and preparation became another). The rule I applied: steps should feel like natural pauses, not arbitrary breaks.
+            </li>
+            <li>
+              <span class="w500">Microcopy on financial fields was initially too technical.</span> First-round labels used industry-standard financial terminology (e.g., "APR," "utilization rate"). Testing with non-expert stakeholders revealed that 2 out of 5 needed clarification. I added inline tooltip definitions and rewrote primary labels in plain language — keeping the technical term as a secondary label for users who needed it for accuracy.
+            </li>
+            <li>
+              <span class="w500">Validation without direct user testing.</span> The forms were validated primarily through stakeholder review and market benchmarks — not direct testing with users under financial stress. This is the most significant process gap: the emotional and cognitive state of someone actively managing debt is not reproducible in a stakeholder session. If I were doing this engagement again, I would negotiate for even 3–5 sessions with screened users before finalizing the flow structure.
+            </li>
+          </ul>
+
+          <!-- Before / reference image -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <a class="cs-single-link" href="../assets/img/digitt/digitt-before.webp" title="Former Digitt homepage — pre-redesign baseline">
+              <img class="w-100" src="../assets/img/digitt/digitt-before.webp" alt="Former Digitt homepage — baseline for flow redesign">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+            <figcaption class="case-caption">Former homepage (historic reference): the visual baseline from which the new flows were built — showing the product's state before the UX improvements were applied.</figcaption>
+          </figure>
+
+          <!-- 8. SCALABILITY & SYSTEMS -->
+          <h4 class="case-heading">Scalability & Reusable Patterns</h4>
           <p class="case-body">
+            The patterns I established were designed to be reusable beyond the initial scope:
           </p>
+          <ul class="case-bullets">
+            <li><span class="w500">The three-question framework</span> (<em>What is this? Why do you need it? What happens next?</em>) was applied consistently across every screen and documented as a design principle — making it easy for the team to evaluate new screens against the same standard without needing to redesign from scratch.</li>
+            <li><span class="w500">The signature flow pattern</span> (review gate → explicit consent → confirmation) is directly reusable for any future agreement or consent moment in the product — loan amendments, terms updates, new product enrollment.</li>
+            <li><span class="w500">The progressive disclosure structure</span> is applicable to any multi-step financial process — not just the current application flow. It works for document uploads, verification, or account setup by mapping steps to user decision domains rather than data collection categories.</li>
+            <li><span class="w500">Error and validation patterns</span> were documented at the component level — inline error placement, ARIA requirements, and recovery copy guidelines — so future forms could reuse the system without redesigning interaction behavior.</li>
+          </ul>
+
+          <!-- 9. IMPACT & METRICS -->
+          <h4 class="case-heading">Impact & Metrics</h4>
+
+          <div class="case-stat-block">
+            <span class="stat-number"><span class="highlight">3</span></span>
+            <div>
+              <span class="stat-label">Core flows shipped — eligibility, application, and digital signature</span>
+              <p class="stat-body">
+                All three flows were delivered, implemented, and live in the product.
+                The signature flow, in particular, moved from a single-screen combined
+                review-and-sign pattern to a two-step separated flow with a genuine
+                review gate — a structural improvement with direct implications for both
+                user comprehension and legal defensibility.
+              </p>
+            </div>
+          </div>
+
+          <ul class="case-bullets">
+            <li><span class="w500">Accessibility improvement shipped post-engagement:</span> the button contrast failure was addressed formally in a later update — demonstrating that advocacy with documentation produces outcomes even after the engagement ends.</li>
+
+<!-- ── Button Contrast Comparison ── -->
+<div style="max-width:720px;margin:32px auto;">
+  <style>
+    .cc-wrap{display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start;}
+    .cc-col{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:160px;}
+    .cc-btn{padding:11px 28px;border-radius:10px;font-size:15px;font-weight:600;border:none;cursor:default;font-family:var(--body-font);}
+    .cc-ratio{font-family:var(--title-font);font-size:42px;font-weight:300;line-height:1;color:var(--title-color);letter-spacing:-2px;}
+    .cc-label{font-size:13px;color:rgba(36,36,36,0.55);font-family:var(--body-font);}
+    .cc-hex{font-size:11px;color:rgba(36,36,36,0.4);font-family:monospace;}
+    .cc-badge{display:inline-block;font-size:11px;font-weight:500;padding:3px 9px;border-radius:4px;font-family:var(--body-font);}
+    .cc-fail{background:rgba(220,53,69,0.1);color:#b91c1c;}
+    .cc-pass{background:rgba(21,128,61,0.1);color:#166534;}
+    .cc-note{font-size:13px;line-height:1.6;color:rgba(36,36,36,0.7);font-family:var(--body-font);max-width:180px;}
+    @media(max-width:480px){.cc-wrap{flex-direction:column;}}
+  </style>
+
+  <div class="cc-wrap">
+
+    <div class="cc-col">
+      <button class="cc-btn" style="background:#87CEEB;color:#fff;">Follow</button>
+      <span class="cc-ratio">1.8:1</span>
+      <span class="cc-badge cc-fail">✕ Fails WCAG AA</span>
+      <span class="cc-hex">BG #87CEEB · Text #FFFFFF</span>
+      <span class="cc-note">Sky blue is already light — white text on top becomes nearly invisible. Requires at least 4.5:1.</span>
+    </div>
+
+    <div class="cc-col">
+      <button class="cc-btn" style="background:#1A73E8;color:#fff;">Follow</button>
+      <span class="cc-ratio">4.6:1</span>
+      <span class="cc-badge cc-pass">✓ Passes WCAG AA</span>
+      <span class="cc-hex">BG #1A73E8 · Text #FFFFFF</span>
+      <span class="cc-note">Darker blue provides enough contrast. Passes AA — the minimum for interactive components.</span>
+    </div>
+
+  </div>
+
+</div>
+
+            <li><span class="w500">Implementation quality:</span> two rounds of design QA during development caught interaction drift before launch — ensuring the built experience matched the designed intent on edge cases and validation states.</li>
+          </ul>
+
+          <h4 class="case-heading">Recommendations</h4>
+
+          <ul class="case-bullets">
+            <li><span class="w500">User research with the actual audience:</span> stakeholder proxies don't reproduce the emotional state of someone actively managing credit card debt. Even 5 unmoderated sessions would meaningfully challenge assumptions about step length, terminology clarity, and where confidence actually breaks down.</li>
+            <li><span class="w500">Full accessibility audit before launch:</span> the contrast issue thankfully was fixed, but a complete WCAG 2.1 AA audit (contrast, keyboard navigation, screen reader testing, touch targets) should have been a formal launch gate, not an ongoing recommendation. In regulated financial contexts, this is not optional.</li>
+          </ul>
+
         </div>
 
         <!-- Prev / Next nav -->
@@ -500,11 +544,13 @@
                 </span>
               </a>
 
+
+              
               <a href="/contact.html" class="nav-btn">
                 <span>
                   <span class="link-effect">
-                    <span class="effect-1">Let’s talk</span>
-                    <span class="effect-1">Let’s talk</span>
+                    <span class="effect-1">Let's talk</span>
+                    <span class="effect-1">Let's talk</span>
                   </span>
                 </span>
                 <i class="fa fa-arrow-right"></i>
@@ -515,125 +561,64 @@
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer-wrapper footer-layout9 overflow-hidden">
-      <div class="container">
-        <div class="widget-area space-top">
-          <div class="row justify-content-between">
-            <div class="col-md-6 col-xl-5 col-lg-6">
-              <div class="widget widget-about footer-widget">
-                <h4 class="widget_title">About Evelyn</h4>
-                <p class="about-text">
-                  I design clear, accessible, and scalable digital experiences —
-                  turning complex product problems into UI that feels simple,
-                  intentional, and ready to ship.
-                </p>
+    <div id="site-footer"></div>
 
-                <div class="social-btn style3">
-                  <a
-                    href="https://www.linkedin.com/in/evelyn-ramsburgh/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                    </span>
-                  </a>
-
-                  <a
-                    href="https://www.behance.net/evelynramsburgh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Behance"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fab fa-behance"></i></span>
-                      <span class="effect-1"><i class="fab fa-behance"></i></span>
-                    </span>
-                  </a>
-
-                  <a
-                    href="https://buymeacoffee.com/evelynramsburgh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Buy Me a Coffee"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-xl-3 col-lg-4">
-              <div class="widget widget_nav_menu footer-widget">
-                <h3 class="widget_title">Links</h3>
-                <div class="menu-all-pages-container">
-                  <ul class="menu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/portfolio.html">Portfolio</a></li>
-                 <!--   <li><a href="/resources.html">Resources</a></li>
-                    <li><a href="/blog.html">Blog</a></li>-->
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/about.html#testimonials">Testimonials</a></li>
-                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Copyright -->
-      <div class="container">
-        <div class="copyright-wrap">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-12">
-              <p>© <span id="year"></span> Evelyn Ramsburgh. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-
-    <!-- Scroll To Top -->
     <div class="scroll-top">
       <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path
-          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-          style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"
-        ></path>
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
       </svg>
     </div>
 
-    <!-- JS -->
-    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="/assets/js/slick.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="/assets/js/jquery.counterup.min.js"></script>
-    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="/assets/js/isotope.pkgd.min.js"></script>
-    <script src="/assets/js/gsap.min.js"></script>
+    <script src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/js/jquery.counterup.min.js"></script>
+    <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/js/isotope.pkgd.min.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/twinmax.js"></script>
+    <script src="../assets/js/imageRevealHover.js"></script>
+    <script src="../assets/js/jarallax.min.js"></script>
+    <script src="../assets/js/jquery.marquee.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/waypoints.js"></script>
+    <script src="../assets/js/wow.js"></script>
+    <script src="../assets/js/main.js"></script>
 
-    <script src="/assets/js/twinmax.js"></script>
-    <script src="/assets/js/imageRevealHover.js"></script>
-    <script src="/assets/js/jarallax.min.js"></script>
-    <script src="/assets/js/jquery.marquee.min.js"></script>
-    <script src="/assets/js/jquery-ui.min.js"></script>
-    <script src="/assets/js/waypoints.js"></script>
-    <script src="/assets/js/wow.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      $('.cs-single-link').magnificPopup({
+        type: 'image', image: { titleSrc: 'title' },
+        removalDelay: 120, mainClass: 'mfp-fade', closeBtnInside: false
+      });
+    });
+    </script>
 
-    <script src="/assets/js/main.js"></script>
+    <script>
+    (function () {
+      var inSubfolder = window.location.pathname.indexOf('/portfolio/') !== -1;
+      var base = inSubfolder ? '../' : './';
+      function load(file, targetId, onDone) {
+        fetch(base + file)
+          .then(function(r) { if (!r.ok) throw new Error(file + ' returned ' + r.status); return r.text(); })
+          .then(function(html) { var el = document.getElementById(targetId); if (!el) return; el.innerHTML = html; if (typeof onDone === 'function') onDone(); })
+          .catch(function(e) { console.warn('Could not load ' + file, e); });
+      }
+      function markActive() {
+        var path = window.location.pathname;
+        ['#site-nav .main-menu a','#site-nav .mobile-menu a'].forEach(function(sel) {
+          document.querySelectorAll(sel).forEach(function(a) {
+            var href = a.getAttribute('href');
+            if (href === path || (href === '/portfolio.html' && path.indexOf('/portfolio') === 0)) a.closest('li').classList.add('active');
+          });
+        });
+      }
+      function initMobileMenu() { if (typeof jQuery !== 'undefined' && jQuery.fn.mobilemenu) jQuery('.mobile-menu-wrapper').mobilemenu(); }
+      function writeYear() { document.querySelectorAll('.footer-year').forEach(function(el) { el.textContent = new Date().getFullYear(); }); }
+      load('nav.html', 'site-nav', function() { markActive(); initMobileMenu(); });
+      load('footer.html', 'site-footer', function() { writeYear(); });
+    })();
+    </script>
   </body>
 </html>

@@ -36,7 +36,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <!-- Favicons - Place favicon.ico in the root directory -->
+    <!-- Favicons -->
     <link
       rel="icon"
       type="image/png"
@@ -50,9 +50,7 @@
     />
     <meta name="theme-color" content="#ffffff" />
 
-    <!--==============================
-	  Google Fonts
-	============================== -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -60,160 +58,23 @@
       rel="stylesheet"
     />
 
-    <!--==============================
-	    All CSS File
-	============================== -->
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
     <link rel="stylesheet" href="assets/css/slick.min.css" />
     <link rel="stylesheet" href="assets/css/animate.min.css" />
     <link rel="stylesheet" href="assets/css/imageRevealHover.css" />
-    <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
-    <!--==============================
-Mobile Menu
-============================== -->
-    <div class="mobile-menu-wrapper">
-      <div class="mobile-menu-area">
-        <button class="menu-toggle"><i class="fas fa-times"></i></button>
-
-        <div class="mobile-logo">
-          <a href="index.html"
-            ><img src="assets/img/logo.svg" alt="Evelyn Ramsburgh"
-          /></a>
-        </div>
-
-        <div class="mobile-menu">
-          <ul>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="social-btn style3">
-          <!-- LinkedIn -->
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-            </span>
-          </a>
-
-          <!-- Behance -->
-          <a
-            href="https://www.behance.net/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Behance"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fab fa-behance"></i></span>
-              <span class="effect-1"><i class="fab fa-behance"></i></span>
-            </span>
-          </a>
-
-          <!-- Buy Me a Coffee -->
-          <a
-            href="https://www.buymeacoffee.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Buy Me a Coffee"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
 
     <!--==============================
-	Header Area
+      Nav — cargado desde nav.html
     ==============================-->
-    <header class="nav-header header-layout1">
-      <div class="sticky-wrapper">
-        <!-- Main Menu Area -->
-        <div class="menu-area">
-          <div class="container-fluid">
-            <div class="row align-items-center justify-content-between">
-              <!-- Logo -->
-              <div class="col-auto">
-                <div class="header-logo">
-                  <a href="index.html">
-                    <img src="assets/img/logo.svg" alt="logo" />
-                  </a>
-                </div>
-              </div>
+    <div id="site-nav"></div>
 
-              <!-- Main Menu -->
-              <div class="col-auto ms-auto">
-                <nav class="main-menu d-none d-lg-inline-block">
-                  <ul>
-                    <li class="active">
-                      <a href="index.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Home</span>
-                          <span class="effect-1">Home</span>
-                        </span>
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="about.html">
-                        <span class="link-effect">
-                          <span class="effect-1">About</span>
-                          <span class="effect-1">About</span>
-                        </span>
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="portfolio.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Portfolio</span>
-                          <span class="effect-1">Portfolio</span>
-                        </span>
-                      </a>
-                    </li>
-
-
-                    <li>
-                      <a href="contact.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Contact</span>
-                          <span class="effect-1">Contact</span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-
-                <!-- Mobile Toggle -->
-                <div class="navbar-right d-inline-flex d-lg-none">
-                  <button type="button" class="menu-toggle sidebar-btn">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
 
     <!--==============================
     Hero Area
@@ -223,12 +84,49 @@ Mobile Menu
         <div class="hero-style3">
           <div class="row">
             <!-- Title -->
-            <div class="col-lg-8">
-              <h1 class="hero-title wow img-custom-anim-left">
-                Designing products that scale, perform, and make sense.
-              </h1>
-            </div>
+ <!-- Intro line -->
+          <p class="hero-intro">
+            Evelyn Ramsburgh is a Sr Product Designer<br>
+            specialized in
+          </p>
 
+          <!-- Specialties list -->
+          <ul class="hero-list">
+            <li class="hero-list-item">
+              <a href="portfolio.html">
+                Product Strategy
+                <span class="hero-list-tag">view work →</span>
+              </a>
+            </li>
+            <li class="hero-list-item">
+              <a href="portfolio.html">
+                User Experience
+                <span class="hero-list-tag">view work →</span>
+              </a>
+            </li>
+            <li class="hero-list-item">
+              <a href="portfolio.html">
+                Research
+                <span class="hero-list-tag">view work →</span>
+              </a>
+            </li>
+            <li class="hero-list-item">
+              <a href="portfolio.html">
+                Design Systems
+                <span class="hero-list-tag">view work →</span>
+              </a>
+            </li>
+            <li class="hero-list-item">
+              <a href="portfolio.html">
+                Accessibility
+                <span class="hero-list-tag">view work →</span>
+              </a>
+            </li>
+          </ul>
+
+
+
+            
             <!-- Text: half width -->
             <div class="col-lg-6"></div>
             <div class="col-lg-4 offset-lg-8">
@@ -244,17 +142,17 @@ Mobile Menu
                   >
                 </span>
               </a>
-
-              <!-- Button aligned right -->
             </div>
           </div>
         </div>
       </div>
     </div>
 
+
     <!--==============================
     Feature Area
     ==============================-->
+     <!--
     <div class="feature-area-1 space bg-gray">
       <div class="container">
         <div class="title-area text-center">
@@ -318,7 +216,7 @@ Mobile Menu
       </div>
     </div>
 
-    <!--======== / Hero Section ========-->
+  -->
     <!--==============================
     Project Area
     ==============================-->
@@ -330,31 +228,12 @@ Mobile Menu
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-10">
+              <div class="title-area text-center">
+                <h2 class="sec-title" style="font-style: italic;">Past work</h2>
+              </div>
               <ul class="award-wrap-area">
-                <div class="title-area text-center">
-                  <h2 class="sec-title">Featured projects</h2>
-                </div>
-                <li
-                  class="single-award-list style2 tg-img-reveal-item"
-                  data-fx="1"
-                  data-img="assets/img/flexera/lockedproject01.png"
-                >
-                  <span class="award-year">2023</span>
-                  <div class="award-details">
-                    <h4>
-                      <a href="portfolio/flexera.html"
-                        >Flexera Cloud Cost Optimization</a
-                      >
-                    </h4>
-                    <div class="award-meta">
-                      <a href="portfolio/flexera.html">UI Design</a>
-                      <a href="portfolio/flexera.html">UX Research</a>
-                      <a href="portfolio/flexera.html">FinOps</a>
-                      <a href="portfolio/flexera.html">Consulting</a>
-                    </div>
-                  </div>
-                  <span class="award-tag">Enterprise</span>
-                </li>
+
+
 
                 <li
                   class="single-award-list style2 tg-img-reveal-item"
@@ -364,15 +243,11 @@ Mobile Menu
                   <span class="award-year">2022</span>
                   <div class="award-details">
                     <h4>
-                      <a href="portfolio/ibm-rebranding.html"
-                        >IBM Seller Incentives - Rebranding</a
-                      >
+                      <a href="portfolio/ibm-rebranding.html">IBM Seller Incentives - Rebranding</a>
                     </h4>
                     <div class="award-meta">
                       <a href="portfolio/ibm-rebranding.html">Branding</a>
-                      <a href="portfolio/ibm-rebranding.html"
-                        >App Icon Design</a
-                      >
+                      <a href="portfolio/ibm-rebranding.html">App Icon Design</a>
                     </div>
                   </div>
                   <span class="award-tag">Branding</span>
@@ -403,17 +278,11 @@ Mobile Menu
                   <span class="award-year">2020</span>
                   <div class="award-details">
                     <h4>
-                      <a href="portfolio/ibm-seller-incentives.html"
-                        >IBM Seller Incentives - Cloud Migration</a
-                      >
+                      <a href="portfolio/ibm-seller-incentives.html">IBM Seller Incentives - Cloud Migration</a>
                     </h4>
                     <div class="award-meta">
-                      <a href="portfolio/ibm-seller-incentives.html"
-                        >UI Design</a
-                      >
-                      <a href="portfolio/ibm-seller-incentives.html"
-                        >UX Research</a
-                      >
+                      <a href="portfolio/ibm-seller-incentives.html">UI Design</a>
+                      <a href="portfolio/ibm-seller-incentives.html">UX Research</a>
                       <a href="portfolio/ibm-seller-incentives.html">FinOps</a>
                     </div>
                   </div>
@@ -450,6 +319,7 @@ Mobile Menu
                   </div>
                   <span class="award-tag">Branding</span>
                 </li>
+
               </ul>
               <div class="btn-wrap mt-50 justify-content-center">
                 <a href="portfolio.html" class="btn">
@@ -465,121 +335,13 @@ Mobile Menu
       </div>
     </div>
 
-    <!--============================== 
-    Footer Area
-==============================-->
-    <footer class="footer-wrapper footer-layout9 overflow-hidden">
-      <div class="container">
-        <div class="widget-area space-top">
-          <div class="row justify-content-between">
-            <!-- About -->
-            <div class="col-md-6 col-xl-5 col-lg-6">
-              <div class="widget widget-about footer-widget">
-                <h3 class="widget_title">About Evelyn</h3>
-                <p class="about-text">
-                  I design clear, accessible, and scalable digital experiences —
-                  turning complex product problems into UI that feels simple,
-                  intentional, and ready to ship.
-                </p>
 
-                <div class="social-btn style3">
-                  <!-- LinkedIn -->
-                  <a
-                    href="https://www.linkedin.com/in/evelyn-ramsburgh/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"
-                        ><i class="fab fa-linkedin-in"></i
-                      ></span>
-                      <span class="effect-1"
-                        ><i class="fab fa-linkedin-in"></i
-                      ></span>
-                    </span>
-                  </a>
+    <!--==============================
+      Footer — cargado desde footer.html
+      Para editar el footer, edita SOLO footer.html
+    ==============================-->
+    <div id="site-footer"></div>
 
-                  <!-- Behance -->
-                  <a
-                    href="https://www.behance.net/evelynramsburgh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Behance"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"
-                        ><i class="fab fa-behance"></i
-                      ></span>
-                      <span class="effect-1"
-                        ><i class="fab fa-behance"></i
-                      ></span>
-                    </span>
-                  </a>
-
-                  <!-- Buy Me a Coffee -->
-                  <a
-                    href="https://buymeacoffee.com/evelynramsburgh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Buy Me a Coffee"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"
-                        ><i class="fas fa-mug-hot"></i
-                      ></span>
-                      <span class="effect-1"
-                        ><i class="fas fa-mug-hot"></i
-                      ></span>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Links (Single Column) -->
-            <div class="col-md-6 col-xl-3 col-lg-4">
-              <div class="widget widget_nav_menu footer-widget">
-                <h3 class="widget_title">Links</h3>
-                <div class="menu-all-pages-container">
-                  <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-
-
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="/about.html#testimonials">Testimonials</a></li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Copyright -->
-      <div class="container">
-        <div class="copyright-wrap">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-12">
-              <p>
-                © <span id="year"></span> Evelyn Ramsburgh. All rights reserved.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-
-    <!--********************************
-			Code End  Here
-	******************************** -->
 
     <!-- Scroll To Top -->
     <div class="scroll-top">
@@ -600,7 +362,7 @@ Mobile Menu
       </svg>
     </div>
 
-    <!-- Jquery -->
+    <!-- JS -->
     <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -609,7 +371,6 @@ Mobile Menu
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <script src="assets/js/gsap.min.js"></script>
-
     <script src="assets/js/twinmax.js"></script>
     <script src="assets/js/imageRevealHover.js"></script>
     <script src="assets/js/jarallax.min.js"></script>
@@ -617,8 +378,67 @@ Mobile Menu
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/waypoints.js"></script>
     <script src="assets/js/wow.js"></script>
-
-    <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+
+    <!--==============================
+      Component loader
+      Carga nav.html y footer.html, marca el link activo,
+      reinicia el menú móvil y escribe el año del copyright.
+    ==============================-->
+    <script>
+      (function () {
+
+        function load(url, targetId, onDone) {
+          fetch(url)
+            .then(function (r) {
+              if (!r.ok) throw new Error(url + ' responded ' + r.status);
+              return r.text();
+            })
+            .then(function (html) {
+              document.getElementById(targetId).innerHTML = html;
+              if (typeof onDone === 'function') onDone();
+            })
+            .catch(function (e) {
+              console.warn('Could not load ' + url + ':', e);
+            });
+        }
+
+        function markActive() {
+          var path = window.location.pathname;
+          ['#site-nav .main-menu a', '#site-nav .mobile-menu a'].forEach(function (sel) {
+            document.querySelectorAll(sel).forEach(function (a) {
+              var href = a.getAttribute('href');
+              var active =
+                href === path ||
+                (href === '/portfolio.html' && path.indexOf('/portfolio') === 0);
+              if (active) a.closest('li').classList.add('active');
+            });
+          });
+        }
+
+        function initMobileMenu() {
+          if (typeof jQuery !== 'undefined' && jQuery.fn.mobilemenu) {
+            jQuery('.mobile-menu-wrapper').mobilemenu();
+          }
+        }
+
+        function writeYear() {
+          document.querySelectorAll('.footer-year').forEach(function (el) {
+            el.textContent = new Date().getFullYear();
+          });
+        }
+
+        load('/nav.html', 'site-nav', function () {
+          markActive();
+          initMobileMenu();
+        });
+
+        load('/footer.html', 'site-footer', function () {
+          writeYear();
+        });
+
+      })();
+    </script>
+
   </body>
 </html>

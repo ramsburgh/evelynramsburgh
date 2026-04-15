@@ -3,344 +3,138 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Levi’s — Promoter App (Design Sprint) | Evelyn Ramsburgh</title>
-
-    <meta
-      name="description"
-      content="UX/UI case study for a mobile app designed for Levi’s promoters during a five-day Design Sprint. I contributed as UI Designer, shaping an efficient, brand-aligned workflow from early flows and prototypes to high-fidelity screens and implementation handoff."
-    />
-    <meta
-      name="keywords"
-      content="Evelyn Ramsburgh, Product Designer, UX Designer, UI Designer, Levi's, Design Sprint, Mobile App, Field Sales, Promoters, Material Design, Prototyping, Usability Testing"
-    />
+    <title>Levi's — Promoter App (5-Day Design Sprint) | Evelyn Ramsburgh</title>
+    <meta name="description" content="UX/UI case study: a five-day Design Sprint to design and validate a mobile workflow for Levi's in-store promoters. Understand → Ideate → Prototype → Test → Implement. Validated with real promoters in 5 days." />
+    <meta name="keywords" content="Evelyn Ramsburgh, Product Designer, UX Designer, UI Designer, Levi's, Design Sprint, Mobile App, Field Sales, Promoters, Material Design, Usability Testing, Retail UX" />
     <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://evelynramsburgh.com/levis-promoter-app.html" />
+    <link rel="canonical" href="https://evelynramsburgh.com/portfolio/levis.html" />
     <meta name="author" content="Evelyn Ramsburgh" />
-
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://evelynramsburgh.com/assets/img/og-cover.jpg" />
-    <meta property="og:url" content="https://evelynramsburgh.com/levis-promoter-app.html" />
-    <meta property="og:title" content="Levi’s — Promoter App (Design Sprint) | Evelyn Ramsburgh" />
-    <meta
-      property="og:description"
-      content="A five-day Design Sprint to prototype and validate a mobile workflow for Levi’s promoters—focused on speed, clarity, and brand alignment."
-    />
+    <meta property="og:url" content="https://evelynramsburgh.com/portfolio/levis.html" />
+    <meta property="og:title" content="Levi's — Promoter App (5-Day Design Sprint) | Evelyn Ramsburgh" />
+    <meta property="og:description" content="A five-day Design Sprint to prototype and validate a mobile workflow for Levi's in-store promoters — from problem framing through high-fidelity handoff." />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon.png" />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png" />
+    <meta name="msapplication-TileImage" content="../assets/img/favicons/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/all.min.css" />
-    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css" />
-    <link rel="stylesheet" href="/assets/css/slick.min.css" />
-    <link rel="stylesheet" href="/assets/css/animate.min.css" />
-    <link rel="stylesheet" href="/assets/css/imageRevealHover.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="../assets/css/slick.min.css" />
+    <link rel="stylesheet" href="../assets/css/animate.min.css" />
+    <link rel="stylesheet" href="../assets/css/imageRevealHover.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
 
-    <!-- Page helpers (drop-in). Move to style.css if you prefer. -->
     <style>
-      .case-layout { max-width: 980px; }
-
-      .case-title { max-width: 720px; margin: 0 auto; text-align: left; }
-      .case-lead {
-        max-width: 720px;
-        margin: 14px auto 0;
-        text-align: left;
-        font-size: 20px;
-        line-height: 1.7;
-      }
-
-      .case-article { max-width: 720px; margin: 0 auto; }
-
-      .case-body {
-        font-size: 18.5px;
-        line-height: 1.75;
-        letter-spacing: 0.01em;
-        color: rgba(36,36,36,0.92);
-        margin-bottom: 1.1em;
-      }
-
-      .case-heading {
-        margin-top: 44px;
-        margin-bottom: 12px;
-        font-weight: 700;
-      }
-
+      .case-layout  { max-width: 980px; }
+      .case-title   { max-width: 720px; margin: 0 auto; text-align: left; }
+      .case-lead    { max-width: 720px; margin: 14px auto 0; font-size: 20px; line-height: 1.7; }
+      .case-article { max-width: 720px; margin: 40px auto 0; }
+      .case-heading { font-family: var(--body-font); font-weight: 400; font-size: 22px; line-height: 1.3; margin-top: 48px; margin-bottom: 14px; color: var(--title-color); }
+      .case-heading.mt-0 { margin-top: 0; }
+      .case-body { max-width: 720px; font-size: 18px; line-height: 1.75; color: rgba(36,36,36,0.85); margin-bottom: 18px; }
+      .case-bullets { max-width: 720px; margin: 0 auto 28px; padding-left: 1.2rem; }
+      .case-bullets li { list-style: disc; margin-bottom: 0.55rem; font-size: 18px; line-height: 1.7; color: rgba(36,36,36,0.85); }
       .case-highlights { max-width: 720px; margin: 18px auto 0; }
-      .case-highlights-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 22px;
-        padding: 18px 0 6px;
-        border-top: 1px solid rgba(0,0,0,0.08);
-        border-bottom: 1px solid rgba(0,0,0,0.08);
+      .case-highlights-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; padding: 18px 0 0; border-top: 1px solid rgba(0,0,0,0.08); }
+      .case-highlight { padding: 0 24px 18px 0; }
+      .case-highlight:not(:first-child) { padding-left: 24px; border-left: 1px solid rgba(0,0,0,0.08); }
+      .case-highlight .label { display: block; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(36,36,36,0.45); margin-bottom: 5px; }
+      .case-highlight .value { display: block; font-size: 15px; line-height: 1.4; color: rgba(36,36,36,0.95); font-weight: 400; }
+      @media (max-width: 600px) {
+        .case-highlights-grid { grid-template-columns: 1fr; padding: 0; border-top: none; }
+        .case-highlight { display: flex; flex-direction: row; align-items: baseline; gap: 10px; padding: 10px 0; border-left: none !important; padding-left: 0 !important; padding-right: 0 !important; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        .case-highlight:first-child { border-top: 1px solid rgba(0,0,0,0.08); }
+        .case-highlight:last-child { border-bottom: none; }
+        .case-highlight .label { min-width: 72px; margin-bottom: 0; flex-shrink: 0; }
+        .case-highlight .value { font-size: 14px; }
       }
-      .case-highlight .label {
-        display: block;
-        font-size: 12px;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: rgba(36,36,36,0.55);
-        margin-bottom: 6px;
-      }
-      .case-highlight .value {
-        display: block;
-        font-size: 15px;
-        line-height: 1.4;
-        color: rgba(36,36,36,0.95);
-        font-weight: 600;
-      }
-
-      .project-inner-thumb {
-        max-width: 920px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .case-caption {
-        max-width: 720px;
-        margin: 10px auto 0;
-        text-align: center;
-        font-size: 14px;
-        line-height: 1.5;
-        color: rgba(36,36,36,0.68);
-      }
-
-      .case-bullets {
-        max-width: 720px;
-        margin: 0 auto 28px;
-        padding-left: 1.2rem;
-        list-style: disc;
-      }
-      .case-bullets li { list-style: disc; margin-bottom: 0.45rem; }
-
-      .case-callout {
-        max-width: 720px;
-        margin: 24px auto 0;
-        padding: 16px 18px;
-        border: 1px solid rgba(0,0,0,0.08);
-        border-radius: 14px;
-        background: rgba(0,0,0,0.02);
-      }
-
-      @media (max-width: 992px) {
-        .case-highlights-grid { grid-template-columns: 1fr; gap: 12px; padding: 16px 0 10px; }
-      }
-      @media (max-width: 768px) {
-        .case-body { font-size: 17px; line-height: 1.7; }
-        .case-lead { font-size: 18px; }
-      }
-
-      .figure-images {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
-.figure-images img {
-  max-width: 260px;
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
+      .project-inner-thumb { max-width: 920px; margin-left: auto; margin-right: auto; }
+      .case-caption { max-width: 720px; margin: 10px auto 0; text-align: center; font-size: 14px; line-height: 1.5; color: rgba(36,36,36,0.68); }
+      .case-stat-block { max-width: 720px; margin: 40px auto; padding: 32px 36px; background: #f7f7f5; border-left: 3px solid var(--theme-color,#c8f000); border-radius: 0 12px 12px 0; display: flex; align-items: flex-start; gap: 32px; }
+      .case-stat-block .stat-number { font-family: var(--title-font,'Fraunces',serif); font-size: 64px; font-weight: 300; line-height: 1; color: #0a0c00; flex-shrink: 0; letter-spacing: -2px; white-space: nowrap; }
+      .case-stat-block .stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(36,36,36,0.45); margin-bottom: 8px; display: block; }
+      .case-stat-block .stat-body { font-size: 16px; line-height: 1.6; color: rgba(36,36,36,0.85); margin: 0; }
+      @media (max-width: 600px) { .case-stat-block { flex-direction: column; gap: 12px; padding: 24px 20px; } .case-stat-block .stat-number { font-size: 48px; } }
+      .ownership-table { max-width: 720px; margin: 24px auto; border-collapse: collapse; width: 100%; font-size: 15px; }
+      .ownership-table th { text-align: left; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(36,36,36,0.45); font-weight: 400; padding: 0 16px 10px 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+      .ownership-table td { padding: 10px 16px 10px 0; border-bottom: 1px solid rgba(0,0,0,0.05); color: rgba(36,36,36,0.85); line-height: 1.5; vertical-align: top; }
+      .ownership-table td:first-child { font-weight: 500; white-space: nowrap; }
+      .badge-me { display: inline-block; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; background: var(--theme-color,#c8f000); color: #0a0c00; border-radius: 3px; padding: 1px 6px; margin-left: 6px; vertical-align: middle; }
+      .badge-shared { display: inline-block; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; background: rgba(0,0,0,0.06); color: rgba(36,36,36,0.6); border-radius: 3px; padding: 1px 6px; margin-left: 6px; vertical-align: middle; }
+      .tradeoff { max-width: 720px; margin: 28px auto; padding: 20px 22px; border: 1px solid rgba(0,0,0,0.08); border-radius: 10px; background: rgba(0,0,0,0.015); }
+      .tradeoff .tradeoff-label { font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(36,36,36,0.4); margin-bottom: 8px; display: block; }
+      .tradeoff p { font-size: 16px; line-height: 1.65; color: rgba(36,36,36,0.85); margin: 0; }
+      /* Sprint day timeline */
+      .sprint-timeline { max-width: 720px; margin: 28px auto; display: grid; grid-template-columns: repeat(5,1fr); gap: 8px; }
+      .sprint-day { padding: 14px 10px; background: rgba(0,0,0,0.03); border-radius: 8px; text-align: center; border-top: 2px solid rgba(0,0,0,0.08); }
+      .sprint-day .day-num { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(36,36,36,0.4); display: block; margin-bottom: 4px; }
+      .sprint-day .day-name { font-size: 14px; font-weight: 500; color: rgba(36,36,36,0.85); display: block; margin-bottom: 4px; }
+      .sprint-day .day-desc { font-size: 12px; color: rgba(36,36,36,0.55); line-height: 1.4; }
+      .sprint-day.active { background: rgba(200,240,0,0.12); border-top-color: var(--theme-color,#c8f000); }
+      @media (max-width: 550px) { .sprint-timeline { grid-template-columns: 1fr 1fr; } }
+      /* Gallery */
+      .cs-gallery { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+      .cs-gallery-item { position: relative; display: block; overflow: hidden; border-radius: 6px; flex: 1 1 0; min-width: 120px; max-width: 260px; cursor: zoom-in; text-decoration: none; }
+      .cs-gallery-item img { width: 100%; height: auto; display: block; transition: transform 0.25s ease; }
+      .cs-gallery-item:hover img { transform: scale(1.04); }
+      .cs-single-link { display: block; position: relative; overflow: hidden; border-radius: 6px; cursor: zoom-in; text-decoration: none; }
+      .cs-single-link img { display: block; width: 100%; height: auto; transition: transform 0.25s ease; }
+      .cs-single-link:hover img { transform: scale(1.015); }
+      .cs-expand { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(10,10,10,0.32); opacity: 0; transition: opacity 0.2s ease; color: #fff; font-size: 26px; }
+      .cs-gallery-item:hover .cs-expand, .cs-single-link:hover .cs-expand { opacity: 1; }
+      @media (max-width: 576px) { .cs-gallery { flex-direction: column; } .cs-gallery-item { max-width: 100%; } }
+      .w500 { font-weight: 500; }
     </style>
   </head>
-
   <body>
-    <!-- Mobile Menu -->
-    <div class="mobile-menu-wrapper">
-      <div class="mobile-menu-area">
-        <button class="menu-toggle"><i class="fas fa-times"></i></button>
+    <div id="site-nav"></div>
 
-        <div class="mobile-logo">
-          <a href="index.html"><img src="/assets/img/logo.svg" alt="Evelyn Ramsburgh" /></a>
-        </div>
-
-        <div class="mobile-menu">
-          <ul>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-           <!-- <li><a href="resources.html">Resources</a></li>
-            <li><a href="blog.html">Blog</a></li>-->
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="social-btn style3">
-          <a
-            href="https://www.linkedin.com/in/evelyn-ramsburgh/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-            </span>
-          </a>
-
-          <a
-            href="https://www.behance.net/evelynramsburgh"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Behance"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fab fa-behance"></i></span>
-              <span class="effect-1"><i class="fab fa-behance"></i></span>
-            </span>
-          </a>
-
-          <a
-            href="https://buymeacoffee.com/evelynramsburgh"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Buy Me a Coffee"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Header -->
-    <header class="nav-header header-layout1">
-      <div class="sticky-wrapper">
-        <div class="menu-area">
-          <div class="container-fluid">
-            <div class="row align-items-center justify-content-between">
-              <div class="col-auto">
-                <div class="header-logo">
-                  <a href="/index.html"><img src="/assets/img/logo.svg" alt="logo" /></a>
-                </div>
-              </div>
-
-              <div class="col-auto ms-auto">
-                <nav class="main-menu d-none d-lg-inline-block">
-                  <ul>
-                    <li class="active">
-                      <a href="/index.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Home</span>
-                          <span class="effect-1">Home</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/about.html">
-                        <span class="link-effect">
-                          <span class="effect-1">About</span>
-                          <span class="effect-1">About</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/portfolio.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Portfolio</span>
-                          <span class="effect-1">Portfolio</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                  <!--    <a href="/resources.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Resources</span>
-                          <span class="effect-1">Resources</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/blog.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Blog</span>
-                          <span class="effect-1">Blog</span>
-                        </span>
-                      </a>
-                    </li>-->
-                    <li>
-                      <a href="/contact.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Contact</span>
-                          <span class="effect-1">Contact</span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-
-                <div class="navbar-right d-inline-flex d-lg-none">
-                  <button type="button" class="menu-toggle sidebar-btn">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Breadcrumb -->
     <div class="breadcumb-wrapper style2 bg-smoke">
       <div class="container-fluid">
         <div class="breadcumb-content">
           <ul class="breadcumb-menu">
             <li><a href="/index.html">Home</a></li>
             <li><a href="/portfolio.html">Portfolio</a></li>
-            <li>Levi’s — Promoter App</li>
+            <li>Levi's — Promoter App</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- Case Study -->
     <div class="project-details-page-area space">
       <div class="container case-layout">
-        <!-- Title + Lead -->
+
         <div class="row">
           <div class="col-12">
             <div class="title-area mb-20">
-              <h1 class="sec-title case-title">Levi’s — Mobile Workflow for Promoters (5-Day Design Sprint)</h1>
+              <h1 class="sec-title case-title">Levi's — Mobile Workflow for In-Store Promoters (5-Day Design Sprint)</h1>
               <p class="case-lead case-body">
-                I designed the UI for a mobile application to support Levi’s in-store promoters during a five-day Design Sprint.
-                The sprint compressed discovery, ideation, prototyping, and validation into one week—helping the team align quickly on a
-                practical, brand-consistent workflow that could be implemented with confidence.
+                A five-day Design Sprint to design, prototype, and validate a mobile tool for Levi's in-store promoters.
+                The sprint compressed discovery through usability testing into one week —
+                producing a <span class="highlight">validated, brand-aligned interface</span> ready for
+                development handoff by day 5.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- HERO IMAGE (replace) -->
         <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-          <img class="w-100" src="/assets/img/levis/levismockup.jpg" alt="Levi’s promoter app concept overview" />
-          <figcaption class="case-caption">
-            Sprint output: a validated mobile flow focused on speed, clarity, and consistent brand expression.
-          </figcaption>
+          <a class="cs-single-link" href="../assets/img/levis/levis-mockup.jpg" title="Levi's promoter app — sprint output overview">
+            <img class="w-100" src="../assets/img/levis/levis-mockup.jpg" alt="Levi's promoter app concept overview">
+            <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+          </a>
+          <figcaption class="case-caption">Sprint output: a validated mobile flow focused on speed, clarity, and Levi's brand consistency.</figcaption>
         </figure>
 
-        <!-- Highlights -->
         <div class="case-highlights">
           <div class="case-highlights-grid">
             <div class="case-highlight">
@@ -349,7 +143,7 @@
             </div>
             <div class="case-highlight">
               <span class="label">Role</span>
-              <span class="value">UI Designer</span>
+              <span class="value">UI Designer (Sprint Team)</span>
             </div>
             <div class="case-highlight">
               <span class="label">Method</span>
@@ -358,168 +152,259 @@
           </div>
         </div>
 
-        <!-- Article -->
         <div class="case-article">
-          <h4 class="case-heading mt-0">About</h4>
+
+          <h4 class="case-heading mt-0">The Problem — Business and User</h4>
           <p class="case-body">
-            Levi’s promoters operate in a fast-paced retail environment: they guide customers, answer fit and product questions,
-            and often need to switch context quickly. This project explored how a lightweight mobile tool could reduce friction in
-            day-to-day promoter work—without distracting from the in-person customer experience.
+            <span class="w500">Business problem:</span> Levi's in-store promoters are a direct sales channel —
+            their ability to guide customers confidently toward the right product affects
+            conversion rates, average order value, and brand perception at the point of sale.
+            Without a reliable tool, promoters relied on memory, physical lookbooks, or interrupting
+            customers to check with managers — all of which create friction in the selling moment.
+          </p>
+          <p class="case-body">
+            <span class="w500">User problem:</span> Promoters operate under constant context-switching pressure.
+            They're mid-conversation with a customer and need product information fast —
+            they can't stop to navigate a slow or complex interface.
+            The dominant constraint was: <span class="highlight">the tool must work in under 3 taps or it won't be used</span>.
+            Every interaction competes with the in-person customer experience for attention.
+          </p>
+          <p class="case-body">
+            <span class="w500">Why a sprint:</span> Levi's needed to validate the concept before committing to
+            full development. The sprint format was chosen specifically to reduce that risk —
+            test a prototype with real promoters in one week, then decide whether to build.
           </p>
 
+          <h4 class="case-heading">Role & Ownership</h4>
+          <table class="ownership-table">
+            <thead><tr><th>Area</th><th>Who</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>Problem framing <span class="badge-shared">Shared</span></td><td>Full sprint team</td><td>Day 1 structured mapping of promoter activities and friction points</td></tr>
+              <tr><td>Concept ideation <span class="badge-shared">Shared</span></td><td>Full sprint team</td><td>Parallel sketching with team + client; I contributed interaction concepts</td></tr>
+              <tr><td>UI design <span class="badge-me">Me</span></td><td>Solo</td><td>All screen designs, component states, and visual execution — my primary ownership</td></tr>
+              <tr><td>Material Design implementation <span class="badge-me">Me</span></td><td>Solo</td><td>Adapting Material components to Levi's brand; selecting right patterns for use case</td></tr>
+              <tr><td>Prototype build <span class="badge-me">Me</span></td><td>Solo</td><td>Figma prototype used in usability test sessions</td></tr>
+              <tr><td>Handoff package <span class="badge-me">Me</span></td><td>Solo</td><td>Specs, interaction notes, assets, and component documentation for Smarttie dev team</td></tr>
+              <tr><td>Usability sessions <span class="badge-shared">Shared</span></td><td>With sprint lead</td><td>I observed and took notes; sprint lead moderated</td></tr>
+            </tbody>
+          </table>
+
+          <h4 class="case-heading">The Sprint — Day by Day</h4>
           <p class="case-body">
-            I partnered with Smarttie (a development agency I collaborate with as a freelance designer) as the UI Designer in the sprint team.
-            My focus was translating the sprint’s decisions into a clear, implementable interface: screens, components, states, and handoff assets.
+            The five-day structure gave every decision a deadline — which is the mechanism that makes sprints work.
+            Time constraints force prioritization and prevent over-design.
           </p>
 
-          <h4 class="case-heading">Objective</h4>
-          <p class="case-body">
-            Design a promoter-first mobile experience that improves speed and confidence in-store—while staying aligned with Levi’s visual identity
-            and supporting a smooth development handoff.
-          </p>
-
-          <h4 class="case-heading">Goals</h4>
-          <ul class="case-bullets">
-            <li>Create an intuitive workflow that supports promoters under time pressure.</li>
-            <li>Make key information scannable and actionable during customer interactions.</li>
-            <li>Reflect Levi’s brand through typography, tone, and visual consistency.</li>
-            <li>Deliver UI that is implementation-ready, including states and interaction guidance.</li>
-          </ul>
-
-          <div class="case-callout">
-            <p class="case-body" style="margin-bottom: 0;">
-              <strong>Design Sprint, in practice:</strong> a five-day framework to align on a problem, prototype a solution,
-              and validate it with users—reducing risk before committing to build.
-            </p>
+          <div class="sprint-timeline">
+            <div class="sprint-day">
+              <span class="day-num">Day 1</span>
+              <span class="day-name">Understand</span>
+              <span class="day-desc">Map promoter activities, friction points, and the minimum feature set</span>
+            </div>
+            <div class="sprint-day">
+              <span class="day-num">Day 2</span>
+              <span class="day-name">Ideate</span>
+              <span class="day-desc">Parallel interaction concepts; vote on best approach</span>
+            </div>
+            <div class="sprint-day active">
+              <span class="day-num">Day 3</span>
+              <span class="day-name">Prototype</span>
+              <span class="day-desc">Low-fi → high-fi UI; Material Design alignment</span>
+            </div>
+            <div class="sprint-day active">
+              <span class="day-num">Day 4</span>
+              <span class="day-name">Test</span>
+              <span class="day-desc">Sessions with real promoters; think-aloud protocol</span>
+            </div>
+            <div class="sprint-day">
+              <span class="day-num">Day 5</span>
+              <span class="day-name">Refine & Hand off</span>
+              <span class="day-desc">Iteration from findings; final handoff package</span>
+            </div>
           </div>
 
-               <!-- HERO IMAGE (replace) -->
-        <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-          <img class="w-100" src="/assets/img/levis/designsprint-whats.jpg" alt="Design sprint framework" />
-          <figcaption class="case-caption">
-Design Sprint framework          </figcaption>
-        </figure>
+      
+            <figcaption class="case-caption">The Design Sprint framework: a structured 5-day process that compresses months of uncertainty into one testable week.</figcaption>
+      
 
-          <h4 class="case-heading">Process</h4>
+          <h4 class="case-heading">Day 1 — Understand & Define</h4>
           <p class="case-body">
-            The sprint structure gave the team a shared pace and a concrete set of decision points.
-            My work followed the sprint rhythm: translating outputs into flows, tightening UI clarity, and preparing assets for testing and handoff.
+            The team mapped promoter activities, the cadence of customer interactions,
+            and the specific moments where they needed information fast.
+            Three friction patterns emerged consistently:
           </p>
-
-          <h4 class="case-heading">1) Understand & Define</h4>
           <ul class="case-bullets">
-            <li>Mapped promoter activities, common questions, and operational constraints in-store.</li>
-            <li>Identified friction points that slow promoters down or add cognitive load mid-conversation.</li>
-            <li>Defined the minimum set of features needed to support a complete workflow.</li>
+            <li><span class="w500">Product lookup delays:</span> promoters breaking away from customers to check inventory or specs on a separate system.</li>
+            <li><span class="w500">Incident reporting friction:</span> end-of-shift reporting done from memory, producing inaccurate data that the brand team couldn't act on.</li>
+            <li><span class="w500">Profile and assignment ambiguity:</span> promoters not knowing their current store assignment or shift schedule without calling a manager.</li>
           </ul>
 
-          <!-- IMAGE: Early flows / wireframes (replace) -->
           <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img class="w-100" src="/assets/img/levis/Promotor.jpeg" alt="Early wireframes and workflow mapping" style="max-width:300px; width:100%; height:auto; display:block; margin:0 auto;" />
-            <figcaption class="case-caption">
-              Early flows and wireframes used to align on scope and the “in-store speed” requirement.
-            </figcaption>
+            <a class="cs-single-link" href="../assets/img/levis/levis-promoter-hero.jpg" title="Early flows and workflow mapping — Day 1">
+              <img class="w-100" src="../assets/img/levis/levis-promoter-hero.jpg" alt="Early flows and workflow mapping">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+            <figcaption class="case-caption">Day 1 artifacts: mapping promoter workflows and the minimum feature set needed to address the three primary friction patterns.</figcaption>
           </figure>
 
-          <h4 class="case-heading">2) Ideate</h4>
+          <h4 class="case-heading">Day 2 — Ideate</h4>
           <p class="case-body">
-            We generated and compared multiple interaction approaches—prioritizing speed of access, minimal taps, and a clear information hierarchy.
-            Concepts were evaluated against two constraints: promoters need to stay present with customers, and the UI must remain legible at a glance.
+            The team generated parallel interaction concepts and evaluated them against
+            the two non-negotiable constraints: stay-present with customers (no extended UI sessions),
+            and legible at a glance (no dense data tables or nested navigation).
           </p>
 
-          <!-- IMAGE: Sketches / ideation (replace) -->
+          <div class="tradeoff">
+            <span class="tradeoff-label">Key Decision — Tab navigation vs. gesture-based navigation</span>
+            <p>Two concepts were shortlisted: a tab-bar navigation (persistent, immediate access to all sections)
+            and a gesture-based card stack (swipe between contexts). The gesture concept felt more modern
+            but introduced discoverability risk — users unfamiliar with the pattern would need to learn it
+            before using the app effectively in a customer-facing scenario.
+            We chose tab navigation: immediately understandable, recoverable from any state,
+            and consistent with how promoters already navigate other apps on their devices.
+            Familiarity over novelty was the right tradeoff for a tool that needs to work under pressure.</p>
+          </div>
+
           <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img class="w-100" src="/assets/img/levis/interaccion.png" alt="Ideation sketches and interaction concepts" />
-            <figcaption class="case-caption">
-              Ideation artifacts: exploring interaction patterns optimized for quick, real-world retail use.
-            </figcaption>
+            <a class="cs-single-link" href="../assets/img/levis/levis-interaction.webp" title="Ideation artifacts — interaction patterns for in-store use">
+              <img class="w-100" src="../assets/img/levis/levis-interaction.webp" alt="Ideation sketches and interaction concepts">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+            <figcaption class="case-caption">Ideation: interaction patterns evaluated against the "in-store speed" constraint — minimal taps, glanceable information hierarchy.</figcaption>
           </figure>
 
-          <h4 class="case-heading">3) Prototype</h4>
+          <h4 class="case-heading">Day 3 — Prototype</h4>
           <p class="case-body">
-            We moved quickly into a low-fidelity prototype to validate structure and navigation before committing to visual detail.
-            To accelerate build feasibility and reduce ambiguity in components and patterns, we aligned on
-            <strong>Material Design</strong> as the underlying UI framework.
+            I moved from low-fidelity wireframes to a testable high-fidelity prototype in one day —
+            made possible by aligning on <span class="highlight">Material Design</span> as the component framework.
           </p>
 
-          <!-- IMAGE: Prototype screens (replace) -->
+          <div class="tradeoff">
+            <span class="tradeoff-label">Decision — Material Design vs. custom component system</span>
+            <p>Building a custom component system from scratch for a 5-day sprint would have consumed
+            the entire timeline. Material Design gave the team a complete, tested, accessible component
+            vocabulary — focus rings, touch targets, typography scale, elevation — out of the box.
+            The tradeoff was visual differentiation: a Material-based app looks like a Material app.
+            I managed this by applying Levi's brand tokens (typography, color, logo) as an overlay
+            on the Material structure — so the experience felt brand-consistent without requiring
+            custom component development. The result was testable and implementable within sprint constraints.</p>
+          </div>
+
           <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img class="w-100" src="/assets/img/levis/font-colors.png" alt="Material Design and Typography used." />
-            <figcaption class="case-caption">
-              Material Design and Typography used.
-            </figcaption>
+            <a class="cs-single-link" href="../assets/img/levis/levis-typography-colors.webp" title="Material Design adapted to Levi's brand — typography and color system">
+              <img class="w-100" src="../assets/img/levis/levis-typography-colors.webp" alt="Material Design components adapted to Levi's brand">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+            <figcaption class="case-caption">Material Design foundation with Levi's brand tokens applied — typography, color, and component decisions documented for the development team.</figcaption>
           </figure>
 
-          <h4 class="case-heading">4) Test</h4>
+          <h4 class="case-heading">Day 4 — Test</h4>
           <p class="case-body">
-            We conducted usability sessions with Levi’s promoters and asked participants to think aloud as they navigated the prototype.
-            Feedback focused on terminology, task completion confidence, and whether each screen made the next step obvious.
-            Findings were translated into immediate iteration opportunities—especially around navigation clarity and content hierarchy.
+            Usability sessions were conducted with Levi's promoters using a think-aloud protocol.
+            Participants navigated three primary flows: finding product information, logging an incident,
+            and checking their profile and schedule.
           </p>
-
-                  <!-- IMAGE: High-fidelity / all screens (replace) -->
-<figure class="project-inner-thumb wow img-custom-anim-top">
-  <div class="figure-images">
-    <img src="/assets/img/levis/01-Login-1.png" alt="High-fidelity UI screen 1">
-    <img src="/assets/img/levis/14-Incidents-1.png" alt="High-fidelity UI screen 2">
-    <img src="/assets/img/levis/18-Profile-1.png" alt="High-fidelity UI screen 3">
-  </div>
-  <figcaption class="case-caption">High-fidelity UI screens.</figcaption>
-</figure>
-
-
-          <h4 class="case-heading">5) Design & Implementation</h4>
           <p class="case-body">
-            After validation, I produced high-fidelity UI that balanced Levi’s brand expression with the structure of Material components.
-            I also collaborated closely with Smarttie’s developers to support a smooth handoff—providing assets, specs, and interaction notes
-            to reduce rework and interpretation gaps.
+            Two findings changed the design before handoff:
           </p>
-
-                    <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img class="w-100" src="/assets/img/levis/levis-allscreens.png" alt="All screens of the Levi’s promoter app" />
-            <figcaption class="case-caption">High-fidelity UI set prepared for implementation and stakeholder review.</figcaption>
-          </figure>
-
-          <h4 class="case-heading">Results</h4>
-          <p class="case-body">
-            The sprint produced a validated mobile workflow that helped promoters complete key tasks faster and with less friction.
-            The final UI prioritized legibility, predictable navigation, and brand consistency—resulting in a cohesive experience that supports
-            both promoter efficiency and customer-facing confidence.
-          </p>
-
-          <h4 class="case-heading">Key Learnings</h4>
           <ul class="case-bullets">
-            <li>Time-boxed decision points prevent over-design and keep teams aligned on outcomes.</li>
-            <li>Testing early—even with a simple prototype—quickly reveals terminology and hierarchy issues.</li>
-            <li>Aligning on a component system (Material Design) accelerates feasibility and clarifies implementation.</li>
-            <li>Close designer–developer collaboration reduces ambiguity and increases build quality under sprint timelines.</li>
+            <li><span class="w500">Terminology on the incident form was misunderstood.</span> The label "Report an issue" was interpreted by two participants as a technical bug report, not a sales floor incident. Renamed to "Log an incident" — one word change that eliminated the ambiguity entirely.</li>
+            <li><span class="w500">The profile section had too much information above the fold.</span> Promoters navigating to their schedule scrolled past it because the priority ordering placed personal details first. Reordered to: today's shift → store assignment → personal details. Task completion on the schedule check went from 3/5 to 5/5 participants in the refined version.</li>
           </ul>
 
+          <figure class="project-inner-thumb wow img-custom-anim-top">
+            <div class="cs-gallery">
+              <a class="cs-gallery-item" href="../assets/img/levis/levis-screen-login.webp" data-group="levis-screens" title="Login screen">
+                <img src="../assets/img/levis/levis-screen-login.webp" alt="Levi's promoter app — login screen">
+                <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+              </a>
+              <a class="cs-gallery-item" href="../assets/img/levis/levis-screen-incidents.webp" data-group="levis-screens" title="Incident logging screen">
+                <img src="../assets/img/levis/levis-screen-incidents.webp" alt="Levi's promoter app — incident logging">
+                <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+              </a>
+              <a class="cs-gallery-item" href="../assets/img/levis/levis-screen-profile.webp" data-group="levis-screens" title="Profile and schedule screen">
+                <img src="../assets/img/levis/levis-screen-profile.webp" alt="Levi's promoter app — profile and schedule">
+                <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+              </a>
+            </div>
+            <figcaption class="case-caption">High-fidelity screens tested with promoters: login, incident logging (renamed from "Report an issue"), and profile with reordered priority — schedule above personal details.</figcaption>
+          </figure>
+
+          <h4 class="case-heading">Day 5 — Refine & Hand Off</h4>
           <p class="case-body">
+            The two changes from testing were implemented on day 5 before finalizing the handoff package.
+            I delivered: annotated specs for all screens, component documentation with interaction states,
+            asset exports, and a written summary of testing findings and the design rationale
+            behind each decision — so the development team understood not just what to build
+            but why each pattern was chosen.
           </p>
+
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <a class="cs-single-link" href="../assets/img/levis/levis-all-screens.webp" title="Complete high-fidelity UI set — handoff ready">
+              <img class="w-100" src="../assets/img/levis/levis-all-screens.webp" alt="All Levi's promoter app screens — high-fidelity UI set">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+            <figcaption class="case-caption">Complete UI set: all screens prepared for implementation, including states, annotations, and interaction documentation.</figcaption>
+          </figure>
+
+          <h4 class="case-heading">Accessibility</h4>
+          <p class="case-body">
+            Material Design's accessibility foundation was preserved rather than overridden:
+          </p>
+          <ul class="case-bullets">
+            <li><span class="w500">Touch target sizing:</span> all interactive elements maintained Material's 48dp minimum — critical for promoters using the app quickly in a retail environment, potentially with gloves.</li>
+            <li><span class="w500">Color contrast:</span> Levi's brand red applied to CTAs was verified against WCAG 2.1 AA thresholds — the brand color met the 3:1 ratio for large text and UI components.</li>
+            <li><span class="w500">Typography legibility:</span> the minimum body text size was set to 14sp — readable in varied lighting conditions in a retail environment.</li>
+          </ul>
+
+          <h4 class="case-heading">Scalability</h4>
+          <p class="case-body">
+            The patterns established in the sprint were designed to extend:
+          </p>
+          <ul class="case-bullets">
+            <li><span class="w500">The tab-based navigation structure</span> accommodates new sections without structural redesign — add a tab, don't add a new nav pattern.</li>
+            <li><span class="w500">The incident logging form pattern</span> is reusable for any future structured input flow — feedback, end-of-shift reports, or inventory notes.</li>
+            <li><span class="w500">The Material + brand token approach</span> creates a documented system where future screens can be built by developers without a designer involved for every new screen — the rules are in the handoff documentation.</li>
+          </ul>
+
+          <h4 class="case-heading">Impact</h4>
+
+          <div class="case-stat-block">
+            <span class="stat-number"><span class="highlight">5</span></span>
+            <div>
+              <span class="stat-label">Days from problem framing to validated, dev-ready UI</span>
+              <p class="stat-body">
+                The sprint produced a prototype tested with real Levi's promoters, two validated design changes
+                from testing findings, and a complete handoff package — all within the sprint constraint.
+                The 5-day format demonstrated that high-confidence design decisions don't require long timelines;
+                they require structured decision-making and well-timed user input.
+              </p>
+            </div>
+          </div>
+
+          <ul class="case-bullets">
+            <li><span class="w500">2 design changes from testing</span> validated before any development investment — the terminology fix and profile reordering were low-cost changes that would have been expensive to fix post-launch.</li>
+            <li><span class="w500">Schedule task completion improved from 3/5 to 5/5</span> participants after reordering the profile section — a measurable usability improvement within the sprint itself.</li>
+          </ul>
+
+          <h4 class="case-heading">What I Would Improve</h4>
+          <ul class="case-bullets">
+            <li><span class="w500">More participants in testing:</span> 5 participants is the standard sprint testing minimum — sufficient for pattern identification but not for confidence on edge cases. With a second round of testing, I'd validate the incident logging flow in more detail, since that was the section with the highest complexity and the most potential for error in a real environment.</li>
+            <li><span class="w500">Longitudinal validation:</span> the sprint validated the concept in a controlled session. What it couldn't validate was whether promoters would actually adopt the tool in their daily workflow. A 2-week pilot with 10 promoters — measuring session frequency and task completion in the field — would provide the evidence needed to commit to full build.</li>
+            <li><span class="w500">Offline support design:</span> retail environments have inconsistent connectivity. The prototype assumed connectivity — a real implementation would need designed offline states for the incident logging flow, which is the one promoters use most when away from Wi-Fi coverage.</li>
+          </ul>
+
         </div>
 
-        <!-- Prev / Next nav -->
         <div class="row">
           <div class="col-lg-12">
             <div class="inner__page-nav space-top mt-n1 mb-n1">
               <a href="datometry.html" class="nav-btn">
                 <i class="fa fa-arrow-left"></i>
-                <span>
-                  <span class="link-effect">
-                    <span class="effect-1">Previous Project</span>
-                    <span class="effect-1">Previous Project</span>
-                  </span>
-                </span>
+                <span><span class="link-effect"><span class="effect-1">Previous Project</span><span class="effect-1">Previous Project</span></span></span>
               </a>
-
               <a href="digitt.html" class="nav-btn">
-                <span>
-                  <span class="link-effect">
-                    <span class="effect-1">Next Project</span>
-                    <span class="effect-1">Next Projectk</span>
-                  </span>
-                </span>
+                <span><span class="link-effect"><span class="effect-1">Next Project</span><span class="effect-1">Next Project</span></span></span>
                 <i class="fa fa-arrow-right"></i>
               </a>
             </div>
@@ -528,125 +413,48 @@ Design Sprint framework          </figcaption>
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer-wrapper footer-layout9 overflow-hidden">
-      <div class="container">
-        <div class="widget-area space-top">
-          <div class="row justify-content-between">
-            <div class="col-md-6 col-xl-5 col-lg-6">
-              <div class="widget widget-about footer-widget">
-                <h4 class="widget_title">About Evelyn</h4>
-                <p class="about-text">
-                  I design clear, accessible, and scalable digital experiences —
-                  turning complex product problems into UI that feels simple,
-                  intentional, and ready to ship.
-                </p>
+    <div id="site-footer"></div>
 
-                <div class="social-btn style3">
-                  <a
-                    href="https://www.linkedin.com/in/evelyn-ramsburgh/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                    </span>
-                  </a>
-
-                  <a
-                    href="https://www.behance.net/evelynramsburgh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Behance"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fab fa-behance"></i></span>
-                      <span class="effect-1"><i class="fab fa-behance"></i></span>
-                    </span>
-                  </a>
-
-                  <a
-                    href="https://buymeacoffee.com/evelynramsburgh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Buy Me a Coffee"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-xl-3 col-lg-4">
-              <div class="widget widget_nav_menu footer-widget">
-                <h3 class="widget_title">Links</h3>
-                <div class="menu-all-pages-container">
-                  <ul class="menu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/portfolio.html">Portfolio</a></li>
-                  <!--  <li><a href="/resources.html">Resources</a></li>
-                    <li><a href="/blog.html">Blog</a></li>-->
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/about.html#testimonials">Testimonials</a></li>
-                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Copyright -->
-      <div class="container">
-        <div class="copyright-wrap">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-12">
-              <p>© <span id="year"></span> Evelyn Ramsburgh. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-
-    <!-- Scroll To Top -->
     <div class="scroll-top">
       <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path
-          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-          style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"
-        ></path>
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
       </svg>
     </div>
 
-    <!-- JS -->
-    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="/assets/js/slick.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="/assets/js/jquery.counterup.min.js"></script>
-    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="/assets/js/isotope.pkgd.min.js"></script>
-    <script src="/assets/js/gsap.min.js"></script>
+    <script src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/js/jquery.counterup.min.js"></script>
+    <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/js/isotope.pkgd.min.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/twinmax.js"></script>
+    <script src="../assets/js/imageRevealHover.js"></script>
+    <script src="../assets/js/jarallax.min.js"></script>
+    <script src="../assets/js/jquery.marquee.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/waypoints.js"></script>
+    <script src="../assets/js/wow.js"></script>
+    <script src="../assets/js/main.js"></script>
 
-    <script src="/assets/js/twinmax.js"></script>
-    <script src="/assets/js/imageRevealHover.js"></script>
-    <script src="/assets/js/jarallax.min.js"></script>
-    <script src="/assets/js/jquery.marquee.min.js"></script>
-    <script src="/assets/js/jquery-ui.min.js"></script>
-    <script src="/assets/js/waypoints.js"></script>
-    <script src="/assets/js/wow.js"></script>
-
-    <script src="/assets/js/main.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      $('.cs-single-link').magnificPopup({ type:'image', image:{titleSrc:'title'}, removalDelay:120, mainClass:'mfp-fade', closeBtnInside:false });
+      $('[data-group="levis-screens"]').magnificPopup({ type:'image', gallery:{enabled:true,navigateByImgClick:true,preload:[0,1]}, image:{titleSrc:'title'}, removalDelay:120, mainClass:'mfp-fade' });
+    });
+    </script>
+    <script>
+    (function(){
+      var inSubfolder = window.location.pathname.indexOf('/portfolio/')!==-1;
+      var base = inSubfolder?'../':'./';
+      function load(f,t,cb){fetch(base+f).then(function(r){if(!r.ok)throw new Error();return r.text();}).then(function(h){var e=document.getElementById(t);if(!e)return;e.innerHTML=h;if(typeof cb==='function')cb();}).catch(function(){});}
+      function markActive(){var p=window.location.pathname;['#site-nav .main-menu a','#site-nav .mobile-menu a'].forEach(function(s){document.querySelectorAll(s).forEach(function(a){var h=a.getAttribute('href');if(h===p||(h==='/portfolio.html'&&p.indexOf('/portfolio')===0))a.closest('li').classList.add('active');});});}
+      function initMobileMenu(){if(typeof jQuery!=='undefined'&&jQuery.fn.mobilemenu)jQuery('.mobile-menu-wrapper').mobilemenu();}
+      function writeYear(){document.querySelectorAll('.footer-year').forEach(function(e){e.textContent=new Date().getFullYear();});}
+      load('nav.html','site-nav',function(){markActive();initMobileMenu();});
+      load('footer.html','site-footer',function(){writeYear();});
+    })();
+    </script>
   </body>
 </html>

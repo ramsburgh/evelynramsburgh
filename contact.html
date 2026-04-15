@@ -32,8 +32,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-
-
     <!--==============================
 	    All CSS File
 	============================== -->
@@ -46,211 +44,133 @@
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <style>
+      /* Contact form */
+      .contact-area-1 .contact-form { width: 100%; max-width: 100%; }
+      .contact-area-1 .form-control  { width: 100%; box-sizing: border-box; }
+
+      /* Mobile: stack map above form */
+      @media (max-width: 991px) {
+        .contact-area-1 { overflow: visible !important; }
+        .contact-area-1 .contact-map {
+          position: relative !important;
+          width: 100% !important;
+          height: 260px !important;
+          top: auto !important; left: auto !important;
+          bottom: auto !important; right: auto !important;
+          margin-bottom: 0 !important;
+          pointer-events: auto !important;
+        }
+        .contact-area-1 .contact-map iframe {
+          width: 100% !important;
+          height: 100% !important;
+        }
+        .contact-area-1 .col-lg-6 {
+          max-width: 100% !important;
+          flex: 0 0 100% !important;
+        }
+      }
+    </style>
+
 </head>
 
 <body>
 
-
-
-<!--==============================
-Mobile Menu
-============================== -->
-<div class="mobile-menu-wrapper">
-    <div class="mobile-menu-area">
-        <button class="menu-toggle"><i class="fas fa-times"></i></button>
-
-        <div class="mobile-logo">
-            <a href="index.html"><img src="assets/img/logo.svg" alt="Evelyn Ramsburgh"></a>
-        </div>
-
-        <div class="mobile-menu">
-            <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-
-        <div class="social-btn style3">
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <span class="link-effect">
-                    <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                    <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                </span>
-            </a>
-
-            <!-- Behance -->
-            <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer" aria-label="Behance">
-                <span class="link-effect">
-                    <span class="effect-1"><i class="fab fa-behance"></i></span>
-                    <span class="effect-1"><i class="fab fa-behance"></i></span>
-                </span>
-            </a>
-
-            <!-- Buy Me a Coffee -->
-            <a href="https://www.buymeacoffee.com/" target="_blank" rel="noopener noreferrer" aria-label="Buy Me a Coffee">
-                <span class="link-effect">
-                    <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                    <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                </span>
-            </a>
-        </div>
-    </div>
-</div>
     <!--==============================
-	Header Area
+      Nav — cargado desde nav.html
     ==============================-->
-    <header class="nav-header header-layout1">
-        <div class="sticky-wrapper">
-            <!-- Main Menu Area -->
-<div class="menu-area">
-    <div class="container-fluid">
-        <div class="row align-items-center justify-content-between">
-            
-            <!-- Logo -->
-            <div class="col-auto">
-                <div class="header-logo">
-                    <a href="index.html">
-                        <img src="assets/img/logo.svg" alt="logo">
-                    </a>
-                </div>
-            </div>
+    <div id="site-nav"></div>
 
-            <!-- Main Menu -->
-            <div class="col-auto ms-auto">
-                <nav class="main-menu d-none d-lg-inline-block">
-                    <ul>
-                        <li class="active">
-                            <a href="index.html">
-                                <span class="link-effect">
-                                    <span class="effect-1">Home</span>
-                                    <span class="effect-1">Home</span>
-                                </span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="about.html">
-                                <span class="link-effect">
-                                    <span class="effect-1">About</span>
-                                    <span class="effect-1">About</span>
-                                </span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="portfolio.html">
-                                <span class="link-effect">
-                                    <span class="effect-1">Portfolio</span>
-                                    <span class="effect-1">Portfolio</span>
-                                </span>
-                            </a>
-                        </li>
-
-                        <li>
-                        <!--    <a href="resources.html">
-                                <span class="link-effect">
-                                    <span class="effect-1">Resources</span>
-                                    <span class="effect-1">Resources</span>
-                                </span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="blog.html">
-                                <span class="link-effect">
-                                    <span class="effect-1">Blog</span>
-                                    <span class="effect-1">Blog</span>
-                                </span>
-                            </a>
-                        </li>
--->
-                        <li>
-                            <a href="contact.html">
-                                <span class="link-effect">
-                                    <span class="effect-1">Contact</span>
-                                    <span class="effect-1">Contact</span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <!-- Mobile Toggle -->
-                <div class="navbar-right d-inline-flex d-lg-none">
-                    <button type="button" class="menu-toggle sidebar-btn">
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="line"></span>
-                    </button>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-</div>
-
-        </div>
-    </header>
 
 
     <!--==============================
     Feature Area
     ==============================-->
-    <div class="feature-area-1 space">
-        <div class="container">
-  <div class="row justify-content-xl-between justify-content-center">
-    <div class="title-area ">
-<h2 class="sec-title"><br>
-  Let's talk about 
-  <em>your <span class="highlight">project</span></em>
-</h2>      <p class="page-subtitle">Opportunities, partnerships, or a simple hello — I’m always happy to connect.</p>
+  <div class="feature-area-1 space">
+    <div class="container">
+        <div class="row justify-content-between align-items-start">
+            <div class="col-lg-7">
 
-<br>
-            <div class="row gy-4 align-items-center justify-content-center">
-              
-                <div class="col-xl-4 col-md-6">
-                    <div class="feature-card">
-                        <div class="feature-card-icon">
-                            <img src="assets/img/icon/speech-bubble.svg" alt="icon">
+                <div class="title-area mb-40">
+          
+                    <h2 class="sec-title"><br>
+                      Let's talk about <em>your project</em>
+                    </h2>
+                    <p class="page-subtitle">Opportunities, partnerships, or a simple hello — I’m always happy to connect.</p>
+                </div>
+
+                <div style="border-bottom:1px solid rgba(0,0,0,0.18); padding:0 0 22px 0; margin-bottom:22px;">
+                  
+                    <div class="row align-items-start">
+                        <div class="col-2 col-md-1">
+                            <span style="display:block; font-size:18px; color:rgba(0,0,0,0.55);">01</span>
                         </div>
-                        <div class="feature-card-details">
-                            <h4 class="feature-card-title">
-                                <a>Email Address</a>
-                            </h4>
-                            <p class="feature-card-text mb-0">hello@evelynramsburgh.com</p>
-                            <p class="feature-card-text"></p><p><br>
-                            <a href="mailto:hello@evelynramsburgh.com" class="link-btn">
-                                <span class="link-effect">
-                                    <span class="effect-1">Send e-mail</span>
-                                    <span class="effect-1">Send e-mail</span>
-                                </span>
-                                <img src="assets/img/icon/arrow-left-top.svg" alt="icon">
-                            </a></p>
+                        <div class="col-10 col-md-11">
+                            <h4 class="mb-10">What kind of projects do you take on?</h4>
+                            <p class="mb-0">I work on UX/UI, product design, design systems, and digital experiences across web and mobile. Most projects focus on improving usability, clarifying complex flows, and creating interfaces that feel polished, scalable, and ready to ship.</p>
                         </div>
                     </div>
                 </div>
 
+                <div style="border-bottom:1px solid rgba(0,0,0,0.18); padding:0 0 22px 0; margin-bottom:22px;">
+                    <div class="row align-items-start">
+                        <div class="col-2 col-md-1">
+                            <span style="display:block; font-size:18px; color:rgba(0,0,0,0.55);">02</span>
+                        </div>
+                        <div class="col-10 col-md-11">
+                            <h4 class="mb-10">What do you need to get started?</h4>
+                            <p class="mb-0">A short overview is usually enough. Sharing your goals, scope, timeline, and any existing materials helps me understand what you need and whether I’m the right fit for the project.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="border-bottom:1px solid rgba(0,0,0,0.18); padding:0 0 22px 0; margin-bottom:0;">
+                    <div class="row align-items-start">
+                        <div class="col-2 col-md-1">
+                            <span style="display:block; font-size:18px; color:rgba(0,0,0,0.55);">03</span>
+                        </div>
+                        <div class="col-10 col-md-11">
+                            <h4 class="mb-10">What’s your availability like?</h4>
+                            <p class="mb-0">Availability depends on project scope and timing. I typically reply within a few business days, and if there’s a strong fit, we can discuss next steps, timeline, and engagement details from there.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4">
+              <div style="margin-top: 24px;"></div>
+                <div class="feature-card" style="background:none; border:none; padding: 0px; margin:0;">
+                    <div class="feature-card-icon mb-25" style="margin-top:0;">
+                        <img src="assets/img/icon/speech-bubble.svg">
+                    </div>
+                    <div class="feature-card-details" style="padding-top:0;">
+                        <h4 class="feature-card-title">Email Address</h4>
+                        <p class="feature-card-text mb-20">hello@evelynramsburgh.com</p>
+                        <a href="mailto:hello@evelynramsburgh.com" class="link-btn">
+                            <span class="link-effect">
+                                <span class="effect-1">Send e-mail</span>
+                                <span class="effect-1">Send e-mail</span>
+                            </span>
+                            <img src="assets/img/icon/arrow-left-top.svg" alt="icon">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
+</div>
     <!--==============================
     Contact Area
     ==============================-->
-    <div class="contact-area-1 space bg-theme">
-        <div class="contact-map shape-mockup wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.2s" data-left="0" data-top="-100px" data-bottom="140px">
-            <iframe src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&t=m&z=10&output=embed&iwloc=near" allowfullscreen="" loading="lazy"></iframe>
+    <div class="contact-area-1 space bg-theme" style="position:relative; overflow:hidden;">
+        <div class="contact-map" style="position:absolute; left:0; top:0; bottom:0; width:50%; z-index:0; pointer-events:none;">
+            <iframe src="https://maps.google.com/maps?q=Guadalajara%2C+Jalisco%2C+M%C3%A9xico&t=m&z=12&output=embed" allowfullscreen="" loading="lazy" style="width:100%; height:100%; border:0; display:block;"></iframe>
         </div>
-        <div class="container">
+        <div class="container" style="position:relative; z-index:1;">
             <div class="row align-items-center justify-content-end">
                 <div class="col-lg-6">
-                    <div class="contact-form-wrap">
+                    <div>
                         <div class="title-area mb-30">
                             <h2 class="sec-title">Interested in working together?</h2>
                             <p>I’d love to hear about it. Share a few details and let’s explore how we can work together.</p>
@@ -292,90 +212,12 @@ Mobile Menu
             </div>
         </div>
     </div>
-    </div>    </div>
-
-<!--============================== 
-    Footer Area
-==============================-->
-<footer class="footer-wrapper footer-layout9 overflow-hidden">
-    <div class="container">
-        <div class="widget-area space-top">
-            <div class="row justify-content-between">
-                <!-- About -->
-                <div class="col-md-6 col-xl-5 col-lg-6">
-                    <div class="widget widget-about footer-widget">
-                        <h3 class="widget_title">About Evelyn</h3>
-                        <p class="about-text">
-                            I design clear, accessible, and scalable digital experiences — turning complex product problems into UI that feels simple, intentional, and ready to ship.
-                        </p>
 
 
-                        <div class="social-btn style3">
-                            <!-- LinkedIn -->
-                            <a href="https://www.linkedin.com/in/evelyn-ramsburgh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                <span class="link-effect">
-                                    <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                                    <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                                </span>
-                            </a>
+</div>
 
-                            <!-- Behance -->
-                            <a href="https://www.behance.net/evelynramsburgh" target="_blank" rel="noopener noreferrer" aria-label="Behance">
-                                <span class="link-effect">
-                                    <span class="effect-1"><i class="fab fa-behance"></i></span>
-                                    <span class="effect-1"><i class="fab fa-behance"></i></span>
-                                </span>
-                            </a>
 
-                            <!-- Buy Me a Coffee -->
-                            <a href="https://buymeacoffee.com/evelynramsburgh" target="_blank" rel="noopener noreferrer" aria-label="Buy Me a Coffee">
-                                <span class="link-effect">
-                                    <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                                    <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Links (Single Column) -->
-                <div class="col-md-6 col-xl-3 col-lg-4">
-                    <div class="widget widget_nav_menu footer-widget">
-                        <h3 class="widget_title">Links</h3>
-                        <div class="menu-all-pages-container">
-                            <ul class="menu">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="portfolio.html">Portfolio</a></li>
-                              <!-- <li><a href="resources.html">Resources</a></li>
-                                <li><a href="blog.html">Blog</a></li>-->
-                                <li><a href="contact.html">Contact</a></li>
-                                <li><a href="testimonials.html">Testimonials</a></li>
-                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Copyright -->
-    <div class="container">
-        <div class="copyright-wrap">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-12">
-                    <p>© <span id="year"></span> Evelyn Ramsburgh. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<div id="site-footer"></div>
 
 
     <!--********************************
@@ -409,6 +251,65 @@ Mobile Menu
 
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
-</body>
 
+  <!--==============================
+    Component loader — NO tocar
+  ==============================-->
+  <script>
+    (function () {
+      var inSubfolder = window.location.pathname.indexOf('/portfolio/') !== -1;
+      var base = inSubfolder ? '../' : './';
+
+      function load(file, targetId, onDone) {
+        fetch(base + file)
+          .then(function (r) {
+            if (!r.ok) throw new Error(file + ' returned ' + r.status);
+            return r.text();
+          })
+          .then(function (html) {
+            var el = document.getElementById(targetId);
+            if (!el) { console.warn('#' + targetId + ' not found'); return; }
+            el.innerHTML = html;
+            if (typeof onDone === 'function') onDone();
+          })
+          .catch(function (e) { console.warn('Could not load ' + file + ':', e); });
+      }
+
+      function markActive() {
+        var path = window.location.pathname;
+        ['#site-nav .main-menu a', '#site-nav .mobile-menu a'].forEach(function (sel) {
+          document.querySelectorAll(sel).forEach(function (a) {
+            var href = a.getAttribute('href');
+            var active = href === path ||
+              (href === '/portfolio.html' && path.indexOf('/portfolio') === 0);
+            if (active) a.closest('li').classList.add('active');
+          });
+        });
+      }
+
+      function initMobileMenu() {
+        if (typeof jQuery !== 'undefined' && jQuery.fn.mobilemenu) {
+          jQuery('.mobile-menu-wrapper').mobilemenu();
+        }
+      }
+
+      function writeYear() {
+        document.querySelectorAll('.footer-year').forEach(function (el) {
+          el.textContent = new Date().getFullYear();
+        });
+      }
+
+      load('nav.html', 'site-nav', function () {
+        markActive();
+        initMobileMenu();
+      });
+
+      load('footer.html', 'site-footer', function () {
+        writeYear();
+      });
+
+    })();
+  </script>
+
+</body>
 </html>

@@ -20,8 +20,8 @@
     }
     .accordion-button {
         font-size: 24px;
-        font-weight: 600;
-        font-family: $title-font;
+        font-weight: 300;
+        font-family: $body-font !important;
         color: $title-color;
         border: 0;
         background-color: transparent;
@@ -52,12 +52,6 @@
             top: 23px;
             right: 0px;
             transition: 0.3s ease-in-out;
-        }
-        &.collapse {
-            &:after {
-                content: '\f068';
-                transform: rotate(0);
-            }
         }
         .faq-number {
             font-size: 14px;
@@ -128,6 +122,7 @@
 .accordion-card.style2 {
     display: block;
     .accordion-button {
+        font-family: $body-font;
         font-size: 20px;
     }
     .accordion-body {

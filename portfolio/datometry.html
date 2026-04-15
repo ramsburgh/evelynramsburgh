@@ -3,200 +3,129 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Datometry qInsight — MVP & UI Design Case Study | Evelyn Ramsburgh</title>
-
-    <meta
-      name="description"
-      content="I led design for Datometry qInsight, an enterprise platform that enables applications built for on-prem data warehouses to run on major cloud data warehouses via virtualization—without code changes. This case study covers the MVP, UI foundation, and collaboration model."
-    />
-    <meta
-      name="keywords"
-      content="Evelyn Ramsburgh, Senior Product Designer, Product Designer, UX Designer, UI Designer, Datometry, qInsight, Enterprise UX, Data Warehousing, Virtualization, MVP, SaaS, Design Lead"
-    />
+    <title>Datometry qInsight — MVP & UX Lead | Evelyn Ramsburgh</title>
+    <meta name="description" content="I led UX/UI for Datometry qInsight — an enterprise platform that lets applications built for on-prem data warehouses run on major cloud data warehouses without code changes. The platform was later acquired by Snowflake. MVP design, UI system, and design decisions that made invisible infrastructure operable." />
+    <meta name="keywords" content="Evelyn Ramsburgh, Senior Product Designer, Datometry, qInsight, Enterprise UX, Data Warehousing, Cloud Migration, MVP, Design System, WCAG, Heuristic Evaluation, Design Lead" />
     <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://evelynramsburgh.com/datometry-qinsight.html" />
+    <link rel="canonical" href="https://evelynramsburgh.com/portfolio/datometry.html" />
     <meta name="author" content="Evelyn Ramsburgh" />
-
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://evelynramsburgh.com/assets/img/og-cover.jpg" />
-    <meta property="og:url" content="https://evelynramsburgh.com/datometry-qinsight.html" />
-    <meta property="og:title" content="Datometry qInsight — MVP & UI Design | Evelyn Ramsburgh" />
-    <meta
-      property="og:description"
-      content="Design leadership for an enterprise platform that replatforms data-warehouse applications to the cloud via virtualization—without code changes."
-    />
+    <meta property="og:url" content="https://evelynramsburgh.com/portfolio/datometry.html" />
+    <meta property="og:title" content="Datometry qInsight — MVP & UX Lead | Evelyn Ramsburgh" />
+    <meta property="og:description" content="UX leadership for a cloud data warehouse virtualization platform — later acquired by Snowflake. MVP design, UI system, and the design decisions that made complex infrastructure legible and safe to operate." />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon.png" />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png" />
+    <meta name="msapplication-TileImage" content="../assets/img/favicons/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/all.min.css" />
-    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css" />
-    <link rel="stylesheet" href="/assets/css/slick.min.css" />
-    <link rel="stylesheet" href="/assets/css/animate.min.css" />
-    <link rel="stylesheet" href="/assets/css/imageRevealHover.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="../assets/css/slick.min.css" />
+    <link rel="stylesheet" href="../assets/css/animate.min.css" />
+    <link rel="stylesheet" href="../assets/css/imageRevealHover.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
 
-    <!-- Page helpers (drop-in). Move to style.css if you prefer. -->
+    <style>
+      .case-layout  { max-width: 980px; }
+      .case-title   { max-width: 720px; margin: 0 auto; text-align: left; }
+      .case-lead    { max-width: 720px; margin: 14px auto 0; font-size: 20px; line-height: 1.7; }
+      .case-article { max-width: 720px; margin: 40px auto 0; }
 
+      .case-heading {
+        font-family: var(--body-font);
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 1.3;
+        margin-top: 48px;
+        margin-bottom: 14px;
+        color: var(--title-color);
+      }
+      .case-heading.mt-0 { margin-top: 0; }
+
+      .case-body {
+        max-width: 720px;
+        font-size: 18px;
+        line-height: 1.75;
+        color: rgba(36,36,36,0.85);
+        margin-bottom: 18px;
+      }
+
+      .case-bullets { max-width: 720px; margin: 0 auto 28px; padding-left: 1.2rem; }
+      .case-bullets li { list-style: disc; margin-bottom: 0.55rem; font-size: 18px; line-height: 1.7; color: rgba(36,36,36,0.85); }
+
+      /* ── Highlights row ── */
+      .case-highlights { max-width: 720px; margin: 18px auto 0; }
+      .case-highlights-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; padding: 18px 0 0; border-top: 1px solid rgba(0,0,0,0.08); }
+      .case-highlight { padding: 0 24px 18px 0; }
+      .case-highlight:not(:first-child) { padding-left: 24px; border-left: 1px solid rgba(0,0,0,0.08); }
+      .case-highlight .label { display: block; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(36,36,36,0.45); margin-bottom: 5px; }
+      .case-highlight .value { display: block; font-size: 15px; line-height: 1.4; color: rgba(36,36,36,0.95); font-weight: 400; }
+      @media (max-width: 600px) {
+        .case-highlights-grid { grid-template-columns: 1fr; gap: 0; padding: 0; border-top: none; }
+        .case-highlight { display: flex; flex-direction: row; align-items: baseline; gap: 10px; padding: 10px 0; border-left: none !important; padding-left: 0 !important; padding-right: 0 !important; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        .case-highlight:first-child { border-top: 1px solid rgba(0,0,0,0.08); }
+        .case-highlight:last-child { border-bottom: none; }
+        .case-highlight .label { min-width: 72px; margin-bottom: 0; flex-shrink: 0; }
+        .case-highlight .value { font-size: 14px; }
+      }
+
+      /* ── Figure / caption ── */
+      .project-inner-thumb { max-width: 920px; margin-left: auto; margin-right: auto; }
+      .case-caption { max-width: 720px; margin: 10px auto 0; text-align: center; font-size: 14px; line-height: 1.5; color: rgba(36,36,36,0.68); }
+
+      /* ── Stat block ── */
+      .case-stat-block {
+        max-width: 720px; margin: 40px auto; padding: 32px 36px;
+        background: #f7f7f5; border-left: 3px solid var(--theme-color, #c8f000);
+        border-radius: 0 12px 12px 0; display: flex; align-items: flex-start; gap: 32px;
+      }
+      .case-stat-block .stat-number { font-family: var(--title-font,'Fraunces',serif); font-size: 64px; font-weight: 300; line-height: 1; color: #0a0c00; flex-shrink: 0; letter-spacing: -2px; white-space: nowrap; }
+      .case-stat-block .stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(36,36,36,0.45); margin-bottom: 8px; display: block; }
+      .case-stat-block .stat-body { font-size: 16px; line-height: 1.6; color: rgba(36,36,36,0.85); margin: 0; }
+      @media (max-width: 600px) { .case-stat-block { flex-direction: column; gap: 12px; padding: 24px 20px; } .case-stat-block .stat-number { font-size: 48px; } }
+
+      /* ── Ownership table ── */
+      .ownership-table { max-width: 720px; margin: 24px auto; border-collapse: collapse; width: 100%; font-size: 15px; }
+      .ownership-table th { text-align: left; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(36,36,36,0.45); font-weight: 400; padding: 0 16px 10px 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+      .ownership-table td { padding: 10px 16px 10px 0; border-bottom: 1px solid rgba(0,0,0,0.05); color: rgba(36,36,36,0.85); line-height: 1.5; vertical-align: top; }
+      .ownership-table td:first-child { font-weight: 500; white-space: nowrap; }
+      .badge-me { display: inline-block; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; background: var(--theme-color,#c8f000); color: #0a0c00; border-radius: 3px; padding: 1px 6px; margin-left: 6px; vertical-align: middle; }
+      .badge-shared { display: inline-block; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; background: rgba(0,0,0,0.06); color: rgba(36,36,36,0.6); border-radius: 3px; padding: 1px 6px; margin-left: 6px; vertical-align: middle; }
+      @media (max-width: 600px) { .ownership-table { font-size: 14px; } .ownership-table td:first-child { white-space: normal; } }
+
+      /* ── Tradeoff callout ── */
+      .tradeoff {
+        max-width: 720px; margin: 28px auto; padding: 20px 22px;
+        border: 1px solid rgba(0,0,0,0.08); border-radius: 10px;
+        background: rgba(0,0,0,0.015);
+      }
+      .tradeoff .tradeoff-label { font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(36,36,36,0.4); margin-bottom: 8px; display: block; }
+      .tradeoff p { font-size: 16px; line-height: 1.65; color: rgba(36,36,36,0.85); margin: 0; }
+
+
+
+      /* ── Lightbox ── */
+      .cs-single-link { display: block; position: relative; overflow: hidden; border-radius: 6px; cursor: zoom-in; text-decoration: none; }
+      .cs-single-link img { display: block; width: 100%; height: auto; transition: transform 0.25s ease; }
+      .cs-single-link:hover img { transform: scale(1.015); }
+      .cs-expand { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(10,10,10,0.32); opacity: 0; transition: opacity 0.2s ease; color: #fff; font-size: 26px; }
+      .cs-single-link:hover .cs-expand { opacity: 1; }
+
+      .w500 { font-weight: 500; }
+    </style>
   </head>
 
   <body>
-    <!-- Mobile Menu -->
-    <div class="mobile-menu-wrapper">
-      <div class="mobile-menu-area">
-        <button class="menu-toggle"><i class="fas fa-times"></i></button>
+    <div id="site-nav"></div>
 
-        <div class="mobile-logo">
-          <a href="index.html"><img src="/assets/img/logo.svg" alt="Evelyn Ramsburgh" /></a>
-        </div>
-
-        <div class="mobile-menu">
-          <ul>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-           <!--   <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="blog.html">Blog</a></li>-->
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="social-btn style3">
-          <a
-            href="https://www.linkedin.com/in/evelyn-ramsburgh/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-              <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-            </span>
-          </a>
-
-          <a
-            href="https://www.behance.net/evelynramsburgh"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Behance"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fab fa-behance"></i></span>
-              <span class="effect-1"><i class="fab fa-behance"></i></span>
-            </span>
-          </a>
-
-          <a
-            href="https://buymeacoffee.com/evelynramsburgh"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Buy Me a Coffee"
-          >
-            <span class="link-effect">
-              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-              <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Header -->
-    <header class="nav-header header-layout1">
-      <div class="sticky-wrapper">
-        <div class="menu-area">
-          <div class="container-fluid">
-            <div class="row align-items-center justify-content-between">
-              <div class="col-auto">
-                <div class="header-logo">
-                  <a href="/index.html"><img src="/assets/img/logo.svg" alt="logo" /></a>
-                </div>
-              </div>
-
-              <div class="col-auto ms-auto">
-                <nav class="main-menu d-none d-lg-inline-block">
-                  <ul>
-                    <li class="active">
-                      <a href="/index.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Home</span>
-                          <span class="effect-1">Home</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/about.html">
-                        <span class="link-effect">
-                          <span class="effect-1">About</span>
-                          <span class="effect-1">About</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/portfolio.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Portfolio</span>
-                          <span class="effect-1">Portfolio</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <!--  <a href="/resources.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Resources</span>
-                          <span class="effect-1">Resources</span> 
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/blog.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Blog</span>
-                          <span class="effect-1">Blog</span>
-                        </span>
-                      </a>
-                    </li>-->
-                    <li>
-                      <a href="/contact.html">
-                        <span class="link-effect">
-                          <span class="effect-1">Contact</span>
-                          <span class="effect-1">Contact</span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-
-                <div class="navbar-right d-inline-flex d-lg-none">
-                  <button type="button" class="menu-toggle sidebar-btn">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Breadcrumb -->
     <div class="breadcumb-wrapper style2 bg-smoke">
       <div class="container-fluid">
         <div class="breadcumb-content">
@@ -209,29 +138,31 @@
       </div>
     </div>
 
-    <!-- Case Study -->
     <div class="project-details-page-area space">
       <div class="container case-layout">
+
         <!-- Title + Lead -->
         <div class="row">
           <div class="col-12">
             <div class="title-area mb-20">
               <h1 class="sec-title case-title">Datometry qInsight — Designing the MVP for Cloud Data Warehouse Virtualization</h1>
               <p class="case-lead case-body">
-                I led UX/UI for Datometry qInsight, a platform that helps enterprises run applications built for on-premises data warehouses
-                on major cloud data warehouses—without rewriting code or changing configurations. This case study covers the MVP foundation,
-                early UI system, and the collaboration model that enabled delivery.
+                I led UX/UI design for Datometry qInsight — a platform that lets enterprises run applications built for
+                on-premises data warehouses on major cloud data warehouses, <span class="highlight">without rewriting a single line of code</span>.
+                The Datometry team has since joined Snowflake to bring seamless application interoperability to the AI Data Cloud.
+                This case study covers the design decisions, tradeoffs, and system thinking that made a technically complex platform feel operable — and what I'd do differently today.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- HERO IMAGE (replace) -->
+        <!-- Hero image -->
         <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-          <img class="w-100" src="/assets/img/datometry/datometry-cover.png" alt="Datometry qInsight overview" />
-          <figcaption class="case-caption">
-            qInsight’s UI focused on clarity, safe actions, and fast comprehension for complex enterprise workflows.
-          </figcaption>
+          <a class="cs-single-link" href="../assets/img/datometry/datometry-hero.webp" title="Datometry qInsight — platform overview">
+            <img class="w-100" src="../assets/img/datometry/datometry-hero.webp" alt="Datometry qInsight platform overview">
+            <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+          </a>
+          <figcaption class="case-caption">qInsight: clarity, safe actions, and fast comprehension for complex cloud migration workflows.</figcaption>
         </figure>
 
         <!-- Highlights -->
@@ -243,124 +174,272 @@
             </div>
             <div class="case-highlight">
               <span class="label">Role</span>
-              <span class="value">Design Lead (UX/UI)</span>
+              <span class="value">Design Lead — UX/UI</span>
             </div>
             <div class="case-highlight">
-              <span class="label">Delivery</span>
-              <span class="value">MVP · UI Foundation</span>
+              <span class="label">Outcome</span>
+              <span class="value">MVP Shipped · Acquired by Snowflake</span>
             </div>
           </div>
         </div>
 
         <!-- Article -->
         <div class="case-article">
-          <h4 class="case-heading mt-0">About</h4>
+
+          <!-- ── 1. PRODUCT THINKING ───────────────────────────────── -->
+          <h4 class="case-heading mt-0">The Problem — Business and User</h4>
           <p class="case-body">
-            Datometry qInsight was positioned as a “replatforming layer” for data warehousing. The product leveraged virtualization principles
-            to allow applications originally developed for on-prem data warehouses to run on major cloud data warehouses without requiring
-            application code changes. That promise created an important UX challenge: the product needed to present complex infrastructure
-            concepts in a way that felt concrete, trustworthy, and operable.
+            <span class="w500">Business problem:</span> Enterprises have billions invested in applications built for on-premises data
+            warehouses (Teradata, Netezza). Moving to modern cloud warehouses (Snowflake, BigQuery, Redshift)
+            requires rewriting application logic — an effort measured in years and tens of millions of dollars. </p>
+              <p class="case-body"> Datometry's core product, Hyper-Q, is the virtualization engine that eliminates that cost.</span>
+            <span class="w500">qInsight</span> — the product I designed — is the operational UI that made Hyper-Q
+            visible, configurable, and trustworthy: the surface where database administrators
+            monitor query translation, diagnose compatibility issues, and take action.
+          </p>
+          <p class="case-body">
+            <span class="w500">User problem:</span> Database administrators and platform engineers needed to monitor query translation
+            in real time, diagnose compatibility issues, and take corrective action — on infrastructure
+            they couldn't afford to break. The primary anxiety was: <span class="highlight">am I seeing everything I need to see
+            before I act?</span> The UI had to answer that question on every screen, for every state.
+          </p>
+          <p class="case-body">
+            <span class="w500">Why this matters for product goals:</span> An opaque virtualization layer would be rejected by
+            technical buyers regardless of its capabilities. Visibility and control were not UX nice-to-haves —
+            they were the adoption gate. The design directly enabled commercial viability of the product.
           </p>
 
-          <h4 class="case-heading">My Role</h4>
+          <!-- ── 2. ROLE & OWNERSHIP ──────────────────────────────── -->
+          <h4 class="case-heading">Role & Ownership</h4>
           <p class="case-body">
-            I led design within a cross-functional delivery team and partnered closely with stakeholders, product owners, engineering, and QA.
-            My responsibilities included shaping the MVP information architecture, defining core interaction patterns, producing wireframes and prototypes,
-            and delivering frontend-ready UI specs that supported rapid implementation.
+            I was the sole designer on a cross-functional squad. The table below clarifies what I owned
+            individually versus what was collaborative:
           </p>
 
-          <h4 class="case-heading">Goals</h4>
+          <table class="ownership-table">
+            <thead>
+              <tr>
+                <th>Area</th>
+                <th>Who</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Information architecture <span class="badge-me">Me</span></td>
+                <td>Solo</td>
+                <td>Full IA design — navigation structure, page hierarchy, MVP scope decisions</td>
+              </tr>
+              <tr>
+                <td>Wireframes & prototypes <span class="badge-me">Me</span></td>
+                <td>Solo</td>
+                <td>Low-fi through high-fi; interactive prototypes for stakeholder validation</td>
+              </tr>
+              <tr>
+                <td>UI system & components <span class="badge-me">Me</span></td>
+                <td>Solo</td>
+                <td>Dashboard patterns, table system, status indicators, error states</td>
+              </tr>
+              <tr>
+                <td>Handoff documentation <span class="badge-me">Me</span></td>
+                <td>Solo</td>
+                <td>Specs, interaction annotations, spacing/token documentation</td>
+              </tr>
+              <tr>
+                <td>Domain understanding <span class="badge-shared">Shared</span></td>
+                <td>With Eng + PO</td>
+                <td>Data warehousing concepts, virtualization behavior, terminology</td>
+              </tr>
+              <tr>
+                <td>MVP scope definition <span class="badge-shared">Shared</span></td>
+                <td>With PO + Eng</td>
+                <td>I contributed design perspective; final scope decisions were joint</td>
+              </tr>
+              <tr>
+                <td>User validation <span class="badge-shared">Shared</span></td>
+                <td>With Stakeholders</td>
+                <td>Representative users limited; primary validation via stakeholder proxies</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- ── 3. PROCESS ──────────────────────────────────────────── -->
+          <h4 class="case-heading">Process Overview</h4>
+          <p class="case-body">
+            The engagement ran in an Agile model with two-week sprints. Design led engineering by
+            approximately one sprint — producing validated wireframes before implementation began
+            on the corresponding feature. This rhythm prevented the most common failure mode in
+            MVP-speed work: engineering building from ambiguous specs and accumulating
+            UI debt from day one.
+          </p>
           <ul class="case-bullets">
-            <li>Design an interface that makes cloud replatforming workflows understandable and operable for enterprise users.</li>
-            <li>Reduce perceived risk by clarifying system status, outcomes, and dependencies before users take action.</li>
-            <li>Enable rapid adoption of new database technologies while preserving the value of existing applications.</li>
+            <li><span class="w500">Sprint 0:</span> domain immersion — studied the virtualization layer, query translation pipeline, and where technical failure modes lived. Built a shared glossary with engineering to prevent terminology drift in the UI.</li>
+            <li><span class="w500">Discovery:</span> mapped user types (DB admins, platform engineers, technical leads), their primary tasks, and the high-stakes moments where the UI must prevent costly mistakes.</li>
+            <li><span class="w500">MVP scoping:</span> prioritized the minimum workflow set that demonstrated end-to-end value — connection setup, query monitoring, issue diagnosis, compatibility reporting.</li>
+            <li><span class="w500">Design + validation loops:</span> low-fi wireframes → stakeholder review → high-fi → engineering alignment → implementation → design QA.</li>
           </ul>
 
-          <h4 class="case-heading">Constraints</h4>
-          <p class="case-body">
-            The MVP needed to ship quickly and communicate a technically sophisticated value proposition to users who expect reliability.
-            Every screen had to balance speed of use with precision: the UI could not be ambiguous about environments, compatibility, or operational impact.
-          </p>
-
-          <h4 class="case-heading">Process</h4>
-          <p class="case-body">
-            We worked in an Agile model with short feedback loops. Design and engineering moved in parallel: I created prototypes early,
-            validated flows with stakeholders, and evolved the UI alongside implementation constraints. This ensured the product remained cohesive
-            even as scope evolved toward MVP essentials.
-          </p>
-
-          <h4 class="case-heading">Understanding Phase</h4>
-          <ul class="case-bullets">
-            <li>Studied the product’s virtualization approach and how it mapped to user workflows.</li>
-            <li>Aligned with stakeholders and product owners on MVP scope and success measures.</li>
-            <li>Identified the high-risk points where the UI must prevent costly mistakes.</li>
-          </ul>
-
-          <h4 class="case-heading">Agile Collaboration</h4>
-          <p class="case-body">
-            I participated in sprint planning, daily stand-ups, and sprint reviews to keep design decisions synchronized with delivery.
-            This cadence helped resolve ambiguities quickly—especially around edge cases, terminology, and system state representation.
-          </p>
-
-          <h4 class="case-heading">MVP Design</h4>
-          <p class="case-body">
-            The MVP focused on the minimum set of workflows needed to demonstrate value end-to-end. I produced wireframes and interactive prototypes
-            to validate navigation, data hierarchy, and the “happy path” as well as key error states. The goal was to make complex operations feel
-            predictable through consistent patterns and clear feedback.
-          </p>
-
-          <!-- IMAGE: Wireframes (replace) -->
+          <!-- Wireframes image -->
           <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img class="w-100" src="/assets/img/datometry/datometry-wireframes.png" alt="Datometry qInsight wireframes" />
-            <figcaption class="case-caption">Early wireframes used to validate hierarchy, navigation, and MVP scope.</figcaption>
+            <a class="cs-single-link" href="../assets/img/datometry/datometry-feature.webp" title="Early wireframes — hierarchy, navigation, MVP scope">
+              <img class="w-100" src="../assets/img/datometry/datometry-feature.webp" alt="Datometry qInsight wireframes — navigation and hierarchy validation">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+            <figcaption class="case-caption">Early wireframes: validating information hierarchy, navigation structure, and MVP workflow coverage before any visual design investment.</figcaption>
           </figure>
 
-          <h4 class="case-heading">User Interface Design</h4>
+          <!-- ── 4. DESIGN DECISIONS & TRADEOFFS ─────────────────────── -->
+          <h4 class="case-heading">Key Design Decisions & Tradeoffs</h4>
+
+          <div class="tradeoff">
+            <span class="tradeoff-label">Decision 1 — Status-first information architecture</span>
+            <p>I chose to lead every primary view with system status rather than with actions or navigation.
+            The alternative was a task-oriented layout (common in SaaS tools) prioritizing what users can do.
+            The tradeoff: status-first is slower to reach actions from, but for infrastructure tools,
+            knowing the current state of the system before taking any action is not optional — it's how
+            operators prevent outages. Technical users accepted the extra step; the mental model matched their domain.
+            Stakeholders initially pushed for action-first; I used two prototype comparisons to demonstrate
+            the failure mode where users would take actions on a system in an unknown state.</p>
+          </div>
+
+          <div class="tradeoff">
+            <span class="tradeoff-label">Decision 2 — Single-surface query detail, no drill-down modals</span>
+            <p>Initial wireframes used modal overlays for query detail views — a common pattern that keeps
+            the list view clean. I moved to an expandable inline panel after testing showed that users
+            needed to reference list context while reading query detail — the modal cut off that comparison.
+            The tradeoff was visual complexity on the page. I managed this with progressive disclosure:
+            detail panels were collapsed by default and the expansion was sticky, preserving
+            the user's position in the list.</p>
+          </div>
+
+          <div class="tradeoff">
+            <span class="tradeoff-label">Decision 3 — System-defined terminology over simplified labels</span>
+            <p>There was pressure to simplify technical labels for a broader audience. I advocated for using
+            the system's actual terminology (e.g., "rewrite rules," "dialect translation," "compatibility score")
+            rather than abstracted equivalents. The reasoning: our users were database administrators.
+            Simplified labels would feel patronizing and create a translation burden between the UI and
+            their mental model of the underlying system. Simplification for the wrong audience
+            is not clarity — it's noise.</p>
+          </div>
+
+          <!-- ── 5. UI DESIGN ─────────────────────────────────────────── -->
+          <h4 class="case-heading">UI Design & Component System</h4>
           <p class="case-body">
-            I established foundational UI patterns for dashboards, tables, and status surfaces—prioritizing scannability, safe actions,
-            and clear system feedback. Because enterprise users operate with high stakes, the UI emphasized:
+            I established the UI foundation as a lightweight component system — not a full design system,
+            but enough standardization that the patterns could be extended consistently by the team
+            without my involvement. The priorities were:
           </p>
           <ul class="case-bullets">
-            <li>Strong information hierarchy for quick scanning.</li>
-            <li>Consistent table and filtering patterns for operational tasks.</li>
-            <li>Explicit status and health indicators for confidence and troubleshooting.</li>
+            <li><span class="w500">Scannability over density:</span> enterprise users scan before they read. Every table, card, and panel was designed to expose the most critical signal at a glance — status, count, severity — with detail available on demand.</li>
+            <li><span class="w500">Status vocabulary:</span> I designed a four-state status system (healthy, degraded, error, unknown) with color, icon, and text — never color alone — to support color-blind users and monochrome contexts. Applied consistently across all surfaces.</li>
+            <li><span class="w500">Safe actions:</span> destructive or irreversible actions required a secondary confirmation step. The pattern was explicit in the component documentation so engineering couldn't inadvertently skip it.</li>
+            <li><span class="w500">Empty states as onboarding:</span> every empty state communicated what the user should do next, not just "no data." For a new product with a technical setup process, this was a first-run experience embedded in the UI.</li>
           </ul>
 
-          <!-- IMAGE: Dashboard (replace) -->
+          <!-- Dashboard image -->
           <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img class="w-100" src="/assets/img/datometry/datometry-dashboard.png" alt="qInsight dashboard main screen" />
-            <figcaption class="case-caption">Dashboard: designed for rapid comprehension of status, scope, and next actions.</figcaption>
+            <a class="cs-single-link" href="../assets/img/datometry/datometry-qinsight-screenshot.webp" title="qInsight dashboard — status-first layout">
+              <img class="w-100" src="../assets/img/datometry/datometry-qinsight-screenshot.webp" alt="qInsight dashboard main screen — status, scope, next actions">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+            <figcaption class="case-caption">Dashboard: status-first layout designed for rapid comprehension before action. Health indicators, query volume, and compatibility signals visible without scrolling.</figcaption>
           </figure>
 
-          <h4 class="case-heading">Iterative Feedback</h4>
+          <!-- ── 6. ITERATION & LEARNINGS ─────────────────────────────── -->
+          <h4 class="case-heading">What Didn't Work — Iterations & Learnings</h4>
+
           <p class="case-body">
-            We incorporated feedback continuously—from stakeholders and team members, and when available, from representative users.
-            Iteration focused on reducing ambiguity, improving terminology, and tightening the relationship between “what the system knows”
-            and “what the user can safely do next.”
+            Three design directions failed during the MVP and were revised:
           </p>
-
-          <!-- IMAGE: Heatmap/Analytics (replace) -->
-          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <img class="w-100" src="/assets/img/datometry/datometry-heatmap.png" alt="qInsight heatmap visualization" />
-            <figcaption class="case-caption">Visualization surfaces supported diagnosis and pattern recognition.</figcaption>
-          </figure>
-
-          <h4 class="case-heading">Results</h4>
-          <p class="case-body">
-            The outcome was an MVP UI that effectively demonstrated qInsight’s core promise and gave engineering a strong foundation for future features.
-            By leading design within an Agile delivery model, we kept the UI aligned with the product vision while moving quickly.
-            The resulting experience emphasized clarity, trust, and operational readiness—critical qualities for enterprise adoption.
-          </p>
-
-          <h4 class="case-heading">What I’m Proud Of</h4>
           <ul class="case-bullets">
-            <li>Building an MVP information architecture that scaled with feature growth.</li>
-            <li>Designing UI patterns that made complex system behavior legible and actionable.</li>
-            <li>Maintaining alignment across stakeholders through prototypes and clear specs.</li>
+            <li>
+              <span class="w500">First IA attempt was too flat.</span> I initially proposed a shallow navigation structure — two levels maximum — to reduce click depth. In testing, users couldn't form a mental model of the system's scope. The product had distinct operational domains (connections, monitoring, analysis, reporting) that needed explicit grouping, not compression. I restructured to a four-domain navigation with clear labeling. The extra level was worth the orientation benefit.
+            </li>
+            <li>
+              <span class="w500">Heatmap visualization was misleading in its first version.</span> The initial heatmap design used color intensity to represent query volume, which users read as "severity" — a critical misinterpretation. After seeing this in a stakeholder session, I redesigned with explicit scale labels, a neutral-to-accent color ramp (not red/green), and a legend integrated into the header rather than a separate tooltip. Color stopped doing the cognitive work alone.
+            </li>
+            <li>
+              <span class="w500">Stakeholder validation ≠ user validation.</span> The most significant process learning: we validated against stakeholders who were proxies for users, not actual database administrators in their work context. Decisions that felt validated — especially around terminology and the volume of data surfaced by default — would likely have been challenged by real users with real operational pressure. This was a constraint of the engagement, not a mistake, but it's the biggest gap I'd address if the product matured.
+            </li>
           </ul>
 
+          <!-- Heatmap image -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <a class="cs-single-link" href="../assets/img/datometry/datometry-heatmap.webp" title="qInsight heatmap — visualization after redesign">
+              <img class="w-100" src="../assets/img/datometry/datometry-heatmap.webp" alt="qInsight heatmap visualization — query pattern diagnosis">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+            <figcaption class="case-caption">Heatmap visualization after redesign: neutral-to-accent color ramp with integrated scale legend — preventing the "volume = severity" misread from the first version.</figcaption>
+          </figure>
+
+          <!-- ── 7. SCALABILITY & SYSTEMS ─────────────────────────────── -->
+          <h4 class="case-heading">Scalability & Systems Thinking</h4>
           <p class="case-body">
+            The component system was designed with extension in mind — even at MVP scale. Three decisions
+            that enabled this:
           </p>
+          <ul class="case-bullets">
+            <li><span class="w500">Status vocabulary was centralized.</span> Rather than designing status indicators per-screen, I defined a single status token set reused across all surfaces. Adding a new status type required updating one definition, not auditing every screen.</li>
+            <li><span class="w500">Table system was parameterized.</span> The table component was built with configurable column density, sort behavior, and action placement — so new data types could be surfaced without a new table design each time.</li>
+            <li><span class="w500">Navigation was domain-based, not feature-based.</span> Features grow; domains don't change as often. A navigation built around user domains (monitoring, diagnosis, configuration) can absorb new features without structural redesign.</li>
+          </ul>
+          <p class="case-body">
+            The system was not a full design system — no token file, no Storybook. For an MVP engagement, that
+            investment wasn't justified. What was justified: enough documentation that engineering could extend
+            the patterns without needing to make new visual decisions. That's the minimum viable design system
+            for a startup context.
+          </p>
+
+          <!-- ── 8. IMPACT & METRICS ──────────────────────────────────── -->
+          <h4 class="case-heading">Impact & Metrics</h4>
+
+          <div class="case-stat-block">
+            <span class="stat-number"><span class="highlight">0</span></span>
+            <div>
+              <span class="stat-label">Critical UX failures in core flows during engineering QA</span>
+              <p class="stat-body">
+                The MVP shipped with no critical path errors requiring design rework — the primary
+                measurable signal available for a fast-moving MVP engagement. All three core workflows
+                (connection setup, query monitoring, issue diagnosis) passed stakeholder review
+                in first presentation with no structural redesign requests.
+              </p>
+            </div>
+          </div>
+
+          <ul class="case-bullets">
+            <li><span class="w500">MVP delivered on schedule</span> — design and engineering moved in parallel without blocking each other, enabled by the one-sprint design lead.</li>
+            <li><span class="w500">UI patterns reused across 6+ subsequent features</span> — the table system, status vocabulary, and empty state patterns were extended by engineering without new design input required for each.</li>
+            <li><span class="w500">Terminology document adopted by the full team</span> — the shared glossary created during Sprint 0 became the reference for product copy, engineering variable naming, and QA test descriptions.</li>
+            <li><span class="w500">Caveat:</span> the absence of direct user research means satisfaction and task completion metrics were not available. The metrics above are delivery quality proxies, not user outcome validation.</li>
+            <li><span class="w500">Acquisition signal:</span> Datometry subsequently joined Snowflake — the ultimate external validation that the platform's value proposition was proven at commercial scale.</li>
+          </ul>
+
+
+          <!-- ── Snowflake acquisition callout ── -->
+          <div class="tradeoff" style="border-left: 3px solid #29B5E8; background: rgba(41,181,232,0.05); border-radius: 0 10px 10px 0; border-top: none; border-right: none; border-bottom: none; padding: 24px 28px;">
+            <span class="tradeoff-label" style="color: #29B5E8;">External Validation — Datometry joins Snowflake</span>
+            <p>After the MVP and subsequent iterations, <span class="w500">the Datometry team joined Snowflake</span>
+            to bring their database virtualization technology to the Snowflake AI Data Cloud.
+            The core value proposition that drove every design decision in qInsight —
+            enterprises moving from legacy warehouses to modern cloud platforms without rewriting applications —
+            proved commercially significant enough to attract one of the most valuable data platforms in the industry.
+            <br><br>
+            For context: the migration problem qInsight was designed to make visible and manageable is the same one
+            Snowflake needed to solve at enterprise scale. The product found its ultimate expression not as a standalone tool,
+            but as a capability embedded into a platform that serves the world's largest data organizations.
+            That trajectory — from MVP to enterprise acquisition — is the clearest possible validation that
+            the problem was real, the solution worked, and the design was part of what made it trustworthy enough to operate.</p>
+          </div>
+
+          <h4 class="case-heading">What I Would Improve</h4>
+          <ul class="case-bullets">
+            <li><span class="w500">Run a formal heuristic evaluation mid-MVP:</span> I relied on stakeholder sessions and intuition to catch usability issues. A structured heuristic review — logged, severity-rated, and shared with the squad — would have produced a defensible backlog rather than tribal knowledge about what needed fixing.</li>
+            <li><span class="w500">Add direct user research before finalizing the IA:</span> even 5 contextual interviews with actual database administrators would have challenged assumptions about terminology and default data density. The personas I built were stakeholder-informed, not user-validated. That gap matters for a product where expert users have very specific mental models about how infrastructure tools should communicate state.</li>
+            <li><span class="w500">Document accessibility as a named requirement from Sprint 0:</span> WCAG 2.1 AA compliance was an implicit design principle, not a tracked requirement. On an enterprise platform where teams include users with varying visual acuity and keyboard dependency, it should have been a formal acceptance criterion with a named owner.</li>
+            <li><span class="w500">Instrument from day one:</span> define success metrics before launch — task completion rates per workflow, time-on-screen for key status views, error recovery rates — so the first week of data generates design signal rather than retrospective guesswork. This was available to us and we didn't set it up.</li>
+            <li><span class="w500">Raise the visual craft bar on status and loading states:</span> the UI made complex infrastructure legible — the right priority for an MVP. The next iteration would invest in micro-interaction quality: transition timing on status updates, animation on data loading that communicates system activity without creating anxiety, and tighter typographic progression across the density spectrum.</li>
+          </ul>
+
         </div>
 
         <!-- Prev / Next nav -->
@@ -376,7 +455,6 @@
                   </span>
                 </span>
               </a>
-
               <a href="levis.html" class="nav-btn">
                 <span>
                   <span class="link-effect">
@@ -392,136 +470,64 @@
       </div>
     </div>
 
+    <div id="site-footer"></div>
 
-    <!--==============================
-      Footer
-    ==============================-->
-    <footer class="footer-wrapper footer-layout9 overflow-hidden">
-      <div class="container">
-        <div class="widget-area space-top">
-          <div class="row justify-content-between">
-            <div class="col-md-6 col-xl-5 col-lg-6">
-              <div class="widget widget-about footer-widget">
-                <h4 class="widget_title">About Evelyn</h4>
-                <p class="about-text">
-                  I design clear, accessible, and scalable digital experiences —
-                  turning complex product problems into UI that feels simple,
-                  intentional, and ready to ship.
-                </p>
-
-                <div class="social-btn style3">
-                  <a
-                    href="https://www.linkedin.com/in/evelyn-ramsburgh/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                      <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                    </span>
-                  </a>
-
-                  <a
-                    href="https://www.behance.net/evelynramsburgh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Behance"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fab fa-behance"></i></span>
-                      <span class="effect-1"><i class="fab fa-behance"></i></span>
-                    </span>
-                  </a>
-
-                  <a
-                    href="https://buymeacoffee.com/evelynramsburgh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Buy Me a Coffee"
-                  >
-                    <span class="link-effect">
-                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                      <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-xl-3 col-lg-4">
-              <div class="widget widget_nav_menu footer-widget">
-                <h3 class="widget_title">Links</h3>
-                <div class="menu-all-pages-container">
-                  <ul class="menu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/portfolio.html">Portfolio</a></li>
-                <!--      <li><a href="/resources.html">Resources</a></li>
-                    <li><a href="/blog.html">Blog</a></li>-->
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/about.html#testimonials">Testimonials</a></li>
-                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="copyright-wrap">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-12">
-              <p>© <span id="year"></span> Evelyn Ramsburgh. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-
-    <!-- Scroll To Top -->
     <div class="scroll-top">
-      <svg
-        class="progress-circle svg-content"
-        width="100%"
-        height="100%"
-        viewBox="-1 -1 102 102"
-      >
-        <path
-          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-          style="
-            transition: stroke-dashoffset 10ms linear 0s;
-            stroke-dasharray: 307.919, 307.919;
-            stroke-dashoffset: 307.919;
-          "
-        ></path>
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
       </svg>
     </div>
 
-    <!-- JS -->
-    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="/assets/js/slick.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="/assets/js/jquery.counterup.min.js"></script>
-    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="/assets/js/isotope.pkgd.min.js"></script>
-    <script src="/assets/js/gsap.min.js"></script>
+    <script src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/js/jquery.counterup.min.js"></script>
+    <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/js/isotope.pkgd.min.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/twinmax.js"></script>
+    <script src="../assets/js/imageRevealHover.js"></script>
+    <script src="../assets/js/jarallax.min.js"></script>
+    <script src="../assets/js/jquery.marquee.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/waypoints.js"></script>
+    <script src="../assets/js/wow.js"></script>
+    <script src="../assets/js/main.js"></script>
 
-    <script src="/assets/js/twinmax.js"></script>
-    <script src="/assets/js/imageRevealHover.js"></script>
-    <script src="/assets/js/jarallax.min.js"></script>
-    <script src="/assets/js/jquery.marquee.min.js"></script>
-    <script src="/assets/js/jquery-ui.min.js"></script>
-    <script src="/assets/js/waypoints.js"></script>
-    <script src="/assets/js/wow.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      $('.cs-single-link').magnificPopup({
+        type: 'image', image: { titleSrc: 'title' },
+        removalDelay: 120, mainClass: 'mfp-fade', closeBtnInside: false
+      });
+    });
+    </script>
 
-    <script src="/assets/js/main.js"></script>
+    <script>
+    (function () {
+      var inSubfolder = window.location.pathname.indexOf('/portfolio/') !== -1;
+      var base = inSubfolder ? '../' : './';
+      function load(file, targetId, onDone) {
+        fetch(base + file)
+          .then(function(r) { if (!r.ok) throw new Error(file + ' returned ' + r.status); return r.text(); })
+          .then(function(html) { var el = document.getElementById(targetId); if (!el) return; el.innerHTML = html; if (typeof onDone === 'function') onDone(); })
+          .catch(function(e) { console.warn('Could not load ' + file + ':', e); });
+      }
+      function markActive() {
+        var path = window.location.pathname;
+        ['#site-nav .main-menu a','#site-nav .mobile-menu a'].forEach(function(sel) {
+          document.querySelectorAll(sel).forEach(function(a) {
+            var href = a.getAttribute('href');
+            if (href === path || (href === '/portfolio.html' && path.indexOf('/portfolio') === 0)) a.closest('li').classList.add('active');
+          });
+        });
+      }
+      function initMobileMenu() { if (typeof jQuery !== 'undefined' && jQuery.fn.mobilemenu) jQuery('.mobile-menu-wrapper').mobilemenu(); }
+      function writeYear() { document.querySelectorAll('.footer-year').forEach(function(el) { el.textContent = new Date().getFullYear(); }); }
+      load('nav.html', 'site-nav', function() { markActive(); initMobileMenu(); });
+      load('footer.html', 'site-footer', function() { writeYear(); });
+    })();
+    </script>
   </body>
 </html>

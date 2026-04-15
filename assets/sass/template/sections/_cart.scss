@@ -18,7 +18,7 @@
     th {
       font-family: $title-font;
       color: $title-color;
-      font-weight: 600;
+      font-weight: 300;
       border: none;
       font-size: 14px;
       padding: 0 0 13px;
@@ -48,7 +48,7 @@
         padding: 22px 20px;
         a {
           color: $title-color;
-          font-weight: 600;
+          font-weight: 300;
           font-size: 20px;
           font-family: $title-font;
           &:hover {
@@ -97,7 +97,7 @@
   
     .cart-productname {
       font-weight: 400;
-      font-family: $body-font;
+      font-family: $title-font;
       color: $body-color;
     }
   
@@ -136,7 +136,7 @@
             color: $title-color;
             padding: 11px 25px;
             text-align: center;
-            font-weight: 600;
+            font-weight: 300;
             font-size: 14px;
             font-family: $title-font;
             border-radius: 0px;
@@ -227,7 +227,7 @@
         width: 25%;
         background-color: transparent;
         padding-left: 0;
-        font-weight: 600;
+        font-weight: 300;
         font-family: $title-font;
         font-size: 14px;
         color: $title-color;
@@ -244,7 +244,7 @@
   
     .order-total {
       .amount {
-        font-weight: 600;
+        font-weight: 300;
       }
     }
   

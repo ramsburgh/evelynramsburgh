@@ -1,23 +1,72 @@
+// ============================================================
+//  _variable.scss
+//  Design tokens — evelynramsburgh.com
+//  Updated to match design system v2.0
+// ============================================================
+
+
+// ─── :root — CSS Custom Properties ──────────────────────────
 :root {
-  --theme-color         : #E3FF04;
+
+  // ── Lime ramp (primary accent) ──────────────────────────
+  --lime-50             : #f9ffe0;
+  --lime-100            : #f4ffc2;
+  --lime-200            : #efff8a;   // ★ base brand accent
+  --lime-400            : #d8e870;   // hover state
+  --lime-600            : #b8c840;   // active / pressed
+
+  // ── Neutral ramp ────────────────────────────────────────
+  --gray-200            : #c8cad0;   // disabled borders, dividers
+  --gray-400            : #9fa2ad;   // placeholder, hint text
+  --gray-600            : #6b6e7a;   // body secondary text, icons
+  --gray-800            : #3d3f4a;   // subheadings, muted emphasis
+
+  // ── Semantic light (bg surfaces) ────────────────────────
+  --success-bg          : #e2ffd5;
+  --error-bg            : #ffd5d5;
+  --warning-bg          : #feffd5;
+  --pink-bg             : #ffd5f3;   // decorative accent
+
+  // ── Semantic dark (text / icons) ────────────────────────
+  --success-dk          : #1a6b0d;   // on success-bg: 6.1:1 AA ✓
+  --error-dk            : #b91c1c;   // on error-bg:   5.4:1 AA ✓
+  --warning-dk          : #92400e;   // on warning-bg: 5.2:1 AA ✓
+
+  // ── Ink Blue ramp (second accent — links, focus, info) ──
+  --info-50             : #e6eef8;   // focus ring halo
+  --info-200            : #b8d0f0;   // link underline, borders
+  --info-400            : #7aaee0;
+  --info-600            : #2d6ab0;   // ★ base — links, focus border
+  --info-800            : #0d2d5c;   // dark ink blue
+
+  // ── Legacy aliases (backward compat — do not remove) ────
+  --theme-color         : #efff8a;   // = --lime-200
   --title-color         : #0A0C00;
   --body-color          : #0A0C00;
   --smoke-color         : #F6F5F3;
-  --smoke-color2        : #FFF4EF;
+  --smoke-color2        : #ffd5f3;   // = --pink-bg
   --smoke-color3        : #F5F5F6;
   --smoke-color4        : #F4F4F4;
   --smoke-color5        : #F0F2F4;
   --black-color         : #202020;
   --gray-color          : #131312;
   --white-color         : #ffffff;
-  --light-color         : #9fa2ad;
-  --yellow-color        : #FFB539;
-  --success-color       : #28a745;
-  --error-color         : #dc3545;
+  --light-color         : #9fa2ad;   // = --gray-400
+  --yellow-color        : #feffd5;   // = --warning-bg (updated from orange)
+  --success-color       : #e2ffd5;   // = --success-bg (bg surface, not text)
+  --error-color         : #ffd5d5;   // = --error-bg   (bg surface, not text)
   --border-color        : #E3E3E3;
+  
+
+  // ── Typography ──────────────────────────────────────────
   --title-font          : 'Fraunces', serif;
   --body-font           : 'Schibsted Grotesk', sans-serif;
   --icon-font           : "Font Awesome 5 Free";
+
+  // ── Focus ring ──────────────────────────────────────────
+  --focus-ring          : 0 0 0 3px #e6eef8;  // = info-50 halo
+
+  // ── Layout ──────────────────────────────────────────────
   --main-container      : 1296px;
   --container-gutters   : 24px;
   --section-space       : 140px;
@@ -25,64 +74,108 @@
   --section-title-space : 65px;
   --ripple-ani-duration : 5s;
 }
-// Color Variation
-$theme-color          : var(--theme-color);
-$title-color          : var(--title-color);
-$body-color           : var(--body-color);
-$smoke-color          : var(--smoke-color);
-$smoke-color2         : var(--smoke-color2);
-$smoke-color3         : var(--smoke-color3);
-$smoke-color4         : var(--smoke-color4);
-$smoke-color5         : var(--smoke-color5);
-$white-color          : var(--white-color);
-$light-color          : var(--light-color);
-$black-color          : var(--black-color);
-$gray-color           : var(--gray-color);
-$yellow-color         : var(--yellow-color);
-$success-color        : var(--success-color);
-$error-color          : var(--error-color);
-$border-color         : var(--border-color);
 
-// Font Variation
-$icon-font   : var(--icon-font);
 
-// Typography
-$title-font      : var(--title-font);
-$body-font       : var(--body-font);
-$body-font-size  : 16px;
-$body-line-Height: 26px;
-$body-font-weight: 400;
-$p-line-Height   : 1.75;
+// ─── Sass Variables ──────────────────────────────────────────
+//
+//  These wrap the CSS custom properties so SCSS functions
+//  (map-merge, darken, etc.) can reference them by name.
+//  For computed values (calc, var()) use the CSS vars directly.
+// ─────────────────────────────────────────────────────────────
 
-// Device Variation
-$hd: 1921px; // Large Device Than 1920
-$xxl: 1500px; // Extra large Device
-$ml: 1399px; // Medium Large Device
-$xl: 1299px; // Medium Large Device
-$lg: 1199px; // Large Device (Laptop)
-$md: 991px; // Medium Device (Tablet)
-$sm: 767px; // Small Device
-$xs: 575px; // Extra Small Device
-$vxs: 375px; // Extra Small Device
+// Lime ramp
+$lime-50          : var(--lime-50);
+$lime-100         : var(--lime-100);
+$lime-200         : var(--lime-200);
+$lime-400         : var(--lime-400);
+$lime-600         : var(--lime-600);
 
-// Spacing Count with 5x
-$space-count: 10;
+// Neutral ramp
+$gray-200         : var(--gray-200);
+$gray-400         : var(--gray-400);
+$gray-600         : var(--gray-600);
+$gray-800         : var(--gray-800);
 
-// Section Space  For large Device
-$space         : var(--section-space);
-$space-extra   : calc(var(--section-space) - 30px);
-$space-extra2   : calc(var(--section-space) - 40px);
+// Semantic pairs
+$success-bg       : var(--success-bg);
+$success-dk       : var(--success-dk);
+$error-bg         : var(--error-bg);
+$error-dk         : var(--error-dk);
+$warning-bg       : var(--warning-bg);
+$warning-dk       : var(--warning-dk);
+$pink-bg          : var(--pink-bg);
 
-// Section Space On small Device
-$space-mobile         : var(--section-space-mobile);
+// Ink blue ramp
+$info-50          : var(--info-50);
+$info-200         : var(--info-200);
+$info-400         : var(--info-400);
+$info-600         : var(--info-600);
+$info-800         : var(--info-800);
+
+// Legacy aliases — keep for backward compat
+$theme-color      : var(--theme-color);
+$title-color      : var(--title-color);
+$body-color       : var(--body-color);
+$smoke-color      : var(--smoke-color);
+$smoke-color2     : var(--smoke-color2);
+$smoke-color3     : var(--smoke-color3);
+$smoke-color4     : var(--smoke-color4);
+$smoke-color5     : var(--smoke-color5);
+$white-color      : var(--white-color);
+$black-color      : var(--black-color);
+$gray-color       : var(--gray-color);
+$light-color      : var(--light-color);
+$yellow-color     : var(--yellow-color);
+$success-color    : var(--success-color);
+$error-color      : var(--error-color);
+$border-color     : var(--border-color);
+
+
+// ─── Typography ──────────────────────────────────────────────
+$icon-font        : var(--icon-font);
+$title-font       : var(--title-font);
+$body-font        : var(--body-font);
+$body-font-size   : 16px;
+$body-line-height : 26px;
+$body-font-weight : 400;
+$p-line-height    : 1.75;
+
+
+// ─── Breakpoints ─────────────────────────────────────────────
+$hd  : 1921px;   // > 1920 — large
+$xxl : 1500px;   // extra large
+$ml  : 1399px;   // medium large
+$xl  : 1299px;   // medium large
+$lg  : 1199px;   // large (laptop)
+$md  : 991px;    // medium (tablet)
+$sm  : 767px;    // small
+$xs  : 575px;    // extra small
+$vxs : 375px;    // very extra small
+
+
+// ─── Spacing ─────────────────────────────────────────────────
+$space-count      : 10;   // multiplier base (× 5px)
+
+$space            : var(--section-space);
+$space-extra      : calc(var(--section-space) - 30px);
+$space-extra2     : calc(var(--section-space) - 40px);
+$space-mobile     : var(--section-space-mobile);
 $space-mobile-extra: calc(var(--section-space-mobile) - 30px);
 
 
-// BG Color Mapping 
-$bgcolorMap  : ();
-$bgcolorMap  : map-merge((
+// ─── BG Color Map ────────────────────────────────────────────
+$bgcolorMap: map-merge((
   "theme"    : $theme-color,
-  "theme2"    : $theme-color,
+  "theme2"   : $theme-color,
+  "lime-50"  : $lime-50,
+  "lime-100" : $lime-100,
+  "lime"     : $lime-200,
+  "lime-400" : $lime-400,
+  "info"     : $info-50,
+  "success"  : $success-bg,
+  "error"    : $error-bg,
+  "warning"  : $warning-bg,
+  "pink"     : $pink-bg,
   "smoke"    : $smoke-color,
   "smoke2"   : $smoke-color2,
   "smoke3"   : $smoke-color3,
@@ -90,42 +183,43 @@ $bgcolorMap  : map-merge((
   "smoke5"   : $smoke-color5,
   "white"    : $white-color,
   "black"    : $black-color,
-  "gray"    : $gray-color,
+  "gray"     : $gray-color,
   "title"    : $title-color,
-), $bgcolorMap);
+), ());
 
 
-// Overlay Color Mapping 
-$overlaycolorMap : ();
-$overlaycolorMap : map-merge((
-  "theme"        : $theme-color,
-  "title"        : $title-color,
-  "white"        : $white-color,
-  "black"        : $black-color,
-  "overlay1"     : #131B23,
-), $overlaycolorMap);
+// ─── Overlay Color Map ───────────────────────────────────────
+$overlaycolorMap: map-merge((
+  "theme"    : $theme-color,
+  "title"    : $title-color,
+  "white"    : $white-color,
+  "black"    : $black-color,
+  "overlay1" : #131B23,
+), ());
 
 
-// Text Color Mapping 
-$textColorsMap : ();
-$textColorsMap : map-merge((
-  "theme"      : $theme-color,
+// ─── Text Color Map ──────────────────────────────────────────
+$textColorsMap: map-merge((
+  "theme"       : $theme-color,
   "theme2"      : $theme-color,
-  "title"      : $title-color,
-  "body"       : $body-color,
-  "white"      : $white-color,
-  "smoke"      : $smoke-color,
-  "light"      : $light-color,
-  "yellow"     : $yellow-color,
-  "success"    : $success-color,
-  "error"      : $error-color), 
-$textColorsMap);
+  "title"       : $title-color,
+  "body"        : $body-color,
+  "white"       : $white-color,
+  "smoke"       : $smoke-color,
+  "light"       : $light-color,
+  "gray-600"    : $gray-600,
+  "gray-800"    : $gray-800,
+  "info"        : $info-600,
+  "success"     : $success-dk,
+  "error"       : $error-dk,
+  "warning"     : $warning-dk,
+  "yellow"      : $yellow-color,
+), ());
 
 
-// Font Mapping 
-$fontsMap    : ();
-$fontsMap    : map-merge((
-  "icon"     : $icon-font,
-  "title"    : $title-font,
-  "body"     : $body-font,
-), $fontsMap);
+// ─── Font Map ────────────────────────────────────────────────
+$fontsMap: map-merge((
+  "icon"  : $icon-font,
+  "title" : $title-font,
+  "body"  : $body-font,
+), ());

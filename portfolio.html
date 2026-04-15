@@ -1,505 +1,443 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
 <head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Evelyn Ramsburgh | Senior Product Designer (UX/UI)</title>
-<meta name="description" content="Senior Product Designer focused on clear, usable, and scalable digital products. End-to-end UX/UI, systems thinking, and accessibility. View selected work and case studies." />
-<meta name="keywords" content="Evelyn Ramsburgh, Senior Product Designer, Product Designer, UX Designer, UI Designer, UX UI Portfolio, Design Systems, Accessibility, Figma, Product Thinking" />
-<meta name="robots" content="index,follow">
-<link rel="canonical" href="https://evelynramsburgh.com/">
-<meta name="author" content="Evelyn Ramsburgh">
-<meta name="theme-color" content="#0B0B0F">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Evelyn Ramsburgh | Senior Product Designer">
-<meta property="og:description" content="Designing thoughtful digital products with clarity and intent.">
-<meta property="og:image" content="https://evelynramsburgh.com/assets/img/og-cover.jpg">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Portfolio — Evelyn Ramsburgh | Senior Product Designer</title>
+  <meta name="description" content="UX/UI case studies across FinOps, LIMS, enterprise tools, and consumer products. 9+ years of end-to-end product design work.">
+  <meta name="keywords" content="Evelyn Ramsburgh, Senior Product Designer, UX Designer, UI Designer, Design Systems, Accessibility, FinOps, LIMS, Enterprise UX, Figma, WCAG">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://evelynramsburgh.com/portfolio.html">
+  <meta name="author" content="Evelyn Ramsburgh">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon.png">
+  <meta name="theme-color" content="#0B0B0F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portfolio — Evelyn Ramsburgh | Senior Product Designer">
+  <meta property="og:description" content="Selected UX/UI case studies across FinOps, enterprise tools, and consumer products.">
+  <meta property="og:image" content="https://evelynramsburgh.com/assets/img/og-cover.jpg">
 
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-    <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+  <link rel="stylesheet" href="assets/css/slick.min.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/imageRevealHover.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/thumbnails.css">
 
-    <!--==============================
-	  Google Fonts
-	============================== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <style>
+    /* ── Colored pc-tags (active state only, by category) ──────────────────
+       Tokens used:
+         FinOps      → --info-50 bg  / --info-800 text   (azul claro)
+         Branding    → --smoke-color2 bg / #7a1a5c text  (rosa claro)
+         Product     → #ede9fe bg / #5b21b6 text         (morado claro — proposed, coherent with ramp style)
+         Enterprise  → --success-bg bg / --success-dk text (verde claro)
+         Consumer    → --error-bg bg  / --error-dk text  (rojo claro)
+         Accessibility → --warning-bg bg / --warning-dk text (amarillo — reuses existing warning token)
+       Non-active tags: unchanged (gray)
+    ─────────────────────────────────────────────────────────────────────── */
 
+    .pc-tag.active.tag-finops {
+      background: var(--info-50);
+      color: var(--info-800);
+    }
+    .pc-tag.active.tag-branding {
+      background: var(--smoke-color2);   /* #ffd5f3 */
+      color: #7a1a5c;
+    }
+    .pc-tag.active.tag-product {
+      background: #ede9fe;
+      color: #5b21b6;
+    }
+    .pc-tag.active.tag-enterprise {
+      background: var(--success-bg);
+      color: var(--success-dk);
+    }
+    .pc-tag.active.tag-consumer {
+      background: var(--error-bg);
+      color: var(--error-dk);
+    }
+    .pc-tag.active.tag-accessibility {
+      background: var(--warning-bg);
+      color: var(--warning-dk);
+    }
+    .pc-tag.active.tag-fintech {
+      background: #eee;
+      color: #888;
+    }
 
+    /* ── pc-link hover → negro ──────────────────────────────────────────── */
+    .pc-link:hover {
+      color: var(--title-color) !important;
+      opacity: 1 !important;
+      border-bottom-color: var(--title-color) !important;
+    }
+    .pc-link:hover::after {
+      background: var(--title-color) !important;
+    }
+  </style>
 
-    <!--==============================
-	    All CSS File
-	============================== -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-    <link rel="stylesheet" href="assets/css/slick.min.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/imageRevealHover.css">
-    <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
+  
 </head>
 
 <body>
 
+  <!-- Nav — cargado desde nav.html -->
+  <div id="site-nav"></div>
 
-
-<!--==============================
-Mobile Menu
-============================== -->
-<div class="mobile-menu-wrapper">
-    <div class="mobile-menu-area">
-        <button class="menu-toggle"><i class="fas fa-times"></i></button>
-
-        <div class="mobile-logo">
-            <a href="index.html"><img src="assets/img/logo.svg" alt="Evelyn Ramsburgh"></a>
-        </div>
-
-        <div class="mobile-menu">
-            <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-              <!--  <li><a href="resources.html">Resources</a></li>
-                <li><a href="blog.html">Blog</a></li>-->
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-
-        <div class="social-btn style3">
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <span class="link-effect">
-                    <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                    <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                </span>
-            </a>
-
-            <!-- Behance -->
-            <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer" aria-label="Behance">
-                <span class="link-effect">
-                    <span class="effect-1"><i class="fab fa-behance"></i></span>
-                    <span class="effect-1"><i class="fab fa-behance"></i></span>
-                </span>
-            </a>
-
-            <!-- Buy Me a Coffee -->
-            <a href="https://www.buymeacoffee.com/" target="_blank" rel="noopener noreferrer" aria-label="Buy Me a Coffee">
-                <span class="link-effect">
-                    <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                    <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                </span>
-            </a>
-        </div>
-    </div>
-</div>
-    <!--==============================
-	Header Area
-    ==============================-->
-    <header class="nav-header header-layout1">
-        <div class="sticky-wrapper">
-            <!-- Main Menu Area -->
-<div class="menu-area">
-    <div class="container-fluid">
-        <div class="row align-items-center justify-content-between">
-            
-            <!-- Logo -->
-            <div class="col-auto">
-                <div class="header-logo">
-                    <a href="index.html">
-                        <img src="assets/img/logo.svg" alt="logo">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Main Menu -->
-            <div class="col-auto ms-auto">
-                <nav class="main-menu d-none d-lg-inline-block">
-                    <ul>
-                        <li class="active">
-                            <a href="index.html">
-                                <span class="link-effect">
-                                    <span class="effect-1">Home</span>
-                                    <span class="effect-1">Home</span>
-                                </span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="about.html">
-                                <span class="link-effect">
-                                    <span class="effect-1">About</span>
-                                    <span class="effect-1">About</span>
-                                </span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="portfolio.html">
-                                <span class="link-effect">
-                                    <span class="effect-1">Portfolio</span>
-                                    <span class="effect-1">Portfolio</span>
-                                </span>
-                            </a>
-                        </li>
-
-                        <li>
-                       <!--     <a href="resources.html">
-                                <span class="link-effect">
-                                    <span class="effect-1">Resources</span>
-                                    <span class="effect-1">Resources</span>
-                                </span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="blog.html">
-                                <span class="link-effect">
-                                    <span class="effect-1">Blog</span>
-                                    <span class="effect-1">Blog</span>
-                                </span>
-                            </a>
-                        </li>
--->
-                        <li>
-                            <a href="contact.html">
-                                <span class="link-effect">
-                                    <span class="effect-1">Contact</span>
-                                    <span class="effect-1">Contact</span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <!-- Mobile Toggle -->
-                <div class="navbar-right d-inline-flex d-lg-none">
-                    <button type="button" class="menu-toggle sidebar-btn">
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="line"></span>
-                    </button>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-</div>
-
-        </div>
-    </header>
-
-   <!--==============================
-        Portfolio Area
-
-==============================-->
-<div class="portfolio-area-1 space overflow-hidden">
-<div class="container">
-  <div class="row justify-content-xl-between justify-content-center">
-    <div class="title-area">
-<h2 class="sec-title"><br>
-  Selected projects that reflect my 
-  <em>design</em> and <em>product practice</em>
-</h2>
-      <p class="page-subtitle">Case studies shaped by <span class="highlight">Product strategy</span>, and <strong>execution</strong> in real-world contexts.</p>
-    </div>
-                <div class="col-xl-4 col-lg-8 position-relative">
-                    <div class="sec_title_static">
-                        <div class="sec_title_wrap">
-                        </div>
-                    </div>
-                </div></div>
-        <div class="row gy-4 justify-content-center">
-
-            <!-- 1 -->
-            <div class="col-lg-7">
-                <a href="portfolio/flexera.html" class="portfolio-wrap style3">
-                    <div class="portfolio-thumb">
-                        <img src="assets/img/flexera/lockedproject_thumbnail.png" alt="Flexera Cloud Cost Optimization">
-                    </div>
-                    <div class="portfolio-details">
-                        <ul class="portfolio-meta">
-                            <li>Enterprise</li>
-                        </ul>
-                        <h3 class="portfolio-title" style="font-family:'Schibsted Grotesk', sans-serif; margin: 0 0 8px 0; line-height: 1.05;">Flexera Cloud Cost Optimization</h3>
-                        <p class="portfolio-text text-smoke mb-0">2023 · UI Design · UX Research · FinOps Consulting</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- 2 -->
-            <div class="col-lg-5">
-                <a href="portfolio/ibm-rebranding.html" class="portfolio-wrap style3">
-                    <div class="portfolio-thumb">
-                        <img src="assets/img/ISI/ISI_thumbnail.png" alt="IBM Seller Incentives - Rebranding">
-                    </div>
-                    <div class="portfolio-details">
-                        <ul class="portfolio-meta">
-                            <li>Branding</li>
-                        </ul>
-                        <h3 class="portfolio-title"style="font-family:'Schibsted Grotesk', sans-serif; margin: 0 0 8px 0; line-height: 1.05;">IBM Seller Incentives — Rebranding</h3>
-                        <p class="portfolio-text text-smoke mb-0">2022 · Branding · App Icon Design</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- 3 -->
-            <div class="col-lg-12">
-                <a href="portfolio/zenitsu.html" class="portfolio-wrap style3">
-                    <div class="portfolio-thumb">
-                        <img src="assets/img/zenitsu/zentisu_thumbnail.jpg" alt="Zenitsu">
-                    </div>
-                    <div class="portfolio-details">
-                        <ul class="portfolio-meta">
-                            <li>Product</li>
-                        </ul>
-                        <h3 class="portfolio-title"style="font-family:'Schibsted Grotesk', sans-serif; margin: 0 0 8px 0; line-height: 1.05;">Zenitsu</h3>
-                        <p class="portfolio-text text-smoke mb-0">2022 · UI Design · UX Research · DevOps</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- 4 -->
-            <div class="col-lg-5">
-                <a href="portfolio/headhunted.html" class="portfolio-wrap style3">
-                    <div class="portfolio-thumb">
-                        <img src="assets/img/headhunted/headhunted.png" alt="Headhunted">
-                    </div>
-                    <div class="portfolio-details">
-                        <ul class="portfolio-meta">
-                            <li>Product</li>
-                        </ul>
-                        <h3 class="portfolio-title"style="font-family:'Schibsted Grotesk', sans-serif; margin: 0 0 8px 0; line-height: 1.05;">Headhunted</h3>
-                        <p class="portfolio-text text-smoke mb-0">2022 · UI Design</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- 5 -->
-            <div class="col-lg-7">
-                <a href="portfolio/pillhuancalli.html" class="portfolio-wrap style3">
-                    <div class="portfolio-thumb">
-                        <img src="assets/img/pillhuancali/pillhuancali.png" alt="Pillhuancali Montessori">
-                    </div>
-                    <div class="portfolio-details">
-                        <ul class="portfolio-meta">
-                            <li>Education</li>
-                        </ul>
-                        <h3 class="portfolio-title"style="font-family:'Schibsted Grotesk', sans-serif; margin: 0 0 8px 0; line-height: 1.05;">Pillhuancali Montessori</h3>
-                        <p class="portfolio-text text-smoke mb-0">2022 · Development · UI Design</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- 6 -->
-            <div class="col-lg-12">
-                <a href="portfolio/ibm-seller-incentives.html" class="portfolio-wrap style3">
-                    <div class="portfolio-thumb">
-                        <img src="assets/img/ibm-seller-incentives/search-active-max-1584px-16col@2x.png" alt="IBM Seller Incentives - Cloud Migration">
-                    </div>
-                    <div class="portfolio-details">
-                        <ul class="portfolio-meta">
-                            <li>Enterprise</li>
-                        </ul>
-                        <h3 class="portfolio-title"style="font-family:'Schibsted Grotesk', sans-serif; margin: 0 0 8px 0; line-height: 1.05;">IBM Seller Incentives — Cloud Migration</h3>
-                        <p class="portfolio-text text-smoke mb-0">2020 · UI Design · UX Research · FinOps</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- 7 -->
-            <div class="col-lg-7">
-                <a href="portfolio/datometry.html" class="portfolio-wrap style3">
-                    <div class="portfolio-thumb">
-                        <img src="assets/img/datometry/datometry.png" alt="Datometry qInsight">
-                    </div>
-                    <div class="portfolio-details">
-                        <ul class="portfolio-meta">
-                            <li>Enterprise</li>
-                        </ul>
-                        <h3 class="portfolio-title"style="font-family:'Schibsted Grotesk', sans-serif; margin: 0 0 8px 0; line-height: 1.05;">Datometry qInsight</h3>
-                        <p class="portfolio-text text-smoke mb-0">2019 · UX Research · UI Design</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- 8 -->
-            <div class="col-lg-5">
-                <a href="portfolio/levis.html" class="portfolio-wrap style3">
-                    <div class="portfolio-thumb">
-                        <img src="assets/img/levis/levis.png" alt="Levi's">
-                    </div>
-                    <div class="portfolio-details">
-                        <ul class="portfolio-meta">
-                            <li>Consumer</li>
-                        </ul>
-                        <h3 class="portfolio-title"style="font-family:'Schibsted Grotesk', sans-serif; margin: 0 0 8px 0; line-height: 1.05;">Levi’s</h3>
-                        <p class="portfolio-text text-smoke mb-0">2019 · UX Research · UI Design</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- 9 -->
-            <div class="col-lg-12">
-                <a href="portfolio/digitt.html" class="portfolio-wrap style3">
-                    <div class="portfolio-thumb">
-                        <img src="assets/img/digitt/digitt.png" alt="Digitt">
-                    </div>
-                    <div class="portfolio-details">
-                        <ul class="portfolio-meta">
-                            <li>Fintech</li>
-                        </ul>
-                       <h3 class="portfolio-title"style="font-family:'Schibsted Grotesk', sans-serif; margin: 0 0 8px 0; line-height: 1.05;">Digitt</h3>
-                        <p class="portfolio-text text-smoke mb-0">2018 · UX Research · UI Design</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- 10 -->
-            <div class="col-lg-12">
-                <a href="portfolio/smarttie.html" class="portfolio-wrap style3">
-                    <div class="portfolio-thumb">
-                        <img src="assets/img/smarttie/smarttiethumbnail.png" alt="Smarttie">
-                    </div>
-                    <div class="portfolio-details">
-                        <ul class="portfolio-meta">
-                            <li>Branding</li>
-                        </ul>
-                        <h3 class="portfolio-title"style="font-family:'Schibsted Grotesk', sans-serif; margin: 0 0 8px 0; line-height: 1.05;">Smarttie</h3>
-                        <p class="portfolio-text text-smoke mb-0">2018 · Branding</p>
-                    </div>
-                </a>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-
-<!--============================== 
-    Footer Area
-==============================-->
-<footer class="footer-wrapper footer-layout9 overflow-hidden">
+  <!--==============================
+    Portfolio Area
+  ==============================-->
+  <div class="portfolio-area-1 space overflow-hidden">
     <div class="container">
-        <div class="widget-area space-top">
-            <div class="row justify-content-between">
-                <!-- About -->
-                <div class="col-md-6 col-xl-5 col-lg-6">
-                    <div class="widget widget-about footer-widget">
-                        <h3 class="widget_title">About Evelyn</h3>
-                        <p class="about-text">
-                            I design clear, accessible, and scalable digital experiences — turning complex product problems into UI that feels simple, intentional, and ready to ship.
-                        </p>
+
+      <!-- Page header -->
+      <div class="title-area mb-50">
+        <h2 class="sec-title">
+          Selected projects that reflect my
+          <em>design and product</em> practice
+        </h2>
+        <p class="page-subtitle">
+Case studies shaped by product strategy and real-world execution—each tackling a different challenge, context, and solution.
+        </p>
+      </div>
+
+      <!-- Filter pills -->
+      <div class="portfolio-filter-bar" id="filter-bar">
+        <span class="pill pill-active" data-filter="all">All</span>
+        <span class="pill pill-default" data-filter="FinOps">FinOps</span>
+        <span class="pill pill-default" data-filter="Enterprise">Enterprise</span>
+        <span class="pill pill-default" data-filter="Branding">Branding</span>
+        <span class="pill pill-default" data-filter="Product">Product</span>
+        <span class="pill pill-default" data-filter="Consumer">Consumer</span>
+        <span class="pill pill-default" data-filter="Fintech">Fintech</span>
+      </div>
+
+      <!-- Project grid — data-tags drives the filter -->
+      <div class="portfolio-grid" id="portfolio-grid">
 
 
-                        <div class="social-btn style3">
-                            <!-- LinkedIn -->
-                            <a href="https://www.linkedin.com/in/evelyn-ramsburgh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                <span class="link-effect">
-                                    <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                                    <span class="effect-1"><i class="fab fa-linkedin-in"></i></span>
-                                </span>
-                            </a>
+        <!-- IBM Rebranding -->
+<div class="project-card" data-tags="Branding,Enterprise">
+  <div class="portfolio-card-thumb">
+    <h3 class="portfolio-thumb-title thumb-gradient-2">
+      IBM App Rebranding
+    </h3>
+  </div>
 
-                            <!-- Behance -->
-                            <a href="https://www.behance.net/evelynramsburgh" target="_blank" rel="noopener noreferrer" aria-label="Behance">
-                                <span class="link-effect">
-                                    <span class="effect-1"><i class="fab fa-behance"></i></span>
-                                    <span class="effect-1"><i class="fab fa-behance"></i></span>
-                                </span>
-                            </a>
-
-                            <!-- Buy Me a Coffee -->
-                            <a href="https://buymeacoffee.com/evelynramsburgh" target="_blank" rel="noopener noreferrer" aria-label="Buy Me a Coffee">
-                                <span class="link-effect">
-                                    <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                                    <span class="effect-1"><i class="fas fa-mug-hot"></i></span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Links (Single Column) -->
-                <div class="col-md-6 col-xl-3 col-lg-4">
-                    <div class="widget widget_nav_menu footer-widget">
-                        <h3 class="widget_title">Links</h3>
-                        <div class="menu-all-pages-container">
-                            <ul class="menu">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="portfolio.html">Portfolio</a></li>
-                              <!--  <li><a href="resources.html">Resources</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>-->
-                                <li><a href="/about.html#testimonials">Testimonials</a></li>
-                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+  <div class="pc-body">
+    <div class="pc-tags">
+      <span class="pc-tag active tag-branding">Branding</span>
+      <span class="pc-tag active tag-enterprise">Enterprise</span>
     </div>
+    <div class="pc-title">IBM Seller Incentives — Rebranding</div>
+    <div class="pc-meta">2022 · Branding · App Icon Design</div>
+    <div class="pc-desc">Visual identity refresh and app icon system for IBM's global seller incentives platform, aligning with Carbon Design System standards.</div>
+    <a class="pc-link" href="portfolio/ibm-rebranding.html">View case study →</a>
+  </div>
+</div>
 
-    <!-- Copyright -->
-    <div class="container">
-        <div class="copyright-wrap">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-12">
-                    <p>© <span id="year"></span> Evelyn Ramsburgh. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
+        <!-- Zenitsu -->
+<div class="project-card" data-tags="Product,Enterprise">
+  <div class="portfolio-card-thumb">
+    <h3 class="portfolio-thumb-title thumb-gradient-3">
+      IBM Web App Builder
+    </h3>
+  </div>
+
+  <div class="pc-body">
+    <div class="pc-tags">
+      <span class="pc-tag active tag-product">Product</span>
+      <span class="pc-tag active tag-enterprise">Enterprise</span>
     </div>
-</footer>
+    <div class="pc-title">Zenitsu</div>
+    <div class="pc-meta">2022 · UI Design · UX Research · DevOps</div>
+    <div class="pc-desc">UX strategy and UI design for a developer platform managing module deployment workflows across backend and frontend environments.</div>
+    <a class="pc-link" href="portfolio/zenitsu.html">View case study →</a>
+  </div>
+</div>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+        <!-- IBM Cloud Migration -->
+<div class="project-card" data-tags="FinOps,Enterprise">
+  <div class="portfolio-card-thumb">
+    <h3 class="portfolio-thumb-title thumb-gradient-3">
+      IBM Seller Incentives
+    </h3>
+  </div>
 
-
-    <!--********************************
-			Code End  Here
-	******************************** -->
-
-    <!-- Scroll To Top -->
-    <div class="scroll-top">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
-        </svg>
+  <div class="pc-body">
+    <div class="pc-tags">
+      <span class="pc-tag active tag-finops">FinOps</span>
+      <span class="pc-tag active tag-enterprise">Enterprise</span>
+      <span class="pc-tag active tag-accessibility">Accessibility</span>
     </div>
+    <div class="pc-title">IBM Seller Incentives — Cloud Migration</div>
+    <div class="pc-meta">2020 · UI Design · UX Research · FinOps</div>
+    <div class="pc-desc">Redesigned internal tools and migrated legacy interfaces for IBM's global sales incentive system, serving thousands of sellers worldwide.</div>
+    <a class="pc-link" href="portfolio/ibm-seller-incentives.html">View case study →</a>
+  </div>
+</div>
 
-    <!-- Jquery -->
-    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/gsap.min.js"></script>
+        <!-- Headhunted -->
+<div class="project-card" data-tags="Product">
+  <div class="portfolio-card-thumb">
+    <h3 class="portfolio-thumb-title thumb-gradient-4">
+      Headhunted Web Design
+    </h3>
+  </div>
 
-    <script src="assets/js/twinmax.js"></script>
-    <script src="assets/js/imageRevealHover.js"></script>
-    <script src="assets/js/jarallax.min.js"></script>
-    <script src="assets/js/jquery.marquee.min.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <script src="assets/js/waypoints.js"></script>
-    <script src="assets/js/wow.js"></script>
+  <div class="pc-body">
+    <div class="pc-tags">
+      <span class="pc-tag active tag-product">Product</span>
+    </div>
+    <div class="pc-title">Headhunted</div>
+    <div class="pc-meta">2022 · UI Design</div>
+    <div class="pc-desc">Mobile-first product design for a talent matching platform, focusing on clarity, speed, and candidate-centric job discovery flows.</div>
+    <a class="pc-link" href="portfolio/headhunted.html">View case study →</a>
+  </div>
+</div>
 
-    <!-- Main Js File -->
-    <script src="assets/js/main.js"></script>
+        <!-- Datometry -->
+<div class="project-card" data-tags="Enterprise">
+  <div class="portfolio-card-thumb">
+    <h3 class="portfolio-thumb-title thumb-gradient-7">
+      qInsight UX UI Design
+    </h3>
+  </div>
+
+  <div class="pc-body">
+    <div class="pc-tags">
+      <span class="pc-tag active tag-enterprise">Enterprise</span>
+    </div>
+    <div class="pc-title">Datometry qInsight</div>
+    <div class="pc-meta">2019 · UX Research · UI Design</div>
+    <div class="pc-desc">UX strategy and interface design for a data visualization platform, translating complex query analytics into actionable dashboards.</div>
+    <a class="pc-link" href="portfolio/datometry.html">View case study →</a>
+  </div>
+</div>
+
+        <!-- Levi's -->
+<div class="project-card" data-tags="Consumer">
+  <div class="portfolio-card-thumb">
+    <h3 class="portfolio-thumb-title thumb-gradient-8">
+      Design Sprint
+    </h3>
+  </div>
+
+  <div class="pc-body">
+    <div class="pc-tags">
+      <span class="pc-tag active tag-consumer">Consumer</span>
+    </div>
+    <div class="pc-title">Levi's</div>
+    <div class="pc-meta">2019 · UX Research · UI Design</div>
+    <div class="pc-desc">Responsive web and mobile design for Levi's retail promoter tool, streamlining field team workflows and incident reporting across stores.</div>
+    <a class="pc-link" href="portfolio/levis.html">View case study →</a>
+  </div>
+</div>
+
+
+        <!-- Digitt -->
+<div class="project-card" data-tags="Fintech">
+  <div class="portfolio-card-thumb">
+    <h3 class="portfolio-thumb-title thumb-gradient-9">
+      Product Design
+    </h3>
+  </div>
+
+  <div class="pc-body">
+    <div class="pc-tags">
+      <span class="pc-tag active tag-fintech">Fintech</span>
+    </div>
+    <div class="pc-title">Digitt</div>
+    <div class="pc-meta">2018 · UX Research · UI Design</div>
+    <div class="pc-desc">UX research and product design for a B2B fintech startup.</div>
+    <a class="pc-link" href="portfolio/digitt.html">View case study →</a>
+  </div>
+</div>
+
+        <!-- Smarttie — coming soon -->
+<div class="project-card" data-tags="Branding">
+  <div class="portfolio-card-thumb">
+    <h3 class="portfolio-thumb-title thumb-gradient-10">
+      Brand Design
+    </h3>
+  </div>
+
+  <div class="pc-body">
+    <div class="pc-tags">
+      <span class="pc-tag active tag-branding">Branding</span>
+    </div>
+    <div class="pc-title">Smarttie</div>
+    <div class="pc-meta">2018 · Branding</div>
+    <div class="pc-desc">Brand identity and design system for a B2B SaaS startup.</div>
+    <a class="pc-link" href="portfolio/smarttie.html">View case study →</a>
+  </div>
+</div>
+
+      </div>
+      <!-- /portfolio-grid -->
+
+    </div>
+  </div>
+
+  <!-- Footer — cargado desde footer.html -->
+  <div id="site-footer"></div>
+
+  <!-- Scroll To Top -->
+  <div class="scroll-top">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+        style="transition:stroke-dashoffset 10ms linear 0s;stroke-dasharray:307.919,307.919;stroke-dashoffset:307.919;"></path>
+    </svg>
+  </div>
+
+  <!-- JS -->
+  <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/twinmax.js"></script>
+  <script src="assets/js/imageRevealHover.js"></script>
+  <script src="assets/js/jarallax.min.js"></script>
+  <script src="assets/js/jquery.marquee.min.js"></script>
+  <script src="assets/js/waypoints.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Filter logic -->
+  <script>
+    (function () {
+      var pills = document.querySelectorAll('#filter-bar .pill');
+      var cards = document.querySelectorAll('#portfolio-grid .project-card');
+
+      // ── Apply filter ─────────────────────────────────────────
+      function applyFilter(filter) {
+        // Swap active pill
+        pills.forEach(function (p) {
+          p.classList.remove('pill-active');
+          p.classList.add('pill-default');
+        });
+        var activePill = document.querySelector(
+          '#filter-bar .pill[data-filter="' + filter + '"]'
+        );
+        if (activePill) {
+          activePill.classList.remove('pill-default');
+          activePill.classList.add('pill-active');
+        }
+
+        // Show / hide cards
+        cards.forEach(function (card) {
+          if (filter === 'all') {
+            card.classList.remove('is-hidden');
+            return;
+          }
+          var tags = (card.getAttribute('data-tags') || '')
+            .split(',')
+            .map(function (t) { return t.trim(); });
+          card.classList.toggle('is-hidden', tags.indexOf(filter) === -1);
+        });
+      }
+
+      // ── Update URL without reloading ─────────────────────────
+      function updateURL(filter) {
+        var url = window.location.pathname;
+        if (filter && filter !== 'all') {
+          url += '?filter=' + encodeURIComponent(filter);
+        }
+        history.pushState({ filter: filter }, '', url);
+      }
+
+      // ── Read filter from URL on load ─────────────────────────
+      function getFilterFromURL() {
+        var params = new URLSearchParams(window.location.search);
+        return params.get('filter') || 'all';
+      }
+
+      // ── Pill click ───────────────────────────────────────────
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          var filter = this.getAttribute('data-filter');
+          applyFilter(filter);
+          updateURL(filter);
+        });
+      });
+
+      // ── Back / forward button support ────────────────────────
+      window.addEventListener('popstate', function (e) {
+        var filter = (e.state && e.state.filter) ? e.state.filter : 'all';
+        applyFilter(filter);
+      });
+
+      // ── Init on page load ────────────────────────────────────
+      var initialFilter = getFilterFromURL();
+      applyFilter(initialFilter);
+
+      // Replace current history entry with initial filter state
+      history.replaceState({ filter: initialFilter }, '', window.location.href);
+
+    })();
+  </script>
+
+  <!-- Component loader -->
+  <script>
+    (function () {
+      var inSubfolder = window.location.pathname.indexOf('/portfolio/') !== -1;
+      var base = inSubfolder ? '../' : './';
+
+      function load(file, targetId, onDone) {
+        fetch(base + file)
+          .then(function (r) {
+            if (!r.ok) throw new Error(file + ' returned ' + r.status);
+            return r.text();
+          })
+          .then(function (html) {
+            var el = document.getElementById(targetId);
+            if (!el) { console.warn('#' + targetId + ' not found'); return; }
+            el.innerHTML = html;
+            if (typeof onDone === 'function') onDone();
+          })
+          .catch(function (e) { console.warn('Could not load ' + file + ':', e); });
+      }
+
+      function markActive() {
+        var path = window.location.pathname;
+        ['#site-nav .main-menu a', '#site-nav .mobile-menu a'].forEach(function (sel) {
+          document.querySelectorAll(sel).forEach(function (a) {
+            var href = a.getAttribute('href');
+            var active = href === path ||
+              (href === '/portfolio.html' && path.indexOf('/portfolio') === 0);
+            if (active) a.closest('li').classList.add('active');
+          });
+        });
+      }
+
+      function initMobileMenu() {
+        if (typeof jQuery !== 'undefined' && jQuery.fn.mobilemenu) {
+          jQuery('.mobile-menu-wrapper').mobilemenu();
+        }
+      }
+
+      function writeYear() {
+        document.querySelectorAll('.footer-year').forEach(function (el) {
+          el.textContent = new Date().getFullYear();
+        });
+      }
+
+      load('nav.html', 'site-nav', function () { markActive(); initMobileMenu(); });
+      load('footer.html', 'site-footer', function () { writeYear(); });
+    })();
+  </script>
+
 </body>
-
 </html>
