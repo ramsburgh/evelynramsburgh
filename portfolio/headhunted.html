@@ -116,6 +116,96 @@
       @media (max-width: 576px) { .cs-gallery { flex-direction: column; } .cs-gallery-item { max-width: 100%; } }
 
       .w500 { font-weight: 500; }
+
+      /* ===== Device preview mockups (scoped with .sp- prefix) ===== */
+      .sp-figure { max-width: 1180px !important; }
+      .sp-stage {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        align-items: center;
+        padding: 64px 30px;
+        background: #f7f7f5;
+        border-radius: 14px;
+      }
+      .sp-device { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; }
+      .sp-label { font-family: 'Schibsted Grotesk', sans-serif; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(36,36,36,0.5); font-weight: 500; }
+
+      /* Desktop */
+      .sp-desktop {
+        width: 100%;
+        max-width: 1000px;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 30px 60px -20px rgba(0,0,0,0.22), 0 12px 25px -5px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04);
+        overflow: hidden;
+        transition: transform 0.5s ease;
+      }
+      .sp-desktop-chrome { background: #F1F1F1; padding: 12px 16px; display: flex; align-items: center; gap: 14px; border-bottom: 1px solid #E0E0E0; }
+      .sp-desktop-dots { display: flex; gap: 7px; }
+      .sp-desktop-dots i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+      .sp-desktop-dots i:nth-child(1) { background: #FF5F57; }
+      .sp-desktop-dots i:nth-child(2) { background: #FEBC2E; }
+      .sp-desktop-dots i:nth-child(3) { background: #28C840; }
+      .sp-desktop-url { flex: 1; background: #fff; border-radius: 6px; padding: 6px 12px; font-size: 12px; color: rgba(0,0,0,0.6); display: flex; align-items: center; gap: 8px; border: 1px solid #E0E0E0; font-family: 'Schibsted Grotesk', sans-serif; }
+      .sp-desktop-url svg { flex-shrink: 0; color: rgba(0,0,0,0.6); }
+      .sp-desktop-url-domain { color: #000; font-weight: 500; }
+      .sp-desktop-frame { position: relative; width: 100%; aspect-ratio: 16/10; background: #fff; overflow: hidden; }
+      .sp-desktop-frame iframe {
+        position: absolute; top: 0; left: 0;
+        width: 1440px; height: 900px;
+        border: 0; display: block;
+        transform-origin: top left;
+        transform: scale(var(--sp-desktop-scale, 0.65));
+      }
+
+      /* iPhone */
+      .sp-iphone {
+        position: relative;
+        width: 340px; height: 700px;
+        background: linear-gradient(145deg, #1a1a1a 0%, #0a0a0a 100%);
+        border-radius: 52px;
+        padding: 12px;
+        box-shadow: 0 40px 80px -20px rgba(0,0,0,0.35), 0 15px 30px -10px rgba(0,0,0,0.12), inset 0 0 0 1.5px rgba(255,255,255,0.08);
+      }
+      .sp-iphone::before { content: ""; position: absolute; inset: 2px; border-radius: 50px; background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, transparent 40%, transparent 60%, rgba(255,255,255,0.04) 100%); pointer-events: none; z-index: 1; }
+      .sp-iphone-btn { position: absolute; background: #0A0A0A; border-radius: 2px; }
+      .sp-iphone-btn.silent { left: -2.5px; top: 110px; width: 4px; height: 28px; }
+      .sp-iphone-btn.vol-up { left: -2.5px; top: 160px; width: 4px; height: 50px; }
+      .sp-iphone-btn.vol-dn { left: -2.5px; top: 220px; width: 4px; height: 50px; }
+      .sp-iphone-btn.power { right: -2.5px; top: 170px; width: 4px; height: 80px; }
+
+      .sp-iphone-screen {
+        position: relative; width: 100%; height: 100%;
+        background: #fff;
+        border-radius: 42px;
+        overflow: hidden;
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+        display: flex; flex-direction: column;
+      }
+
+      .sp-island { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 110px; height: 32px; background: #000; border-radius: 20px; z-index: 10; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05); }
+
+      .sp-status { position: relative; height: 52px; padding: 16px 28px 4px; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; background: #fff; font-family: -apple-system, 'SF Pro Text', 'Schibsted Grotesk', sans-serif; z-index: 5; }
+      .sp-status-time { font-size: 15px; font-weight: 600; color: #000; letter-spacing: -0.3px; }
+      .sp-status-icons { display: flex; gap: 5px; align-items: center; color: #000; }
+
+      .sp-content { flex: 1; position: relative; overflow: hidden; background: #fff; }
+      .sp-content iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+      .sp-safari { flex-shrink: 0; background: #F4F4F5; border-top: 0.5px solid rgba(0,0,0,0.08); padding: 8px 14px 12px; display: flex; align-items: center; gap: 10px; }
+      .sp-safari-url { flex: 1; background: #E4E4E7; border-radius: 12px; padding: 8px 12px; font-size: 13px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; color: #000; font-family: -apple-system, 'SF Pro Text', 'Schibsted Grotesk', sans-serif; }
+      .sp-safari-url svg { flex-shrink: 0; opacity: 0.6; }
+      .sp-safari-btn { padding: 4px; color: #0A0A0A; display: flex; align-items: center; justify-content: center; background: none; border: none; cursor: default; }
+
+      @media (max-width: 720px) {
+        .sp-stage { padding: 30px 16px; gap: 50px; }
+        .sp-iphone { width: 280px; height: 580px; border-radius: 42px; padding: 10px; }
+        .sp-iphone-screen { border-radius: 33px; }
+        .sp-island { width: 90px; height: 26px; top: 8px; }
+        .sp-status { height: 44px; padding: 12px 22px 4px; }
+        .sp-status-time { font-size: 14px; }
+      }
     </style>
   </head>
 
@@ -214,13 +304,7 @@
           </p>
 
           <!-- Landing page / IA image -->
-          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <a class="cs-single-link" href="../assets/img/headhunted/headhunted-landing-page.webp" title="Content hierarchy and early layout structure">
-              <img class="w-100" src="../assets/img/headhunted/headhunted-landing-page.webp" alt="Information architecture and early layout structure for Headhunted">
-              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
-            </a>
-            <figcaption class="case-caption">IA and content hierarchy: mission → programs → impact evidence → call to action. Sequence designed to match the trust-building arc of a first visit.</figcaption>
-          </figure>
+
 
           <h4 class="case-heading">Brand Direction</h4>
           <p class="case-body">
@@ -244,9 +328,60 @@
 
           <!-- Colors / brand image -->
           <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <a class="cs-single-link" href="../assets/img/headhunted/headhunted-colors.webp" title="Color palette and typography system">
-              <img class="w-100" src="../assets/img/headhunted/headhunted-colors.webp" alt="Headhunted color palette and typography decisions">
-              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+           <style>
+  :root {
+    /* Pinks */
+    --color-pink-900: #8B0A4B;
+    --color-pink-600: #E6007E;
+    --color-pink-300: #FF80C8;
+
+    /* Neutrals */
+    --color-white:    #FFFFFF;
+    --color-black:    #000000;
+    --color-gray-800: #4A4A4A;
+    --color-gray-400: #A5A5A5;
+    --color-gray-100: #EFEFEF;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 24px;
+
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    max-width: 720px;
+  }
+  .swatch {
+    aspect-ratio: 1;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  }
+  .light { color: #fff; }
+  .dark  { color: #000; }
+  .bordered { box-shadow: inset 0 0 0 1px #ddd; }
+</style>
+
+<body>
+  <div class="grid">
+    <div class="swatch light" style="background: var(--color-pink-900);">pink-900</div>
+    <div class="swatch light" style="background: var(--color-pink-600);">pink-600</div>
+    <div class="swatch dark"  style="background: var(--color-pink-300);">pink-300</div>
+    <div class="swatch dark bordered" style="background: var(--color-white);">white</div>
+
+    <div class="swatch light" style="background: var(--color-black);">black</div>
+    <div class="swatch light" style="background: var(--color-gray-800);">gray-800</div>
+    <div class="swatch dark"  style="background: var(--color-gray-400);">gray-400</div>
+    <div class="swatch dark bordered" style="background: var(--color-gray-100);">gray-100</div>
+  </div>
             </a>
             <figcaption class="case-caption">Color and typography: restrained palette, modular type scale, and explicit weight progression — each decision documented with its rationale.</figcaption>
           </figure>
@@ -272,13 +407,92 @@
             <li><span class="w500">Semantic HTML in annotations:</span> handoff documents specified heading level, landmark roles, and ARIA labels — not just visual styling — so implementation produced accessible markup by default.</li>
           </ul>
 
-          <!-- UI screens image -->
-          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
-            <a class="cs-single-link" href="../assets/img/headhunted/headhunted-screens.webp" title="UI component system and screen designs">
-              <img class="w-100" src="../assets/img/headhunted/headhunted-screens.webp" alt="Headhunted UI screens and component system">
-              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
-            </a>
-            <figcaption class="case-caption">UI screens and reusable components — each pattern documented with states, spacing, and responsive behavior for developer implementation.</figcaption>
+
+          <h4 class="case-heading">Responsive Implementation — Desktop &amp; Mobile</h4>
+          <p class="case-body">
+            The component system rendered live across contexts — desktop at 1440px and iOS Safari at mobile breakpoint.
+            Same codebase, different viewport: the <span class="highlight">three-breakpoint responsive system</span>
+            is observable in production, not theoretical in the spec. Every spacing value, font-weight step, and
+            focus ring designed in Figma is now executing in HTML and CSS.
+          </p>
+
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top sp-figure">
+            <div class="sp-stage">
+              <!-- Desktop mockup -->
+              <div class="sp-device">
+                <div class="sp-desktop">
+                  <div class="sp-desktop-chrome">
+                    <div class="sp-desktop-dots"><i></i><i></i><i></i></div>
+                    <div class="sp-desktop-url">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0110 0v4"></path>
+                      </svg>
+                      <span class="sp-desktop-url-domain">headhunted.co</span>
+                    </div>
+                    <div style="width: 40px;"></div>
+                  </div>
+                  <div class="sp-desktop-frame">
+                    <iframe src="./headhunted-site/index.html" title="Headhunted — desktop preview" loading="lazy"></iframe>
+                  </div>
+                </div>
+                <span class="sp-label">Desktop · 1440px</span>
+              </div>
+
+              <!-- iPhone mockup -->
+              <div class="sp-device">
+                <div class="sp-iphone">
+                  <span class="sp-iphone-btn silent"></span>
+                  <span class="sp-iphone-btn vol-up"></span>
+                  <span class="sp-iphone-btn vol-dn"></span>
+                  <span class="sp-iphone-btn power"></span>
+                  <div class="sp-iphone-screen">
+                    <!-- iOS status bar -->
+                    <div class="sp-status">
+                      <span class="sp-status-time">9:41</span>
+                      <div class="sp-island"></div>
+                      <div class="sp-status-icons">
+                        <svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor" aria-hidden="true">
+                          <rect x="0" y="7" width="3" height="4" rx="0.5"/>
+                          <rect x="4.5" y="5" width="3" height="6" rx="0.5"/>
+                          <rect x="9" y="2.5" width="3" height="8.5" rx="0.5"/>
+                          <rect x="13.5" y="0" width="3" height="11" rx="0.5"/>
+                        </svg>
+                        <svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor" aria-hidden="true">
+                          <path d="M7.5 0C4.5 0 1.8 1.1 0 2.8l1.1 1.1C2.7 2.4 5 1.5 7.5 1.5S12.3 2.4 13.9 3.9L15 2.8C13.2 1.1 10.5 0 7.5 0zm0 3.5c-2 0-3.9.8-5.3 2.1l1.1 1.1C4.4 5.7 5.9 5 7.5 5s3.1.7 4.2 1.7l1.1-1.1C11.4 4.3 9.5 3.5 7.5 3.5zm0 3.5c-1 0-2 .4-2.7 1.1l1.1 1.1c.5-.4 1.1-.7 1.6-.7s1.1.2 1.6.7l1.1-1.1C9.5 7.4 8.5 7 7.5 7zm0 3.3c-.3 0-.6.1-.8.4L7.5 11l.8-.8c-.2-.3-.5-.4-.8-.4z"/>
+                        </svg>
+                        <svg width="27" height="12" viewBox="0 0 27 12" fill="none" aria-hidden="true">
+                          <rect x="0.5" y="0.5" width="22" height="11" rx="2.5" stroke="currentColor" stroke-opacity="0.4"/>
+                          <rect x="2" y="2" width="19" height="8" rx="1.2" fill="currentColor"/>
+                          <path d="M24 4v4c0.7-0.2 1.2-0.9 1.2-2s-0.5-1.8-1.2-2z" fill="currentColor" fill-opacity="0.4"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <!-- Site content -->
+                    <div class="sp-content">
+                      <iframe src="./headhunted-site/index.html" title="Headhunted — mobile preview" loading="lazy"></iframe>
+                    </div>
+
+                    <!-- Safari toolbar -->
+                    <div class="sp-safari">
+                      <button class="sp-safari-btn" aria-label="Back">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                      </button>
+                      <div class="sp-safari-url">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                        <span>headhunted.co</span>
+                      </div>
+                      <button class="sp-safari-btn" aria-label="Tabs">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="14" height="14" rx="2"/><path d="M8 2h12a2 2 0 012 2v12"/></svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <span class="sp-label">iPhone 15 Pro · Safari</span>
+              </div>
+            </div>
+            <figcaption class="case-caption">The component system responding to viewport context — same markup, different breakpoint behavior across desktop and iOS Safari.</figcaption>
           </figure>
 
           <h4 class="case-heading">Accessibility</h4>
@@ -321,6 +535,14 @@
             can be built by the development team without requiring a designer to intervene for
             every change.
           </p>
+                    <!-- UI screens image -->
+          <figure class="project-inner-thumb mb-35 wow img-custom-anim-top">
+            <a class="cs-single-link" href="../assets/img/headhunted/headhunted-screens.webp" title="UI component system and screen designs">
+              <img class="w-100" src="../assets/img/headhunted/headhunted-screens.webp" alt="Headhunted UI screens and component system">
+              <span class="cs-expand"><i class="bi bi-arrows-angle-expand"></i></span>
+            </a>
+          </figure>
+
           <p class="case-body">
             If extended, the next phase would introduce lightweight behavioral analytics — scroll depth,
             CTA click rates, and form completion funnels — to validate content engagement assumptions
@@ -335,7 +557,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="inner__page-nav space-top mt-n1 mb-n1">
-              <a href="zenitsu.html" class="nav-btn">
+              <a href="ibm-seller-incentives.html" class="nav-btn">
                 <i class="fa fa-arrow-left"></i>
                 <span>
                   <span class="link-effect">
@@ -344,7 +566,7 @@
                   </span>
                 </span>
               </a>
-              <a href="pillhuancalli.html" class="nav-btn">
+              <a href="datometry-qinsight.html" class="nav-btn">
                 <span>
                   <span class="link-effect">
                     <span class="effect-1">Next Project</span>
@@ -395,6 +617,21 @@
         closeBtnInside: false
       });
     });
+    </script>
+
+    <!-- Device preview: dynamic scaling of desktop iframe
+         so it renders at real desktop viewport (1440px) and scales to fit the mockup -->
+    <script>
+    (function(){
+      var frame = document.querySelector('.sp-desktop-frame');
+      if (!frame || typeof ResizeObserver === 'undefined') return;
+      var DESIGN_W = 1440;
+      var update = function(){
+        frame.style.setProperty('--sp-desktop-scale', (frame.offsetWidth / DESIGN_W).toString());
+      };
+      update();
+      new ResizeObserver(update).observe(frame);
+    })();
     </script>
 
     <!-- Component loader -->

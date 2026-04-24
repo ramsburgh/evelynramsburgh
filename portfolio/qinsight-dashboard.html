@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>qInsight — Executive Summary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+  /* ---------- Design tokens (accessible palette) ---------- */
+  :root {
+    /* Brand — accessible orange (meets WCAG AA on white: ~4.7:1) */
+    --brand-500: #C65012;        /* primary interactive */
+    --brand-600: #A8410E;        /* hover / pressed */
+    --brand-50:  #FFF2E8;        /* tints */
+    --brand-logo-bg: #DB5B14;    /* logo mark */
+
+    /* Neutrals */
+    --ink-900: #111418;          /* primary text, sidebar bg */
+    --ink-800: #1C2127;
+    --ink-700: #2A3038;
+    --ink-600: #4A5159;          /* secondary text (AA on white) */
+    --ink-500: #6B7280;
+    --ink-400: #9AA3AE;
+    --ink-300: #D1D5DB;
+    --ink-200: #E4E7EB;
+    --ink-100: #F1F3F5;
+    --ink-50:  #F7F8FA;
+    --white:   #FFFFFF;
+
+    /* Semantic — data viz (accessible) */
+    --info-600: #0E6FB8;         /* accessible blue */
+    --info-500: #1E88D6;
+    --info-100: #E3F1FB;
+    --success-600: #167A3E;      /* accessible green */
+    --warn-600:  #A85C00;        /* accessible amber */
+    --warn-100:  #FFF1DC;
+
+    /* Chart palette (colorblind friendly) */
+    --c1: #1E88D6;
+    --c2: #16A085;
+    --c3: #C65012;
+    --c4: #8E44AD;
+    --c5: #2C3E50;
+
+    /* Layout */
+    --rail-w: 64px;
+    --side-w: 260px;
+    --radius: 10px;
+    --radius-sm: 6px;
+    --shadow-sm: 0 1px 2px rgba(17,20,24,.04), 0 0 0 1px rgba(17,20,24,.05);
+    --shadow-md: 0 4px 12px rgba(17,20,24,.06), 0 0 0 1px rgba(17,20,24,.05);
+
+    /* Typography */
+    --font-body: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Fraunces', Georgia, serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink-900);
+    background: var(--ink-50);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; }
+
+  /* ---------- App shell ---------- */
+  .app {
+    display: grid;
+    grid-template-columns: var(--rail-w) var(--side-w) 1fr;
+    min-height: 100vh;
+  }
+
+  /* ---------- Rail (dark, icon-only) ---------- */
+  .rail {
+    background: var(--ink-900);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    border-right: 3px solid var(--brand-500);
+  }
+  .rail__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 0 14px;
+    gap: 4px;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .rail__logo-mark {
+    width: 34px; height: 34px;
+    display: grid; place-items: center;
+    background: var(--brand-logo-bg);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%);
+    color: white;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: .02em;
+  }
+  .rail__logo-word { font-size: 10px; letter-spacing: .14em; color: #CAD1D9; font-weight: 600; }
+  .rail__logo-beta {
+    font-size: 8px;
+    background: var(--brand-500);
+    color: white;
+    border-radius: 3px;
+    padding: 1px 5px;
+    letter-spacing: .08em;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+
+  .rail__nav { padding: 14px 0; display: flex; flex-direction: column; gap: 2px; }
+  .rail__item {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 4px;
+    padding: 14px 8px;
+    color: #CAD1D9;
+    font-size: 11px; font-weight: 600;
+    cursor: pointer;
+    border-left: 3px solid transparent;
+    margin-left: -3px;
+    transition: background .15s, color .15s, border-color .15s;
+  }
+  .rail__item:hover { color: white; background: rgba(255,255,255,.04); }
+  .rail__item[aria-current="page"] {
+    color: white;
+    border-left-color: var(--brand-500);
+    background: rgba(198,80,18,.08);
+  }
+  .rail__item svg { width: 20px; height: 20px; }
+
+  .rail__support {
+    margin-top: auto;
+    padding: 14px;
+    border-top: 1px solid rgba(255,255,255,.06);
+  }
+  .rail__support-btn {
+    width: 100%;
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    background: transparent;
+    color: var(--brand-500);
+    border: 1.5px solid var(--brand-500);
+    border-radius: 6px;
+    padding: 8px 6px;
+    font-size: 11px; font-weight: 700; letter-spacing: .02em;
+    cursor: pointer;
+  }
+  .rail__support-btn:hover { background: rgba(198,80,18,.12); color: #FFB388; }
+
+  /* ---------- Secondary side panel ---------- */
+  .side {
+    background: var(--white);
+    border-right: 1px solid var(--ink-200);
+    padding: 22px 22px 28px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .org-switcher {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 12px;
+    background: var(--ink-100);
+    border-radius: var(--radius-sm);
+    margin: -6px -6px 22px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  .org-switcher:hover { background: var(--ink-200); }
+
+  .side__title {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0 0 4px;
+  }
+  .side__sub { color: var(--ink-600); font-weight: 600; font-size: 13px; margin-bottom: 14px; }
+  .side__meta { color: var(--ink-600); font-size: 12px; line-height: 1.5; margin-bottom: 26px; }
+  .side__meta strong { color: var(--ink-900); font-weight: 700; display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px; }
+
+  .side__section {
+    display: flex; align-items: center; gap: 6px;
+    font-weight: 800; font-size: 14px;
+    color: var(--ink-900);
+    padding: 8px 0;
+    cursor: pointer;
+  }
+  .side__section svg { transition: transform .15s; }
+  .side__section--open svg { transform: rotate(90deg); }
+
+  .side__list { list-style: none; margin: 0; padding: 0 0 0 14px; border-left: 1px solid var(--ink-200); }
+  .side__list li {
+    position: relative;
+    padding: 7px 12px;
+    color: var(--ink-600);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 1px 0;
+  }
+  .side__list li:hover { color: var(--ink-900); background: var(--ink-50); }
+  .side__list li[aria-current="true"] {
+    color: var(--brand-600);
+    font-weight: 700;
+    background: var(--brand-50);
+  }
+  .side__list li[aria-current="true"]::before {
+    content: '';
+    position: absolute; left: -15px; top: 6px; bottom: 6px;
+    width: 2px; background: var(--brand-500); border-radius: 2px;
+  }
+
+  .side__group { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--ink-200); }
+  .side__group > .side__section { padding: 4px 0; font-weight: 700; color: var(--ink-700); }
+
+  /* ---------- Main content ---------- */
+  .main { padding: 22px 36px 60px; max-width: 1400px; }
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .breadcrumb {
+    display: flex; align-items: center; gap: 8px;
+    color: var(--ink-600); font-size: 13px; font-weight: 500;
+  }
+  .breadcrumb .crumb { cursor: pointer; }
+  .breadcrumb .crumb:hover { color: var(--brand-600); }
+  .breadcrumb .sep { color: var(--ink-400); }
+  .breadcrumb .current { color: var(--ink-900); font-weight: 700; }
+
+  .user-menu {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--white);
+    border: 1px solid var(--ink-200);
+    border-radius: 999px;
+    padding: 4px 12px 4px 4px;
+    cursor: pointer;
+    font-size: 13px; font-weight: 600;
+  }
+  .user-menu:hover { border-color: var(--ink-300); }
+  .avatar {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--brand-500), #E48554);
+    color: white;
+    display: grid; place-items: center;
+    font-size: 12px; font-weight: 700;
+  }
+
+  .page-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 22px;
+  }
+  .page-title {
+    font-family: var(--font-display);
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: var(--ink-900);
+  }
+  .page-actions { display: flex; align-items: center; gap: 10px; }
+  .icon-btn {
+    width: 36px; height: 36px;
+    background: var(--white);
+    border: 1px solid var(--ink-200);
+    border-radius: var(--radius-sm);
+    display: grid; place-items: center;
+    color: var(--ink-700);
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .icon-btn:hover { color: var(--brand-600); border-color: var(--brand-500); background: var(--brand-50); }
+  .icon-btn:focus-visible { outline: 2px solid var(--brand-500); outline-offset: 2px; }
+
+  /* ---------- Cards ---------- */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--ink-200);
+    border-radius: var(--radius);
+    padding: 22px;
+    box-shadow: var(--shadow-sm);
+  }
+  .card__title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink-600);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin: 0 0 14px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .info-dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--ink-200);
+    color: var(--ink-600);
+    font-size: 9px; font-weight: 800;
+    display: inline-grid; place-items: center;
+    cursor: help;
+  }
+
+  /* ---------- Top row: qScore + Cloud readiness ---------- */
+  .top-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  .qscore {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    align-items: center;
+    gap: 18px;
+  }
+  .qscore__hero {
+    text-align: center;
+    padding: 14px 0;
+    border-right: 1px solid var(--ink-200);
+  }
+  .qscore__label {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--brand-500);
+    letter-spacing: -0.02em;
+    display: inline-flex; align-items: baseline; gap: 3px;
+  }
+  .qscore__label sup { font-size: 10px; color: var(--brand-500); }
+  .qscore__value {
+    font-family: var(--font-display);
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-top: 4px;
+    color: var(--ink-900);
+  }
+  .qscore__sub {
+    text-align: center;
+  }
+  .qscore__sub .k { color: var(--ink-600); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; font-weight: 700; }
+  .qscore__sub .v {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--ink-900);
+    letter-spacing: -0.02em;
+    display: block;
+    margin-top: 4px;
+  }
+
+  .cloud__head {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    margin-bottom: 14px;
+    gap: 20px;
+  }
+  .cloud__platforms { text-align: right; font-size: 12px; color: var(--ink-600); line-height: 1.55; }
+  .cloud__platforms span { color: var(--ink-900); font-weight: 600; }
+
+  .cloud__states {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .cloud-state {
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    padding: 10px;
+    border-radius: var(--radius-sm);
+  }
+  .cloud-state__icon {
+    width: 58px; height: 58px;
+    display: grid; place-items: center;
+    border-radius: 50%;
+    position: relative;
+  }
+  .cloud-state__icon svg { width: 38px; height: 38px; }
+  .cloud-state--ok .cloud-state__icon { background: rgba(22,122,62,.08); }
+  .cloud-state--warn .cloud-state__icon { background: rgba(168,92,0,.08); }
+  .cloud-state__badge {
+    position: absolute; bottom: -2px; right: -2px;
+    width: 22px; height: 22px; border-radius: 50%;
+    display: grid; place-items: center;
+    color: white; font-weight: 800; font-size: 13px;
+    border: 2px solid white;
+  }
+  .cloud-state--ok .cloud-state__badge { background: var(--success-600); }
+  .cloud-state--warn .cloud-state__badge { background: var(--warn-600); }
+  .cloud-state__label {
+    font-weight: 700;
+    color: var(--ink-800);
+    font-size: 14px;
+  }
+
+  /* ---------- Metric cards ---------- */
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+  .metric {
+    background: var(--white);
+    border: 1px solid var(--ink-200);
+    border-radius: var(--radius);
+    padding: 16px 14px 18px;
+    display: flex; flex-direction: column; gap: 8px;
+    box-shadow: var(--shadow-sm);
+    transition: transform .15s, box-shadow .15s, border-color .15s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .metric:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--info-600);
+  }
+  .metric:focus-visible { outline: 2px solid var(--brand-500); outline-offset: 2px; }
+  .metric__icon {
+    width: 34px; height: 34px;
+    background: var(--info-100);
+    color: var(--info-600);
+    border-radius: 8px;
+    display: grid; place-items: center;
+  }
+  .metric__icon svg { width: 20px; height: 20px; }
+  .metric__label {
+    color: var(--info-600);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: -0.01em;
+  }
+  .metric__value {
+    font-family: var(--font-display);
+    color: var(--ink-900);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+  .metric__note { font-size: 10px; color: var(--ink-500); font-weight: 600; letter-spacing: .02em; margin-top: -2px; }
+
+  /* ---------- Key takeaways ---------- */
+  .takeaways {
+    margin-bottom: 26px;
+  }
+  .takeaways__header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .takeaways__title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin: 0;
+  }
+  .takeaways ol {
+    margin: 0; padding: 0; list-style: none;
+    counter-reset: takeaway;
+  }
+  .takeaways li {
+    counter-increment: takeaway;
+    padding: 10px 0 10px 34px;
+    position: relative;
+    border-bottom: 1px dashed var(--ink-200);
+    font-size: 14px;
+    color: var(--ink-800);
+    line-height: 1.55;
+  }
+  .takeaways li:last-child { border-bottom: none; }
+  .takeaways li::before {
+    content: counter(takeaway);
+    position: absolute;
+    left: 0; top: 10px;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--brand-50);
+    color: var(--brand-600);
+    font-weight: 800;
+    font-size: 11px;
+    display: grid; place-items: center;
+  }
+  .takeaways li mark {
+    background: var(--warn-100);
+    color: var(--ink-900);
+    padding: 0 3px; border-radius: 3px;
+    font-weight: 700;
+  }
+
+  /* ---------- Operational section ---------- */
+  .section-header {
+    display: flex; align-items: center; gap: 12px;
+    margin: 30px 0 14px;
+  }
+  .section-header h2 {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .section-header .rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--ink-200), transparent);
+  }
+
+  .objects-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+  .objects-overview .card__title {
+    display: flex; align-items: center; justify-content: space-between;
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink-900);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+  }
+
+  table.objects {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .objects thead th {
+    text-align: left;
+    background: var(--ink-100);
+    color: var(--ink-700);
+    font-weight: 700;
+    padding: 10px 14px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .objects thead th:last-child { text-align: right; }
+  .objects thead th button {
+    background: none; border: none; padding: 0; cursor: pointer;
+    font: inherit; color: inherit;
+    display: inline-flex; align-items: center; gap: 4px;
+  }
+  .objects tbody td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--ink-100);
+    color: var(--ink-800);
+  }
+  .objects tbody td:last-child { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .objects tbody tr:hover td { background: var(--ink-50); }
+  .objects tbody td .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 10px; vertical-align: middle; }
+
+  .donut-wrap {
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    padding: 10px;
+  }
+  .donut { width: 220px; height: 220px; position: relative; }
+  .donut__center {
+    position: absolute; inset: 0;
+    display: grid; place-items: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+  .donut__center .big {
+    font-size: 28px;
+    color: var(--ink-900);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .donut__center .small {
+    font-size: 11px;
+    color: var(--ink-600);
+    font-family: var(--font-body);
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .legend {
+    list-style: none; padding: 0; margin: 16px 0 0;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px;
+    width: 100%;
+    max-width: 280px;
+  }
+  .legend li { font-size: 13px; color: var(--ink-700); display: flex; align-items: center; gap: 8px; }
+  .legend .dot { width: 10px; height: 10px; border-radius: 50%; }
+
+  /* ---------- History timeline (bonus preview) ---------- */
+  .history { margin-top: 18px; }
+
+  /* ---------- A11y helpers ---------- */
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0;
+    margin: -1px; overflow: hidden; clip: rect(0,0,0,0);
+    white-space: nowrap; border: 0;
+  }
+  :focus-visible { outline: 2px solid var(--brand-500); outline-offset: 2px; border-radius: 3px; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 1200px) {
+    .metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .top-grid { grid-template-columns: 1fr; }
+    .objects-overview { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 860px) {
+    .app { grid-template-columns: var(--rail-w) 1fr; }
+    .side { display: none; }
+    .main { padding: 18px; }
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+    .qscore { grid-template-columns: 1fr; }
+    .qscore__hero { border-right: none; border-bottom: 1px solid var(--ink-200); padding-bottom: 14px; }
+    .page-title { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- RAIL -->
+  <aside class="rail" aria-label="Primary">
+    <div class="rail__logo" title="qInsight BETA">
+      <div class="rail__logo-mark" aria-hidden="true">qI</div>
+      <div class="rail__logo-word">qInsight</div>
+      <div class="rail__logo-beta">BETA</div>
+    </div>
+    <nav class="rail__nav" aria-label="Main navigation">
+      <a href="#" class="rail__item" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="4" width="3" height="14"/></svg>
+        <span>Reports</span>
+      </a>
+      <a href="#" class="rail__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Users</span>
+      </a>
+    </nav>
+    <div class="rail__support">
+      <button class="rail__support-btn" type="button">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-7h3zM3 19a2 2 0 0 0 2 2h1v-7H3z"/></svg>
+        Support
+      </button>
+    </div>
+  </aside>
+
+  <!-- SIDE PANEL -->
+  <aside class="side" aria-label="Report navigation">
+    <div class="org-switcher" tabindex="0" role="button" aria-haspopup="menu">
+      <span>Datometry</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+
+    <h1 class="side__title">NW POC</h1>
+    <p class="side__sub">NationWide</p>
+    <div class="side__meta">
+      <strong>Duration of analysis</strong>
+      1/2/2018 – 1/30/2018<br>
+      <span style="color:var(--ink-500)">(29 days)</span>
+    </div>
+
+    <div class="side__section side__section--open" role="button" aria-expanded="true">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+      Overview
+    </div>
+    <ul class="side__list">
+      <li aria-current="true">Executive Summary</li>
+      <li>Report inputs</li>
+      <li>Takeaways &amp; risks</li>
+      <li>Objects overview</li>
+      <li>Application overview</li>
+      <li>Complex features</li>
+      <li>Statements types</li>
+      <li>Throughput</li>
+    </ul>
+
+    <div class="side__group">
+      <div class="side__section" role="button" aria-expanded="false">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+        Applications
+      </div>
+    </div>
+    <div class="side__group" style="margin-top: 0; padding-top: 8px; border-top: none;">
+      <div class="side__section" role="button" aria-expanded="false">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+        Objects
+      </div>
+    </div>
+
+    <div class="side__group">
+      <div class="side__section" role="button" aria-expanded="false" style="color:var(--ink-600); font-weight:700;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        Properties
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a class="crumb" href="#">Reports</a>
+        <span class="sep">›</span>
+        <a class="crumb" href="#">NW POC</a>
+        <span class="sep">›</span>
+        <span class="current">Overview — Executive Summary</span>
+      </nav>
+      <div class="user-menu" tabindex="0" role="button" aria-haspopup="menu">
+        <span class="avatar" aria-hidden="true">MG</span>
+        <span>Michele Gage</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+
+    <header class="page-head">
+      <h2 class="page-title">Executive Summary</h2>
+      <div class="page-actions">
+        <button class="icon-btn" aria-label="Print report" title="Print">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Export as PDF" title="Export PDF">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Top row: qScore + Cloud readiness -->
+    <section class="top-grid" aria-label="Headline metrics">
+      <article class="card qscore">
+        <div class="qscore__hero">
+          <div class="qscore__label">qScore<sup>™</sup> <span class="info-dot" aria-label="What is qScore?">i</span></div>
+          <div class="qscore__value">5,000</div>
+        </div>
+        <div class="qscore__sub">
+          <span class="k">Workload</span>
+          <span class="v">2,500</span>
+        </div>
+        <div class="qscore__sub">
+          <span class="k">Schema</span>
+          <span class="v">2,500</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="cloud__head">
+          <h3 class="card__title" style="margin:0;">
+            Cloud readiness
+            <span class="info-dot" aria-label="What is cloud readiness?">i</span>
+          </h3>
+          <div class="cloud__platforms">
+            Source platform: <span>Teradata v15.10.07.15</span><br>
+            Target platform: <span>Azure</span>
+          </div>
+        </div>
+        <div class="cloud__states">
+          <div class="cloud-state cloud-state--ok">
+            <div class="cloud-state__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--info-500)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="#E3F1FB"/></svg>
+              <span class="cloud-state__badge" aria-label="ready">✓</span>
+            </div>
+            <div class="cloud-state__label">With HyperQ</div>
+          </div>
+          <div class="cloud-state cloud-state--warn">
+            <div class="cloud-state__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--info-500)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="#E3F1FB"/></svg>
+              <span class="cloud-state__badge" aria-label="needs attention">!</span>
+            </div>
+            <div class="cloud-state__label">Without HyperQ</div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Metric tiles -->
+    <section class="metrics" aria-label="Workload metrics">
+      <button class="metric" type="button">
+        <span class="metric__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="7" x2="22" y2="7"/><circle cx="5" cy="5" r=".5" fill="currentColor"/><circle cx="7.5" cy="5" r=".5" fill="currentColor"/></svg>
+        </span>
+        <span class="metric__label">Applications</span>
+        <span class="metric__value">104</span>
+      </button>
+      <button class="metric" type="button">
+        <span class="metric__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><text x="8" y="17" font-size="5" fill="currentColor" stroke="none" font-weight="bold">SQL</text></svg>
+        </span>
+        <span class="metric__label">Total statements</span>
+        <span class="metric__value">22,000</span>
+      </button>
+      <button class="metric" type="button">
+        <span class="metric__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><text x="8" y="17" font-size="5" fill="currentColor" stroke="none" font-weight="bold">SQL</text></svg>
+        </span>
+        <span class="metric__label">Unique statements</span>
+        <span class="metric__value">22,000</span>
+      </button>
+      <button class="metric" type="button">
+        <span class="metric__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><line x1="12" y1="7.5" x2="12" y2="12"/><line x1="12" y1="12" x2="5" y2="15.5"/><line x1="12" y1="12" x2="19" y2="15.5"/></svg>
+        </span>
+        <span class="metric__label">Schemas</span>
+        <span class="metric__value">777</span>
+      </button>
+      <button class="metric" type="button">
+        <span class="metric__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8 12 14 2 8 12 2"/><polyline points="2 16 12 22 22 16"/></svg>
+        </span>
+        <span class="metric__label">Objects</span>
+        <span class="metric__value">69,124</span>
+      </button>
+      <button class="metric" type="button">
+        <span class="metric__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+        </span>
+        <span class="metric__label">Database size</span>
+        <span class="metric__value">~206TB</span>
+        <span class="metric__note">(24% unused)</span>
+      </button>
+    </section>
+
+    <!-- Key takeaways -->
+    <section class="card takeaways" aria-labelledby="takeaways-heading">
+      <div class="takeaways__header">
+        <h3 class="takeaways__title" id="takeaways-heading">Key takeaways</h3>
+        <button class="icon-btn" aria-label="Edit key takeaways" title="Edit">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </button>
+      </div>
+      <ol>
+        <li>Wide fluctuation in query volume/application load <mark>(2.4M – 51M)</mark> over two weeks.</li>
+        <li>Key contributor to the fluctuation is <strong>IBM SPSS</strong> statistics modeling tool.</li>
+        <li>SPSS generated <strong>130M Insert</strong> statements alone out of the 206M queries.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+      </ol>
+    </section>
+
+    <!-- Operational -->
+    <div class="section-header">
+      <h2>Operational</h2>
+      <span class="rule" aria-hidden="true"></span>
+    </div>
+
+    <section class="objects-overview" aria-label="Objects overview">
+      <article class="card">
+        <h3 class="card__title">
+          Objects overview
+          <span style="font-family:var(--font-body); font-weight:600; font-size:12px; color:var(--ink-500); text-transform:none; letter-spacing:0;">69,124 total</span>
+        </h3>
+        <table class="objects">
+          <thead>
+            <tr>
+              <th><button type="button">Object type <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button></th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="dot" style="background:var(--c1)"></span>Tables</td><td>6,400</td></tr>
+            <tr><td><span class="dot" style="background:var(--c2)"></span>Macros</td><td>12,860</td></tr>
+            <tr><td><span class="dot" style="background:var(--c3)"></span>Views</td><td>24,320</td></tr>
+            <tr><td><span class="dot" style="background:var(--c4)"></span>Procedures</td><td>18,544</td></tr>
+            <tr><td><span class="dot" style="background:var(--c5)"></span>Functions</td><td>7,000</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Distribution</h3>
+        <div class="donut-wrap">
+          <div class="donut" role="img" aria-label="Donut chart of object types">
+            <svg viewBox="0 0 42 42" width="100%" height="100%">
+              <!-- Background ring -->
+              <circle cx="21" cy="21" r="15.915" fill="none" stroke="#F1F3F5" stroke-width="6"/>
+              <!-- Segments (stroke-dasharray = length gap) -->
+              <!-- Total circumference ≈ 100 -->
+              <!-- Tables 9.3% -->
+              <circle cx="21" cy="21" r="15.915" fill="none" stroke="var(--c1)" stroke-width="6"
+                      stroke-dasharray="9.3 90.7" stroke-dashoffset="25" stroke-linecap="butt"/>
+              <!-- Macros 18.6% -->
+              <circle cx="21" cy="21" r="15.915" fill="none" stroke="var(--c2)" stroke-width="6"
+                      stroke-dasharray="18.6 81.4" stroke-dashoffset="15.7" stroke-linecap="butt"/>
+              <!-- Views 35.2% -->
+              <circle cx="21" cy="21" r="15.915" fill="none" stroke="var(--c3)" stroke-width="6"
+                      stroke-dasharray="35.2 64.8" stroke-dashoffset="-2.9" stroke-linecap="butt"/>
+              <!-- Procedures 26.8% -->
+              <circle cx="21" cy="21" r="15.915" fill="none" stroke="var(--c4)" stroke-width="6"
+                      stroke-dasharray="26.8 73.2" stroke-dashoffset="-38.1" stroke-linecap="butt"/>
+              <!-- Functions 10.1% -->
+              <circle cx="21" cy="21" r="15.915" fill="none" stroke="var(--c5)" stroke-width="6"
+                      stroke-dasharray="10.1 89.9" stroke-dashoffset="-64.9" stroke-linecap="butt"/>
+            </svg>
+            <div class="donut__center">
+              <div>
+                <div class="big">69.1K</div>
+                <div class="small">Objects</div>
+              </div>
+            </div>
+          </div>
+          <ul class="legend">
+            <li><span class="dot" style="background:var(--c1)"></span>Tables</li>
+            <li><span class="dot" style="background:var(--c2)"></span>Macros</li>
+            <li><span class="dot" style="background:var(--c3)"></span>Views</li>
+            <li><span class="dot" style="background:var(--c4)"></span>Procedures</li>
+            <li><span class="dot" style="background:var(--c5)"></span>Functions</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  // Light interaction: toggle side sections
+  document.querySelectorAll('.side__section[role="button"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const open = btn.classList.toggle('side__section--open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+  // Simple tile feedback
+  document.querySelectorAll('.metric').forEach(m => {
+    m.addEventListener('click', e => {
+      const label = m.querySelector('.metric__label').textContent;
+      console.log('Drill into:', label);
+    });
+  });
+</script>
+</body>
+</html>

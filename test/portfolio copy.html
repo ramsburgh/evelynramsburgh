@@ -82,25 +82,6 @@
     .pc-link:hover::after {
       background: var(--title-color) !important;
     }
-
-    /* ── Thumbnail images (replace gradient titles) ──────────────────────── */
-    .portfolio-card-thumb {
-      padding: 0 !important;
-      overflow: hidden;
-      position: relative;
-    }
-    .portfolio-card-thumb .portfolio-thumb-img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-    .project-card:hover .portfolio-card-thumb .portfolio-thumb-img {
-      transform: scale(1.03);
-    }
   </style>
 
   
@@ -139,12 +120,6 @@ Case studies shaped by product strategy and real-world execution—each tackling
         <span class="pill pill-default" data-filter="Fintech">Fintech</span>
       </div>
 
-      <!-- Column view toggle — reuses .pill styles, no new CSS -->
-      <div id="cols-bar" style="display:flex; justify-content:flex-end; gap:8px; margin:-8px 0 24px;" role="group" aria-label="Columnas del grid">
-        <span class="pill pill-default" data-cols="2" role="button" tabindex="0" aria-pressed="false" aria-label="Ver en 2 columnas">2 cols</span>
-        <span class="pill pill-active"  data-cols="3" role="button" tabindex="0" aria-pressed="true"  aria-label="Ver en 3 columnas">3 cols</span>
-      </div>
-
       <!-- Project grid — data-tags drives the filter -->
       <div class="portfolio-grid" id="portfolio-grid">
 
@@ -152,10 +127,9 @@ Case studies shaped by product strategy and real-world execution—each tackling
         <!-- IBM Rebranding -->
 <div class="project-card" data-tags="Branding,Enterprise">
   <div class="portfolio-card-thumb">
-    <picture>
-      <source type="image/webp" srcset="assets/img/thumbnails/thumbnail-ibm-app-rebranding.webp">
-      <img class="portfolio-thumb-img" src="assets/img/thumbnails/thumbnail-ibm-app-rebranding.png" alt="IBM App Rebranding — visual identity and cloud logo system" loading="lazy" decoding="async">
-    </picture>
+    <h3 class="portfolio-thumb-title thumb-gradient-2">
+      IBM App Rebranding
+    </h3>
   </div>
 
   <div class="pc-body">
@@ -173,10 +147,9 @@ Case studies shaped by product strategy and real-world execution—each tackling
         <!-- Zenitsu -->
 <div class="project-card" data-tags="Product,Enterprise">
   <div class="portfolio-card-thumb">
-    <picture>
-      <source type="image/webp" srcset="assets/img/thumbnails/thumbnailzenitsu.webp">
-      <img class="portfolio-thumb-img" src="assets/img/thumbnails/thumbnailzenitsu.png" alt="Zenitsu — full-stack web app builder" loading="lazy" decoding="async">
-    </picture>
+    <h3 class="portfolio-thumb-title thumb-gradient-3">
+      IBM Web App Builder
+    </h3>
   </div>
 
   <div class="pc-body">
@@ -194,10 +167,9 @@ Case studies shaped by product strategy and real-world execution—each tackling
         <!-- IBM Cloud Migration -->
 <div class="project-card" data-tags="FinOps,Enterprise">
   <div class="portfolio-card-thumb">
-    <picture>
-      <source type="image/webp" srcset="assets/img/thumbnails/thumbnail-ibm-seller-incentives.webp">
-      <img class="portfolio-thumb-img" src="assets/img/thumbnails/thumbnail-ibm-seller-incentives.png" alt="IBM Seller Incentives — Field Management System login and dashboard" loading="lazy" decoding="async">
-    </picture>
+    <h3 class="portfolio-thumb-title thumb-gradient-3">
+      IBM Seller Incentives
+    </h3>
   </div>
 
   <div class="pc-body">
@@ -216,10 +188,9 @@ Case studies shaped by product strategy and real-world execution—each tackling
         <!-- Headhunted -->
 <div class="project-card" data-tags="Product">
   <div class="portfolio-card-thumb">
-    <picture>
-      <source type="image/webp" srcset="assets/img/thumbnails/thumbnailheadhunted.webp">
-      <img class="portfolio-thumb-img" src="assets/img/thumbnails/thumbnailheadhunted.png" alt="Headhunted — brand identity business cards on pink fabric" loading="lazy" decoding="async">
-    </picture>
+    <h3 class="portfolio-thumb-title thumb-gradient-4">
+      Headhunted Web Design
+    </h3>
   </div>
 
   <div class="pc-body">
@@ -236,10 +207,9 @@ Case studies shaped by product strategy and real-world execution—each tackling
         <!-- Datometry -->
 <div class="project-card" data-tags="Enterprise">
   <div class="portfolio-card-thumb">
-    <picture>
-      <source type="image/webp" srcset="assets/img/thumbnails/thumbnaildatometry.webp">
-      <img class="portfolio-thumb-img" src="assets/img/thumbnails/thumbnaildatometry.png" alt="Datometry qInsight — data visualization dashboard and modals" loading="lazy" decoding="async">
-    </picture>
+    <h3 class="portfolio-thumb-title thumb-gradient-7">
+      qInsight UX UI Design
+    </h3>
   </div>
 
   <div class="pc-body">
@@ -256,10 +226,9 @@ Case studies shaped by product strategy and real-world execution—each tackling
         <!-- Levi's -->
 <div class="project-card" data-tags="Consumer">
   <div class="portfolio-card-thumb">
-    <picture>
-      <source type="image/webp" srcset="assets/img/thumbnails/thumbnaillevis.webp">
-      <img class="portfolio-thumb-img" src="assets/img/thumbnails/thumbnaillevis.png" alt="Levi's Promotores — retail promoter tool for field teams" loading="lazy" decoding="async">
-    </picture>
+    <h3 class="portfolio-thumb-title thumb-gradient-8">
+      Design Sprint
+    </h3>
   </div>
 
   <div class="pc-body">
@@ -277,10 +246,9 @@ Case studies shaped by product strategy and real-world execution—each tackling
         <!-- Digitt -->
 <div class="project-card" data-tags="Fintech">
   <div class="portfolio-card-thumb">
-    <picture>
-      <source type="image/webp" srcset="assets/img/thumbnails/thumbaildigitt.webp">
-      <img class="portfolio-thumb-img" src="assets/img/thumbnails/thumbaildigitt.png" alt="Digitt — credit card debt transfer mobile app" loading="lazy" decoding="async">
-    </picture>
+    <h3 class="portfolio-thumb-title thumb-gradient-9">
+      Product Design
+    </h3>
   </div>
 
   <div class="pc-body">
@@ -297,10 +265,9 @@ Case studies shaped by product strategy and real-world execution—each tackling
         <!-- Smarttie — coming soon -->
 <div class="project-card" data-tags="Branding">
   <div class="portfolio-card-thumb">
-    <picture>
-      <source type="image/webp" srcset="assets/img/thumbnails/thumbnail.webp">
-      <img class="portfolio-thumb-img" src="assets/img/thumbnails/thumbnail.png" alt="Smarttie — brand identity, the way we look and feel" loading="lazy" decoding="async">
-    </picture>
+    <h3 class="portfolio-thumb-title thumb-gradient-10">
+      Brand Design
+    </h3>
   </div>
 
   <div class="pc-body">
@@ -419,55 +386,6 @@ Case studies shaped by product strategy and real-world execution—each tackling
       // Replace current history entry with initial filter state
       history.replaceState({ filter: initialFilter }, '', window.location.href);
 
-    })();
-  </script>
-
-  <!-- Columns toggle (2 / 3) — no CSS added, just inline grid-template-columns -->
-  <script>
-    (function () {
-      var grid       = document.getElementById('portfolio-grid');
-      var colPills   = document.querySelectorAll('#cols-bar .pill');
-      var MOBILE_BP  = 768; // debajo de este ancho dejamos que el CSS responsive maneje
-      var currentCols = 3;
-
-      function applyCols(cols) {
-        currentCols = cols;
-        if (window.innerWidth >= MOBILE_BP) {
-          grid.style.gridTemplateColumns = 'repeat(' + cols + ', 1fr)';
-        } else {
-          grid.style.gridTemplateColumns = ''; // limpia inline, vuelve al CSS
-        }
-
-        colPills.forEach(function (p) {
-          var active = parseInt(p.getAttribute('data-cols'), 10) === cols;
-          p.classList.toggle('pill-active', active);
-          p.classList.toggle('pill-default', !active);
-          p.setAttribute('aria-pressed', active ? 'true' : 'false');
-        });
-      }
-
-      colPills.forEach(function (pill) {
-        pill.addEventListener('click', function () {
-          applyCols(parseInt(this.getAttribute('data-cols'), 10));
-        });
-        // Soporte de teclado (Enter / Space) — los <span> no lo dan por default
-        pill.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            applyCols(parseInt(this.getAttribute('data-cols'), 10));
-          }
-        });
-      });
-
-      // Re-aplicar en resize (para que al bajar a mobile el inline se limpie)
-      var resizeTimer;
-      window.addEventListener('resize', function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function () { applyCols(currentCols); }, 120);
-      });
-
-      // Estado inicial = 3 cols (coincide con .pill-active del HTML)
-      applyCols(3);
     })();
   </script>
 

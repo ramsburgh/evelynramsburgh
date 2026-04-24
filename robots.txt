@@ -1,0 +1,29 @@
+# robots.txt for evelynramsburgh.com
+
+User-agent: *
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Disallow: /drafts/
+Disallow: /test/
+Disallow: /backup/
+
+Sitemap: https://evelynramsburgh.com/sitemap.xml
